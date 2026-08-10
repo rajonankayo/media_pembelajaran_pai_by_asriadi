@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WhatsApp Contact & Feedback Center</title>
+        <!-- Google Fonts - Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- SweetAlert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- AOS Animation -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!-- QRCode.js -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+        <style>
+        /* Glassmorphism Styles */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
+
+        /* Pulse Glow Animation */
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-glow {
+            animation: pulseGlow 4s infinite ease-in-out;
+        }
+    </style>
+    </head>
+    <body
+        class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 min-h-screen flex flex-col relative overflow-x-hidden">
+
+        <!-- Background Decorative Gradient Blurs -->
+        <div
+            class="fixed top-0 left-1/4 w-96 h-96 bg-emerald-400/20 dark:bg-emerald-600/10 rounded-full blur-3xl pointer-events-none animate-glow"></div>
+        <div
+            class="fixed top-1/3 right-10 w-96 h-96 bg-blue-500/20 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none animate-glow"
+            style="animation-delay: 2s;"></div>
+        <div
+            class="fixed bottom-10 left-10 w-80 h-80 bg-indigo-500/20 dark:bg-indigo-600/10 rounded-full blur-3xl pointer-events-none animate-glow"
+            style="animation-delay: 1s;"></div>
+
+        <!-- STICKY HEADER / NAVBAR -->
+        <header
+            class="sticky top-0 z-40 glass-nav border-b border-slate-200/50 dark:border-slate-800/50 transition-colors">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+                <!-- Logo & Brand -->
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-white shadow-lg shadow-emerald-500/30">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1
+                            class="font-bold text-lg sm:text-xl tracking-tight leading-tight">WhatsApp
+                            Contact Center</h1>
+                        <p
+                            class="text-xs text-slate-500 dark:text-slate-400 font-medium">Hubungi
+                            Saya dengan Mudah</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Items & Theme Toggle -->
+                <div class="hidden md:flex items-center gap-6">
+                    <nav
+                        class="flex items-center gap-4 text-sm font-medium text-slate-600 dark:text-slate-300">
+                        <a href="#hero"
+                            class="hover:text-emerald-500 transition-colors">Beranda</a>
+                        <a href="#kontak"
+                            class="hover:text-emerald-500 transition-colors">Daftar
+                            Kontak</a>
+                        <a href="#saran"
+                            class="hover:text-emerald-500 transition-colors">Form
+                            Saran</a>
+                    </nav>
+                    <button id="themeToggleBtn"
+                        class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:bg-emerald-500 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-moon text-lg dark:hidden"></i>
+                        <i
+                            class="fa-solid fa-sun text-lg hidden dark:block"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Controls -->
+                <div class="flex md:hidden items-center gap-2">
+                    <button id="themeToggleBtnMobile"
+                        class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center">
+                        <i class="fa-solid fa-moon text-lg dark:hidden"></i>
+                        <i
+                            class="fa-solid fa-sun text-lg hidden dark:block"></i>
+                    </button>
+                    <button id="drawerOpenBtn"
+                        class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- MOBILE DRAWER MENU -->
+        <div id="drawerMenu"
+            class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+            <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm"
+                id="drawerBackdrop"></div>
+            <div
+                class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white dark:bg-slate-900 shadow-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="flex items-center gap-2">
+                            <i
+                                class="fa-brands fa-whatsapp text-emerald-500 text-2xl"></i>
+                            <span class="font-bold text-lg">Contact
+                                Center</span>
+                        </div>
+                        <button id="drawerCloseBtn"
+                            class="text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white">
+                            <i class="fa-solid fa-xmark text-2xl"></i>
+                        </button>
+                    </div>
+                    <nav
+                        class="flex flex-col gap-4 font-medium text-slate-600 dark:text-slate-300">
+                        <a href="#hero"
+                            class="drawer-link py-2 border-b border-slate-100 dark:border-slate-800 hover:text-emerald-500">Beranda</a>
+                        <a href="#kontak"
+                            class="drawer-link py-2 border-b border-slate-100 dark:border-slate-800 hover:text-emerald-500">Daftar
+                            Kontak</a>
+                        <a href="#saran"
+                            class="drawer-link py-2 border-b border-slate-100 dark:border-slate-800 hover:text-emerald-500">Form
+                            Saran & Kritik</a>
+                    </nav>
+                </div>
+                <div class="text-xs text-slate-400 text-center">
+                    © 2026 WhatsApp Center. All rights reserved.
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT CONTAINER -->
+        <main
+            class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+            <!-- HERO SECTION -->
+            <section id="hero" data-aos="fade-up"
+                class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 via-teal-600 to-indigo-700 text-white p-8 sm:p-12 shadow-2xl shadow-emerald-900/20">
+                <div
+                    class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+                    <i class="fa-brands fa-whatsapp text-[280px]"></i>
+                </div>
+                <div class="relative z-10 max-w-2xl">
+                    <span
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold uppercase tracking-wider mb-4 text-emerald-200 border border-white/20">
+                        <i class="fa-solid fa-headset"></i> Layanan Bantuan
+                    </span>
+                    <h2
+                        class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4">Butuh
+                        Bantuan? Kami Siap Melayani Anda</h2>
+                    <p
+                        class="text-slate-100 text-base sm:text-lg mb-8 font-light leading-relaxed">
+                        Silakan hubungi kontak resmi Administrator kami atau
+                        kirimkan saran pengembangan aplikasi secara langsung
+                        melalui WhatsApp.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#kontak"
+                            class="bg-white text-emerald-700 hover:bg-emerald-50 font-semibold px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <i class="fa-solid fa-comments text-lg"></i> Hubungi
+                            Sekarang
+                        </a>
+                        <a href="#saran"
+                            class="bg-emerald-800/40 hover:bg-emerald-800/60 text-white border border-white/20 font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-lg"></i>
+                            Kirim Saran
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DAFTAR KONTAK SECTION -->
+            <section id="kontak" class="space-y-6">
+                <div
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-4"
+                    data-aos="fade-up">
+                    <div>
+                        <h2
+                            class="text-2xl sm:text-3xl font-bold tracking-tight">Kontak
+                            Utama</h2>
+                        <p
+                            class="text-slate-500 dark:text-slate-400 text-sm mt-1">Layanan
+                            bantuan resmi untuk aplikasi Anda</p>
+                    </div>
+                </div>
+
+                <!-- FILTER & SEARCH BAR -->
+                <div class="glass-card p-4 rounded-2xl shadow-sm space-y-4"
+                    data-aos="fade-up">
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- Search Input -->
+                        <div class="relative">
+                            <i
+                                class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                            <input type="text" id="searchInput"
+                                placeholder="Cari nama atau jabatan..."
+                                class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 border-0 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white placeholder-slate-400">
+                        </div>
+                        <!-- Divisi Filter -->
+                        <div>
+                            <select id="divisiFilter"
+                                class="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 border-0 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white">
+                                <option value="ALL">Semua Divisi</option>
+                            </select>
+                        </div>
+                        <!-- Status Filter -->
+                        <div>
+                            <select id="statusFilter"
+                                class="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 border-0 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white">
+                                <option value="ALL">Semua Status Jam</option>
+                                <option value="Online">Online Saat Ini</option>
+                                <option value="Offline">Offline</option>
+                            </select>
+                        </div>
+                        <!-- Reset Button -->
+                        <button id="resetFilterBtn"
+                            class="w-full bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-medium py-2.5 rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-rotate-left"></i> Reset Filter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CONTACT CARDS GRID (Single Card Centered) -->
+                <div id="contactGrid"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                    <!-- Dynamic Content Generated by JS -->
+                </div>
+
+                <!-- EMPTY STATE -->
+                <div id="emptyState"
+                    class="hidden text-center py-12 glass-card rounded-2xl">
+                    <i
+                        class="fa-solid fa-user-slash text-4xl text-slate-400 mb-3"></i>
+                    <h3 class="text-lg font-semibold">Kontak Tidak
+                        Ditemukan</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Coba
+                        sesuaikan kata kunci pencarian atau filter Anda.</p>
+                </div>
+            </section>
+
+            <!-- FORM SARAN PENGEMBANGAN SECTION -->
+            <section id="saran" class="max-w-4xl mx-auto" data-aos="fade-up">
+                <div
+                    class="glass-card rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-emerald-500 to-indigo-600"></div>
+                    <div class="mb-8">
+                        <span
+                            class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Feedback
+                            & Support</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold mt-1">Formulir
+                            Saran & Pengembangan</h2>
+                        <p
+                            class="text-slate-500 dark:text-slate-400 text-sm mt-2">Bantu
+                            kami memperkuat aplikasi dengan kritik, saran,
+                            maupun laporan kendala secara langsung.</p>
+                    </div>
+
+                    <form id="feedbackForm" class="space-y-6" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Nama -->
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Nama
+                                    Lengkap <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text" id="formNama" required
+                                    placeholder="Contoh: Ahmad Subagja"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white transition-all">
+                            </div>
+                            <!-- Instansi -->
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Instansi
+                                    / Perusahaan</label>
+                                <input type="text" id="formInstansi"
+                                    placeholder="Contoh: PT Teknologi Bangsawan"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white transition-all">
+                            </div>
+                            <!-- Email -->
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Alamat
+                                    Email <span
+                                        class="text-red-500">*</span></label>
+                                <input type="email" id="formEmail" required
+                                    placeholder="nama@email.com"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white transition-all">
+                            </div>
+                            <!-- Nomor HP -->
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Nomor
+                                    HP / WA <span
+                                        class="text-red-500">*</span></label>
+                                <input type="tel" id="formPhone" required
+                                    placeholder="081234567890"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white transition-all">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Kategori -->
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Kategori
+                                    <span class="text-red-500">*</span></label>
+                                <select id="formKategori" required
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white transition-all">
+                                    <option value disabled selected>Pilih
+                                        Kategori</option>
+                                    <option value="Bug">Laporan Bug</option>
+                                    <option value="Saran">Saran</option>
+                                    <option
+                                        value="Pengembangan">Pengembangan</option>
+                                    <option value="Fitur Baru">Fitur
+                                        Baru</option>
+                                    <option value="Kritik">Kritik</option>
+                                    <option value="Lainnya">Lainnya</option>
+                                </select>
+                            </div>
+                            <!-- Prioritas -->
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Prioritas</label>
+                                <select id="formPrioritas"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white transition-all">
+                                    <option value="Rendah">Rendah</option>
+                                    <option value="Sedang"
+                                        selected>Sedang</option>
+                                    <option value="Tinggi">Tinggi</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Tujuan WhatsApp Contact -->
+                        <div>
+                            <label
+                                class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Pilih
+                                Tujuan Kontak WhatsApp <span
+                                    class="text-red-500">*</span></label>
+                            <select id="formTujuan" required
+                                class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white transition-all">
+                                <!-- Populated dynamically from single contact JSON -->
+                            </select>
+                        </div>
+
+                        <!-- Judul Saran -->
+                        <div>
+                            <label
+                                class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Judul
+                                Pesan / Saran <span
+                                    class="text-red-500">*</span></label>
+                            <input type="text" id="formJudul" required
+                                placeholder="Ringkasan singkat pesan Anda"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white transition-all">
+                        </div>
+
+                        <!-- Isi Saran -->
+                        <div>
+                            <label
+                                class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">Isi
+                                Saran / Detail Pesan <span
+                                    class="text-red-500">*</span> (Min. 20
+                                Karakter)</label>
+                            <textarea id="formIsi" rows="4" required
+                                placeholder="Jelaskan secara rinci saran, kritik, atau bug yang ditemukan..."
+                                class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm focus:ring-2 focus:ring-emerald-500 dark:text-white transition-all"></textarea>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="formCallback"
+                                class="w-4 h-4 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                            <label for="formCallback"
+                                class="text-sm text-slate-600 dark:text-slate-300 select-none">Saya
+                                bersedia dihubungi kembali terkait saran
+                                ini.</label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit"
+                            class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-3 text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Kirim
+                            ke WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- QR CODE MODAL -->
+        <div id="qrModal"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+            <div
+                class="bg-white dark:bg-slate-800 rounded-3xl p-6 max-w-sm w-full shadow-2xl border border-slate-100 dark:border-slate-700 text-center relative transform scale-95 transition-transform duration-300"
+                id="qrModalCard">
+                <button id="closeQrBtn"
+                    class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+                <h3 class="text-lg font-bold mb-1" id="qrModalName">WhatsApp QR
+                    Code</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-4"
+                    id="qrModalPhone"></p>
+                <div
+                    class="flex justify-center p-4 bg-white rounded-2xl border border-slate-100 shadow-inner mb-4">
+                    <div id="qrcode"></div>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Pindai
+                    kode di atas menggunakan ponsel Anda untuk mulai berkirim
+                    pesan.</p>
+            </div>
+        </div>
+
+        <!-- SCROLL TO TOP BUTTON -->
+        <button id="scrollTopBtn"
+            class="fixed bottom-6 right-6 z-30 w-12 h-12 rounded-2xl bg-emerald-600 text-white shadow-xl shadow-emerald-600/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-emerald-700 hover:scale-110">
+            <i class="fa-solid fa-arrow-up text-lg"></i>
+        </button>
+
+        <!-- FOOTER -->
+        <footer
+            class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors mt-auto">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500 dark:text-slate-400">
+                <div>
+                    <p
+                        class="font-semibold text-slate-700 dark:text-slate-300">WhatsApp
+                        Contact & Feedback Center <span
+                            class="text-xs bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full font-mono ml-2">v2.4.0</span></p>
+                    <p class="text-xs mt-0.5">© 2026 Developed with ❤️ by Senior
+                        Full Stack Developer.</p>
+                </div>
+                <div class="flex items-center gap-6 text-lg">
+                    <a href="https://wa.me/082383539160" target="_blank"
+                        class="hover:text-emerald-500 transition-colors"
+                        title="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:support@example.com"
+                        class="hover:text-emerald-500 transition-colors"
+                        title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#" class="hover:text-emerald-500 transition-colors"
+                        title="Website"><i class="fa-solid fa-globe"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JS & AOS INITIATION -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        /**
+         * WhatsApp Contact Center Single Page Application Logic
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ duration: 800, once: true });
+
+            // =========================================================================
+            // DATA CONTACTS (JSON ARRAY - SINGLE CONTACT)
+            // =========================================================================
+            const contacts = [
+                {
+                    id: 1,
+                    nama: "Administrator",
+                    jabatan: "Developer",
+                    divisi: "IT",
+                    phone: "6282383539160",
+                    status: "Online",
+                    jam: "08.00 - 16.00 WIB",
+                    foto: "Asriadi, S.Pd.I., Gr..jpeg"
+                }
+            ];
+
+            // DOM Elements Reference
+            const contactGrid = document.getElementById('contactGrid');
+            const emptyState = document.getElementById('emptyState');
+            const searchInput = document.getElementById('searchInput');
+            const divisiFilter = document.getElementById('divisiFilter');
+            const statusFilter = document.getElementById('statusFilter');
+            const resetFilterBtn = document.getElementById('resetFilterBtn');
+            const feedbackForm = document.getElementById('feedbackForm');
+            const formTujuan = document.getElementById('formTujuan');
+            const themeToggleBtns = [document.getElementById('themeToggleBtn'), document.getElementById('themeToggleBtnMobile')];
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+            // Modal Elements
+            const qrModal = document.getElementById('qrModal');
+            const qrModalCard = document.getElementById('qrModalCard');
+            const closeQrBtn = document.getElementById('closeQrBtn');
+            const qrModalName = document.getElementById('qrModalName');
+            const qrModalPhone = document.getElementById('qrModalPhone');
+            const qrcodeContainer = document.getElementById('qrcode');
+
+            // Drawer Elements
+            const drawerMenu = document.getElementById('drawerMenu');
+            const drawerOpenBtn = document.getElementById('drawerOpenBtn');
+            const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+            const drawerBackdrop = document.getElementById('drawerBackdrop');
+            const drawerLinks = document.querySelectorAll('.drawer-link');
+
+            // =========================================================================
+            // THEME MANAGEMENT (DARK / LIGHT MODE)
+            // =========================================================================
+            function initTheme() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            }
+
+            function toggleTheme() {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            }
+
+            themeToggleBtns.forEach(btn => btn?.addEventListener('click', toggleTheme));
+            initTheme();
+
+            // =========================================================================
+            // RENDER CARDS & DYNAMIC OPTIONS
+            // =========================================================================
+            function populateFiltersAndDropdowns() {
+                // Unique Divisi
+                const divisiSet = new Set(contacts.map(c => c.divisi));
+                divisiSet.forEach(div => {
+                    const option = document.createElement('option');
+                    option.value = div;
+                    option.textContent = div;
+                    divisiFilter.appendChild(option);
+                });
+
+                // Populate Form Tujuan Dropdown
+                formTujuan.innerHTML = '';
+                contacts.forEach((c, index) => {
+                    const option = document.createElement('option');
+                    option.value = c.phone;
+                    option.textContent = `${c.nama} (${c.jabatan})`;
+                    if (index === 0) option.selected = true;
+                    formTujuan.appendChild(option);
+                });
+            }
+
+            function renderContacts(data) {
+                contactGrid.innerHTML = '';
+
+                if (data.length === 0) {
+                    emptyState.classList.remove('hidden');
+                    return;
+                }
+                emptyState.classList.add('hidden');
+
+                data.forEach(c => {
+                    const isOnline = c.status.toLowerCase() === 'online';
+                    const card = document.createElement('div');
+                    card.className = "glass-card rounded-2xl p-6 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group border border-slate-100 dark:border-slate-800 max-w-md w-full mx-auto";
+                    card.setAttribute('data-aos', 'fade-up');
+
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex items-start justify-between gap-4 mb-4">
+                                <div class="relative">
+                                    <img src="${c.foto}" alt="${c.nama}" class="w-16 h-16 rounded-2xl object-cover shadow-md" loading="lazy">
+                                    <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-white dark:border-slate-800 ${isOnline ? 'bg-emerald-500' : 'bg-slate-400'}" title="${c.status}"></span>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="share-btn w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center justify-center transition-colors" data-nama="${c.nama}" data-phone="${c.phone}" title="Bagikan Kontak">
+                                        <i class="fa-solid fa-share-nodes text-xs"></i>
+                                    </button>
+                                    <button class="qr-btn w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center justify-center transition-colors" data-nama="${c.nama}" data-phone="${c.phone}" title="Lihat QR Code">
+                                        <i class="fa-solid fa-qrcode text-xs"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="space-y-1">
+                                <span class="inline-block px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                                    ${c.divisi}
+                                </span>
+                                <h3 class="font-bold text-lg text-slate-800 dark:text-slate-100 line-clamp-1">${c.nama}</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">${c.jabatan}</p>
+                            </div>
+
+                            <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800/60 space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-slate-400">Jam Operasional:</span>
+                                    <span class="font-semibold">${c.jam}</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-slate-400">WhatsApp:</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="font-mono">${c.phone}</span>
+                                        <button class="copy-btn text-slate-400 hover:text-emerald-500" data-phone="${c.phone}" title="Salin Nomor">
+                                            <i class="fa-regular fa-copy text-xs"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <button class="chat-direct-btn w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2.5 rounded-xl transition-all flex items-center justify-center gap-2 text-sm shadow-md shadow-emerald-500/20" data-nama="${c.nama}" data-phone="${c.phone}">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi via WA
+                            </button>
+                        </div>
+                    `;
+
+                    contactGrid.appendChild(card);
+                });
+
+                attachCardEvents();
+            }
+
+            // =========================================================================
+            // FILTER & SEARCH LOGIC
+            // =========================================================================
+            function filterContacts() {
+                const searchVal = searchInput.value.toLowerCase().trim();
+                const divisiVal = divisiFilter.value;
+                const statusVal = statusFilter.value;
+
+                const filtered = contacts.filter(c => {
+                    const matchSearch = c.nama.toLowerCase().includes(searchVal) || c.jabatan.toLowerCase().includes(searchVal);
+                    const matchDivisi = divisiVal === 'ALL' || c.divisi === divisiVal;
+                    const matchStatus = statusVal === 'ALL' || c.status.toLowerCase() === statusVal.toLowerCase();
+
+                    return matchSearch && matchDivisi && matchStatus;
+                });
+
+                renderContacts(filtered);
+            }
+
+            searchInput.addEventListener('input', filterContacts);
+            divisiFilter.addEventListener('change', filterContacts);
+            statusFilter.addEventListener('change', filterContacts);
+
+            resetFilterBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                divisiFilter.value = 'ALL';
+                statusFilter.value = 'ALL';
+                renderContacts(contacts);
+            });
+
+            // =========================================================================
+            // CARD EVENT HANDLERS (CHAT, COPY, SHARE, QR)
+            // =========================================================================
+            function attachCardEvents() {
+                // Direct WhatsApp Chat
+                document.querySelectorAll('.chat-direct-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const phone = e.currentTarget.getAttribute('data-phone');
+                        const nama = e.currentTarget.getAttribute('data-nama');
+                        
+                        const defaultMessage = `Assalamu'alaikum.\n\nSaya ingin bertanya mengenai aplikasi kepada Bpk/Ibu ${nama}.\n\nNama :\nInstansi :\n\nTerima kasih.`;
+                        const encodedMsg = encodeURIComponent(defaultMessage);
+                        window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
+                    });
+                });
+
+                // Copy Phone
+                document.querySelectorAll('.copy-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const phone = e.currentTarget.getAttribute('data-phone');
+                        navigator.clipboard.writeText(phone).then(() => {
+                            Swal.fire({
+                                toast: true,
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'Nomor disalin ke clipboard!',
+                                showConfirmButton: false,
+                                timer: 2000
+                            });
+                        });
+                    });
+                });
+
+                // Share Contact
+                document.querySelectorAll('.share-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const phone = e.currentTarget.getAttribute('data-phone');
+                        const nama = e.currentTarget.getAttribute('data-nama');
+                        const text = `Kontak Support: ${nama} - https://wa.me/${phone}`;
+
+                        if (navigator.share) {
+                            navigator.share({ title: `Kontak ${nama}`, text: text });
+                        } else {
+                            navigator.clipboard.writeText(text);
+                            Swal.fire({
+                                toast: true,
+                                position: 'top-end',
+                                icon: 'info',
+                                title: 'Link kontak disalin ke clipboard!',
+                                showConfirmButton: false,
+                                timer: 2000
+                            });
+                        }
+                    });
+                });
+
+                // QR Code Modal
+                document.querySelectorAll('.qr-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const phone = e.currentTarget.getAttribute('data-phone');
+                        const nama = e.currentTarget.getAttribute('data-nama');
+
+                        qrModalName.textContent = nama;
+                        qrModalPhone.textContent = `+${phone}`;
+                        qrcodeContainer.innerHTML = '';
+
+                        new QRCode(qrcodeContainer, {
+                            text: `https://wa.me/${phone}`,
+                            width: 180,
+                            height: 180,
+                            colorDark : "#059669",
+                            colorLight : "#ffffff",
+                            correctLevel : QRCode.CorrectLevel.H
+                        });
+
+                        qrModal.classList.remove('opacity-0', 'pointer-events-none');
+                        qrModalCard.classList.remove('scale-95');
+                        qrModalCard.classList.add('scale-100');
+                    });
+                });
+            }
+
+            // Close QR Modal
+            closeQrBtn.addEventListener('click', () => {
+                qrModal.classList.add('opacity-0', 'pointer-events-none');
+                qrModalCard.classList.remove('scale-100');
+                qrModalCard.classList.add('scale-95');
+            });
+
+            // =========================================================================
+            // FORM FEEDBACK VALIDATION & SUBMISSION
+            // =========================================================================
+            feedbackForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const nama = document.getElementById('formNama').value.trim();
+                const instansi = document.getElementById('formInstansi').value.trim() || '-';
+                const email = document.getElementById('formEmail').value.trim();
+                const phone = document.getElementById('formPhone').value.trim();
+                const kategori = document.getElementById('formKategori').value;
+                const prioritas = document.getElementById('formPrioritas').value;
+                const tujuanPhone = document.getElementById('formTujuan').value;
+                const judul = document.getElementById('formJudul').value.trim();
+                const isi = document.getElementById('formIsi').value.trim();
+                const callback = document.getElementById('formCallback').checked ? 'Ya' : 'Tidak';
+
+                // Validasi Email Regex
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                // Validasi HP Regex
+                const phoneRegex = /^[0-9+]{9,15}$/;
+
+                // SweetAlert Validation Checks
+                if (!nama) {
+                    return showValidationError('Nama Lengkap Wajib Diisi!');
+                }
+                if (!email || !emailRegex.test(email)) {
+                    return showValidationError('Format Alamat Email Tidak Valid!');
+                }
+                if (!phone || !phoneRegex.test(phone)) {
+                    return showValidationError('Nomor HP/WA Tidak Valid (Minimal 9 Digit Angka)!');
+                }
+                if (!kategori) {
+                    return showValidationError('Pilih Kategori Saran!');
+                }
+                if (!tujuanPhone) {
+                    return showValidationError('Pilih Tujuan Kontak WhatsApp!');
+                }
+                if (!judul) {
+                    return showValidationError('Judul Pesan Wajib Diisi!');
+                }
+                if (!isi || isi.length < 20) {
+                    return showValidationError('Isi Saran/Pesan Terlalu Singkat (Minimal 20 Karakter)!');
+                }
+
+                // Construct Formatted Message
+                const messageText = `=========================\nSARAN PENGEMBANGAN APLIKASI\n=========================\n\nNama: ${nama}\nInstansi: ${instansi}\nEmail: ${email}\nNomor HP: ${phone}\n\nKategori: ${kategori}\nJudul: ${judul}\nPrioritas: ${prioritas}\n\nIsi Saran:\n${isi}\n\nBersedia Dihubungi: ${callback}\n\n=========================\nTerima kasih.`;
+
+                // Encode Message Properly
+                const encodedMessage = encodeURIComponent(messageText);
+                const waUrl = `https://wa.me/${tujuanPhone}?text=${encodedMessage}`;
+
+                // SweetAlert Confirmation
+                Swal.fire({
+                    title: 'Kirim Pesan via WhatsApp?',
+                    text: 'Anda akan diarahkan langsung ke aplikasi WhatsApp.',
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#10b981',
+                    cancelButtonColor: '#64748b',
+                    confirmButtonText: '<i class="fa-brands fa-whatsapp"></i> Ya, Kirim!',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.open(waUrl, '_blank');
+                        feedbackForm.reset();
+                        populateFiltersAndDropdowns();
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Formulir Berhasil Dibuat!',
+                            text: 'Silakan lanjutkan pengiriman pada jendela WhatsApp yang terbuka.',
+                            confirmButtonColor: '#10b981'
+                        });
+                    }
+                });
+            });
+
+            function showValidationError(msg) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Validasi Gagal',
+                    text: msg,
+                    confirmButtonColor: '#10b981'
+                });
+            }
+
+            // =========================================================================
+            // DRAWER & SCROLL EVENTS
+            // =========================================================================
+            drawerOpenBtn.addEventListener('click', () => drawerMenu.classList.remove('translate-x-full'));
+            const closeDrawer = () => drawerMenu.classList.add('translate-x-full');
+            drawerCloseBtn.addEventListener('click', closeDrawer);
+            drawerBackdrop.addEventListener('click', closeDrawer);
+            drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+            // Scroll to Top Toggle
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                } else {
+                    scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Init App Data
+            populateFiltersAndDropdowns();
+            renderContacts(contacts);
+        });
+    </script>
+    </body>
+</html>

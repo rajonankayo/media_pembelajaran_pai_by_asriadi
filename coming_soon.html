@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitur Baru Segera Hadir</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-custom': '#4f46e5',
+                        'primary-hover-custom': '#4338ca',
+                        'text-main-custom': '#d5ff18',
+                        'text-muted-custom': '#f6f7f8',
+                        'card-bg-custom': '#0804d4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-text-main-custom flex items-center justify-center min-h-screen p-5 font-sans">
+
+    <div class="max-w-[550px] w-full bg-teal-600 p-8 sm:p-10 rounded-2xl shadow-xl text-center animate-[fadeIn_0.6s_ease-out]">
+        <!-- Bagian Icon -->
+        <div class="w-20 h-20 bg-[#eeebff] rounded-full flex items-center justify-center mx-auto mb-6 text-primary-custom">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 21l8.982-8.982M18 13.653V7.622c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-7.82 0c-1.18.037-2.09 1.022-2.09 2.201v10.13c0 1.18.91 2.164 2.09 2.201a51.964 51.964 0 0 0 2.337.073M8.25 10.5h8.25M8.25 13.5h5.25" />
+            </svg>
+        </div>
+
+        <!-- Label Status -->
+        <span class="inline-block bg-[#e0e7ff] text-primary-custom text-xs font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">
+            Next Update
+        </span>
+
+        <!-- Teks Informasi -->
+        <h1 class="text-2xl sm:text-3xl font-bold mb-3 text-text-main-custom">
+            Fitur Keren Sedang Disiapkan!
+        </h1>
+        <p class="text-base text-text-muted-custom leading-relaxed mb-7">
+            Kami sedang bekerja keras untuk menghadirkan fitur ini pada pembaruan sistem selanjutnya demi memberikan pengalaman yang lebih baik untuk Anda. Pantau terus!
+        </p>
+    </div>
+
+</body>
+</html>

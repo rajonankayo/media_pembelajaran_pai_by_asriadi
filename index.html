@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Media Pembelajaran Interaktif PAI</title>
+    <link rel="icon" type="image/png" href="icon.png" />
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* CSS Tambahan khusus untuk penanganan transisi dinamis JS & CSS Reset khusus */
+        .submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-out;
+        }
+        
+        .arrow-icon {
+            transition: transform 0.25s ease;
+        }
+
+        .menu-item.open .arrow-icon {
+            transform: rotate(90deg);
+        }
+
+        /* Perilaku Sidebar Collapse di Layar Desktop (MD ke atas) */
+        @media (min-width: 768px) {
+            #sidebar {
+                transition: width 0.3s ease;
+            }
+            #sidebar.collapsed {
+                width: 0px !important;
+                border-right: none;
+            }
+            #sidebar.collapsed .judul_pc,
+            #sidebar.collapsed .menu-list {
+                opacity: 0;
+                pointer-events: none;
+            }
+            #desktop-sidebar-toggle {
+                transition: left 0.3s ease, background-color 0.2s;
+            }
+            #desktop-sidebar-toggle.nav-collapsed {
+                left: 10px !important;
+            }
+        }
+
+        /* Perilaku Sidebar Mobile */
+        @media (max-width: 767px) {
+            #sidebar {
+                transition: transform 0.3s ease;
+                transform: translateX(-100%);
+            }
+            #sidebar.mobile-open {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#f4f6f9] h-screen w-screen overflow-hidden flex flex-col md:flex-row font-sans">
+
+    <!-- Top Bar Khusus Mobile -->
+    <header class="mobile-header md:hidden bg-teal-600 text-[#f8fafc] px-5 py-[15px] flex items-center justify-between fixed top-0 left-0 right-0 z-[100] shadow-md h-[55px]">
+        <div class="flex items-center gap-[5px]">
+            <img src="icon.png" class="h-[40px] w-[40px] rounded-[10px]" alt="Logo">
+            <div>
+                <h2 class="text-[1rem] font-bold flex items-center gap-2">Media Pembelajaran Interaktif</h2>
+                <p class="mt-[2px] mb-0 text-[0.43rem] text-[#cbd5e1] flex whitespace-nowrap">
+                    Pendidikan Agama Islam dan Budi Pekerti || Dibuat oleh:<span class="font-bold text-[#facc15]"> Asriadi, S.Pd.I., Gr.</span>                     
+                </p>   
+            </div>
+        </div>
+        <button class="menu-toggle-btn text-[#cbd5e1] text-[1.3rem] p-1 hover:text-[#f8fafc] transition-colors" id="mobile-menu-toggle">
+            <!-- Berikan ID pada elemen ikon agar mudah diakses JavaScript -->
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </button>
+    </header>
+
+    <!-- JavaScript untuk Toggle Ikon -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-toggle');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            // Berganti class FontAwesome antara fa-bars dan fa-xmark
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-xmark');
+        });
+    </script>
+
+    <!-- Tombol Toggle Sidebar Khusus Desktop -->
+    <button class="desktop-toggle-btn hidden md:flex items-center justify-center w-[34px] h-[34px] bg-teal-600 text-[#cbd5e1] rounded-md cursor-pointer fixed top-[18px] left-[400px] z-[101] text-[0.95rem] shadow-md hover:bg-teal-600 hover:text-[#f8fafc] transition-all" id="desktop-sidebar-toggle" title="Sembunyikan/Tampilkan Menu">
+        <i class="fa-solid fa-angles-left" id="desktop-toggle-icon"></i>
+    </button>
+
+    <!-- Overlay untuk menutup menu saat klik di luar (Mobile) -->
+    <div class="sidebar-overlay hidden fixed inset-0 bg-black/40 z-[98]" id="sidebar-overlay"></div>
+
+    <!-- Navigasi Menu Samping (Sidebar) -->
+    <nav id="sidebar" class="w-[390px] bg-teal-600 text-[#cbd5e1] shrink-0 flex flex-col border-r border-[#1e293b] z-[99] h-full overflow-hidden fixed md:relative top-0 bottom-0 left-0 shadow-lg md:shadow-none">
+        
+        <!-- Header Sidebar Desktop -->
+        <div class="judul_pc hidden md:flex items-center gap-[12px] p-[5px]">
+            <img src="icon.png" class="h-[40px] w-[40px] rounded-[10px]" alt="Logo">
+            <div class="leading-tight text-left">
+                <span class="m-0 text-[1.3rem] font-bold text-[#f8fafc] block">
+                    Media Pembelajaran Interaktif
+                </span>
+                <p class="mt-[2px] mb-0 text-[0.55rem] text-[#cbd5e1]">
+                    Pendidikan Agama Islam dan Budi Pekerti || Dibuat oleh:<span class="font-bold text-[#facc15]"> Asriadi, S.Pd.I., Gr.</span>                       
+                </p>                
+            </div>
+        </div>
+
+        <hr class="border-[#f8fafc] my-2 hidden md:block">
+        <div class="hidden md:block h-12"></div>
+
+        <!-- List Menu -->
+        <ul class="menu-list list-none overflow-y-auto flex-1 min-w-[290px] opacity-100">
+            <li>
+                <a href="#" class="submenu-link active flex items-center p-3 text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 bg-teal-700 transition-all text-[17px] font-bold pl-[20px] py-[10px] [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="support_developer.html">
+                    <div class="pl-0">
+                        <i class="fa-solid fa-home main-icon text-[17px] mr-3 w-[20px] text-center"></i> Dashboard
+                    </div>
+                </a>
+            </li>
+
+            <li class="menu-item relative mb-0">
+                <button class="menu-btn w-full flex items-center px-6 py-3.5 text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 bg-teal-700 text-[0.95rem] text-left font-medium transition-all">
+                    <i class="fa-solid fa-book-open main-icon mr-3 text-[1.1rem] w-5 text-center"></i>
+                    Kelas 1
+                    <i class="fa-solid fa-chevron-right arrow-icon ml-auto text-[0.8rem]"></i>
+                </button>
+                <ul class="submenu list-none bg-teal-700">
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 01.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 02.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 03.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 04.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 05.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 06.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 07.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 08.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 09.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 10.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item relative mb-0">
+                <button class="menu-btn w-full flex items-center px-6 py-3.5 text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 bg-teal-700 text-[0.95rem] text-left font-medium transition-all">
+                    <i class="fa-solid fa-book-open main-icon mr-3 text-[1.1rem] w-5 text-center"></i>
+                    Kelas 2
+                    <i class="fa-solid fa-chevron-right arrow-icon ml-auto text-[0.8rem]"></i>
+                </button>
+                <ul class="submenu list-none bg-teal-700">
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 01.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 02.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 03.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 04.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 05.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 06.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 07.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 08.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 09.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 10.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item relative mb-0">
+                <button class="menu-btn w-full flex items-center px-6 py-3.5 text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 bg-teal-700 text-[0.95rem] text-left font-medium transition-all">
+                    <i class="fa-solid fa-book-open main-icon mr-3 text-[1.1rem] w-5 text-center"></i>
+                    Kelas 3
+                    <i class="fa-solid fa-chevron-right arrow-icon ml-auto text-[0.8rem]"></i>
+                </button>
+                <ul class="submenu list-none bg-teal-700">
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 01.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 02.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 03.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 04.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 05.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 06.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 07.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 08.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 09.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 10.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item relative mb-0">
+                <button class="menu-btn w-full flex items-center px-6 py-3.5 text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 bg-teal-700 text-[0.95rem] text-left font-medium transition-all">
+                    <i class="fa-solid fa-book-open main-icon mr-3 text-[1.1rem] w-5 text-center"></i>
+                    Kelas 4
+                    <i class="fa-solid fa-chevron-right arrow-icon ml-auto text-[0.8rem]"></i>
+                </button>
+                <ul class="submenu list-none bg-teal-700">
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 01.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 02.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 03.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 04.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 05.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 06.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 07.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 08.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 09.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 10.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item relative mb-0">
+                <button class="menu-btn w-full flex items-center px-6 py-3.5 text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 bg-teal-700 text-[0.95rem] text-left font-medium transition-all">
+                    <i class="fa-solid fa-book-open main-icon mr-3 text-[1.1rem] w-5 text-center"></i>
+                    Kelas 5
+                    <i class="fa-solid fa-chevron-right arrow-icon ml-auto text-[0.8rem]"></i>
+                </button>
+                <ul class="submenu list-none bg-teal-700">
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 01.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 02.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 03.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 04.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 05.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 06.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 07.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 08.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 09.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 10.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item relative mb-0">
+                <button class="menu-btn w-full flex items-center px-6 py-3.5 text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 bg-teal-700 text-[0.95rem] text-left font-medium transition-all">
+                    <i class="fa-solid fa-book-open main-icon mr-3 text-[1.1rem] w-5 text-center"></i>
+                    Kelas 6
+                    <i class="fa-solid fa-chevron-right arrow-icon ml-auto text-[0.8rem]"></i>
+                </button>
+                <ul class="submenu list-none bg-teal-700">
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 01.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="bab_02_pai_kelas_6_asmaul_husna_(al-waliy_al-hamid_al-‘adl_as-shabur).html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 02.</span> Asmaul Husna (al-Waliy, al-Hamid, al-‘Adl, as-Shabur)
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 03.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 04.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 05.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 06.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 07.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 08.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 09.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#f8fafc]" data-target="coming_soon.html">
+                            <div class="flex items-start">
+                                <span class="pr-[5px] whitespace-nowrap">BAB 10.</span> ...
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="menu-item relative mb-1">
+                <button class="menu-btn w-full flex items-center px-6 py-3.5 text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 bg-teal-700 text-[0.95rem] text-left font-medium transition-all">
+                    <i class="fa-solid fa-circle-user main-icon mr-3 text-[1.1rem] w-5 text-center"></i>
+                    Tentang Saya
+                    <i class="fa-solid fa-chevron-right arrow-icon ml-auto text-[0.8rem]"></i>
+                </button>
+                <ul class="submenu list-none bg-teal-700">
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#38bdf8]" data-target="my_profil.html">
+                            <i class="fa-solid fa-user mr-[10px] text-[0.85rem] w-4 text-center opacity-70"></i> Profil Saya
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-link flex items-center py-3 pr-6 pl-[44px] text-[#f8fafc] hover:text-[#f8fafc] hover:bg-teal-900 text-[0.9rem] transition-all border-l-3 border-transparent [&.active]:text-[#f8fafc] [&.active]:bg-teal-900 [&.active]:border-l-[3px] [&.active]:border-[#38bdf8]" data-target="contact_me.html">
+                            <i class="fa-solid fa-phone-alt mr-[10px] text-[0.85rem] w-4 text-center opacity-70"></i> Hubungi Saya
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama (Main Container) -->
+    <main class="flex-1 p-0 md:p-6 flex flex-col bg-[#f8fafc] h-[calc(100vh-55px)] md:h-screen min-w-0 mt-[55px] md:mt-0">
+        <div class="card bg-white rounded-none md:rounded-xl shadow-none md:shadow-md flex-1 flex overflow-hidden border-0 md:border md:border-[#e2e8f0] h-full w-full">
+            <iframe id="content-frame" class="w-full h-full border-none bg-transparent block" src=""></iframe>
+        </div>
+    </main>
+
+    <!-- JavaScript Tetap Mempertahankan Logika Asli -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuItems = document.querySelectorAll(".menu-item");
+            const submenuLinks = document.querySelectorAll(".submenu-link");
+            const contentFrame = document.getElementById("content-frame");
+            
+            const sidebar = document.getElementById("sidebar");
+            const menuToggleBtn = document.getElementById("mobile-menu-toggle");
+            const overlay = document.getElementById("sidebar-overlay");
+            const desktopToggleBtn = document.getElementById("desktop-sidebar-toggle");
+            const desktopToggleIcon = document.getElementById("desktop-toggle-icon");
+
+            function toggleSidebar() {
+                sidebar.classList.toggle("mobile-open");
+                overlay.classList.toggle("hidden");
+            }
+
+            menuToggleBtn.addEventListener("click", toggleSidebar);
+            overlay.addEventListener("click", toggleSidebar);
+
+            // Toggle sidebar khusus layar desktop
+            function toggleDesktopSidebar() {
+                const isCollapsed = sidebar.classList.toggle("collapsed");
+                desktopToggleBtn.classList.toggle("nav-collapsed", isCollapsed);
+                if (desktopToggleIcon) {
+                    desktopToggleIcon.className = isCollapsed
+                        ? "fa-solid fa-angles-right"
+                        : "fa-solid fa-angles-left";
+                }
+                try {
+                    localStorage.setItem("aps_sidebar_collapsed", isCollapsed ? "1" : "0");
+                } catch (e) {}
+            }
+
+            desktopToggleBtn.addEventListener("click", toggleDesktopSidebar);
+
+            // Memuat kembali status sidebar (terbuka/tersembunyi)
+            try {
+                if (localStorage.getItem("aps_sidebar_collapsed") === "1" && window.innerWidth >= 768) {
+                    sidebar.classList.add("collapsed");
+                    desktopToggleBtn.classList.add("nav-collapsed");
+                    if (desktopToggleIcon) desktopToggleIcon.className = "fa-solid fa-angles-right";
+                }
+            } catch (e) {}
+
+            // Buka/tutup submenu
+            menuItems.forEach(item => {
+                const btn = item.querySelector(".menu-btn");
+                const submenu = item.querySelector(".submenu");
+
+                btn.addEventListener("click", () => {
+                    const willOpen = !item.classList.contains("open");
+
+                    menuItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove("open");
+                            const otherSubmenu = otherItem.querySelector(".submenu");
+                            if(otherSubmenu) otherSubmenu.style.maxHeight = null;
+                        }
+                    });
+
+                    if (willOpen) {
+                        item.classList.add("open");
+                        submenu.style.maxHeight = submenu.scrollHeight + "px";
+                    } else {
+                        item.classList.remove("open");
+                        submenu.style.maxHeight = null;
+                    }
+                });
+            });
+
+            // Resizing window handler
+            window.addEventListener("resize", () => {
+                document.querySelectorAll(".menu-item.open").forEach(openItem => {
+                    const openSubmenu = openItem.querySelector(".submenu");
+                    if(openSubmenu) openSubmenu.style.maxHeight = openSubmenu.scrollHeight + "px";
+                });
+            });
+
+            // Injeksi CSS ke Iframe
+            contentFrame.addEventListener("load", () => {
+                try {
+                    const iframeDoc = contentFrame.contentDocument || contentFrame.contentWindow.document;
+                    
+                    const style = iframeDoc.createElement("style");
+                    style.innerHTML = `
+                        html, body { 
+                            margin: 0 !important; 
+                            padding: 10px !important;
+                            width: 100% !important;
+                            box-sizing: border-box !important;
+                        }
+                        .container, .wrapper, .card, [class*="container"] { 
+                            width: 100% !important; 
+                            max-width: 100% !important; 
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            box-sizing: border-box !important;
+                        }
+                    `;
+                    iframeDoc.head.appendChild(style);
+                } catch (e) {
+                    console.warn("Gagal menyuntikkan CSS ke iframe (Abaikan jika file eksternal/beda domain):", e);
+                }
+            });
+
+            submenuLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    submenuLinks.forEach(l => l.classList.remove("active"));
+                    link.classList.add("active");
+
+                    const targetPage = link.getAttribute("data-target");
+                    if (targetPage) {
+                        contentFrame.src = targetPage;
+                    }
+
+                    if (sidebar.classList.contains("mobile-open")) {
+                        toggleSidebar();
+                    }
+                });
+            });
+
+            const defaultActiveLink = document.querySelector(".submenu-link.active");
+            if (defaultActiveLink) {
+                contentFrame.src = defaultActiveLink.getAttribute("data-target");
+            }
+        });
+    </script>
+</body>
+</html>

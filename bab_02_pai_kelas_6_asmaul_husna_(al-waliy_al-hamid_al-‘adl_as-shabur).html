@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmaul Husna (al-Waliy, al-Hamid, al-‘Adl, as-Shabur)</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <!-- Header Tambahan / Top Bar -->
+    <div class="bg-teal-850 text-teal-100 py-2 px-4 text-xs md:text-sm border-b border-white/10 hidden">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap justify-center sm:justify-start gap-3 md:gap-5">
+                <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-mosque text-teal-300"></i> Media Pembelajaran Interaktif</span>
+                <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-graduation-cap text-teal-300"></i> PAI & Budi Pekerti</span>
+            </div>
+            <div class="flex items-center gap-1.5 text-center sm:text-right">
+                <span><i class="fa-solid fa-star text-teal-300"></i> Dibuat Oleh:</span>
+                <span class="text-yellow-300 font-extrabold">Asriadi, S.Pd.I., Gr.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-kaaba"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 02. Asmaul Husna (al-Waliy, al-Hamid, al-‘Adl, as-Shabur)</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase C - Kelas 6 SD <span class="text-yellow-300">(Sesuai Analisis CP & TP Terbaru No. 20 Thn 2026 KKG PAI Kota Padang)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('al-waliyy', this)">
+                    <i class="fa-solid fa-shield-halved"></i> Al-Waliyy
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('al-hamid', this)">
+                    <i class="fa-solid fa-hand-holding-heart"></i> Al-Hamid
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('al-adl', this)">
+                    <i class="fa-solid fa-scale-balanced"></i> Al-'Adl
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('as-shabur', this)">
+                    <i class="fa-solid fa-hourglass-half"></i> As-Shabur
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-brain"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Meneladani Asmaul Husna</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">Asmaul Husna adalah nama-nama Allah Swt. yang indah dan menunjukkan sifat-sifat kesempurnaan-Nya. Mari kita kenal Allah lebih dekat dan teladani maknanya dalam kehidupan sehari-hari.</p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Materi Asmaul Husna
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-green-200 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('al-waliyy')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْوَلِيُّ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Al-Waliyy</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Maha Melindungi & Menolong</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Allah Swt. selalu melindungi dan menolong hamba-Nya. Pertolongan sejati berasal dari Allah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-green-200 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('al-hamid')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْحَمِيدُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Al-Hamid</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Maha Terpuji</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Allah memiliki semua sifat sempurna. Segala nikmat berasal dari-Nya sehingga wajib dipuji.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-green-200 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('al-adl')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْعَدْلُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Al-'Adl</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Maha Adil</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Allah berlaku adil, tidak pernah berbuat zalim, dan memberi balasan sesuai perbuatan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-green-200 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('as-shabur')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الصَّبُورُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">As-Shabur</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Maha Sabar</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Allah tidak tergesa-gesa memberi balasan, memberikan kesempatan untuk memperbaiki diri.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion Block -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb"></i> Kesimpulan Pembelajaran
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700">Mempelajari Asmaul Husna bukan hanya untuk menghafal nama dan artinya. Kita juga harus membiasakan perilaku yang sesuai dengan maknanya dalam kehidupan sehari-hari.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="text-teal-600 font-bold text-sm mb-1">Al-Waliyy</h4>
+                        <p class="text-xs text-slate-500">Mengajarkan kita untuk suka menolong dan melindungi sesama.</p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="text-teal-600 font-bold text-sm mb-1">Al-Hamid</h4>
+                        <p class="text-xs text-slate-500">Mengajarkan kita untuk senantiasa bersyukur dan berbuat terpuji.</p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="text-teal-600 font-bold text-sm mb-1">Al-'Adl</h4>
+                        <p class="text-xs text-slate-500">Mengajarkan kita untuk berlaku adil dan tidak membeda-bedakan.</p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="text-teal-600 font-bold text-sm mb-1">As-Shabur</h4>
+                        <p class="text-xs text-slate-500">Mengajarkan kita untuk sabar, gigih, dan tidak mudah menyerah.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: AL-WALIYY -->
+        <div id="tab-al-waliyy" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-6 drop-shadow-sm">الْوَلِيُّ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">1. Al-Waliyy</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Allah Maha Melindungi dan Maha Menolong</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-bookmark"></i> Makna Al-Waliyy
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700">
+                            <strong>Al-Waliyy</strong> berarti Allah Swt. Maha Melindungi dan Maha Menolong. Allah Swt. selalu melindungi dan menolong hamba-Nya yang beriman. Sebagai seorang Muslim, kita harus menyadari bahwa pertolongan dan perlindungan yang sebenarnya berasal dari Allah Swt.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-heart-circle-check"></i> Sikap Keteladanan
+                        </h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Memohon perlindungan hanya kepada Allah Swt.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Bersyukur atas pertolongan yang diberikan Allah Swt.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Menolong dan melindungi orang lain dari hal-hal yang buruk.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Menjaga teman dan keluarga dengan penuh kasih sayang.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm md:col-span-2">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak menyakiti, mengganggu, atau membahayakan orang lain.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-hands-holding-child"></i> Contoh Penerapan dalam Kehidupan:
+                        </h4>
+                        <p class="text-amber-900 text-xs md:text-sm">Ketika teman mengalami kesulitan saat membawa barang atau mengalami musibah, kita dengan sigap membantu mereka sesuai dengan kemampuan yang kita miliki.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: AL-HAMID -->
+        <div id="tab-al-hamid" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-6 drop-shadow-sm">الْحَمِيدُ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">2. Al-Hamid</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Allah Maha Terpuji</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-bookmark"></i> Makna Al-Hamid
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700">
+                            <strong>Al-Hamid</strong> berarti Allah Swt. Maha Terpuji. Allah memiliki semua sifat yang sempurna sehingga Allah wajib dipuji dan disyukuri. Segala nikmat, kesehatan, dan kebaikan yang kita terima dalam hidup ini seluruhnya berasal dari Allah Swt.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-heart-circle-check"></i> Sikap Keteladanan
+                        </h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Selalu bersyukur kepada Allah Swt. atas segala nikmat.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Membiasakan mengucapkan <i>Alhamdulillah</i> dalam setiap situasi.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Berkata baik, santun, dan sopan kepada siapa saja.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Melakukan perbuatan-perbuatan terpuji dan bermanfaat.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm md:col-span-2">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak suka mencela, meremehkan, atau menghina orang lain.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-award"></i> Contoh Penerapan dalam Kehidupan:
+                        </h4>
+                        <p class="text-amber-900 text-xs md:text-sm">Setelah mendapatkan nilai yang baik atau prestasi di sekolah, kita mengawalinya dengan mengucapkan <i>Alhamdulillah</i> dan tetap rendah hati tanpa menyombongkan diri.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: AL-ADL -->
+        <div id="tab-al-adl" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-6 drop-shadow-sm">الْعَدْلُ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">3. Al-'Adl</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Allah Maha Adil</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-bookmark"></i> Makna Al-'Adl
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700">
+                            <strong>Al-'Adl</strong> berarti Allah Swt. Maha Adil. Allah Swt. selalu berlaku adil dan tidak pernah berbuat zalim sekecil apa pun. Allah memberikan balasan yang sangat tepat dan setimpal sesuai dengan apa yang diperbuat oleh manusia.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-heart-circle-check"></i> Sikap Keteladanan
+                        </h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Bersikap adil kepada semua orang dalam tindakan sehari-hari.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak membeda-bedakan teman berdasarkan status atau penampilan.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak mengambil atau merampas hak milik orang lain.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Mau berbagi rezeki atau makanan dengan jujur dan adil.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm md:col-span-2">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Berani berkata benar dan tidak memihak hanya karena teman dekat.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-users-rectangle"></i> Contoh Penerapan dalam Kehidupan:
+                        </h4>
+                        <p class="text-amber-900 text-xs md:text-sm">Saat bermain bersama teman-teman, kita selalu mematuhi aturan permainan dan memberikan kesempatan yang sama kepada semua teman tanpa pilih kasih.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: AS-SHABUR -->
+        <div id="tab-as-shabur" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-6 drop-shadow-sm">الصَّبُورُ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">4. As-Shabur</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Allah Maha Sabar</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-bookmark"></i> Makna As-Shabur
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700">
+                            <strong>As-Shabur</strong> berarti Allah Swt. Maha Sabar. Allah Swt. tidak tergesa-gesa dalam memberikan balasan atau siksaan kepada manusia. Allah senantiasa memberikan kesempatan kepada manusia untuk bertobat, memperbaiki kesalahan, dan kembali ke jalan yang benar.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-heart-circle-check"></i> Sikap Keteladanan
+                        </h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Sabar ketika menghadapi ujian atau kesulitan hidup.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Dapat menahan emosi dan tidak mudah marah.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tekun dan sabar dalam proses belajar meraih cita-cita.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak mudah menyerah dan putus asa saat menemui kegagalan.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Bersabar ketika harus antre atau menunggu giliran.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tetap berbuat baik meskipun orang lain memberikan tanggapan kurang menyenangkan.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap"></i> Contoh Penerapan dalam Kehidupan:
+                        </h4>
+                        <p class="text-amber-900 text-xs md:text-sm">Ketika belum memahami materi pelajaran di sekolah, kita tidak langsung menyerah atau kesal. Kita terus belajar dengan gigih dan tidak malu bertanya kepada guru.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-table"></i> Ringkasan Materi Asmaul Husna
+            </h2>
+            <p class="text-xs md:text-sm text-slate-500 mb-4">Tabel rangkuman makna dan bentuk keteladanan dari 4 Asmaul Husna yang telah dipelajari:</p>
+
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-x-auto">
+                <table class="w-full min-w-[600px] text-left border-collapse">
+                    <thead>
+                        <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                            <th class="p-3 md:p-4 w-12 text-center">No</th>
+                            <th class="p-3 md:p-4 w-32">Asmaul Husna</th>
+                            <th class="p-3 md:p-4 w-28 text-center">Lafal Arab</th>
+                            <th class="p-3 md:p-4 w-44">Artinya</th>
+                            <th class="p-3 md:p-4">Sikap yang Diteladani</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-700">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 md:p-4 text-center font-bold">1</td>
+                            <td class="p-3 md:p-4 font-bold">Al-Waliyy</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl text-center text-teal-800">الْوَلِيُّ</td>
+                            <td class="p-3 md:p-4">Maha Melindungi / Menolong</td>
+                            <td class="p-3 md:p-4">Suka menolong dan melindungi orang lain dari keburukan.</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <td class="p-3 md:p-4 text-center font-bold">2</td>
+                            <td class="p-3 md:p-4 font-bold">Al-Hamid</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl text-center text-teal-800">الْحَمِيدُ</td>
+                            <td class="p-3 md:p-4">Maha Terpuji</td>
+                            <td class="p-3 md:p-4">Selalu bersyukur, mengucapkan Alhamdulillah, dan berbuat terpuji.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 md:p-4 text-center font-bold">3</td>
+                            <td class="p-3 md:p-4 font-bold">Al-'Adl</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl text-center text-teal-800">الْعَدْلُ</td>
+                            <td class="p-3 md:p-4">Maha Adil</td>
+                            <td class="p-3 md:p-4">Bersikap adil kepada semua orang, tidak membeda-bedakan, dan tidak zalim.</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <td class="p-3 md:p-4 text-center font-bold">4</td>
+                            <td class="p-3 md:p-4 font-bold">As-Shabur</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl text-center text-teal-800">الصَّبُورُ</td>
+                            <td class="p-3 md:p-4">Maha Sabar</td>
+                            <td class="p-3 md:p-4">Sabar menghadapi kesulitan, tidak mudah marah, dan tidak mudah menyerah.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-quote-left"></i> Pesan Utama
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">Dengan meneladani Asmaul Husna (Al-Waliyy, Al-Hamid, Al-'Adl, As-Shabur), kita dapat tumbuh menjadi anak yang beriman, bersyukur, adil, suka menolong, sabar, dan memiliki akhlak mulia dalam kehidupan bermasyarakat.</p>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-feather-pointed"></i> Kuis Asmaul Husna
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Aplikasi Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions
+        const quizData = [
+            {
+                question: "1. Arti dari Asmaul Husna Al-Waliyy (الْوَلِيُّ) adalah...",
+                options: [
+                    "A. Allah Maha Terpuji",
+                    "B. Allah Maha Melindungi dan Maha Menolong",
+                    "C. Allah Maha Adil",
+                    "D. Allah Maha Sabar"
+                ],
+                correct: 1,
+                explanation: "Al-Waliyy berarti Allah Swt. Maha Melindungi dan Maha Menolong."
+            },
+            {
+                question: "2. Ketika teman mengalami kesulitan dan kita membantunya sesuai kemampuan, hal ini merupakan bentuk meneladani sifat...",
+                options: [
+                    "A. As-Shabur",
+                    "B. Al-Hamid",
+                    "C. Al-Waliyy",
+                    "D. Al-'Adl"
+                ],
+                correct: 2,
+                explanation: "Menolong dan menjaga orang lain merupakan contoh keteladanan dari sifat Al-Waliyy."
+            },
+            {
+                question: "3. Mengucapkan 'Alhamdulillah' setelah mendapatkan nilai yang baik merupakan cerminan dari meneladani Asmaul Husna...",
+                options: [
+                    "A. Al-Hamid",
+                    "B. Al-'Adl",
+                    "C. As-Shabur",
+                    "D. Al-Waliyy"
+                ],
+                correct: 0,
+                explanation: "Al-Hamid artinya Maha Terpuji, di mana kita membiasakan bersyukur dan mengagungkan Allah."
+            },
+            {
+                question: "4. Asmaul Husna yang mengajarkan kita untuk tidak membeda-bedakan teman dan bersikap tidak zalim adalah...",
+                options: [
+                    "A. Al-Waliyy",
+                    "B. As-Shabur",
+                    "C. Al-'Adl",
+                    "D. Al-Hamid"
+                ],
+                correct: 2,
+                explanation: "Al-'Adl berarti Allah Maha Adil, mengajarkan kita berlaku adil kepada siapa saja."
+            },
+            {
+                question: "5. Mengapa Allah Swt. memiliki nama As-Shabur (الصَّبُورُ)?",
+                options: [
+                    "A. Karena Allah selalu memberi pertolongan kepada hamba-Nya",
+                    "B. Karena Allah tidak tergesa-gesa memberi balasan dan memberi kesempatan manusia bertobat",
+                    "C. Karena Allah menciptakan seluruh alam semesta secara adil",
+                    "D. Karena Allah memiliki seluruh keagungan dan terpuji"
+                ],
+                correct: 1,
+                explanation: "As-Shabur berarti Allah tidak tergesa-gesa memberikan balasan dan memberikan waktu bagi hamba-Nya untuk memperbaiki diri."
+            },
+            {
+                question: "6. Di bawah ini yang BUKAN merupakan contoh sikap meneladani Al-Hamid adalah...",
+                options: [
+                    "A. Berkata baik dan sopan",
+                    "B. Selalu bersyukur kepada Allah Swt.",
+                    "C. Suka mencela atau menghina teman",
+                    "D. Melakukan perbuatan yang terpuji"
+                ],
+                correct: 2,
+                explanation: "Mencela atau menghina orang lain adalah perbuatan yang bertentangan dengan sifat Al-Hamid."
+            },
+            {
+                question: "7. Saat belum memahami pelajaran di sekolah, sikap yang sesuai dengan Asmaul Husna As-Shabur adalah...",
+                options: [
+                    "A. Langsung menyerah dan tidak mau belajar lagi",
+                    "B. Marah kepada guru karena pelajaran sulit",
+                    "C. Tetap tenang, tidak menyerah, dan terus belajar serta bertanya",
+                    "D. Menyalahkan teman yang lebih pintar"
+                ],
+                correct: 2,
+                explanation: "As-Shabur mengajarkan kita untuk sabar dalam belajar dan tidak mudah menyerah."
+            },
+            {
+                question: "8. Ketika sedang bermain bersama, kita memberikan kesempatan yang sama kepada semua teman tanpa memihak. Ini adalah cerminan dari...",
+                options: [
+                    "A. Al-'Adl",
+                    "B. Al-Waliyy",
+                    "C. Al-Hamid",
+                    "D. As-Shabur"
+                ],
+                correct: 0,
+                explanation: "Mengikuti aturan main dan memberi kesempatan secara rata adalah wujud dari sikap adil (Al-'Adl)."
+            },
+            {
+                question: "9. Pertolongan dan perlindungan yang sebenarnya bagi setiap hamba berasal dari...",
+                options: [
+                    "A. Kekuatan manusia sendiri",
+                    "B. Teman dekat",
+                    "C. Allah Swt.",
+                    "D. Harta benda"
+                ],
+                correct: 2,
+                explanation: "Sesuai makna Al-Waliyy, pertolongan dan perlindungan yang sejati hanya berasal dari Allah Swt."
+            },
+            {
+                question: "10. Tujuan utama kita mempelajari Asmaul Husna adalah...",
+                options: [
+                    "A. Hanya untuk mendapatkan nilai bagus di sekolah",
+                    "B. Agar dipuji oleh orang tua dan teman",
+                    "C. Mengenal Allah lebih dekat serta meneladani maknanya dalam kehidupan sehari-hari",
+                    "D. Sekadar menghafal nama-namanya tanpa mengamalkan"
+                ],
+                correct: 2,
+                explanation: "Mempelajari Asmaul Husna bertujuan agar kita mengenal Allah Swt. dan membiasakan perilaku mulia sesuai maknanya."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kiri
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = (score / quizData.length) * 100;
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>
