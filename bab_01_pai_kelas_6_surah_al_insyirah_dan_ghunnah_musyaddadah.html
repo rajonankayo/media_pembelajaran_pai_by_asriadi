@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghunnah Musyaddadah dan Surah Al-Insyirah - PAI Kelas 6 SD</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['Amiri', 'LPMQ IsepMisbah', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">Ghunnah Musyaddadah & Surah Al-Insyirah</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Ringkasan Materi PAI & Budi Pekerti - Kelas 6 SD</p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ghunnah', this)">
+                    <i class="fa-solid fa-lips"></i> Ghunnah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('membaca', this)">
+                    <i class="fa-solid fa-book-open-reader"></i> Membaca
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('menulis', this)">
+                    <i class="fa-solid fa-pen-nib"></i> Menulis
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pesan', this)">
+                    <i class="fa-solid fa-heart-pulse"></i> Makna & Pesan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-brain"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📖 Ringkasan Materi PAI Kelas 6 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">Mari pelajari hukum tajwid Ghunnah Musyaddadah dan mendalami bacaan, tulisan, makna, serta pesan pokok dari Surah Al-Insyirah!</p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-bookmark"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('ghunnah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">نّ / مّ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Ghunnah Musyaddadah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Dengung 2 Harakat</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Hukum membaca nun atau mim bertasydid dengan suara dengung dari rongga hidung selama 2 harakat.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('membaca')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الشرح</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Membaca Surah Al-Insyirah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">8 Ayat Makkiyah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Membaca Surah Al-Insyirah dengan memperhatikan makhraj, harakat, dan hukum tajwid Ghunnah Musyaddadah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('menulis')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْكِتَابَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Menulis Surah Al-Insyirah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Ketepatan & Kerapian</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Aturan menulis huruf hijaiyah bersambung, posisi titik, dan harakat dalam Surah Al-Insyirah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pesan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْمَعْنَى</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Makna & Pesan Pokok</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Kemudahan Bersama Kesulitan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami pesan pantang menyerah, bersabar, berusaha sungguh-sungguh, berdoa, dan berserah diri.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion Block -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb"></i> Kesimpulan Pembelajaran
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Ghunnah Musyaddadah adalah bacaan dengung pada huruf <strong>نّ</strong> dan <strong>مّ</strong> selama 2 harakat. Surah Al-Insyirah terdiri dari 8 ayat dan mengajarkan bahwa di balik setiap kesulitan terdapat kemudahan. Kita hendaknya selalu bersabar, tidak mudah menyerah, berusaha dengan sungguh-sungguh, serta bertawakal kepada Allah Swt.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: GHUNNAH MUSYADDADAH -->
+        <div id="tab-ghunnah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-4 drop-shadow-sm">غُنَّة مُشَدَّدَة</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">1. Hukum Tajwid Ghunnah Musyaddadah</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Dengung pada Nun Bertasydid (نّ) dan Mim Bertasydid (مّ)</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-open"></i> Pengertian
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700 mb-3">
+                            <strong>Ghunnah</strong> berarti membaca dengan suara dengung yang keluar dari rongga hidung.<br>
+                            <strong>Musyaddadah</strong> berarti huruf yang diberi tanda tasydid (ّ).
+                        </p>
+                        <div class="bg-teal-50 border border-teal-200 p-4 rounded-xl text-xs md:text-sm text-teal-900 font-semibold">
+                            Jadi, <strong>Ghunnah Musyaddadah</strong> adalah bacaan dengung pada huruf <strong>نّ</strong> (nun bertasydid) dan <strong>مّ</strong> (mim bertasydid). Cara membacanya dibaca dengung dari hidung sepanjang <strong>2 harakat</strong>.
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-list-check"></i> Contoh Bacaan Ghunnah Musyaddadah
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                            <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex justify-between items-center">
+                                <span class="text-xs md:text-sm text-slate-600">Terdapat <strong>نّ</strong></span>
+                                <span class="font-arabic text-2xl font-bold text-teal-800">إِنَّ</span>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex justify-between items-center">
+                                <span class="text-xs md:text-sm text-slate-600">Terdapat <strong>نّ</strong></span>
+                                <span class="font-arabic text-2xl font-bold text-teal-800">أَنَّ</span>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex justify-between items-center">
+                                <span class="text-xs md:text-sm text-slate-600">Terdapat <strong>مّ</strong></span>
+                                <span class="font-arabic text-2xl font-bold text-teal-800">ثُمَّ</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 space-y-2">
+                            <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex justify-between items-center">
+                                <span class="text-xs md:text-sm text-slate-600">Contoh Kalimat 1:</span>
+                                <span class="font-arabic text-xl font-bold text-teal-800">إِنَّ مَعَ الْعُسْرِ يُسْرًا</span>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex justify-between items-center">
+                                <span class="text-xs md:text-sm text-slate-600">Contoh Kalimat 2:</span>
+                                <span class="font-arabic text-xl font-bold text-teal-800">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb"></i> Cara Membaca & Catatan Penting:
+                        </h4>
+                        <p class="text-amber-900 text-xs md:text-sm">Huruf <strong>نّ</strong> atau <strong>مّ</strong> dibaca dengan menahan suara dengung dari hidung selama 2 harakat. Ingat: Jika menemukan huruf nun atau mim bertasydid, selalu tahan dan dengungkan 2 harakat!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MEMBACA SURAH AL-INSYIRAH -->
+        <div id="tab-membaca" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-4 drop-shadow-sm">سُؤْرَةُ الشَّرْحِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">2. Membaca Surah Al-Insyirah</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Surah ke-94 • 8 Ayat • Golongan Makkiyah</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Surah <strong>Al-Insyirah</strong> berarti <i>kelapangan</i> atau <i>melapangkan dada</i>. Ketika membaca surah ini, perhatikan makhraj huruf, harakat, panjang pendek bacaan, serta hukum tajwidnya.
+                    </p>
+
+                    <!-- Teks Surah Al-Insyirah -->
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center space-y-6">
+                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+                        </div>
+                        <div class="divide-y divide-slate-200">
+                            <div class="py-3 font-arabic text-2xl md:text-3xl text-slate-800 leading-loose flex justify-between items-center flex-row-reverse">
+                                <span>أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ ۝١</span>
+                            </div>
+                            <div class="py-3 font-arabic text-2xl md:text-3xl text-slate-800 leading-loose flex justify-between items-center flex-row-reverse">
+                                <span>وَوَضَعْنَا عَنكَ وِزْرَكَ ۝٢</span>
+                            </div>
+                            <div class="py-3 font-arabic text-2xl md:text-3xl text-slate-800 leading-loose flex justify-between items-center flex-row-reverse">
+                                <span>الَّذِي أَنقَضَ ظَهْرَكَ ۝٣</span>
+                            </div>
+                            <div class="py-3 font-arabic text-2xl md:text-3xl text-slate-800 leading-loose flex justify-between items-center flex-row-reverse">
+                                <span>وَرَفَعْنَا لَكَ ذِكْرَكَ ۝٤</span>
+                            </div>
+                            <div class="py-3 font-arabic text-2xl md:text-3xl text-teal-800 font-bold bg-amber-50 rounded-xl px-3 leading-loose flex justify-between items-center flex-row-reverse">
+                                <span>فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝٥</span>
+                                <span class="text-xs font-sans text-amber-700 font-normal">Ghunnah Musyaddadah (فَإِنَّ)</span>
+                            </div>
+                            <div class="py-3 font-arabic text-2xl md:text-3xl text-teal-800 font-bold bg-amber-50 rounded-xl px-3 leading-loose flex justify-between items-center flex-row-reverse">
+                                <span>إِنَّ مَعَ الْعُسْرِ يُسْرًا ۝٦</span>
+                                <span class="text-xs font-sans text-amber-700 font-normal">Ghunnah Musyaddadah (إِنَّ)</span>
+                            </div>
+                            <div class="py-3 font-arabic text-2xl md:text-3xl text-slate-800 leading-loose flex justify-between items-center flex-row-reverse">
+                                <span>فَإِذَا فَرَغْتَ فَانصَبْ ۝٧</span>
+                            </div>
+                            <div class="py-3 font-arabic text-2xl md:text-3xl text-slate-800 leading-loose flex justify-between items-center flex-row-reverse">
+                                <span>وَإِلَىٰ رَبِّكَ فَارْغَب ۝٨</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-teal-50 border-l-4 border-teal-600 p-4 rounded-r-xl">
+                        <h4 class="text-teal-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass"></i> Perhatikan Ghunnah Musyaddadah dalam Al-Insyirah:
+                        </h4>
+                        <p class="text-teal-900 text-xs md:text-sm">
+                            Dalam Surah Al-Insyirah terdapat bacaan Ghunnah Musyaddadah pada kata <span class="font-arabic font-bold text-base">فَإِنَّ</span> (Ayat 5) dan <span class="font-arabic font-bold text-base">إِنَّ</span> (Ayat 6). Pada kata tersebut terdapat huruf <strong>نّ</strong> sehingga wajib dibaca dengung selama 2 harakat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MENULIS SURAH AL-INSYIRAH -->
+        <div id="tab-menulis" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-4 drop-shadow-sm">كِتَابَةُ السُّؤْرَةِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">3. Menulis Surah Al-Insyirah</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Panduan Menulis Hijaiyah dengan Rapi & Tepat</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-pen-ruler"></i> Hal yang Harus Diperhatikan dalam Menulis
+                        </h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-3 text-xs md:text-sm">
+                                <i class="fa-solid fa-check text-teal-600 text-base"></i>
+                                <span>Bentuk huruf hijaiyah.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-3 text-xs md:text-sm">
+                                <i class="fa-solid fa-check text-teal-600 text-base"></i>
+                                <span>Huruf yang dapat bersambung.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-3 text-xs md:text-sm">
+                                <i class="fa-solid fa-check text-teal-600 text-base"></i>
+                                <span>Posisi dan jumlah titik huruf.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-3 text-xs md:text-sm">
+                                <i class="fa-solid fa-check text-teal-600 text-base"></i>
+                                <span>Harakat setiap huruf.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-3 text-xs md:text-sm">
+                                <i class="fa-solid fa-check text-teal-600 text-base"></i>
+                                <span>Tanda waqaf jika ada.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-3 text-xs md:text-sm">
+                                <i class="fa-solid fa-check text-teal-600 text-base"></i>
+                                <span>Kerapian dan ketepatan tulisan.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl">
+                        <h4 class="font-bold text-amber-800 text-xs md:text-sm mb-2">Contoh Penulisan Ghunnah Musyaddadah:</h4>
+                        <p class="font-arabic text-2xl text-amber-900 text-center py-2">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا</p>
+                        <p class="text-xs md:text-sm text-amber-800 text-center">Saat menulis, perhatikan huruf <strong>نّ</strong> pada kata <strong>إِنَّ</strong> dan <strong>فَإِنَّ</strong>.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-dumbbell"></i> Langkah Latihan Menulis Siswa
+                        </h3>
+                        <ol class="space-y-2 list-decimal list-inside text-xs md:text-sm text-slate-700">
+                            <li class="p-2 bg-slate-50 rounded-lg">Menyalin satu ayat Al-Qur'an secara cermat.</li>
+                            <li class="p-2 bg-slate-50 rounded-lg">Memeriksa kembali bentuk huruf dan kelengkapan harakat.</li>
+                            <li class="p-2 bg-slate-50 rounded-lg">Mencoba menulis mandiri tanpa melihat contoh.</li>
+                            <li class="p-2 bg-slate-50 rounded-lg">Membandingkan hasil tulisan dengan teks mushaf Al-Qur'an.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MAKNA DAN PESAN POKOK -->
+        <div id="tab-pesan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-4 drop-shadow-sm">مَعْنَى وَهِدَايَةُ السُّؤْرَةِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">4 & 5. Makna & Pesan Pokok Surah Al-Insyirah</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Pengajaran Nilai-Nilai Kehidupan</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <!-- Makna -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-open"></i> Makna Surah Al-Insyirah
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700 mb-3">
+                            Surah Al-Insyirah menjelaskan tentang nikmat, pertolongan, dan kemudahan yang Allah Swt. berikan kepada Nabi Muhammad saw. Allah Swt. menegaskan bahwa <strong>setelah mengalami kesulitan, akan datang kemudahan.</strong>
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                                <p class="font-arabic text-xl text-teal-800 font-bold mb-1">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا</p>
+                                <p class="text-xs text-slate-600 italic">"Karena sesungguhnya bersama kesulitan ada kemudahan."</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                                <p class="font-arabic text-xl text-teal-800 font-bold mb-1">إِنَّ مَعَ الْعُسْرِ يُسْرًا</p>
+                                <p class="text-xs text-slate-600 italic">"Sesungguhnya bersama kesulitan ada kemudahan."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pesan Pokok -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-star"></i> 5 Pesan Pokok Surah Al-Insyirah
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-start gap-3">
+                                <span class="text-xl">🌟</span>
+                                <div>
+                                    <h4 class="font-bold text-xs md:text-sm text-emerald-900">A. Tidak Boleh Berputus Asa</h4>
+                                    <p class="text-xs text-emerald-800 mt-1">Ketika menghadapi kesulitan, kita harus yakin bahwa Allah Swt. akan memberikan kemudahan.</p>
+                                </div>
+                            </div>
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-start gap-3">
+                                <span class="text-xl">🌟</span>
+                                <div>
+                                    <h4 class="font-bold text-xs md:text-sm text-emerald-900">B. Harus Bersabar</h4>
+                                    <p class="text-xs text-emerald-800 mt-1">Kesulitan dan tantangan hidup harus dihadapi dengan kesabaran dan keteguhan hati.</p>
+                                </div>
+                            </div>
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-start gap-3">
+                                <span class="text-xl">🌟</span>
+                                <div>
+                                    <h4 class="font-bold text-xs md:text-sm text-emerald-900">C. Berusaha dengan Sungguh-sungguh</h4>
+                                    <p class="text-xs text-emerald-800 mt-1">Setelah menyelesaikan suatu pekerjaan, teruslah berusaha dan melakukan pekerjaan lain yang bermanfaat.</p>
+                                </div>
+                            </div>
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-start gap-3">
+                                <span class="text-xl">🌟</span>
+                                <div>
+                                    <h4 class="font-bold text-xs md:text-sm text-emerald-900">D. Selalu Berdoa kepada Allah</h4>
+                                    <p class="text-xs text-emerald-800 mt-1">Dalam setiap keadaan, senantiasa memohon pertolongan dan perlindungan kepada Allah Swt.</p>
+                                </div>
+                            </div>
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-start gap-3 md:col-span-2">
+                                <span class="text-xl">🌟</span>
+                                <div>
+                                    <h4 class="font-bold text-xs md:text-sm text-emerald-900">E. Berserah Diri (Tawakal)</h4>
+                                    <p class="text-xs text-emerald-800 mt-1">Menjadikan Allah Swt. sebagai satu-satunya tempat berharap dan menggantungkan cita-cita.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-table"></i> Rangkuman Materi Pembelajaran
+            </h2>
+            <p class="text-xs md:text-sm text-slate-500 mb-4">Matriks ikhtisar hukum tajwid dan pemahaman Surah Al-Insyirah:</p>
+
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-x-auto mb-6">
+                <table class="w-full min-w-[600px] text-left border-collapse">
+                    <thead>
+                        <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                            <th class="p-3 md:p-4 w-12 text-center">No</th>
+                            <th class="p-3 md:p-4 w-44">Topik</th>
+                            <th class="p-3 md:p-4 w-36 text-center">Ketentuan / Arab</th>
+                            <th class="p-3 md:p-4">Keterangan Ringkas</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-700">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 md:p-4 text-center font-bold">1</td>
+                            <td class="p-3 md:p-4 font-bold">Ghunnah Musyaddadah</td>
+                            <td class="p-3 md:p-4 text-center font-arabic text-xl font-bold text-teal-800">نّ / مّ</td>
+                            <td class="p-3 md:p-4">Membaca dengung dari rongga hidung selama <strong>2 harakat</strong>.</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <td class="p-3 md:p-4 text-center font-bold">2</td>
+                            <td class="p-3 md:p-4 font-bold">Surah Al-Insyirah</td>
+                            <td class="p-3 md:p-4 text-center font-arabic text-xl font-bold text-teal-800">الشَّرْحِ</td>
+                            <td class="p-3 md:p-4">Surah ke-94, terdiri dari <strong>8 ayat</strong>, tergolong surah <strong>Makkiyah</strong>. Berarti kelapangan dada.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 md:p-4 text-center font-bold">3</td>
+                            <td class="p-3 md:p-4 font-bold">Ghunnah di Al-Insyirah</td>
+                            <td class="p-3 md:p-4 text-center font-arabic text-xl font-bold text-teal-800">فَإِنَّ / إِنَّ</td>
+                            <td class="p-3 md:p-4">Terdapat pada ayat 5 dan ayat 6 pada huruf nun bertasydid (نّ).</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <td class="p-3 md:p-4 text-center font-bold">4</td>
+                            <td class="p-3 md:p-4 font-bold">Pesan Pokok Utamanya</td>
+                            <td class="p-3 md:p-4 text-center font-bold text-teal-800">العُسْر ↔ اليُسْر</td>
+                            <td class="p-3 md:p-4">Bersama kesulitan pasti ada kemudahan; bersabar, pantang menyerah, berusaha, dan berdoa.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-key"></i> Kata Kunci Utama
+                </h3>
+                <div class="flex flex-wrap gap-2 text-xs md:text-sm font-semibold">
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Ghunnah Musyaddadah</span>
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">نّ dan مّ</span>
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Dengung 2 Harakat</span>
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Surah Al-Insyirah</span>
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Kesulitan dan Kemudahan</span>
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Sabar & Berusaha</span>
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Berdoa & Berharap</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-feather-pointed"></i> Kuis Ghunnah Musyaddadah & Surah Al-Insyirah
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Aplikasi Media Pembelajaran Interaktif PAI SD.</p>
+        <p class="text-xs opacity-70 mt-1">Materi Ghunnah Musyaddadah dan Surah Al-Insyirah - Kelas 6 SD.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions
+        const quizData = [
+            {
+                question: "1. Apa arti dari Ghunnah dalam hukum membaca Al-Qur'an?",
+                options: [
+                    "A. Membaca dengan suara memantul",
+                    "B. Membaca dengan samar-samar",
+                    "C. Membaca dengan suara dengung dari rongga hidung",
+                    "D. Membaca dengan jelas dan tegas"
+                ],
+                correct: 2,
+                explanation: "Ghunnah berarti membaca dengan suara dengung yang keluar dari rongga hidung."
+            },
+            {
+                question: "2. Hukum bacaan Ghunnah Musyaddadah terjadi apabila terdapat huruf...",
+                options: [
+                    "A. Nun bertasydid (نّ) atau Mim bertasydid (مّ)",
+                    "B. Alif (أ) atau Ya (ي) bersukun",
+                    "C. Ba (ب) atau Jim (ج) bertasydid",
+                    "D. Lam (ل) atau Ra (ر) mati"
+                ],
+                correct: 0,
+                explanation: "Ghunnah Musyaddadah terjadi pada huruf Nun bertasydid (نّ) dan Mim bertasydid (مّ)."
+            },
+            {
+                question: "3. Berapa panjang harakat saat membaca bacaan Ghunnah Musyaddadah?",
+                options: [
+                    "A. 1 harakat",
+                    "B. 2 harakat",
+                    "C. 4 harakat",
+                    "D. 6 harakat"
+                ],
+                correct: 1,
+                explanation: "Ghunnah Musyaddadah dibaca dengan suara dengung sepanjang 2 harakat."
+            },
+            {
+                question: "4. Manakah di bawah ini yang merupakan contoh kalimat bacaan Ghunnah Musyaddadah?",
+                options: [
+                    "A. أَلَمْ نَشْرَحْ",
+                    "B. وَوَضَعْنَا عَنكَ",
+                    "C. ثُمَّ dan إِنَّ",
+                    "D. فَانصَبْ"
+                ],
+                correct: 2,
+                explanation: "Kata ثُمَّ (mim bertasydid) dan إِنَّ (nun bertasydid) adalah contoh Ghunnah Musyaddadah."
+            },
+            {
+                question: "5. Surah Al-Insyirah terdiri dari berapa ayat dan tergolong dalam surah apa?",
+                options: [
+                    "A. 7 ayat - Madaniyah",
+                    "B. 8 ayat - Makkiyah",
+                    "C. 9 ayat - Makkiyah",
+                    "D. 10 ayat - Madaniyah"
+                ],
+                correct: 1,
+                explanation: "Surah Al-Insyirah terdiri dari 8 ayat dan termasuk dalam golongan surah Makkiyah."
+            },
+            {
+                question: "6. Arti dari kata 'Al-Insyirah' adalah...",
+                options: [
+                    "A. Kelapangan atau melapangkan dada",
+                    "B. Pertolongan Allah",
+                    "C. Waktu subuh",
+                    "D. Hari kiamat"
+                ],
+                correct: 0,
+                explanation: "Al-Insyirah berarti kelapangan atau melapangkan dada."
+            },
+            {
+                question: "7. Pada Surah Al-Insyirah, bacaan Ghunnah Musyaddadah terdapat pada kata...",
+                options: [
+                    "A. صَدْرَكَ",
+                    "B. وَوَضَعْنَا",
+                    "C. فَإِنَّ dan إِنَّ",
+                    "D. فَارْغَب"
+                ],
+                correct: 2,
+                explanation: "Lafal فَإِنَّ dan إِنَّ mengandung huruf nun bertasydid (نّ) yang dibaca Ghunnah Musyaddadah."
+            },
+            {
+                question: "8. Ayat 'فَإِنَّ مَعَ الْعُسْرِ يُسْرًا' dalam Surah Al-Insyirah memiliki arti...",
+                options: [
+                    "A. Bukankah Kami telah melapangkan dadamu?",
+                    "B. Dan Kami pun telah menanggalkan bebanmu",
+                    "C. Karena sesungguhnya bersama kesulitan ada kemudahan",
+                    "D. Dan hanya kepada Tuhanmulah engkau berharap"
+                ],
+                correct: 2,
+                explanation: "Ayat tersebut artinya: 'Karena sesungguhnya bersama kesulitan ada kemudahan.'"
+            },
+            {
+                question: "9. Hal yang BUKAN merupakan langkah penting saat menulis Surah Al-Insyirah adalah...",
+                options: [
+                    "A. Memperhatikan bentuk dan harakat huruf",
+                    "B. Memperhatikan posisi dan jumlah titik huruf",
+                    "C. Mengubah bentuk huruf hijaiyah sesuka hati",
+                    "D. Memperhatikan hubungan antar huruf yang bersambung"
+                ],
+                correct: 2,
+                explanation: "Mengubah bentuk huruf sesuka hati dilarang karena dapat merusak susunan teks Al-Qur'an."
+            },
+            {
+                question: "10. Salah satu pesan pokok dari Surah Al-Insyirah ketika kita menghadapi ujian/kesulitan adalah...",
+                options: [
+                    "A. Mudah berputus asa dan menyalahkan keadaan",
+                    "B. Tetap bersabar, tidak berputus asa, dan yakin ada kemudahan dari Allah",
+                    "C. Berhenti berusaha dan hanya bersantai",
+                    "D. Mengeluh kepada semua teman"
+                ],
+                correct: 1,
+                explanation: "Pesan utama Surah Al-Insyirah mengajarkan kita untuk tidak berputus asa, bersabar, dan yakin bahwa Allah memberi kemudahan."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kiri
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = (score / quizData.length) * 100;
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>
