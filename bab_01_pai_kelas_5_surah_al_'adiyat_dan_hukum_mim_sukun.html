@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surah Al-‘Adiyat dan Hukum Mim Sukun - PAI Kelas 5 SD</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">Surah Al-‘Adiyat dan Hukum Mim Sukun</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Ringkasan Materi Kelas 5 SD <span class="text-yellow-300">(PAI dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('mengenal', this)">
+                    <i class="fa-solid fa-circle-info"></i> Mengenal & Teks Surah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('mim-sukun', this)">
+                    <i class="fa-solid fa-spell-check"></i> Hukum Mim Sukun
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pesan', this)">
+                    <i class="fa-solid fa-heart"></i> Makna & Pesan Pokok
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('panduan', this)">
+                    <i class="fa-solid fa-pen-to-square"></i> Menulis & Menghafal
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📖 Surah Al-‘Adiyat & Hukum Mim Sukun</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Pembelajaran Agama Islam Kelas 5 SD membahas tentang mengenal, membaca, menulis, memahami makna, dan menghafal Surah Al-‘Adiyat, serta menguasai tajwid hukum bacaan Mim Sukun dalam Al-Qur'an.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('mengenal')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">العاديات</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🐎 Surah Al-‘Adiyat</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Kuda Perang Berlari Kencang</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Surah ke-100, terdiri dari 11 ayat, tergolong surah Makkiyah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Baca Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('mim-sukun')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">مْ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">✨ Hukum Mim Sukun</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tajwid Al-Qur'an</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Terbagi menjadi 3 hukum bacaan: Ikhfa Syafawi, Idgham Mimi, dan Izhar Syafawi.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Tajwid <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pesan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْمَعْنَى</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">❤️ Makna & Pesan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pelajaran Hidup</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Pengingat agar tidak ingkar nikmat, tidak berlebihan mencintai harta, dan mengingat hari kiamat.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pahami Pesan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('panduan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْحِفْظُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📝 Menulis & Hafalan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Keterampilan Praktis</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Panduan cara menulis tulisan Arab dengan rapi serta langkah mudah menghafal surah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Panduan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ringkasan Tiga Hukum Mim Sukun -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-emerald-600"></i> 💡 Cara Mudah Mengingat Hukum Mim Sukun (مْ)
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded">Bertemu huruf ب</span>
+                        <h4 class="text-teal-700 font-bold text-base mt-2">Ikhfa Syafawi</h4>
+                        <p class="text-xs text-slate-600 mt-1">Dibaca: <strong>Samar + dengung</strong></p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold bg-teal-100 text-teal-800 px-2 py-0.5 rounded">Bertemu huruf م</span>
+                        <h4 class="text-teal-700 font-bold text-base mt-2">Idgham Mimi</h4>
+                        <p class="text-xs text-slate-600 mt-1">Dibaca: <strong>Melebur + dengung</strong></p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded">Selain huruf ب dan م</span>
+                        <h4 class="text-teal-700 font-bold text-base mt-2">Izhar Syafawi</h4>
+                        <p class="text-xs text-slate-600 mt-1">Dibaca: <strong>Jelas</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MENGENAL & TEKS SURAH -->
+        <div id="tab-mengenal" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-2 drop-shadow-sm">سُورَةُ الْعَادِيَاتِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">1. Mengenal Surah Al-‘Adiyat</h2>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Nomor Surah</p>
+                            <p class="text-lg font-bold text-teal-800">Surah ke-100</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Jumlah Ayat</p>
+                            <p class="text-lg font-bold text-teal-800">11 Ayat</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Golongan Surah</p>
+                            <p class="text-lg font-bold text-teal-800">Makkiyah</p>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        <strong>Al-‘Adiyat (العاديات)</strong> berarti <em>kuda perang yang berlari kencang</em>. Surah ini menggambarkan kuda-kuda yang berlari dengan cepat dalam perjuangan, kemudian Allah mengingatkan manusia bahwa manusia sering kali ingkar terhadap nikmat Allah dan terlalu mencintai harta.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Teks Arab Surah Al-Adiyat -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-teal-700 text-white p-4 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> 2. Membaca Surah Al-‘Adiyat (Ayat 1 - 11)
+                </div>
+                <div class="p-6 md:p-8 space-y-6 bg-amber-50/30">
+                    <div class="text-center font-arabic text-2xl md:text-3xl text-teal-900 pb-4 border-b border-slate-200">
+                        بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 1</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">وَالْعَادِيَاتِ ضَبْحًا ۝١</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 2</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">فَالْمُورِيَاتِ قَدْحًا ۝٢</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 3</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">فَالْمُغِيرَاتِ صُبْحًا ۝٣</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 4</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">فَأَثَرْنَ بِهِ نَقْعًا ۝٤</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 5</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">فَوَسَطْنَ بِهِ جَمْعًا ۝٥</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 6</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">إِنَّ الْإِنْسَانَ لِرَبِّهِ لَكَنُودٌ ۝٦</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 7</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">وَإِنَّهُ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ ۝٧</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 8</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ ۝٨</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 9</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِي الْقُبُورِ ۝٩</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 10</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">وَحُصِّلَ مَا فِي الصُّدُورِ ۝١٠</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 flex justify-between items-center gap-4 shadow-sm">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 11</span>
+                            <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">إِنَّ رَبَّهُمْ بِهِمْ يَوْمَئِذٍ لَخَبِيرٌ ۝١١</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-amber-100/70 rounded-xl border border-amber-300 text-xs md:text-sm font-semibold text-amber-900 text-center">
+                        📌 Siswa perlu membaca Surah Al-‘Adiyat dengan makhraj dan tajwid yang benar.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HUKUM MIM SUKUN -->
+        <div id="tab-mim-sukun" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-spell-check"></i> 3. Apa itu Hukum Mim Sukun?
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        <strong>Mim sukun (مْ)</strong> adalah huruf mim (م) yang memiliki tanda sukun.
+                    </p>
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="text-xs font-bold text-slate-500">Contoh Bacaan:</span>
+                        <span class="font-arabic text-xl text-teal-800 font-bold">هُمْ – أَمْ – عَلَيْهِمْ</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-base md:text-lg font-bold text-slate-800 mb-4">Tiga Hukum Bacaan Mim Sukun:</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Hukum A -->
+                        <div class="bg-teal-50/50 p-4 md:p-5 rounded-2xl border border-teal-200">
+                            <h4 class="text-teal-800 font-extrabold text-base md:text-lg mb-1">A. Ikhfa Syafawi</h4>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2">
+                                Terjadi apabila <strong>mim sukun (مْ)</strong> bertemu dengan <strong>huruf ba (ب)</strong>.
+                            </p>
+                            <p class="text-xs md:text-sm font-semibold text-slate-600 mb-3">Cara membaca: Samar-samar disertai dengung.</p>
+                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex justify-between items-center">
+                                <span class="text-xs font-bold text-teal-600">Contoh:</span>
+                                <span class="font-arabic text-2xl text-teal-900 font-bold">تَرْمِيهِمْ بِحِجَارَةٍ</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-2"> Pada bagian <span class="font-arabic text-sm font-bold">مْ بِ</span> terdapat hukum Ikhfa Syafawi.</p>
+                        </div>
+
+                        <!-- Hukum B -->
+                        <div class="bg-emerald-50/50 p-4 md:p-5 rounded-2xl border border-emerald-200">
+                            <h4 class="text-emerald-800 font-extrabold text-base md:text-lg mb-1">B. Idgham Mimi</h4>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2">
+                                Terjadi apabila <strong>mim sukun (مْ)</strong> bertemu dengan <strong>mim (م)</strong>.
+                            </p>
+                            <p class="text-xs md:text-sm font-semibold text-slate-600 mb-3">Cara membaca: Memasukkan mim pertama ke mim kedua disertai dengung.</p>
+                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex justify-between items-center">
+                                <span class="text-xs font-bold text-emerald-600">Contoh:</span>
+                                <span class="font-arabic text-2xl text-emerald-900 font-bold">لَهُمْ مَا</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-2"> Pada bagian <span class="font-arabic text-sm font-bold">مْ مَ</span> terdapat hukum Idgham Mimi.</p>
+                        </div>
+
+                        <!-- Hukum C -->
+                        <div class="bg-indigo-50/50 p-4 md:p-5 rounded-2xl border border-indigo-200">
+                            <h4 class="text-indigo-800 font-extrabold text-base md:text-lg mb-1">C. Izhar Syafawi</h4>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2">
+                                Terjadi apabila <strong>mim sukun (مْ)</strong> bertemu dengan <strong>huruf hijaiyah selain ب dan م</strong>.
+                            </p>
+                            <p class="text-xs md:text-sm font-semibold text-slate-600 mb-3">Cara membaca: Jelas dan tidak disamarkan.</p>
+                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex justify-between items-center">
+                                <span class="text-xs font-bold text-indigo-600">Contoh:</span>
+                                <span class="font-arabic text-2xl text-indigo-900 font-bold">عَلَيْهِمْ غَيْرِ</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-2"> Mim sukun dibaca jelas karena bertemu dengan huruf <span class="font-arabic text-sm font-bold">غ</span>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian 4: Penerapan dalam Al-Adiyat -->
+                <div class="pt-4 border-t border-slate-200">
+                    <h3 class="text-base md:text-lg font-bold text-teal-800 mb-2">4. Hukum Mim Sukun dalam Surah Al-‘Adiyat</h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Ketika membaca Surah Al-‘Adiyat, siswa dapat berlatih menemukan dan membaca mim sukun dengan benar. Contoh ayat latihan:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 font-arabic text-xl text-teal-900 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div>1. فَوَسَطْنَ بِهِ جَمْعًا</div>
+                        <div>2. إِنَّ رَبَّهُمْ بِهِمْ يَوْمَئِذٍ لَخَبِيرٌ</div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">Dalam mempelajari tajwid, siswa harus memperhatikan setiap mim sukun (مْ) dan huruf yang mengikutinya untuk menentukan hukum bacaannya.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MAKNA & PESAN POKOK -->
+        <div id="tab-pesan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-book-bookmark"></i> 5. Makna Surah Al-‘Adiyat
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Secara umum, Surah Al-‘Adiyat mengingatkan manusia agar tidak menjadi orang yang ingkar terhadap nikmat Allah. Allah menggambarkan kuda-kuda yang berlari kencang dalam perjuangan. Setelah itu, Allah mengingatkan bahwa manusia sering kali:
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Tidak bersyukur atas nikmat Allah.
+                        </li>
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Terlalu mencintai harta.
+                        </li>
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Melupakan kehidupan akhirat.
+                        </li>
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Tidak menyadari perbuatan akan dipertanggungjawabkan.
+                        </li>
+                    </ul>
+                    <div class="mt-4 p-3.5 bg-indigo-50 border-l-4 border-indigo-600 rounded-r-xl text-xs md:text-sm text-indigo-900">
+                        Pada hari kiamat, apa yang ada di dalam kubur akan dibangkitkan dan apa yang tersembunyi di dalam hati manusia akan diketahui oleh Allah.
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart"></i> 6. Pesan Pokok Surah Al-‘Adiyat
+                    </h2>
+                    <div class="space-y-3">
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-xl">❤️</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">1. Harus bersyukur kepada Allah</h4>
+                                <p class="text-xs text-slate-600">Semua nikmat yang kita miliki berasal dari Allah. Oleh karena itu, kita harus selalu bersyukur.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-xl">💰</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">2. Tidak boleh terlalu mencintai harta</h4>
+                                <p class="text-xs text-slate-600">Harta boleh dimiliki dan digunakan, tetapi jangan sampai membuat kita lupa kepada Allah.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-xl">🤲</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">3. Rajin beribadah</h4>
+                                <p class="text-xs text-slate-600">Kita harus menggunakan nikmat Allah untuk melakukan kebaikan dan beribadah.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-xl">⚖️</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">4. Ingat adanya hari kiamat</h4>
+                                <p class="text-xs text-slate-600">Setiap manusia akan dibangkitkan dan mempertanggungjawabkan perbuatannya.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-xl">👀</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">5. Allah mengetahui semua perbuatan manusia</h4>
+                                <p class="text-xs text-slate-600">Tidak ada perbuatan yang tersembunyi dari pengetahuan Allah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MENULIS & MENGHAFAL -->
+        <div id="tab-panduan" class="tab-content hidden transition-opacity duration-300">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Bagian 7: Menulis Surah -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 space-y-4">
+                    <h2 class="text-lg md:text-xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                        <i class="fa-solid fa-pen-to-square"></i> 7. Menulis Surah Al-‘Adiyat
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-600">Ketika menulis Surah Al-‘Adiyat, siswa perlu memperhatikan hal-hal berikut:</p>
+                    <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                        <li class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                            <i class="fa-solid fa-check text-teal-600"></i> Menulis huruf Arab dengan benar.
+                        </li>
+                        <li class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                            <i class="fa-solid fa-check text-teal-600"></i> Memperhatikan bentuk setiap huruf.
+                        </li>
+                        <li class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                            <i class="fa-solid fa-check text-teal-600"></i> Menulis harakat dengan tepat.
+                        </li>
+                        <li class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                            <i class="fa-solid fa-check text-teal-600"></i> Menulis ayat secara berurutan.
+                        </li>
+                        <li class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                            <i class="fa-solid fa-check text-teal-600"></i> Menjaga kebersihan dan kerapian tulisan.
+                        </li>
+                    </ul>
+                    <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 font-semibold">
+                        ✏️ <strong>Latihan:</strong> Tulislah Surah Al-‘Adiyat ayat 1–11 dengan tulisan Arab yang rapi.
+                    </div>
+                </div>
+
+                <!-- Bagian 8: Menghafal Surah -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 space-y-4">
+                    <h2 class="text-lg md:text-xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                        <i class="fa-solid fa-brain"></i> 8. Menghafal Surah Al-‘Adiyat
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-600">Agar mudah menghafal Surah Al-‘Adiyat, lakukan langkah-langkah berikut:</p>
+                    <ol class="space-y-2 text-xs md:text-sm text-slate-700 list-decimal list-inside">
+                        <li class="bg-slate-50 p-2 rounded-lg">Dengarkan bacaan Surah Al-‘Adiyat dengan tartil.</li>
+                        <li class="bg-slate-50 p-2 rounded-lg">Baca ayat pertama berulang-ulang.</li>
+                        <li class="bg-slate-50 p-2 rounded-lg">Setelah lancar, lanjutkan ke ayat berikutnya.</li>
+                        <li class="bg-slate-50 p-2 rounded-lg">Gabungkan ayat 1–2, kemudian 1–3, dan seterusnya.</li>
+                        <li class="bg-slate-50 p-2 rounded-lg">Perhatikan makna setiap ayat.</li>
+                        <li class="bg-slate-50 p-2 rounded-lg">Setorkan hafalan kepada guru atau orang tua.</li>
+                        <li class="bg-slate-50 p-2 rounded-lg">Ulangi hafalan secara rutin agar tidak mudah lupa.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-table"></i> 📋 Ringkasan Tajwid Hukum Mim Sukun
+            </h2>
+            <p class="text-xs md:text-sm text-slate-500 mb-4">Tabel ringkas cara mengingat hukum bacaan Mim Sukun (مْ):</p>
+
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-x-auto mb-6">
+                <table class="w-full min-w-[600px] text-left border-collapse">
+                    <thead>
+                        <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                            <th class="p-3 md:p-4">Mim Sukun (مْ) Bertemu</th>
+                            <th class="p-3 md:p-4">Hukum Bacaan</th>
+                            <th class="p-3 md:p-4">Cara Membaca</th>
+                            <th class="p-3 md:p-4">Contoh</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-700">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 md:p-4 font-bold text-teal-900">Huruf Ba (ب)</td>
+                            <td class="p-3 md:p-4 font-semibold">Ikhfa Syafawi</td>
+                            <td class="p-3 md:p-4">Samar + dengung</td>
+                            <td class="p-3 md:p-4 font-arabic text-lg font-bold text-teal-800">تَرْمِيهِمْ بِحِجَارَةٍ</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <td class="p-3 md:p-4 font-bold text-teal-900">Huruf Mim (م)</td>
+                            <td class="p-3 md:p-4 font-semibold">Idgham Mimi</td>
+                            <td class="p-3 md:p-4">Melebur + dengung</td>
+                            <td class="p-3 md:p-4 font-arabic text-lg font-bold text-teal-800">لَهُمْ مَا</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 md:p-4 font-bold text-teal-900">Selain huruf ب dan م</td>
+                            <td class="p-3 md:p-4 font-semibold">Izhar Syafawi</td>
+                            <td class="p-3 md:p-4">Jelas</td>
+                            <td class="p-3 md:p-4 font-arabic text-lg font-bold text-teal-800">عَلَيْهِمْ غَيْرِ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> 🌟 Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-2">
+                    Surah Al-‘Adiyat mengajarkan kita untuk bersyukur kepada Allah, tidak berlebihan mencintai harta, rajin beribadah, dan mengingat hari akhir. Dalam membaca Al-Qur’an, kita juga harus memperhatikan hukum mim sukun, yaitu: <strong>Ikhfa Syafawi, Idgham Mimi, dan Izhar Syafawi</strong>.
+                </p>
+                <p class="text-xs md:text-sm font-bold text-teal-800 italic">
+                    Dengan memahami tajwid, membaca, menulis, memahami makna, dan menghafal Surah Al-‘Adiyat, kita diharapkan dapat membaca Al-Qur’an dengan benar serta mengamalkan pesan-pesannya dalam kehidupan sehari-hari.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Surah Al-‘Adiyat & Mim Sukun
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 5</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Aplikasi Media Pembelajaran Interaktif PAI SD.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti Kelas 5 SD.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions disesuaikan khusus materi Surah Al-Adiyat dan Hukum Mim Sukun (10 Soal)
+        const quizData = [
+            {
+                question: "1. Arti dari kata Al-‘Adiyat (العاديات) secara bahasa adalah...",
+                options: [
+                    "A. Kuda perang yang berlari kencang",
+                    "B. Hari kiamat yang dahsyat",
+                    "C. Gunung-gunung yang tinggi",
+                    "D. Pertolongan Allah Swt."
+                ],
+                correct: 0,
+                explanation: "Al-‘Adiyat secara bahasa memiliki arti kuda perang yang berlari kencang."
+            },
+            {
+                question: "2. Surah Al-‘Adiyat terdiri dari 11 ayat dan merupakan surah ke-100 yang tergolong dalam surah...",
+                options: [
+                    "A. Madaniyah",
+                    "B. Makkiyah",
+                    "C. Bagdadiah",
+                    "D. Kufiyah"
+                ],
+                correct: 1,
+                explanation: "Surah Al-‘Adiyat diturunkan di Mekah sehingga tergolong surah Makkiyah."
+            },
+            {
+                question: "3. Hukum bacaan yang terjadi apabila Mim Sukun (مْ) bertemu dengan huruf Ba (ب) adalah...",
+                options: [
+                    "A. Idgham Mimi",
+                    "B. Izhar Syafawi",
+                    "C. Ikhfa Syafawi",
+                    "D. Iqlab"
+                ],
+                correct: 2,
+                explanation: "Ikhfa Syafawi terjadi jika mim sukun bertemu dengan huruf ba (ب) dan dibaca samar-samar disertai dengung."
+            },
+            {
+                question: "4. Bagaimanakah cara membaca hukum tajwid Idgham Mimi (مْ bertemu م)?",
+                options: [
+                    "A. Memasukkan mim pertama ke mim kedua disertai dengung",
+                    "B. Dibaca dengan jelas tanpa dengung",
+                    "C. Dibaca membalik huruf",
+                    "D. Dibaca panjang 6 harakat"
+                ],
+                correct: 0,
+                explanation: "Idgham Mimi dibaca dengan memasukkan mim sukun ke mim berikutnya disertai dengung."
+            },
+            {
+                question: "5. Apabila Mim Sukun (مْ) bertemu dengan huruf hijaiyah selain huruf Ba (ب) dan Mim (م), maka hukum bacaannya adalah...",
+                options: [
+                    "A. Ikhfa Syafawi",
+                    "B. Idgham Mutamatsilain",
+                    "C. Izhar Halqi",
+                    "D. Izhar Syafawi"
+                ],
+                correct: 3,
+                explanation: "Izhar Syafawi terjadi ketika mim sukun bertemu dengan semua huruf hijaiyah selain huruf ba (ب) dan mim (م), dan cara membacanya adalah jelas."
+            },
+            {
+                question: "6. Kalimat تَرْمِيهِمْ بِحِجَارَةٍ memuat hukum bacaan Mim Sukun yaitu...",
+                options: [
+                    "A. Izhar Syafawi",
+                    "B. Ikhfa Syafawi",
+                    "C. Idgham Mimi",
+                    "D. Ikhfa Haqiqi"
+                ],
+                correct: 1,
+                explanation: "Pada contoh tersebut terdapat Mim Sukun (مْ) bertemu huruf Ba (ب), sehingga dibaca Ikhfa Syafawi (samar disertai dengung)."
+            },
+            {
+                question: "7. Berdasarkan Surah Al-‘Adiyat ayat 6–8, salah satu sifat buruk manusia yang diperingatkan oleh Allah Swt. adalah...",
+                options: [
+                    "A. Sangat ingkar terhadap nikmat dan terlalu mencintai harta",
+                    "B. Suka berbohong dan adu domba",
+                    "C. Malas menuntut ilmu dan beribadah",
+                    "D. Suka menggunjing dan berprasangka buruk"
+                ],
+                correct: 0,
+                explanation: "Surah Al-‘Adiyat mengingatkan bahwa manusia sering kali kikir/ingkar terhadap nikmat Tuhan-Nya dan sangat mencintai harta secara berlebihan."
+            },
+            {
+                question: "8. Peristiwa yang digambarkan pada akhir Surah Al-‘Adiyat (ayat 9–11) berkaitan dengan...",
+                options: [
+                    "A. Penciptaan bumi dan langit",
+                    "B. Dibangkitkannya manusia dari kubur dan ditampakkannya isi hati pada hari kiamat",
+                    "C. Perjalanan hijrah Nabi Muhammad Saw.",
+                    "D. Kemenangan kaum muslimin dalam perang"
+                ],
+                correct: 1,
+                explanation: "Ayat 9–11 menjelaskan tentang dibangkitkannya apa yang ada di dalam kubur dan dibukanya rahasia apa yang ada di dalam dada pada hari kiamat."
+            },
+            {
+                question: "9. Di antara contoh berikut, manakah yang merupakan bacaan Izhar Syafawi?",
+                options: [
+                    "A. لَهُمْ مَا",
+                    "B. تَرْمِيهِمْ بِحِجَارَةٍ",
+                    "C. عَلَيْهِمْ غَيْرِ",
+                    "D. مِنْ بَعْدِ"
+                ],
+                correct: 2,
+                explanation: "Pada lafal عَلَيْهِمْ غَيْرِ, terdapat Mim Sukun (مْ) bertemu huruf Ghain (غ) yang merupakan huruf Izhar Syafawi, sehingga dibaca jelas."
+            },
+            {
+                question: "10. Pesan utama yang dapat kita amalkan dari pemahaman Surah Al-‘Adiyat dalam kehidupan sehari-hari adalah...",
+                options: [
+                    "A. Menumpuk harta sebanyak-banyaknya untuk pamer",
+                    "B. Selalu bersyukur atas nikmat Allah dan tidak kikir dalam berbuat kebaikan",
+                    "C. Mengabaikan persiapan ibadah untuk akhirat",
+                    "D. Menyembunyikan kejahatan agar tidak diketahui orang lain"
+                ],
+                correct: 1,
+                explanation: "Pesan utama Surah Al-‘Adiyat adalah agar manusia tidak ingkar nikmat, tidak terbuai oleh harta duniawi, serta rajin beribadah mengingat balasan di hari kiamat."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = (score / quizData.length) * 100;
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>
