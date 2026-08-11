@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 2 SD - Kalimat Tayyibah & Akhlak Kepada Allah SWT</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 03. Kalimat Tayyibah dan Akhlak kepada Allah SWT</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 2 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('akhlak', this)">
+                    <i class="fa-solid fa-heart"></i> Akhlak Allah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('tayyibah', this)">
+                    <i class="fa-solid fa-comments"></i> Kalimat Tayyibah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('iman-ikhlas', this)">
+                    <i class="fa-solid fa-hand-holding-heart"></i> Prasangka & Ikhlas
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('penerapan', this)">
+                    <i class="fa-solid fa-table-list"></i> Tabel Penerapan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 2 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        🌟 Kalimat Tayyibah dan Akhlak kepada Allah SWT
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('akhlak')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الأَخْلَاقُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">❤️ Akhlak kepada Allah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sikap Perilaku Terpuji</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal akhlak yang baik kepada Allah SWT seperti bersyukur, berprasangka baik, dan menjalankan perintah-Nya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Akhlak <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('tayyibah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الْكَلِمَاتُ الطَّيِّبَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌿 Kalimat Tayyibah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">5 Ucapan Yang Baik</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal bacaan, arti, dan waktu mengcapkan Subhanallah, Alhamdulillah, Astagfirullah, Masya Allah, dan Insya Allah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Kalimat <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('iman-ikhlas')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الإِخْلَاصُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🤲 Prasangka Baik & Ikhlas</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Niat Tulus Beribadah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti berprasangka baik kepada Allah dan beribadah tulus hanya mengharap ridha-Nya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Detail <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">التَّطْبِيْقُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">⭐ Penerapan Sehari-hari</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Panduan Singkat</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Tabel ringkas penerapan 5 kalimat tayyibah beserta contoh pengguanaannya dalam kehidupan sehari-hari.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Tabel <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-amber-500"></i> 💡 Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Kalimat tayyibah adalah ucapan yang baik untuk mengingat, memuji, dan mengagungkan Allah SWT. Kita harus membiasakan mengucapkan Subhanallah, Alhamdulillah, Astagfirullah, Masya Allah, dan Insya Allah sesuai dengan keadaan. Dengan membiasakan kalimat tayyibah, kita belajar menjadi anak yang beriman, bersyukur, rendah hati, berprasangka baik kepada Allah, dan ikhlas dalam beribadah.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: AKHLAK KEPADA ALLAH SWT -->
+        <div id="tab-akhlak" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart"></i> 1. Akhlak kepada Allah SWT
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Akhlak adalah perilaku atau sikap yang baik. Sebagai umat Islam, kita harus memiliki akhlak yang baik kepada Allah SWT.
+                    </p>
+
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Akhlak kepada Allah SWT dapat dilakukan dengan:
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-star text-teal-600 text-base"></i>
+                            <span>Meyakini bahwa Allah SWT adalah Tuhan Yang Maha Esa.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-quote-right text-teal-600 text-base"></i>
+                            <span>Selalu mengingat dan memuji Allah SWT.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-smile text-teal-600 text-base"></i>
+                            <span>Berprasangka baik kepada Allah SWT.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-hand-holding-heart text-teal-600 text-base"></i>
+                            <span>Ikhlas dalam beribadah.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-gift text-teal-600 text-base"></i>
+                            <span>Bersyukur atas nikmat yang diberikan Allah SWT.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-shield-halved text-teal-600 text-base"></i>
+                            <span>Melaksanakan perintah Allah SWT dan menjauhi larangan-Nya.</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl">
+                        <p class="text-xs md:text-sm text-teal-900 leading-relaxed">
+                            💡 Salah satu cara memuji dan mengingat Allah SWT adalah dengan mengucapkan <strong>kalimat tayyibah</strong>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KALIMAT TAYYIBAH -->
+        <div id="tab-tayyibah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-comments"></i> 2. Pengertian Kalimat Tayyibah
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        Kalimat tayyibah berarti <strong>kalimat yang baik</strong>. Kalimat tayyibah merupakan ucapan yang mengandung pujian, doa, dan pengagungan kepada Allah SWT. Ada lima kalimat tayyibah yang perlu kita pelajari:
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Subhanallah -->
+                        <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-lg font-bold text-teal-800">🌿 A. Subhanallah</h3>
+                            <span class="font-arabic text-2xl font-bold text-teal-900">سُبْحَانَ اللَّهِ</span>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2"><strong>Artinya:</strong> "Mahasuci Allah."</p>
+                            <p class="text-xs md:text-sm text-slate-600 mb-3">Kita mengucapkan Subhanallah ketika melihat atau menyadari sesuatu yang menunjukkan kebesaran dan kesucian Allah SWT.</p>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs md:text-sm text-slate-700">
+                                <strong>Contoh:</strong> Ketika melihat pemandangan alam yang indah, kita dapat mengucapkan: <em>"Subhanallah, indah sekali ciptaan Allah."</em>
+                            </div>
+                        </div>
+
+                        <!-- Alhamdulillah -->
+                        <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-lg font-bold text-teal-800">🌸 B. Alhamdulillah / Hamdallah</h3>
+                                <span class="font-arabic text-2xl font-bold text-teal-900">الْحَمْدُ لِلَّهِ</span>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2"><strong>Artinya:</strong> "Segala puji bagi Allah."</p>
+                            <p class="text-xs md:text-sm text-slate-600 mb-3">Kita mengucapkan Alhamdulillah sebagai bentuk syukur kepada Allah SWT atas nikmat yang diberikan.</p>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs md:text-sm text-slate-700 space-y-1">
+                                <p>• Mendapat makanan → <em>Alhamdulillah.</em></p>
+                                <p>• Mendapat nilai yang baik → <em>Alhamdulillah.</em></p>
+                                <p>• Sembuh dari sakit → <em>Alhamdulillah.</em></p>
+                            </div>
+                        </div>
+
+                        <!-- Astagfirullah -->
+                        <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-lg font-bold text-teal-800">🤲 C. Astagfirullah</h3>
+                                <span class="font-arabic text-2xl font-bold text-teal-900">أَسْتَغْفِرُ اللَّهَ</span>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2"><strong>Artinya:</strong> "Aku memohon ampun kepada Allah."</p>
+                            <p class="text-xs md:text-sm text-slate-600 mb-3">Kita mengucapkan Astagfirullah ketika melakukan kesalahan dan memohon ampun kepada Allah SWT.</p>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs md:text-sm text-slate-700">
+                                <strong>Contoh:</strong> Jika kita tidak sengaja berbuat salah kepada teman, kita segera meminta maaf dan mengucapkan: <em>"Astagfirullah, aku telah berbuat salah."</em>
+                            </div>
+                        </div>
+
+                        <!-- Masya Allah -->
+                        <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-lg font-bold text-teal-800">🌺 D. Masya Allah</h3>
+                                <span class="font-arabic text-2xl font-bold text-teal-900">مَا شَآءَ اللَّهُ</span>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2"><strong>Artinya:</strong> "Apa yang dikehendaki Allah."</p>
+                            <p class="text-xs md:text-sm text-slate-600 mb-3">Kita mengucapkan Masya Allah ketika melihat sesuatu yang indah, baik, atau menakjubkan, sambil menyadari bahwa semua itu terjadi atas kehendak Allah SWT.</p>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs md:text-sm text-slate-700">
+                                <strong>Contoh:</strong> <em>"Masya Allah, tulisanmu sangat bagus."</em>
+                            </div>
+                        </div>
+
+                        <!-- Insya Allah -->
+                        <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-lg font-bold text-teal-800">🌱 E. Insya Allah</h3>
+                                <span class="font-arabic text-2xl font-bold text-teal-900">إِنْ شَآءَ اللَّهُ</span>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2"><strong>Artinya:</strong> "Jika Allah menghendaki."</p>
+                            <p class="text-xs md:text-sm text-slate-600 mb-3">Kita mengucapkan Insya Allah ketika berjanji atau merencanakan sesuatu yang akan dilakukan di masa yang akan datang.</p>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs md:text-sm text-slate-700">
+                                <strong>Contoh:</strong> <em>"Insya Allah, besok saya akan belajar bersama."</em>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PRASANGKA BAIK & IKHLAS -->
+        <div id="tab-iman-ikhlas" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <!-- 3. Beriman & Prasangka Baik -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-hands-holding"></i> 3. Beriman dan Berprasangka Baik kepada Allah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Kita harus yakin kepada Allah SWT. Allah selalu mengetahui apa yang kita lakukan dan selalu memberikan yang terbaik bagi hamba-Nya. Kita juga harus berprasangka baik kepada Allah. Jika mendapatkan sesuatu yang kurang menyenangkan, kita tidak boleh langsung berputus asa.
+                    </p>
+
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-medium text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Ketika mendapat nilai kurang baik, kita belajar lebih giat dan tetap percaya kepada Allah.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-medium text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Ketika keinginan belum tercapai, kita tetap berdoa dan tidak menyalahkan Allah.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-medium text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Ketika mendapat nikmat, kita bersyukur kepada Allah.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Ikhlas dalam Beribadah -->
+                <div class="pt-4 border-t border-slate-200">
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart-pulse"></i> 4. Ikhlas dalam Beribadah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        <strong>Ikhlas</strong> berarti melakukan ibadah hanya karena mengharap ridha Allah SWT, bukan untuk mendapatkan pujian dari orang lain.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-teal-900 flex items-center gap-2">
+                            <i class="fa-solid fa-kaaba text-teal-600"></i> Salat karena Allah.
+                        </div>
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-teal-900 flex items-center gap-2">
+                            <i class="fa-solid fa-book-quran text-teal-600"></i> Membaca Al-Qur'an karena Allah.
+                        </div>
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-teal-900 flex items-center gap-2">
+                            <i class="fa-solid fa-hand-holding-dollar text-teal-600"></i> Bersedekah tanpa mengharapkan pujian.
+                        </div>
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-teal-900 flex items-center gap-2">
+                            <i class="fa-solid fa-people-carry-box text-teal-600"></i> Membantu teman dengan tulus.
+                        </div>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-slate-600 bg-amber-50 p-3.5 rounded-xl border border-amber-200">
+                        ✨ <em>Jika kita beribadah dengan ikhlas, kita tidak perlu menunjukkan kebaikan kita kepada orang lain.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: TABEL PENERAPAN -->
+        <div id="tab-penerapan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-table-list"></i> 5. Contoh Penerapan dalam Kehidupan Sehari-hari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-6">
+                    Berikut adalah rangkuman penggunaan kalimat tayyibah beserta artinya dalam kehidupan sehari-hari:
+                </p>
+                
+                <div class="overflow-x-auto rounded-xl border border-slate-200">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                <th class="p-3 border">Kalimat Tayyibah</th>
+                                <th class="p-3 border">Artinya</th>
+                                <th class="p-3 border">Contoh Penggunaan</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-800">
+                            <tr>
+                                <td class="p-3 font-bold text-teal-800 border">Subhanallah</td>
+                                <td class="p-3 border">Mahasuci Allah</td>
+                                <td class="p-3 border">Melihat keindahan ciptaan Allah</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-bold text-teal-800 border">Alhamdulillah</td>
+                                <td class="p-3 border">Segala puji bagi Allah</td>
+                                <td class="p-3 border">Mendapat nikmat atau keberhasilan</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-teal-800 border">Astagfirullah</td>
+                                <td class="p-3 border">Aku memohon ampun kepada Allah</td>
+                                <td class="p-3 border">Setelah melakukan kesalahan</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-bold text-teal-800 border">Masya Allah</td>
+                                <td class="p-3 border">Apa yang dikehendaki Allah</td>
+                                <td class="p-3 border">Melihat sesuatu yang indah/menakjubkan</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-teal-800 border">Insya Allah</td>
+                                <td class="p-3 border">Jika Allah menghendaki</td>
+                                <td class="p-3 border">Berjanji atau merencanakan sesuatu</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-semibold text-center">
+                    Dengan membiasakan kalimat tayyibah, kita belajar menjadi anak yang beriman, bersyukur, rendah hati, berprasangka baik kepada Allah, dan ikhlas dalam beribadah.
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Kalimat Tayyibah & Akhlak
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Kalimat Tayyibah Kelas 2 SD
+        const quizData = [
+            {
+                question: "1. Kalimat Tayyibah memiliki arti...",
+                options: [
+                    "A. Kalimat yang pendek",
+                    "B. Kalimat yang baik",
+                    "C. Kalimat yang sulit",
+                    "D. Kalimat yang panjang"
+                ],
+                correct: 1,
+                explanation: "Kalimat Tayyibah berarti kalimat yang baik, mengandung pujian, doa, dan pengagungan kepada Allah SWT."
+            },
+            {
+                question: "2. Ketika melihat pemandangan alam yang sangat indah, kita mengucapkan...",
+                options: [
+                    "A. Astagfirullah",
+                    "B. Subhanallah",
+                    "C. Insya Allah",
+                    "D. Alhamdulillah"
+                ],
+                correct: 1,
+                explanation: "Subhanallah dibaca ketika melihat kebesaran dan kesucian ciptaan Allah SWT."
+            },
+            {
+                question: "3. Ucapan 'Alhamdulillah' memiliki arti...",
+                options: [
+                    "A. Mahasuci Allah",
+                    "B. Aku memohon ampun kepada Allah",
+                    "C. Segala puji bagi Allah",
+                    "D. Jika Allah menghendaki"
+                ],
+                correct: 2,
+                explanation: "Alhamdulillah artinya 'Segala puji bagi Allah', diucapkan sebagai bentuk bersyukur."
+            },
+            {
+                question: "4. Ketika tidak sengaja berbuat salah kepada teman, kalimat yang sebaiknya diucapkan adalah...",
+                options: [
+                    "A. Astagfirullah",
+                    "B. Masya Allah",
+                    "C. Insya Allah",
+                    "D. Subhanallah"
+                ],
+                correct: 0,
+                explanation: "Astagfirullah diucapkan saat memohon ampunan kepada Allah SWT setelah berbuat salah."
+            },
+            {
+                question: "5. Saat mengagumi tulisan teman yang sangat bagus, kita dapat mengucapkan...",
+                options: [
+                    "A. Astagfirullah",
+                    "B. Masya Allah",
+                    "C. Insya Allah",
+                    "D. Subhanallah"
+                ],
+                correct: 1,
+                explanation: "Masya Allah artinya 'Apa yang dikehendaki Allah', diucapkan ketika melihat sesuatu yang indah/menakjubkan."
+            },
+            {
+                question: "6. Apabila berjanji akan belajar bersama teman besok hari, kita mengucapkan...",
+                options: [
+                    "A. Insya Allah",
+                    "B. Subhanallah",
+                    "C. Alhamdulillah",
+                    "D. Astagfirullah"
+                ],
+                correct: 0,
+                explanation: "Insya Allah diucapkan ketika berjanji atau merencanakan sesuatu di masa mendatang."
+            },
+            {
+                question: "7. Melakukan ibadah hanya karena mengharap ridha Allah SWT dinamakan...",
+                options: [
+                    "A. Sombong",
+                    "B. Pamer",
+                    "C. Ikhlas",
+                    "D. Malas"
+                ],
+                correct: 2,
+                explanation: "Ikhlas berarti melakukan ibadah tulus hanya mengharap ridha Allah SWT, bukan pujian orang."
+            },
+            {
+                question: "8. Sikap berprasangka baik kepada Allah ketika mendapat nilai kurang baik adalah...",
+                options: [
+                    "A. Menyalahkan Allah SWT",
+                    "B. Berputus asa dan menangis",
+                    "C. Belajar lebih giat dan tetap percaya pada Allah",
+                    "D. Marah kepada guru"
+                ],
+                correct: 2,
+                explanation: "Berprasangka baik berarti tetap optimis, belajar giat, dan percaya Allah memberikan yang terbaik."
+            },
+            {
+                question: "9. Di bawah ini yang merupakan contoh sikap ikhlas adalah...",
+                options: [
+                    "A. Bersedekah agar dipuji teman",
+                    "B. Salat karena takut dimarahi",
+                    "C. Membantu teman dengan tulus tanpa pamer",
+                    "D. Pamer saat membaca Al-Qur'an"
+                ],
+                correct: 2,
+                explanation: "Membantu teman secara tulus tanpa mengharapkan pujian merupakan contoh sikap ikhlas."
+            },
+            {
+                question: "10. Lafal 'أَسْتَغْفِرُ اللهَ' dibaca...",
+                options: [
+                    "A. Subhanallah",
+                    "B. Astagfirullah",
+                    "C. Alhamdulillah",
+                    "D. Masya Allah"
+                ],
+                correct: 1,
+                explanation: "Lafal أَسْتَغْفِرُ اللهَ dibaca Astagfirullah."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

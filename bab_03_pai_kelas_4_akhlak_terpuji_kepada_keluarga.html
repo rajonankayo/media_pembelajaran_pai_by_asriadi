@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 4 SD - Akhlak Terpuji kepada Keluarga</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-people-roof"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 03. Akhlak Terpuji kepada Keluarga</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 4 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-heart"></i> Pengertian
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('inti', this)">
+                    <i class="fa-solid fa-house-user"></i> Keluarga Inti
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('lainnya', this)">
+                    <i class="fa-solid fa-users"></i> Keluarga Lain
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('silaturahmi', this)">
+                    <i class="fa-solid fa-handshake"></i> Silaturahmi
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('penerapan', this)">
+                    <i class="fa-solid fa-table-list"></i> Penerapan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 4 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        🌟 Akhlak Terpuji kepada Keluarga
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الأَخْلَاقُ المَحْمُوْدَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌟 Pengertian</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Akhlak Terpuji & Keluarga</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti perilaku baik sesuai ajaran Islam serta peran keluarga sebagai orang terdekat kita.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Pengertian <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('inti')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الأُسْرَةُ الأَسَاسِيَّةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">👨‍👩‍👧 Keluarga Inti</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Ayah, Ibu, dan Anak</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Contoh-contoh perilaku santun, mendoakan orang tua, serta menyayangi dan membantu saudara.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Keluarga Inti <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('lainnya')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الأَقَارِبُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">👵 Keluarga Lainnya</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Kakek, Nenek, Paman, Bibi</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Akhlak baik kepada kerabat lain seperti berkunjung, bersikap ramah, serta menjaga hubungan baik.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Keluarga Lain <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('silaturahmi')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">صِلَةُ الرَّحِيْمِ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🤝 Silaturrahim</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Keutamaan & Manfaat</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Manfaat pentingnya menjaga hubungan silaturahmi agar menciptakan kerukunan dan kasih sayang.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Silaturahmi <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    Sebagai anak muslim, kita harus berakhlak terpuji kepada seluruh anggota keluarga. Kita harus menyayangi, menghormati, membantu, berbicara dengan sopan, serta menjaga silaturahmi. Akhlak baik kepada keluarga merupakan salah satu bentuk ketaatan kepada Allah SWT dan dapat menciptakan keluarga yang rukun, damai, dan penuh kasih sayang.
+                </p>
+                <div class="p-3 bg-white rounded-xl border border-teal-200 text-teal-900 text-xs md:text-sm font-bold text-center">
+                    "Akhlak terpuji menciptakan keluarga yang rukun, damai, dan penuh kasih sayang."
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN AKHLAK TERPUJI -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart text-teal-600"></i> 1. Pengertian Akhlak Terpuji
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        <strong>Akhlak terpuji</strong> adalah perilaku baik yang sesuai dengan ajaran Islam. Setiap muslim harus membiasakan akhlak terpuji, terutama kepada orang-orang yang berada di dalam keluarga.
+                    </p>
+
+                    <div class="bg-teal-50 p-4 rounded-xl border border-teal-200 mb-6 space-y-2 text-xs md:text-sm text-teal-900">
+                        <p class="font-bold border-b border-teal-200 pb-1">Arti Keluarga:</p>
+                        <p>Keluarga adalah orang-orang terdekat yang selalu memberikan kasih sayang, perhatian, bantuan, dan pendidikan kepada kita.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KELUARGA INTI -->
+        <div id="tab-inti" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-house-user text-teal-600"></i> 2. Akhlak Terpuji kepada Keluarga Inti
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        <strong>Keluarga inti</strong> adalah keluarga yang terdiri dari ayah, ibu, dan anak.
+                    </p>
+
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-teal-600"></i> Contoh Akhlak Terpuji kepada Keluarga Inti:
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-lg">👨‍👩‍👧</span>
+                            <span>Menyayangi ayah dan ibu.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-lg">🙏</span>
+                            <span>Menghormati dan menaati nasihat orang tua selama dalam kebaikan.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-lg">🗣️</span>
+                            <span>Berbicara dengan sopan dan lembut kepada orang tua.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-lg">🤲</span>
+                            <span>Mendoakan kedua orang tua.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-lg">🏠</span>
+                            <span>Membantu pekerjaan orang tua di rumah.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-lg">📚</span>
+                            <span>Belajar dengan rajin sebagai bentuk tanggung jawab kepada orang tua.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-lg">😊</span>
+                            <span>Menyayangi dan membantu saudara.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-lg">🤝</span>
+                            <span>Mau berbagi dan bekerja sama dengan anggota keluarga.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs md:text-sm text-rose-900">
+                            <span class="text-lg">❌</span>
+                            <span>Tidak berkata kasar, membentak, atau menyakiti anggota keluarga.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-lg">❤️</span>
+                            <span>Saling memaafkan apabila terjadi kesalahan.</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900">
+                        <p class="font-bold mb-1">Contoh Sikap Nyata:</p>
+                        <p>Ketika ibu sedang membersihkan rumah, kita dapat membantu menyapu atau merapikan barang. Ketika ayah memberikan nasihat, kita mendengarkannya dengan baik dan tidak membantah dengan kasar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KELUARGA LAINNYA -->
+        <div id="tab-lainnya" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-users text-teal-600"></i> 3. Akhlak Terpuji kepada Keluarga Lainnya
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Selain keluarga inti, kita juga memiliki keluarga lainnya, seperti <strong>kakek, nenek, paman, bibi, dan saudara sepupu</strong>.
+                    </p>
+
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600"></i> Perilaku Terpuji kepada Keluarga Lainnya:
+                    </h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <span class="text-lg">🙏</span>
+                            <span>Menghormati kakek dan nenek.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <span class="text-lg">❤️</span>
+                            <span>Menyayangi paman, bibi, dan saudara.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <span class="text-lg">🗣️</span>
+                            <span>Berbicara dengan sopan kepada anggota keluarga.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <span class="text-lg">🤝</span>
+                            <span>Saling membantu ketika ada yang membutuhkan.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <span class="text-lg">🎁</span>
+                            <span>Mau berbagi dengan saudara.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <span class="text-lg">😊</span>
+                            <span>Bersikap ramah dan tidak sombong.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <span class="text-lg">📞</span>
+                            <span>Menjaga hubungan silaturahmi.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <span class="text-lg">🏡</span>
+                            <span>Berkunjung atau menyapa keluarga dengan baik.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <span class="text-lg">🤲</span>
+                            <span>Mendoakan keluarga agar selalu dalam kebaikan.</span>
+                        </div>
+                        <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs md:text-sm text-rose-900 flex items-center gap-3">
+                            <span class="text-lg">❌</span>
+                            <span>Tidak mengejek, bertengkar, atau menyakiti perasaan saudara.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SILATURAHMI -->
+        <div id="tab-silaturahmi" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-handshake text-teal-600"></i> 4. Pentingnya Menjaga Silaturahmi
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        <strong>Silaturahmi</strong> berarti menjaga hubungan baik dengan keluarga dan orang lain.
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Dengan menjaga silaturahmi, kita dapat:
+                    </p>
+
+                    <div class="space-y-3">
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Mempererat hubungan keluarga.</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Menumbuhkan rasa kasih sayang.</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Saling membantu.</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Menciptakan kerukunan.</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Menghindari pertengkaran dan permusuhan.</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mt-4 italic font-semibold">
+                        Islam mengajarkan umatnya untuk selalu berbuat baik kepada keluarga dan menjaga hubungan kekeluargaan.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: TABEL PENERAPAN -->
+        <div id="tab-penerapan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-table-list"></i> 5. Contoh Perilaku dalam Kehidupan Sehari-hari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-6">
+                    Berikut adalah panduan praktis akhlak terpuji ketika menghadapi berbagai situasi sehari-hari bersama keluarga:
+                </p>
+                
+                <div class="overflow-x-auto rounded-xl border border-slate-200">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                <th class="p-3 border">Situasi</th>
+                                <th class="p-3 border">Akhlak Terpuji</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-800">
+                            <tr>
+                                <td class="p-3 font-semibold text-teal-900 border">Ibu meminta bantuan</td>
+                                <td class="p-3 border">Segera membantu dengan senang hati</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-semibold text-teal-900 border">Ayah memberi nasihat</td>
+                                <td class="p-3 border">Mendengarkan dengan sopan</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-teal-900 border">Adik membutuhkan bantuan</td>
+                                <td class="p-3 border">Membantu dan menyayanginya</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-semibold text-teal-900 border">Bertemu kakek dan nenek</td>
+                                <td class="p-3 border">Menyapa dan menghormatinya</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-teal-900 border">Saudara melakukan kesalahan</td>
+                                <td class="p-3 border">Menasihati dengan lembut dan memaafkan</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-semibold text-teal-900 border">Keluarga sedang kesulitan</td>
+                                <td class="p-3 border">Membantu sesuai kemampuan</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-teal-900 border">Bertemu paman atau bibi</td>
+                                <td class="p-3 border">Bersalaman dan berbicara dengan sopan</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-semibold text-center">
+                    Akhlak baik kepada keluarga merupakan bentuk ketaatan kepada Allah SWT.
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Akhlak Terpuji kepada Keluarga
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Akhlak Terpuji kepada Keluarga PAI Kelas 4 SD
+        const quizData = [
+            {
+                question: "1. Perilaku baik yang sesuai dengan ajaran Islam disebut...",
+                options: [
+                    "A. Akhlak tercela",
+                    "B. Akhlak terpuji",
+                    "C. Suuzan",
+                    "D. Takabur"
+                ],
+                correct: 1,
+                explanation: "Akhlak terpuji adalah semua perilaku baik yang sesuai dengan ajaran Islam."
+            },
+            {
+                question: "2. Anggota keluarga yang termasuk dalam keluarga inti adalah...",
+                options: [
+                    "A. Ayah, ibu, dan anak",
+                    "B. Kakek, nenek, dan paman",
+                    "C. Paman, bibi, dan sepupu",
+                    "D. Tetangga dan sahabat"
+                ],
+                correct: 0,
+                explanation: "Keluarga inti terdiri dari ayah, ibu, dan anak."
+            },
+            {
+                question: "3. Ketika ibu sedang membersihkan rumah, tindakan terpuji yang sebaiknya kita lakukan adalah...",
+                options: [
+                    "A. Bermain game dan pura-pura tidak tahu",
+                    "B. Segera membantu menyapu atau merapikan barang",
+                    "C. Pergi keluar rumah bersama teman",
+                    "D. Meminta ibu membuatkan camilan"
+                ],
+                correct: 1,
+                explanation: "Membantu pekerjaan rumah tangga dengan senang hati merupakan contoh akhlak terpuji kepada ibu."
+            },
+            {
+                question: "4. Sikap yang benar ketika ayah sedang memberikan nasihat adalah...",
+                options: [
+                    "A. Membantah dengan kata-kata kasar",
+                    "B. Mendengarkannya dengan baik dan tidak membantah",
+                    "C. Menutup telinga",
+                    "D. Meninggalkan ayah berbicat sendiri"
+                ],
+                correct: 1,
+                explanation: "Kita harus menghormati nasihat orang tua dengan mendengarkan secara sopan."
+            },
+            {
+                question: "5. Berikut ini yang BUKAN merupakan contoh akhlak terpuji kepada keluarga adalah...",
+                options: [
+                    "A. Berbicara dengan lembut dan sopan",
+                    "B. Saling memaafkan jika ada kesalahan",
+                    "C. Berkata kasar dan membentak saudara",
+                    "D. Mendoakan kedua orang tua"
+                ],
+                correct: 2,
+                explanation: "Berkata kasar dan membentak adalah contoh perilaku tercela yang harus dihindari."
+            },
+            {
+                question: "6. Menjaga hubungan baik dengan anggota keluarga dan kerabat dinamakan...",
+                options: [
+                    "A. Silaturahmi",
+                    "B. Musyawarah",
+                    "C. Sedekah",
+                    "D. Tawaduk"
+                ],
+                correct: 0,
+                explanation: "Silaturahmi berarti menyambung dan menjaga hubungan baik antar anggota keluarga."
+            },
+            {
+                question: "7. Kakek, nenek, paman, bibi, dan saudara sepupu termasuk dalam kelompok...",
+                options: [
+                    "A. Keluarga inti",
+                    "B. Keluarga lainnya",
+                    "C. Orang asing",
+                    "D. Tetangga dekat"
+                ],
+                correct: 1,
+                explanation: "Selain ayah, ibu, dan anak, kerabat seperti kakek, nenek, paman, dan bibi tergolong keluarga lainnya."
+            },
+            {
+                question: "8. Salah satu manfaat penting dari menjaga silaturahmi dalam keluarga adalah...",
+                options: [
+                    "A. Menimbulkan pertengkaran",
+                    "B. Menciptakan kerukunan dan rasa kasih sayang",
+                    "C. Membuat orang lain iri",
+                    "D. Menjauhkan rasa persaudaraan"
+                ],
+                correct: 1,
+                explanation: "Silaturahmi mempererat persaudaraan, menumbuhkan kasih sayang, dan menciptakan kerukunan."
+            },
+            {
+                question: "9. Ketika bertemu dengan paman atau bibi, sikap santun yang kita lakukan yaitu...",
+                options: [
+                    "A. Pura-pura tidak kenal",
+                    "B. Bersalaman dan berbicara dengan sopan",
+                    "C. Lari bersembunyi",
+                    "D. Meminta uang secara paksa"
+                ],
+                correct: 1,
+                explanation: "Bersalaman dan menyapa dengan sopan menunjukkan akhlak terpuji kepada kerabat."
+            },
+            {
+                question: "10. Mengapa kita harus rajin belajar sebagai anak muslim dalam keluarga?",
+                options: [
+                    "A. Sebagai bentuk tanggung jawab dan membanggakan orang tua",
+                    "B. Agar bisa menyombongkan diri",
+                    "C. Supaya diberi hadiah besar",
+                    "D. Hanya karena dipaksa oleh guru"
+                ],
+                correct: 0,
+                explanation: "Belajar rajin merupakan bentuk tanggung jawab serta bakti anak kepada orang tua."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

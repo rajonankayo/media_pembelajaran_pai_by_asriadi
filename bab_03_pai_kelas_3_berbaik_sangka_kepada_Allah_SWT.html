@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 3 SD - Berbaik Sangka & Menjauhi Berburuk Sangka</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 03. Sikap Berbaik Sangka & Menjauhi Berburuk Sangka</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 3 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('husnuzan', this)">
+                    <i class="fa-solid fa-heart"></i> Berbaik Sangka
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('suuzan', this)">
+                    <i class="fa-solid fa-shield-halved"></i> Berburuk Sangka
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pencegahan', this)">
+                    <i class="fa-solid fa-lightbulb"></i> Cara Menghindari
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('penerapan', this)">
+                    <i class="fa-solid fa-table-list"></i> Tabel Penerapan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 3 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        🌟 Berbaik Sangka (Husnuzan) & Menjauhi Berburuk Sangka (Suuzan)
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('husnuzan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">حُسْنُ الظَّنِّ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌟 Berbaik Sangka</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Husnuzan kepada Allah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Meyakini bahwa semua ketentuan Allah SWT pasti mengandung kebaikan dan hikmah bagi hamba-Nya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Husnuzan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('suuzan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">سُوْءُ الظَّنِّ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌱 Berburuk Sangka</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Suuzan & Akibatnya</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami bahaya dugaan buruk tanpa alasan yang benar serta dampak negatifnya dalam kehidupan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Suuzan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pencegahan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">التَّزْكِيَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">💡 Cara Menghindari</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Langkah Menjaga Hati</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Langkah-langkah praktis untuk menjaga hati agar tidak mudah berprasangka buruk kepada orang lain.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Cara <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">التَّطْبِيْقُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌷 Tabel Penerapan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sikap Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Panduan contoh respon terpuji ketika menghadapi berbagai situasi dalam kehidupan nyata.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Tabel <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    <strong>Berbaik sangka kepada Allah SWT (husnuzan)</strong> adalah sikap percaya bahwa Allah SWT selalu memberikan yang terbaik bagi hamba-Nya. Ketika mendapat kesulitan, kita harus sabar, berdoa, bersyukur, dan terus berusaha. Sebaliknya, kita harus menjauhi <strong>berburuk sangka (suuzan)</strong> karena dapat membuat hati tidak tenang dan merusak hubungan dengan orang lain.
+                </p>
+                <div class="p-3 bg-white rounded-xl border border-teal-200 text-teal-900 text-xs md:text-sm font-bold text-center">
+                    Ingat: "Berpikir baik, bersikap baik, dan percaya bahwa Allah SWT selalu memberikan yang terbaik."
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: BERBAIK SANGKA (HUSNUZAN) -->
+        <div id="tab-husnuzan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart text-teal-600"></i> 1. Pengertian Berbaik Sangka (Husnuzan)
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Berbaik sangka disebut juga <strong>husnuzan</strong>. Berbaik sangka kepada Allah SWT berarti meyakini bahwa semua ketentuan Allah SWT pasti mengandung kebaikan dan hikmah, meskipun terkadang kita belum memahami hikmah tersebut.
+                    </p>
+
+                    <div class="bg-teal-50 p-4 rounded-xl border border-teal-200 mb-6 space-y-2 text-xs md:text-sm text-teal-900">
+                        <p class="font-bold border-b border-teal-200 pb-1">Contoh Sikap Husnuzan:</p>
+                        <p>• Ketika mendapatkan kesulitan, kita tetap yakin Allah SWT akan memberikan jalan keluar.</p>
+                        <p>• Ketika keinginan belum tercapai, kita tidak berputus asa.</p>
+                        <p>• Ketika mendapat ujian, kita bersabar dan percaya bahwa Allah SWT mengetahui yang terbaik untuk kita.</p>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question text-teal-600"></i> 2. Mengapa Kita Harus Berbaik Sangka kepada Allah SWT?
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Allah SWT Maha Mengetahui apa yang terbaik bagi hamba-Nya. Oleh karena itu, kita harus selalu percaya kepada Allah SWT. Berbaik sangka dapat membuat kita:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-heart text-rose-500 text-base"></i>
+                            <span>Lebih sabar menghadapi masalah.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-hands-praying text-teal-600 text-base"></i>
+                            <span>Lebih dekat kepada Allah SWT.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-face-smile text-amber-500 text-base"></i>
+                            <span>Tidak mudah kecewa dan putus asa.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-dumbbell text-indigo-600 text-base"></i>
+                            <span>Tetap berusaha ketika mengalami kesulitan.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 md:col-span-2">
+                            <i class="fa-solid fa-star text-amber-500 text-base"></i>
+                            <span>Selalu bersyukur atas nikmat Allah SWT.</span>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-teal-600"></i> 3. Contoh Berbaik Sangka dalam Kehidupan Sehari-hari
+                    </h3>
+                    
+                    <div class="space-y-3 text-xs md:text-sm">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">a. Ketika mendapat nilai kurang baik</p>
+                            <p class="text-slate-700">Kita tidak menyalahkan Allah SWT. Kita belajar lebih rajin dan berusaha mendapatkan nilai yang lebih baik.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">b. Ketika sakit</p>
+                            <p class="text-slate-700">Kita bersabar, berdoa, dan berusaha berobat. Kita yakin Allah SWT memberikan kesembuhan pada waktu yang terbaik.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">c. Ketika keinginan belum tercapai</p>
+                            <p class="text-slate-700">Kita tidak kecewa berlebihan. Kita yakin mungkin Allah SWT mempunyai rencana yang lebih baik.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">d. Ketika mengalami kesulitan</p>
+                            <p class="text-slate-700">Kita tetap berdoa dan berusaha karena yakin Allah SWT akan memberikan pertolongan.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: BERBURUK SANGKA (SUUZAN) -->
+        <div id="tab-suuzan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-600"></i> 4. Pengertian Berburuk Sangka (Suuzan)
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Berburuk sangka disebut juga <strong>suuzan</strong>. Berburuk sangka berarti memiliki dugaan atau pikiran buruk terhadap Allah SWT atau orang lain tanpa alasan yang benar. Berburuk sangka merupakan perilaku tercela yang harus kita hindari.
+                    </p>
+
+                    <div class="bg-rose-50 p-4 rounded-xl border border-rose-200 mb-6 space-y-2 text-xs md:text-sm text-rose-900">
+                        <p class="font-bold border-b border-rose-200 pb-1">Contoh Perilaku Berburuk Sangka:</p>
+                        <p>• Menganggap Allah SWT tidak menyayangi kita ketika mendapat ujian.</p>
+                        <p>• Menganggap doa kita tidak didengar Allah SWT.</p>
+                        <p>• Menuduh teman berbuat buruk tanpa mengetahui kebenarannya.</p>
+                        <p>• Menganggap orang lain memiliki niat buruk tanpa bukti.</p>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-burst text-rose-600"></i> 5. Dampak Berburuk Sangka
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Berburuk sangka dapat menimbulkan banyak akibat buruk, antara lain:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-face-frown text-amber-600 text-lg"></i>
+                            <span>Hati menjadi tidak tenang.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-face-angry text-rose-600 text-lg"></i>
+                            <span>Mudah marah kepada orang lain.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-heart-crack text-rose-600 text-lg"></i>
+                            <span>Menimbulkan perselisihan.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-user-slash text-slate-600 text-lg"></i>
+                            <span>Merusak persahabatan.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-shield-xmark text-slate-600 text-lg"></i>
+                            <span>Membuat kita sulit mempercayai orang lain.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-person-walking-arrow-right text-rose-600 text-lg"></i>
+                            <span>Menjauhkan diri dari sikap bersyukur.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: CARA MENGHINDARI BERBURUK SANGKA -->
+        <div id="tab-pencegahan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-lightbulb text-amber-500"></i> 6. Cara Menghindari Berburuk Sangka
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        Agar tidak terbiasa berburuk sangka, kita dapat melakukan beberapa hal berikut dalam kehidupan harian:
+                    </p>
+
+                    <div class="space-y-3">
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Berpikir positif terhadap Allah SWT dan orang lain.</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Tidak mudah menuduh sebelum mengetahui kebenarannya.</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Mencari informasi yang benar sebelum mengambil kesimpulan.</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Mengingat bahwa Allah SWT Maha Mengetahui segala sesuatu.</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Berdoa kepada Allah SWT agar diberikan hati yang baik.</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200 text-xs md:text-sm font-medium text-emerald-900 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            <span>Memaafkan kesalahan orang lain dan memberikan kesempatan untuk memperbaiki diri.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: TABEL PENERAPAN -->
+        <div id="tab-penerapan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-table-list"></i> 7. Contoh Sikap dalam Kehidupan Sehari-hari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-6">
+                    Berikut adalah panduan praktis untuk bersikap terpuji ketika menghadapi berbagai situasi:
+                </p>
+                
+                <div class="overflow-x-auto rounded-xl border border-slate-200">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                <th class="p-3 border">Situasi</th>
+                                <th class="p-3 border">Sikap yang Baik</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-800">
+                            <tr>
+                                <td class="p-3 font-semibold text-teal-900 border">Nilai ulangan rendah</td>
+                                <td class="p-3 border">Belajar lebih rajin dan tidak berputus asa</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-semibold text-teal-900 border">Mendapat ujian atau kesulitan</td>
+                                <td class="p-3 border">Sabar, berdoa, dan berusaha</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-teal-900 border">Teman belum mengembalikan barang</td>
+                                <td class="p-3 border">Bertanya dengan baik, bukan langsung menuduh</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-semibold text-teal-900 border">Teman tidak menyapa</td>
+                                <td class="p-3 border">Tidak langsung menganggap teman membenci kita</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-teal-900 border">Keinginan belum tercapai</td>
+                                <td class="p-3 border">Tetap bersyukur dan percaya kepada Allah SWT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-semibold text-center">
+                    Berpikir baik, bersikap baik, dan percaya bahwa Allah SWT selalu memberikan yang terbaik.
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Berbaik Sangka & Menjauhi Berburuk Sangka
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Husnuzan & Suuzan PAI Kelas 3 SD
+        const quizData = [
+            {
+                question: "1. Berbaik sangka kepada Allah SWT dan sesama disebut juga dengan istilah...",
+                options: [
+                    "A. Suuzan",
+                    "B. Husnuzan",
+                    "C. Tawaduk",
+                    "D. Takabur"
+                ],
+                correct: 1,
+                explanation: "Husnuzan adalah istilah untuk berbaik sangka, sedangkan suuzan adalah berburuk sangka."
+            },
+            {
+                question: "2. Ketika kita mendapat ujian atau kesulitan, sikap husnuzan yang tepat adalah...",
+                options: [
+                    "A. Marah dan menyalahkan Allah",
+                    "B. Bersabar dan yakin Allah memberikan jalan keluar",
+                    "C. Berputus asa dan berhenti berdoa",
+                    "D. Mengurung diri di dalam kamar"
+                ],
+                correct: 1,
+                explanation: "Husnuzan membuat kita tetap sabar dan yakin bahwa Allah SWT selalu punya jalan keluar."
+            },
+            {
+                question: "3. Istilah untuk perilaku berburuk sangka tanpa alasan yang benar adalah...",
+                options: [
+                    "A. Suuzan",
+                    "B. Husnuzan",
+                    "C. Qana'ah",
+                    "D. Amanah"
+                ],
+                correct: 0,
+                explanation: "Suuzan adalah memiliki dugaan atau pikiran buruk terhadap Allah SWT atau orang lain tanpa bukti."
+            },
+            {
+                question: "4. Salah satu dampak buruk dari sikap berburuk sangka (suuzan) adalah...",
+                options: [
+                    "A. Hati menjadi tenang dan damai",
+                    "B. Banyak disukai oleh teman",
+                    "C. Hati tidak tenang dan merusak persahabatan",
+                    "D. Makin dekat kepada Allah SWT"
+                ],
+                correct: 2,
+                explanation: "Suuzan membuat hati tidak tenang, mudah marah, dan dapat merusak tali hubungan persahabatan."
+            },
+            {
+                question: "5. Apabila nilai ulangan kita kurang baik, tindakan husnuzan yang harus dilakukan yaitu...",
+                options: [
+                    "A. Belajar lebih rajin dan tidak berputus asa",
+                    "B. Menyalahkan teman di kelas",
+                    "C. Tidak mau ikut ulangan lagi",
+                    "D. Marah kepada guru"
+                ],
+                correct: 0,
+                explanation: "Sikap berbaik sangka saat nilai rendah adalah menerima dengan lapang dada lalu belajar lebih giat lagi."
+            },
+            {
+                question: "6. Jika teman belum mengembalikan barang yang dipinjamnya, sikap yang terpuji adalah...",
+                options: [
+                    "A. Menuduhnya mencuri",
+                    "B. Marah dan memusuhinya",
+                    "C. Bertanya dengan baik tanpa langsung menuduh",
+                    "D. Mengambil barang milik teman tanpa izin"
+                ],
+                correct: 2,
+                explanation: "Sebelum mengambil kesimpulan, kita harus menanyakan dengan sopan dan mencari kebenaran (tabayyun)."
+            },
+            {
+                question: "7. Berikut ini yang BUKAN merupakan cara menghindari sikap berburuk sangka adalah...",
+                options: [
+                    "A. Berpikir positif kepada orang lain",
+                    "B. Langsung menuduh tanpa mencari bukti",
+                    "C. Memaafkan kesalahan orang lain",
+                    "D. Berdoa agar diberi hati yang bersih"
+                ],
+                correct: 1,
+                explanation: "Langsung menuduh tanpa bukti merupakan bentuk perilaku suuzan, bukan cara menghindarinya."
+            },
+            {
+                question: "8. Ketika keinginan kita belum tercapai, sikap yang terbaik adalah...",
+                options: [
+                    "A. Kecewa berlebihan dan marah",
+                    "B. Yakin Allah SWT memiliki rencana yang lebih baik",
+                    "C. Menyalahkan orang tua",
+                    "D. Berhenti berdoa kepada Allah"
+                ],
+                correct: 1,
+                explanation: "Berbaik sangka mengandalkan keyakinan bahwa Allah SWT Maha Mengetahui apa yang terbaik bagi hamba-Nya."
+            },
+            {
+                question: "9. Mengapa kita harus selalu berbaik sangka kepada Allah SWT?",
+                options: [
+                    "A. Karena Allah SWT Maha Mengetahui yang terbaik bagi hamba-Nya",
+                    "B. Agar kita bisa bersikap sombong",
+                    "C. Agar dipuji oleh orang lain",
+                    "D. Supaya tidak perlu bekerja keras"
+                ],
+                correct: 0,
+                explanation: "Allah SWT Maha Mengetahui segalanya, sehingga semua takdir-Nya pasti membawa hikmah dan kebaikan."
+            },
+            {
+                question: "10. Apabila ada teman yang tidak menyapa kita saat bertemu, sebaiknya kita...",
+                options: [
+                    "A. Membencinya secara diam-diam",
+                    "B. Langsung menganggap dia tidak mau berteman",
+                    "C. Tidak langsung menganggap dia membenci kita",
+                    "D. Membalas dengan tidak menyapanya selamanya"
+                ],
+                correct: 2,
+                explanation: "Mungkin teman tidak melihat atau sedang melamun. Berpikir positif akan menghindarkan kita dari pertengkaran."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

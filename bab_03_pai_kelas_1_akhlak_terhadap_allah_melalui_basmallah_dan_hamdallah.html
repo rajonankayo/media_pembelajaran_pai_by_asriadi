@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 1 SD - Basmallah & Hamdallah</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 03. Akhlak kepada Allah Swt. melalui Basmallah dan Hamdallah.</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 1 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('basmallah', this)">
+                    <i class="fa-solid fa-star"></i> Basmallah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hamdallah', this)">
+                    <i class="fa-solid fa-heart"></i> Hamdallah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('akhlak', this)">
+                    <i class="fa-solid fa-hands-holding-circle"></i> Akhlak & Perbedaan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('penerapan', this)">
+                    <i class="fa-solid fa-repeat"></i> Pembiasaan Hari-hari
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 1 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        🌟 Akhlak kepada Allah Swt. melalui Basmallah dan Hamdallah
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('basmallah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">بِسْمِ اللّٰهِ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">✨ Kalimat Basmallah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Awal Setiap Kebaikan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal kalimat Basmallah, bacaan, arti, dan waktu membacanya sebelum melakukan perbuatan baik.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Basmallah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hamdallah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">اَلْحَمْدُ لِلّٰهِ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🤲 Kalimat Hamdallah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Ungkapan Rasa Syukur</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal kalimat Hamdallah, bacaan, arti, serta waktu membacanya setelah mendapat nikmat atau selesai kegiatan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hamdallah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('akhlak')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الأَخْلَاقُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">❤️ Akhlak & Perbedaan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Taat kepada Allah Swt.</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Contoh sikap akhlak kepada Allah dan pemahaman perbandingan waktu membaca Basmallah dan Hamdallah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Detail <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">التَّعَوُّدُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌱 Pembiasaan Diri</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Penerapan Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Membiasakan diri membaca Basmallah dan Hamdallah sebelum dan sesudah makan, belajar, serta kegiatan lainnya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Pembiasaan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Basmallah dibaca sebelum melakukan kegiatan yang baik, sedangkan Hamdallah dibaca sebagai ungkapan syukur kepada Allah Swt. Anak yang baik hendaknya membiasakan diri membaca Basmallah dan Hamdallah, rajin bersyukur, serta selalu melakukan perbuatan yang baik .
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: BASMALLAH -->
+        <div id="tab-basmallah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-star"></i> 1. Mengenal Kalimat Basmallah 
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Basmallah adalah kalimat: 
+                    </p>
+
+                    <!-- Lafal Basmallah -->
+                    <div class="p-6 bg-teal-50 border border-teal-200 rounded-xl mb-6 text-center space-y-3">
+                        <div class="font-arabic text-3xl md:text-4xl text-teal-900 font-bold leading-relaxed">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ 
+                        </div>
+                        <div class="text-teal-800 font-semibold text-sm md:text-base">
+                            Bismillāhir-raḥmānir-raḥīm 
+                        </div>
+                        <div class="text-slate-600 text-xs md:text-sm italic pt-2 border-t border-teal-200/60 max-w-md mx-auto">
+                            Artinya: “Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.” 
+                        </div>
+                    </div>
+
+                    <!-- Kapan Dibaca -->
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-amber-600"></i> Kapan Kita Membaca Basmallah?
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Kita membaca Basmallah sebelum melakukan kegiatan yang baik, misalnya: 
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-utensils text-teal-600 text-base"></i>
+                            <span>Sebelum makan dan minum. </span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-book text-teal-600 text-base"></i>
+                            <span>Sebelum belajar. </span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-book-quran text-teal-600 text-base"></i>
+                            <span>Sebelum membaca Al-Qur'an. </span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-shoe-prints text-teal-600 text-base"></i>
+                            <span>Sebelum pergi. </span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 md:col-span-2">
+                            <i class="fa-solid fa-thumbs-up text-teal-600 text-base"></i>
+                            <span>Sebelum mengerjakan pekerjaan yang baik. </span>
+                        </div>
+                    </div>
+
+                    <!-- Keutamaan Membaca Basmallah -->
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl">
+                        <p class="text-xs md:text-sm text-amber-900 leading-relaxed">
+                            💡 <strong>Tujuan & Keutamaan:</strong> Dengan membaca Basmallah, kita mengingat Allah Swt. dan memohon agar kegiatan yang kita lakukan mendapat keberkahan dan pertolongan dari Allah .
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HAMDALLAH -->
+        <div id="tab-hamdallah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart"></i> 2. Mengenal Kalimat Hamdallah 
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Hamdallah adalah kalimat: 
+                    </p>
+
+                    <!-- Lafal Hamdallah -->
+                    <div class="p-6 bg-teal-50 border border-teal-200 rounded-xl mb-6 text-center space-y-3">
+                        <div class="font-arabic text-3xl md:text-4xl text-teal-900 font-bold leading-relaxed">
+                            اَلْحَمْدُ لِلّٰهِ 
+                        </div>
+                        <div class="text-teal-800 font-semibold text-sm md:text-base">
+                            Alhamdulillāh 
+                        </div>
+                        <div class="text-slate-600 text-xs md:text-sm italic pt-2 border-t border-teal-200/60 max-w-md mx-auto">
+                            Artinya: “Segala puji bagi Allah.” 
+                        </div>
+                    </div>
+
+                    <!-- Kapan Dibaca -->
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-amber-600"></i> Kapan Kita Membaca Hamdallah?
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Kita membaca Hamdallah ketika mendapatkan nikmat, kebaikan, atau selesai melakukan sesuatu. Contohnya: 
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-utensils text-teal-600 text-base"></i>
+                            <span>Setelah selesai makan. </span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-graduation-cap text-teal-600 text-base"></i>
+                            <span>Setelah selesai belajar. </span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-gift text-teal-600 text-base"></i>
+                            <span>Ketika mendapatkan hadiah. </span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-bullhorn text-teal-600 text-base"></i>
+                            <span>Ketika mendapatkan kabar baik. </span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 md:col-span-2">
+                            <i class="fa-solid fa-check-circle text-teal-600 text-base"></i>
+                            <span>Ketika berhasil menyelesaikan tugas. </span>
+                        </div>
+                    </div>
+
+                    <!-- Keutamaan Membaca Hamdallah -->
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl">
+                        <p class="text-xs md:text-sm text-amber-900 leading-relaxed">
+                            💡 <strong>Tujuan & Keutamaan:</strong> Dengan membaca Hamdallah, kita menunjukkan rasa syukur kepada Allah Swt. 
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: AKHLAK & PERBEDAAN -->
+        <div id="tab-akhlak" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-hands-holding-circle"></i> 3. Akhlak kepada Allah Swt. 
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Akhlak kepada Allah berarti bersikap baik dan taat kepada Allah Swt. 
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Selalu mengingat Allah. 
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Rajin beribadah. 
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Bersyukur atas nikmat Allah. 
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Berdoa kepada Allah. 
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Melakukan perbuatan yang baik. 
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Menghindari perbuatan yang buruk. 
+                        </div>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-slate-600 bg-teal-50 p-3 rounded-lg border border-teal-200 mb-8">
+                        Membaca Basmallah dan Hamdallah merupakan salah satu cara membiasakan diri untuk selalu mengingat dan bersyukur kepada Allah .
+                    </p>
+
+                    <!-- TABEL PERBEDAAN -->
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-code-compare"></i> 4. Perbedaan Basmallah dan Hamdallah 
+                    </h2>
+
+                    <div class="overflow-x-auto rounded-xl border border-slate-200">
+                        <table class="w-full text-center border-collapse">
+                            <thead>
+                                <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                    <th class="p-3 border">Kalimat</th>
+                                    <th class="p-3 border">Bacaan</th>
+                                    <th class="p-3 border">Arti</th>
+                                    <th class="p-3 border">Kapan Dibaca?</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-800">
+                                <tr>
+                                    <td class="p-3 font-bold text-teal-800 border">Basmallah </td>
+                                    <td class="p-3 font-arabic text-xl text-teal-900 border">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ </td>
+                                    <td class="p-3 border">Dengan nama Allah Yang Maha Pengasih, Maha Penyayang </td>
+                                    <td class="p-3 border">Sebelum melakukan kegiatan baik </td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 font-bold text-teal-800 border">Hamdallah </td>
+                                    <td class="p-3 font-arabic text-xl text-teal-900 border">اَلْحَمْدُ لِلّٰهِ </td>
+                                    <td class="p-3 border">Segala puji bagi Allah </td>
+                                    <td class="p-3 border">Setelah mendapat nikmat atau selesai melakukan kegiatan </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PEMBIASAAN -->
+        <div id="tab-penerapan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-repeat"></i> 5. Membiasakan Membaca Basmallah dan Hamdallah 
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-6">
+                    Sebagai anak muslim, kita harus membiasakan membaca Basmallah dan Hamdallah dalam kehidupan sehari-hari. 
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Kasus Makan -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
+                        <div class="font-bold text-sm text-teal-800 flex items-center gap-2">
+                            <i class="fa-solid fa-utensils"></i> Saat Makan
+                        </div>
+                        <div class="text-xs md:text-sm text-slate-700 space-y-1">
+                            <p><strong>Sebelum makan:</strong> 👉 Membaca Basmallah. </p>
+                            <p><strong>Setelah makan:</strong> 👉 Membaca Hamdallah. </p>
+                        </div>
+                    </div>
+
+                    <!-- Kasus Belajar -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
+                        <div class="font-bold text-sm text-teal-800 flex items-center gap-2">
+                            <i class="fa-solid fa-book-open"></i> Saat Belajar
+                        </div>
+                        <div class="text-xs md:text-sm text-slate-700 space-y-1">
+                            <p><strong>Sebelum belajar:</strong> 👉 Membaca Basmallah. </p>
+                            <p><strong>Setelah selesai belajar:</strong> 👉 Membaca Hamdallah. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-semibold text-center">
+                    Dengan kebiasaan tersebut, kita belajar untuk selalu mengingat Allah dan bersyukur atas nikmat-Nya .
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Basmallah & Hamdallah
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 5</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Basmallah & Hamdallah Kelas 1 SD
+        const quizData = [
+            {
+                question: "1. Kapan kita membaca kalimat Basmallah?",
+                options: [
+                    "A. Setelah selesai makan",
+                    "B. Sebelum melakukan kegiatan yang baik",
+                    "C. Saat sedang marah",
+                    "D. Setelah tidur"
+                ],
+                correct: 1,
+                explanation: "Basmallah dibaca sebelum kita melakukan kegiatan atau pekerjaan yang baik."
+            },
+            {
+                question: "2. Apakah arti dari bacaan Hamdallah (Alhamdulillāh)?",
+                options: [
+                    "A. Dengan nama Allah Yang Maha Pengasih",
+                    "B. Segala puji bagi Allah",
+                    "C. Maha Suci Allah",
+                    "D. Allah Maha Besar"
+                ],
+                correct: 1,
+                explanation: "Hamdallah (Alhamdulillāh) artinya 'Segala puji bagi Allah'."
+            },
+            {
+                question: "3. Sebelum belajar, sebaiknya kita membaca...",
+                options: [
+                    "A. Hamdallah",
+                    "B. Takbir",
+                    "C. Basmallah",
+                    "D. Salam"
+                ],
+                correct: 2,
+                explanation: "Sebelum belajar kita membaca Basmallah agar kegiatan belajar mendapat keberkahan dari Allah Swt."
+            },
+            {
+                question: "4. Setelah selesai makan, kita sebaiknya membaca...",
+                options: [
+                    "A. Basmallah",
+                    "B. Hamdallah",
+                    "C. Takbir",
+                    "D. Salam"
+                ],
+                correct: 1,
+                explanation: "Setelah selesai makan, kita membaca Hamdallah sebagai tanda bersyukur kepada Allah Swt."
+            },
+            {
+                question: "5. Membaca Hamdallah menunjukkan rasa ... kepada Allah Swt.",
+                options: [
+                    "A. Marah",
+                    "B. Syukur",
+                    "C. Sedih",
+                    "D. Malas"
+                ],
+                correct: 1,
+                explanation: "Dengan membaca Hamdallah, kita menunjukkan rasa syukur kepada Allah Swt. atas nikmat yang diberikan."
+            },
+            {
+                question: "6. Berikut ini yang merupakan contoh akhlak yang baik kepada Allah Swt. adalah...",
+                options: [
+                    "A. Malas beribadah",
+                    "B. Tidak mau berdoa",
+                    "C. Rajin beribadah",
+                    "D. Suka berbuat buruk"
+                ],
+                correct: 2,
+                explanation: "Rajin beribadah merupakan salah satu contoh akhlak yang baik kepada Allah Swt."
+            },
+            {
+                question: "7. Kalimat Basmallah yang benar adalah...",
+                options: [
+                    "A. اَلْحَمْدُ لِلّٰهِ",
+                    "B. اَللّٰهُ أَكْبَرُ",
+                    "C. بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+                    "D. سُبْحَانَ اللّٰهِ"
+                ],
+                correct: 2,
+                explanation: "Basmallah berbunyi 'Bismillāhir-raḥmānir-raḥīm' yang berarti dengan nama Allah Yang Maha Pengasih, Maha Penyayang."
+            },
+            {
+                question: "8. Ketika mendapat hadiah dari orang tua, kita sebaiknya mengucapkan...",
+                options: [
+                    "A. Alhamdulillāh",
+                    "B. Bismillāh",
+                    "C. Astaghfirullāh",
+                    "D. Allahu Akbar"
+                ],
+                correct: 0,
+                explanation: "Ketika mendapatkan nikmat atau kebaikan, kita mengucapkan Alhamdulillāh sebagai tanda bersyukur kepada Allah Swt."
+            },
+            {
+                question: "9. Mengapa kita membaca Basmallah sebelum melakukan kegiatan yang baik?",
+                options: [
+                    "A. Agar kegiatan mendapat keberkahan dari Allah",
+                    "B. Agar cepat selesai bermain",
+                    "C. Agar dipuji teman",
+                    "D. Agar mendapatkan hadiah"
+                ],
+                correct: 0,
+                explanation: "Basmallah dibaca agar kita mengingat Allah dan memohon keberkahan serta pertolongan-Nya."
+            },
+            {
+                question: "10. Sikap yang tepat sebagai anak yang selalu mengingat Allah Swt. adalah...",
+                options: [
+                    "A. Suka berbohong",
+                    "B. Rajin berdoa dan bersyukur",
+                    "C. Malas beribadah",
+                    "D. Suka mengganggu teman"
+                ],
+                correct: 1,
+                explanation: "Anak yang baik kepada Allah selalu rajin berdoa, beribadah, bersyukur, dan melakukan perbuatan yang baik."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>
