@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surah Al-Kautsar dan Hukum Tajwid Mad Thabi'i - PAI Kelas 3 SD</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 01. Surah Al-Kautsar & Mad Thabi’i</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 3 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('mengenal', this)">
+                    <i class="fa-solid fa-circle-info"></i> Surah Al-Kautsar
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('mad', this)">
+                    <i class="fa-solid fa-spell-check"></i> Mad Thabi’i
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pesan', this)">
+                    <i class="fa-solid fa-heart"></i> Kandungan & Perilaku
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('panduan', this)">
+                    <i class="fa-solid fa-brain"></i> Panduan Hafalan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📖 Surah Al-Kautsar & Hukum Mad Thabi’i</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Pembelajaran mengenai Hukum Bacaan Mad Thabi’i, membaca Surah Al-Kautsar beserta artinya, memahami kandungan surah tentang nikmat Allah, serta penerapannya dalam kehidupan sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('mengenal')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْكَوْثَرُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📖 Surah Al-Kautsar</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Nikmat yang Banyak</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Surah ke-108 dalam Al-Qur'an, terdiri dari 3 ayat yang sangat ringkas dan indah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Baca Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('mad')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">مَدْ طَبِيْعِيْ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">✨ Hukum Mad Thabi’i</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Bacaan Panjang 2 Harakat</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal huruf Mad (ا، و، ي) dan syarat-syarat terjadinya bacaan Mad Thabi’i.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Tajwid <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pesan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْمَعْنَى</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">❤️ Kandungan & Perilaku</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pesan dan Penerapan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Perintah bersyukur, rajin salat, beribadah ikhlas, dan penerapan perilaku baik sehari-hari.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pahami Pesan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('panduan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْحِفْظُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📝 Panduan Hafalan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Langkah Menghafal</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Tips dan 6 langkah praktis untuk menghafal Surah Al-Kautsar dengan cepat dan lancar.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Panduan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ringkasan Hukum Mad Thabi'i -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-emerald-600"></i> 💡 Cara Mudah Mengingat Mad Thabi’i
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 text-center">
+                        <span class="text-xs font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">Fathah + Alif</span>
+                        <h4 class="text-teal-700 font-bold text-lg mt-2 font-arabic">ــَ + ا</h4>
+                        <p class="text-xs text-slate-600 mt-1">Contoh: <strong class="text-emerald-700 font-arabic text-lg">قَالَ</strong></p>
+                        <p class="text-xs text-slate-500 mt-1">Panjang 2 Harakat</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 text-center">
+                        <span class="text-xs font-bold bg-teal-100 text-teal-800 px-2.5 py-1 rounded-full">Dammah + Wau</span>
+                        <h4 class="text-teal-700 font-bold text-lg mt-2 font-arabic">ــُ + وْ</h4>
+                        <p class="text-xs text-slate-600 mt-1">Contoh: <strong class="text-teal-700 font-arabic text-lg">يَقُوْلُ</strong></p>
+                        <p class="text-xs text-slate-500 mt-1">Panjang 2 Harakat</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 text-center">
+                        <span class="text-xs font-bold bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full">Kasrah + Ya</span>
+                        <h4 class="text-teal-700 font-bold text-lg mt-2 font-arabic">ــِ + يْ</h4>
+                        <p class="text-xs text-slate-600 mt-1">Contoh: <strong class="text-emerald-700 font-arabic text-lg">قِيْلَ</strong></p>
+                        <p class="text-xs text-slate-500 mt-1">Panjang 2 Harakat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MENGENAL & TEKS SURAH AL-KAUTSAR -->
+        <div id="tab-mengenal" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-2 drop-shadow-sm">سُورَةُ الْكَوْثَرِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">Mengenal Surah Al-Kautsar</h2>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Nomor Surah</p>
+                            <p class="text-lg font-bold text-teal-800">Surah ke-108</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Jumlah Ayat</p>
+                            <p class="text-lg font-bold text-teal-800">3 Ayat</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Arti Name</p>
+                            <p class="text-lg font-bold text-teal-800">Nikmat yang Banyak</p>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        <strong>Surah Al-Kautsar</strong> terdiri dari 3 ayat dan merupakan surah ke-108 dalam Al-Qur'an. Surah ini mengajarkan bahwa Allah Swt. memberikan banyak nikmat kepada manusia, sehingga kita diperintahkan untuk bersyukur dengan melaksanakan salat dan berkurban.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Teks Arab Surah Al-Kautsar, Transliterasi, & Terjemahan -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-teal-700 text-white p-4 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> Teks Arab, Transliterasi & Terjemahan Surah Al-Kautsar
+                </div>
+                <div class="p-6 md:p-8 space-y-6 bg-amber-50/30">
+                    <div class="text-center font-arabic text-2xl md:text-3xl text-teal-900 pb-4 border-b border-slate-200">
+                        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيْمِ
+                        <p class="text-xs md:text-sm font-sans font-normal text-slate-600 mt-2">Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Ayat 1 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 1</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">إِنَّآ أَعْطَيْنَاكَ الْكَوْثَرَ ۝١</p>
+                            </div>
+                            <p class="text-xs text-teal-700 italic font-semibold">Cara Membaca: Innā a‘ṭainākal-kauṡar.</p>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "Sesungguhnya Kami telah memberimu (Muhammad) nikmat yang banyak."</p>
+                        </div>
+                        <!-- Ayat 2 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 2</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">فَصَلِّ لِرَبِّكَ وَانْحَرْ ۝٢</p>
+                            </div>
+                            <p class="text-xs text-teal-700 italic font-semibold">Cara Membaca: Faṣalli lirabbika wanḥar.</p>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "Maka laksanakanlah salat karena Tuhanmu, dan berkurbanlah."</p>
+                        </div>
+                        <!-- Ayat 3 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 3</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ ۝٣</p>
+                            </div>
+                            <p class="text-xs text-teal-700 italic font-semibold">Cara Membaca: Inna syāni'aka huwal-abtar.</p>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "Sungguh, orang-orang yang membencimu dialah yang terputus (dari rahmat Allah)."</p>
+                        </div>
+                    </div>
+
+                    <!-- Petunjuk Cara Membaca bagi Siswa -->
+                    <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+                        <h4 class="font-bold text-xs md:text-sm text-emerald-900 mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-graduation-cap"></i> Petunjuk Cara Membaca bagi Siswa:
+                        </h4>
+                        <ul class="list-disc list-inside text-xs md:text-sm text-slate-700 space-y-1">
+                            <li>Benar makhraj hurufnya.</li>
+                            <li>Memperhatikan panjang dan pendek bacaan.</li>
+                            <li>Memperhatikan hukum tajwid, termasuk Mad Thabi’i.</li>
+                            <li>Membaca dengan tartil dan tidak tergesa-gesa.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HUKUM TAJWID MAD THABI'I -->
+        <div id="tab-mad" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-spell-check"></i> Hukum Bacaan Mad Thabi’i
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        <strong>Mad Thabi’i</strong> adalah bacaan panjang biasa dalam Al-Qur’an. Mad Thabi’i dibaca panjang <strong>2 harakat</strong> atau kira-kira <strong>dua ketukan</strong>.
+                    </p>
+                    <div class="p-3.5 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl text-xs md:text-sm text-amber-900 font-semibold">
+                        ⭐ Ingat: Ketika membaca Mad Thabi’i, jangan terlalu pendek dan jangan terlalu panjang. Bacalah 2 harakat.
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-base md:text-lg font-bold text-slate-800 mb-4">Huruf Mad dan Syarat Terjadinya:</h3>
+                    
+                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden mb-4">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                    <th class="p-3 md:p-4">Huruf Mad</th>
+                                    <th class="p-3 md:p-4">Syarat</th>
+                                    <th class="p-3 md:p-4">Contoh</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-700">
+                                <tr>
+                                    <td class="p-3 md:p-4 font-arabic text-2xl font-bold text-teal-800">ا <span class="font-sans text-xs font-normal text-slate-500">(alif)</span></td>
+                                    <td class="p-3 md:p-4">Sebelumnya berharakat <strong>fathah</strong></td>
+                                    <td class="p-3 md:p-4 font-arabic text-2xl font-bold text-teal-900">قَالَ</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 md:p-4 font-arabic text-2xl font-bold text-teal-800">و <span class="font-sans text-xs font-normal text-slate-500">(wau)</span></td>
+                                    <td class="p-3 md:p-4">Sebelumnya berharakat <strong>dammah</strong></td>
+                                    <td class="p-3 md:p-4 font-arabic text-2xl font-bold text-teal-900">يَقُوْلُ</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 md:p-4 font-arabic text-2xl font-bold text-teal-800">ي <span class="font-sans text-xs font-normal text-slate-500">(ya)</span></td>
+                                    <td class="p-3 md:p-4">Sebelumnya berharakat <strong>kasrah</strong></td>
+                                    <td class="p-3 md:p-4 font-arabic text-2xl font-bold text-teal-900">قِيْلَ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Praktik Mad Thabi'i dalam Surah Al-Kautsar -->
+                <div class="pt-4 border-t border-slate-200 space-y-4">
+                    <h3 class="text-base md:text-lg font-bold text-teal-800 mb-2">Contoh Mad Thabi’i dalam Surah Al-Kautsar</h3>
+                    
+                    <!-- Contoh 1 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                        <span class="text-xs font-bold text-teal-700 bg-teal-100 px-2.5 py-0.5 rounded">Ayat 1</span>
+                        <p class="font-arabic text-2xl text-teal-900 font-bold text-right py-1">إِنَّآ أَعْطَيْنَاكَ ٱلْكَوْثَرَ</p>
+                        <p class="text-xs md:text-sm text-slate-700">Pada kata <span class="font-arabic text-lg font-bold text-teal-800">أَعْطَيْنَاكَ</span> terdapat bacaan panjang pada <span class="font-arabic font-bold">نَا</span>.</p>
+                    </div>
+
+                    <!-- Contoh 2 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                        <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded">Ayat 2</span>
+                        <p class="font-arabic text-2xl text-teal-900 font-bold text-right py-1">فَصَلِّ لِرَبِّكَ وَٱنْحَرْ</p>
+                        <p class="text-xs md:text-sm text-slate-700">Pada kata <span class="font-arabic text-lg font-bold text-teal-800">لِرَبِّكَ</span> tidak terdapat Mad Thabi’i, sedangkan pada bagian tertentu dalam ayat perlu diperhatikan panjang-pendek bacaannya.</p>
+                    </div>
+
+                    <!-- Contoh 3 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                        <span class="text-xs font-bold text-teal-700 bg-teal-100 px-2.5 py-0.5 rounded">Ayat 3</span>
+                        <p class="font-arabic text-2xl text-teal-900 font-bold text-right py-1">إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ</p>
+                        <p class="text-xs md:text-sm text-slate-700">Pada kata <span class="font-arabic text-lg font-bold text-teal-800">شَانِئَكَ</span> terdapat <span class="font-arabic font-bold">ا</span> setelah fathah sehingga dibaca panjang 2 harakat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KANDUNGAN & PERILAKU -->
+        <div id="tab-pesan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-book-bookmark"></i> Kandungan Surah Al-Kautsar
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Surah Al-Kautsar mengajarkan kita untuk bersyukur kepada Allah Swt. Allah memberikan banyak nikmat kepada manusia. Oleh karena itu, kita harus menggunakan nikmat tersebut dengan baik dan tidak lupa bersyukur.
+                    </p>
+                    
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base mb-3">Pesan Pokok Surah Al-Kautsar:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl">
+                            <h4 class="font-bold text-xs md:text-sm text-teal-800 mb-1">1. Allah memberikan banyak nikmat kepada manusia</h4>
+                            <p class="text-xs text-slate-600">Kita harus menyadari bahwa kesehatan, keluarga, makanan, ilmu, dan kesempatan belajar merupakan nikmat dari Allah.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl">
+                            <h4 class="font-bold text-xs md:text-sm text-teal-800 mb-1">2. Kita harus bersyukur kepada Allah</h4>
+                            <p class="text-xs text-slate-600">Salah satu cara bersyukur adalah melaksanakan salat dan beribadah kepada Allah.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl">
+                            <h4 class="font-bold text-xs md:text-sm text-teal-800 mb-1">3. Kita harus rajin melaksanakan salat</h4>
+                            <p class="text-xs text-slate-600">Salat merupakan bentuk penghambaan dan rasa syukur kepada Allah.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl">
+                            <h4 class="font-bold text-xs md:text-sm text-teal-800 mb-1">4. Kita harus ikhlas dalam beribadah</h4>
+                            <p class="text-xs text-slate-600">Ibadah dilakukan hanya karena Allah Swt.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl">
+                            <h4 class="font-bold text-xs md:text-sm text-teal-800 mb-1">5. Tidak membalas keburukan dengan keburukan</h4>
+                            <p class="text-xs text-slate-600">Jika ada orang yang membenci kita, kita tetap berbuat baik dan menyerahkan urusannya kepada Allah.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl">
+                            <h4 class="font-bold text-xs md:text-sm text-teal-800 mb-1">6. Jangan sombong dengan nikmat Allah</h4>
+                            <p class="text-xs text-slate-600">Semua nikmat yang kita miliki berasal dari Allah.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabel Penerapan dalam Kehidupan Sehari-hari -->
+                <div class="pt-4 border-t border-slate-200">
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart"></i> Contoh Penerapan dalam Kehidupan Sehari-hari
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-600 mb-4">Pesan Surah Al-Kautsar dapat kita terapkan dalam kehidupan sehari-hari melalui perilaku terpuji berikut:</p>
+                    
+                    <div class="overflow-x-auto rounded-xl border border-slate-200">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                    <th class="p-3 md:p-4 w-1/3">Pesan</th>
+                                    <th class="p-3 md:p-4 w-2/3">Contoh Perilaku</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-700">
+                                <tr>
+                                    <td class="p-3 md:p-4 font-bold text-teal-900">Bersyukur</td>
+                                    <td class="p-3 md:p-4">Mengucapkan Alhamdulillah</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 md:p-4 font-bold text-teal-900">Rajin beribadah</td>
+                                    <td class="p-3 md:p-4">Melaksanakan salat tepat waktu</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 md:p-4 font-bold text-teal-900">Menjaga nikmat Allah</td>
+                                    <td class="p-3 md:p-4">Merawat kesehatan dan lingkungan</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 md:p-4 font-bold text-teal-900">Tidak sombong</td>
+                                    <td class="p-3 md:p-4">Tetap rendah hati ketika mendapat prestasi</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 md:p-4 font-bold text-teal-900">Berbuat baik</td>
+                                    <td class="p-3 md:p-4">Membantu teman yang kesulitan</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 md:p-4 font-bold text-teal-900">Tidak membalas keburukan</td>
+                                    <td class="p-3 md:p-4">Memaafkan teman yang berbuat salah</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 md:p-4 font-bold text-teal-900">Rajin membaca Al-Qur'an</td>
+                                    <td class="p-3 md:p-4">Membaca Al-Qur'an setiap hari</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PANDUAN HAFALAN -->
+        <div id="tab-panduan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 md:p-8 space-y-6">
+                <h2 class="text-lg md:text-xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                    <i class="fa-solid fa-brain"></i> Menghafal Surah Al-Kautsar
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600">Surah Al-Kautsar hanya terdiri dari 3 ayat, sehingga sangat mudah untuk dihafalkan. Ikuti langkah-langkah praktis berikut:</p>
+                <ol class="space-y-3 text-xs md:text-sm text-slate-700">
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">1</span>
+                        <span><strong>Langkah 1:</strong> Dengarkan bacaan Surah Al-Kautsar dengan baik.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">2</span>
+                        <span><strong>Langkah 2:</strong> Baca ayat pertama berulang-ulang sampai lancar.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">3</span>
+                        <span><strong>Langkah 3:</strong> Lanjutkan ke ayat kedua.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">4</span>
+                        <span><strong>Langkah 4:</strong> Hafalkan ayat ketiga.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">5</span>
+                        <span><strong>Langkah 5:</strong> Gabungkan ayat 1, 2, dan 3.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">6</span>
+                        <span><strong>Langkah 6:</strong> Setorkan hafalan kepada guru atau orang tua.</span>
+                    </li>
+                </ol>
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 font-semibold flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500 text-lg"></i>
+                    <span>🌟 <strong>Tips:</strong> Menghafal sedikit demi sedikit tetapi dilakukan secara rutin akan membuat hafalan lebih mudah diingat.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-table"></i> Ringkasan & Kata Kunci Materi
+            </h2>
+            <p class="text-xs md:text-sm text-slate-500 mb-4">Poin-poin penting yang wajib diingat oleh siswa kelas 3 SD:</p>
+
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden mb-6 p-5">
+                <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-thumbtack text-amber-500"></i> 📌 Kata Kunci yang Perlu Diingat
+                </h3>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-slate-700">
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200"><strong>Mad Thabi’i</strong> → panjang 2 harakat</li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200"><strong>Al-Kautsar</strong> → surah ke-108</li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200"><strong>Jumlah ayat</strong> → 3 ayat</li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200"><strong>Isi utama</strong> → nikmat Allah dan perintah bersyukur</li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200"><strong>Cara bersyukur</strong> → salat, beribadah, dan berbuat baik</li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200"><strong>Hafalan</strong> → Surah Al-Kautsar ayat 1–3</li>
+                </ul>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Kesimpulan Materi
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-2">
+                    <strong>Mad Thabi’i</strong> adalah bacaan panjang yang dibaca 2 harakat. Mad Thabi’i dapat ditemukan dalam bacaan Surah Al-Kautsar.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-2">
+                    <strong>Surah Al-Kautsar</strong> adalah surah ke-108 dalam Al-Qur’an dan terdiri dari 3 ayat. Surah ini mengajarkan bahwa Allah memberikan banyak nikmat kepada manusia.
+                </p>
+                <p class="text-xs md:text-sm font-bold text-teal-800 italic">
+                    Oleh karena itu, kita harus bersyukur, rajin salat, beribadah dengan ikhlas, dan selalu berbuat baik.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Surah Al-Kautsar & Mad Thabi'i
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 5</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Aplikasi Media Pembelajaran Interaktif Tajwid.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions disesuaikan khusus materi Surah Al-Kautsar & Mad Thabi'i
+        const quizData = [
+            {
+                question: "1. Mad Thabi’i adalah bacaan panjang biasa dalam Al-Qur'an. Berapakah panjang bacaan Mad Thabi’i?",
+                options: [
+                    "A. 1 harakat",
+                    "B. 2 harakat (2 ketukan)",
+                    "C. 4 harakat",
+                    "D. 6 harakat"
+                ],
+                correct: 1,
+                explanation: "Mad Thabi’i dibaca panjang 2 harakat atau kira-kira dua ketukan."
+            },
+            {
+                question: "2. Huruf alif (ا) dibaca Mad Thabi’i apabila huruf sebelumnya berharakat...",
+                options: [
+                    "A. Fathah",
+                    "B. Kasrah",
+                    "C. Dammah",
+                    "D. Sukun"
+                ],
+                correct: 0,
+                explanation: "Alif (ا) menjadi Mad Thabi’i jika huruf sebelumnya berharakat fathah, seperti pada kata قَالَ."
+            },
+            {
+                question: "3. Surah Al-Kautsar merupakan surah ke-108 dalam Al-Qur'an. Berapakah jumlah ayat dalam Surah Al-Kautsar?",
+                options: [
+                    "A. 3 ayat",
+                    "B. 5 ayat",
+                    "C. 7 ayat",
+                    "D. 9 ayat"
+                ],
+                correct: 0,
+                explanation: "Surah Al-Kautsar terdiri dari 3 ayat dan merupakan salah satu surah terpendek dalam Al-Qur'an."
+            },
+            {
+                question: "4. Apakah arti dari nama surah 'Al-Kautsar'?",
+                options: [
+                    "A. Pertolongan",
+                    "B. Nikmat yang banyak",
+                    "C. Waktu subuh",
+                    "D. Pembuka"
+                ],
+                correct: 1,
+                explanation: "Al-Kautsar berarti nikmat yang banyak, sebagaimana dijelaskan dalam ayat pertama."
+            },
+            {
+                question: "5. Perhatikan potongan ayat berikut: (فَصَلِّ لِرَبِّكَ وَانْحَرْ). Apakah arti perintah dari ayat tersebut?",
+                options: [
+                    "A. Membaca Al-Qur'an dan belajar",
+                    "B. Melaksanakan salat karena Tuhanmu dan berkurbanlah",
+                    "C. Menolong teman yang kesusahan",
+                    "D. Puasa di bulan Ramadan"
+                ],
+                correct: 1,
+                explanation: "Ayat 2 Surah Al-Kautsar berbunyi 'Faṣalli lirabbika wanḥar' yang artinya 'Maka laksanakanlah salat karena Tuhanmu, dan berkurbanlah.'"
+            },
+            {
+                question: "6. Kata (يَقُوْلُ) merupakan contoh Mad Thabi'i karena huruf Wau (و) didahului oleh harakat...",
+                options: [
+                    "A. Fathah",
+                    "B. Kasrah",
+                    "C. Dammah",
+                    "D. Tanwin"
+                ],
+                correct: 2,
+                explanation: "Huruf wau (و) didahului harakat dammah menghasilkan bacaan Mad Thabi'i, seperti pada contoh يَقُوْلُ."
+            },
+            {
+                question: "7. Manakah salah satu bentuk ungkapan syukur kita atas nikmat Allah Swt. dalam kehidupan sehari-hari?",
+                options: [
+                    "A. Mengucapkan Alhamdulillah dan rajin salat",
+                    "B. Pamer barang mewah kepada teman",
+                    "C. Tidur seharian",
+                    "D. Membalas ejekan teman"
+                ],
+                correct: 0,
+                explanation: "Salah satu cara bersyukur atas nikmat Allah adalah dengan mengucapkan Alhamdulillah dan rajin melaksanakan salat."
+            },
+            {
+                question: "8. Bagaimana cara kita bersikap jika ada teman yang membenci atau berbuat salah kepada kita sesuai pesan Surah Al-Kautsar?",
+                options: [
+                    "A. Membalasnya dengan ejekan yang lebih parah",
+                    "B. Memaafkannya dan tetap berbuat baik",
+                    "C. Jauhi dan musuhi selamanya",
+                    "D. Marah-marah di sekolah"
+                ],
+                correct: 1,
+                explanation: "Pesan pokok Surah Al-Kautsar mengajarkan kita untuk tidak membalas keburukan dengan keburukan, melainkan memaafkan dan tetap berbuat baik."
+            },
+            {
+                question: "9. Dalam Surah Al-Kautsar ayat 3 (إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ), bacaan Mad Thabi'i terdapat pada kata...",
+                options: [
+                    "A. إِنَّ",
+                    "B. شَانِئَكَ",
+                    "C. هُوَ",
+                    "D. الْأَبْتَرُ"
+                ],
+                correct: 1,
+                explanation: "Pada kata شَانِئَكَ terdapat huruf alif (ا) setelah harakat fathah sehingga dibaca panjang 2 harakat (Mad Thabi'i)."
+            },
+            {
+                question: "10. Pengertian bacaan Mad Thabi’i yang benar ketika dibaca adalah...",
+                options: [
+                    "A. Tidak boleh terlalu pendek dan tidak boleh terlalu panjang (2 harakat)",
+                    "B. Dibaca cepat tanpa ditahan",
+                    "C. Dibaca sepanjang 6 ketukan",
+                    "D. Dibaca samar-samar"
+                ],
+                correct: 0,
+                explanation: "Ketika membaca Mad Thabi’i, jangan terlalu pendek dan jangan terlalu panjang. Bacalah pas 2 harakat."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

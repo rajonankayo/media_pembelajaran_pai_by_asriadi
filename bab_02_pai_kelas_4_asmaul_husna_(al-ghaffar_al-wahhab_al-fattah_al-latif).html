@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmaul Husna (Al-Ghaffar, Al-Wahhab, Al-Fattah, Al-Latif)</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-kaaba"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 02. Meneladani Asmaul Husna: Al-Ghaffār, Al-Wahhāb, Al-Fattāh, dan Al-Latīf</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 4 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('al-ghaffar', this)">
+                    <i class="fa-solid fa-leaf"></i> Al-Ghaffār
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('al-wahhab', this)">
+                    <i class="fa-solid fa-gift"></i> Al-Wahhāb
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('al-fattah', this)">
+                    <i class="fa-solid fa-key"></i> Al-Fattāh
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('al-latif', this)">
+                    <i class="fa-solid fa-heart"></i> Al-Latīf
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🌟 A. Pengertian Asmaul Husna</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed mb-4">
+                        Asmaul Husna adalah nama-nama Allah Swt. yang indah dan baik. Allah Swt. memiliki banyak nama yang menunjukkan sifat-sifat kesempurnaan-Nya.
+                    </p>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 text-left max-w-xl mx-auto">
+                        <p class="font-bold text-yellow-300 mb-2 text-xs md:text-sm">Dengan mempelajari Asmaul Husna, kita dapat:</p>
+                        <ul class="text-xs md:text-sm space-y-1 list-disc list-inside text-teal-50">
+                            <li>Mengenal kebesaran Allah Swt.</li>
+                            <li>Meyakini sifat-sifat Allah Swt.</li>
+                            <li>Menumbuhkan rasa cinta kepada Allah Swt.</li>
+                            <li>Mencontoh sifat-sifat mulia dalam kehidupan sehari-hari.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Empat Asmaul Husna yang Dipelajari
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1: Al-Ghaffar -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('al-ghaffar')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْغَفَّارُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌿 Al-Ghaffār</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Maha Pengampun</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Allah mengampuni dosa dan kesalahan hamba-Nya yang benar-benar bertobat dan memohon ampunan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2: Al-Wahhab -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('al-wahhab')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْوَهَّابُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🎁 Al-Wahhāb</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Maha Pemberi Karunia</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Allah memberikan berbagai nikmat kepada manusia tanpa mengharapkan balasan atau imbalan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3: Al-Fattah -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('al-fattah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْفَتَّاحُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🔑 Al-Fattāh</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Maha Pembuka</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Allah membuka pintu kebaikan, memberi pertolongan, dan membukakan jalan keluar dari kesulitan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4: Al-Latif -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('al-latif')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">اللَّطِيفُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌸 Al-Latīf</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Maha Lembut</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Allah memberikan kasih sayang dan pertolongan kepada makhluk-Nya secara halus dan penuh kebaikan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cara Mudah Menghafal -->
+            <div class="bg-amber-50 rounded-2xl p-5 md:p-6 border border-amber-200 mb-6">
+                <h3 class="text-amber-800 font-bold text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-brain text-amber-600"></i> 🧠 Cara Mudah Menghafal
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-amber-100">
+                        <span class="font-bold text-teal-800 text-sm">Ghaffār</span> → Ampunan
+                        <p class="text-xs text-amber-700 font-medium mt-1">➡️ Aku mau memaafkan.</p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-amber-100">
+                        <span class="font-bold text-teal-800 text-sm">Wahhāb</span> → Pemberian
+                        <p class="text-xs text-amber-700 font-medium mt-1">➡️ Aku mau berbagi.</p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-amber-100">
+                        <span class="font-bold text-teal-800 text-sm">Fattāh</span> → Pembuka
+                        <p class="text-xs text-amber-700 font-medium mt-1">➡️ Aku tidak mudah menyerah.</p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-amber-100">
+                        <span class="font-bold text-teal-800 text-sm">Latīf</span> → Kelembutan
+                        <p class="text-xs text-amber-700 font-medium mt-1">➡️ Aku bersikap lembut.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Penerapan Sehari-hari -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-seedling text-emerald-600"></i> 🌱 Keteladanan dalam Kehidupan Sehari-hari
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Keimanan kepada Asmaul Husna tidak hanya dihafalkan, tetapi juga diamalkan:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="text-teal-600 font-bold text-sm mb-1">Memaafkan</h4>
+                        <p class="text-xs text-slate-600">Meminta maaf saat bersalah dan memaafkan teman yang meminta maaf.</p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="text-teal-600 font-bold text-sm mb-1">Suka Berbagi</h4>
+                        <p class="text-xs text-slate-600">Berbagi makanan dan membantu orang yang sedang kesulitan.</p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="text-teal-600 font-bold text-sm mb-1">Pantang Menyerah</h4>
+                        <p class="text-xs text-slate-600">Rajin belajar, berdoa, dan tidak mudah menyerah saat menghadapi masalah.</p>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="text-teal-600 font-bold text-sm mb-1">Lembut & Sopan</h4>
+                        <p class="text-xs text-slate-600">Berbicara lembut kepada orang tua dan guru serta tidak mengejek teman.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: AL-GHAFFAR -->
+        <div id="tab-al-ghaffar" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-4 drop-shadow-sm">الْغَفَّارُ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">B. 🌿 Al-Ghaffār</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Allah Swt. Maha Pengampun</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-bookmark"></i> 1. Arti Al-Ghaffār
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700">
+                            <strong>Al-Ghaffār</strong> berarti Allah Maha Pengampun. Allah Swt. mengampuni dosa dan kesalahan hamba-Nya yang benar-benar bertobat dan memohon ampun kepada-Nya. Allah memiliki sifat Al-Ghaffār karena Allah berkali-kali memberikan ampunan kepada hamba-Nya yang menyesal dan kembali kepada-Nya.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-heart-circle-check"></i> 2. Sikap yang dapat Diteladani
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-3">Sebagai seorang muslim, kita dapat meneladani makna Al-Ghaffār dengan cara:</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Memohon ampun kepada Allah ketika melakukan kesalahan.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak mengulangi kesalahan yang telah diperbuat.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Memaafkan kesalahan orang lain.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak suka menyimpan dendam.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm md:col-span-2">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Mengakui kesalahan dengan jujur.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb"></i>💡 Contoh dalam Kehidupan:
+                        </h4>
+                        <p class="text-amber-900 text-xs md:text-sm">Jika seorang teman melakukan kesalahan kepada kita dan meminta maaf dengan sungguh-sungguh, sebaiknya kita memaafkannya.</p>
+                    </div>
+                    
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-teal-800 text-center">
+                        Al-Ghaffār → Maha Pengampun → Kita belajar menjadi pribadi yang suka memaafkan.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: AL-WAHHAB -->
+        <div id="tab-al-wahhab" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-4 drop-shadow-sm">الْوَهَّابُ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">C. 🎁 Al-Wahhāb</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Allah Swt. Maha Pemberi Karunia</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-bookmark"></i> 1. Arti Al-Wahhāb
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700">
+                            <strong>Al-Wahhāb</strong> berarti Allah Maha Pemberi Karunia. Allah Swt. memberikan berbagai macam nikmat kepada manusia tanpa mengharapkan imbalan. Contohnya adalah kesehatan, keluarga, ilmu, makanan, rezeki, dan kehidupan. Semua karunia tersebut merupakan pemberian Allah Swt.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-heart-circle-check"></i> 2. Sikap yang dapat Diteladani
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-3">Kita dapat meneladani makna Al-Wahhāb dengan cara:</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Bersyukur atas nikmat Allah.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Suka berbagi kepada orang lain.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Memberikan bantuan kepada orang yang membutuhkan.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak pelit.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm md:col-span-2">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak mengharapkan balasan ketika memberikan sesuatu.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-gift"></i>💡 Contoh dalam Kehidupan:
+                        </h4>
+                        <p class="text-amber-900 text-xs md:text-sm">Ketika mempunyai makanan lebih, kita dapat berbagi dengan teman yang belum mempunyai makanan.</p>
+                    </div>
+
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-teal-800 text-center">
+                        Al-Wahhāb → Maha Pemberi Karunia → Kita belajar menjadi anak yang suka berbagi.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: AL-FATTAH -->
+        <div id="tab-al-fattah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-4 drop-shadow-sm">الْفَتَّاحُ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">D. 🔑 Al-Fattāh</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Allah Swt. Maha Pembuka</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-bookmark"></i> 1. Arti Al-Fattāh
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700">
+                            <strong>Al-Fattāh</strong> berarti Allah Maha Pembuka. Allah Swt. membuka berbagai jalan kebaikan, memberikan pertolongan, dan memberikan jalan keluar dari berbagai kesulitan. Allah juga membuka hati manusia untuk menerima kebenaran dan memberikan ilmu serta pemahaman.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-heart-circle-check"></i> 2. Sikap yang dapat Diteladani
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-3">Kita dapat meneladani makna Al-Fattāh dengan cara:</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak mudah menyerah ketika menghadapi kesulitan.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Rajin belajar dan berusaha.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Berdoa kepada Allah ketika menghadapi masalah.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Membantu orang lain menemukan jalan keluar.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm md:col-span-2">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Membuka kesempatan bagi orang lain untuk berbuat baik.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-key"></i>💡 Contoh dalam Kehidupan:
+                        </h4>
+                        <p class="text-amber-900 text-xs md:text-sm">Ketika mengalami kesulitan memahami pelajaran, kita berdoa, belajar dengan sungguh-sungguh, dan bertanya kepada guru.</p>
+                    </div>
+
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-teal-800 text-center">
+                        Al-Fattāh → Maha Pembuka → Kita belajar menjadi pribadi yang suka membantu dan tidak mudah menyerah.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: AL-LATIF -->
+        <div id="tab-al-latif" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-4 drop-shadow-sm">اللَّطِيفُ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">E. 🌸 Al-Latīf</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Allah Swt. Maha Lembut</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-book-bookmark"></i> 1. Arti Al-Latīf
+                        </h3>
+                        <p class="text-xs md:text-sm leading-relaxed text-slate-700">
+                            <strong>Al-Latīf</strong> berarti Allah Maha Lembut. Allah Swt. memberikan kasih sayang dan pertolongan kepada makhluk-Nya dengan cara yang lembut dan penuh kebaikan. Allah mengetahui segala sesuatu yang tersembunyi maupun yang terlihat.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-heart-circle-check"></i> 2. Sikap yang dapat Diteladani
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-3">Kita dapat meneladani makna Al-Latīf dengan cara:</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Bersikap lembut kepada orang lain.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Berbicara dengan sopan dan tidak berkata kasar.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Menyayangi orang tua, guru, teman, dan sesama.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Membantu orang lain dengan penuh kasih sayang.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-start gap-3 hover:border-teal-500 hover:bg-teal-50 transition-colors text-xs md:text-sm md:col-span-2">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-base mt-0.5 shrink-0"></i>
+                                <span>Tidak menyakiti hati orang lain.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-heart"></i>💡 Contoh dalam Kehidupan:
+                        </h4>
+                        <p class="text-amber-900 text-xs md:text-sm">Ketika teman melakukan kesalahan, kita sebaiknya menasihatinya dengan bahasa yang lembut, bukan dengan membentak atau mengejek.</p>
+                    </div>
+
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-teal-800 text-center">
+                        Al-Latīf → Maha Lembut → Kita belajar menjadi anak yang lembut, sopan, dan penyayang.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-table"></i> F. Tabel Hafalan Asmaul Husna
+            </h2>
+            <p class="text-xs md:text-sm text-slate-500 mb-4">Tabel rangkuman makna dan keteladanan dari 4 Asmaul Husna Kelas 4 SD:</p>
+
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-x-auto mb-6">
+                <table class="w-full min-w-[600px] text-left border-collapse">
+                    <thead>
+                        <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                            <th class="p-3 md:p-4 w-32">Asmaul Husna</th>
+                            <th class="p-3 md:p-4 w-28 text-center">Lafal Arab</th>
+                            <th class="p-3 md:p-4 w-48">Arti</th>
+                            <th class="p-3 md:p-4">Keteladanan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-700">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 md:p-4 font-bold text-teal-900">Al-Ghaffār</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl text-center text-teal-800">الْغَفَّارُ</td>
+                            <td class="p-3 md:p-4">Allah Maha Pengampun</td>
+                            <td class="p-3 md:p-4">Suka memaafkan</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <td class="p-3 md:p-4 font-bold text-teal-900">Al-Wahhāb</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl text-center text-teal-800">الْوَهَّابُ</td>
+                            <td class="p-3 md:p-4">Allah Maha Pemberi Karunia</td>
+                            <td class="p-3 md:p-4">Suka berbagi</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 md:p-4 font-bold text-teal-900">Al-Fattāh</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl text-center text-teal-800">الْفَتَّاحُ</td>
+                            <td class="p-3 md:p-4">Allah Maha Pembuka</td>
+                            <td class="p-3 md:p-4">Tidak mudah menyerah dan suka membantu</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <td class="p-3 md:p-4 font-bold text-teal-900">Al-Latīf</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl text-center text-teal-800">اللَّطِيفُ</td>
+                            <td class="p-3 md:p-4">Allah Maha Lembut</td>
+                            <td class="p-3 md:p-4">Bersikap lembut dan penyayang</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- G. Meyakini Asmaul Husna -->
+            <div class="bg-white rounded-2xl p-5 md:p-6 border border-slate-200 mb-6 shadow-sm">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-heart text-rose-500"></i> ❤️ G. Meyakini Asmaul Husna
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    Meyakini Asmaul Husna berarti percaya dengan sungguh-sungguh bahwa Allah Swt. memiliki sifat-sifat tersebut. Dengan meyakini:
+                </p>
+                <ul class="text-xs md:text-sm space-y-2 text-slate-700">
+                    <li class="flex items-start gap-2">
+                        <span class="text-teal-600 font-bold">•</span>
+                        <span><strong>Al-Ghaffār:</strong> kita tidak boleh berputus asa dari ampunan Allah.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-teal-600 font-bold">•</span>
+                        <span><strong>Al-Wahhāb:</strong> kita selalu bersyukur atas karunia Allah.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-teal-600 font-bold">•</span>
+                        <span><strong>Al-Fattāh:</strong> kita yakin Allah dapat memberikan jalan keluar dari kesulitan.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-teal-600 font-bold">•</span>
+                        <span><strong>Al-Latīf:</strong> kita yakin Allah selalu memberikan kasih sayang dan kebaikan kepada hamba-Nya.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Kesimpulan -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Al-Ghaffār, Al-Wahhāb, Al-Fattāh, dan Al-Latīf adalah empat Asmaul Husna yang mengajarkan kita untuk menjadi anak yang suka memaafkan, suka berbagi, tidak mudah menyerah, suka membantu, lembut, dan penyayang.
+                </p>
+                <p class="text-xs md:text-sm font-bold text-teal-800 mt-3 italic">
+                    Kenali nama-Nya, yakini sifat-Nya, lalu teladani dalam kehidupan sehari-hari!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Asmaul Husna Kelas 4 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+   <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Aplikasi Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions disesuaikan khusus materi Kelas 4 SD (Al-Ghaffar, Al-Wahhab, Al-Fattah, Al-Latif)
+        const quizData = [
+            {
+                question: "1. Arti dari Asmaul Husna Al-Ghaffār (الْغَفَّارُ) adalah...",
+                options: [
+                    "A. Allah Maha Pembuka",
+                    "B. Allah Maha Pemberi Karunia",
+                    "C. Allah Maha Pengampun",
+                    "D. Allah Maha Lembut"
+                ],
+                correct: 2,
+                explanation: "Al-Ghaffār berarti Allah Swt. Maha Pengampun yang berkali-kali mengampuni dosa hamba-Nya yang bertobat."
+            },
+            {
+                question: "2. Ketika teman kita meminta maaf atas kesalahannya dengan sungguh-sungguh, tindakan yang sesuai dengan meneladani Al-Ghaffār adalah...",
+                options: [
+                    "A. Memaafkannya dan tidak menyimpan dendam",
+                    "B. Pura-pura memaafkan tetapi tetap marah",
+                    "C. Membalas kesalahannya terlebih dahulu",
+                    "D. Mengabaikan dan memusuhinya"
+                ],
+                correct: 0,
+                explanation: "Meneladani Al-Ghaffār mengajarkan kita untuk menjadi pribadi yang pemaaf dan tidak menyimpan dendam."
+            },
+            {
+                question: "3. Allah memberikan nikmat kesehatan, ilmu, dan rezeki kepada manusia tanpa mengharapkan imbalan. Hal ini menunjukkan sifat Allah...",
+                options: [
+                    "A. Al-Fattāh",
+                    "B. Al-Wahhāb",
+                    "C. Al-Latīf",
+                    "D. Al-Ghaffār"
+                ],
+                correct: 1,
+                explanation: "Al-Wahhāb berarti Allah Swt. Maha Pemberi Karunia tanpa mengharapkan balasan."
+            },
+            {
+                question: "4. Salah satu cara meneladani makna Asmaul Husna Al-Wahhāb dalam kehidupan sehari-hari adalah...",
+                options: [
+                    "A. Berkata jujur saat berbuat salah",
+                    "B. Suka berbagi makanan kepada teman yang membutuhkan",
+                    "C. Rajin belajar dan tidak mudah menyerah",
+                    "D. Menasihati teman dengan kata-kata lembut"
+                ],
+                correct: 1,
+                explanation: "Al-Wahhāb (Maha Pemberi Karunia) dapat diteladani dengan suka berbagi dan memberikan bantuan tanpa pamrih."
+            },
+            {
+                question: "5. Sifat Allah Swt. Al-Fattāh (الْفَتَّاحُ) mengandung arti bahwa Allah Swt. Maha...",
+                options: [
+                    "A. Lembut",
+                    "B. Pengampun",
+                    "C. Pembuka",
+                    "D. Pemberi Karunia"
+                ],
+                correct: 2,
+                explanation: "Al-Fattāh berarti Allah Maha Pembuka, yaitu membukakan pintu kebaikan, jalan keluar dari kesulitan, dan pemahaman ilmu."
+            },
+            {
+                question: "6. Ketika kita mengalami kesulitan dalam memahami pelajaran, sikap yang meneladani Asmaul Husna Al-Fattāh adalah...",
+                options: [
+                    "A. Berdoa, belajar sungguh-sungguh, dan tidak mudah menyerah",
+                    "B. Menyalahkan guru dan tidak mau belajar lagi",
+                    "C. Menyontek jawaban teman saat ujian",
+                    "D. Menyerah dan membiarkan nilai jelek"
+                ],
+                correct: 0,
+                explanation: "Meneladani Al-Fattāh mendidik kita untuk tidak mudah menyerah, rajin berusaha/belajar, dan berdoa memohon kemudahan."
+            },
+            {
+                question: "7. Arti dari Asmaul Husna Al-Latīf (اللَّطِيفُ) adalah...",
+                options: [
+                    "A. Allah Maha Pengampun",
+                    "B. Allah Maha Lembut",
+                    "C. Allah Maha Pemberi Karunia",
+                    "D. Allah Maha Pembuka"
+                ],
+                correct: 1,
+                explanation: "Al-Latīf berarti Allah Maha Lembut, memberikan kasih sayang dan kebaikan dengan cara yang halus."
+            },
+            {
+                question: "8. Jika ada teman yang berbuat kesalahan, cara menasihatinya yang mencerminkan keteladanan Al-Latīf adalah...",
+                options: [
+                    "A. Membentak dan memarahinya di depan umum",
+                    "B. Menasihatinya dengan tutur kata yang sopan dan lembut",
+                    "C. Mengejek dan menjauhinya",
+                    "D. Melaporkan kepada guru agar dihukum berat"
+                ],
+                correct: 1,
+                explanation: "Al-Latīf mengajarkan kelembutan, bersikap sopan, tidak berkata kasar, dan menasihati teman dengan kasih sayang."
+            },
+            {
+                question: "9. Pasangan Asmaul Husna dan artinya yang tepat di bawah ini adalah...",
+                options: [
+                    "A. Al-Ghaffār = Maha Lembut",
+                    "B. Al-Wahhāb = Maha Pembuka",
+                    "C. Al-Fattāh = Maha Pengampun",
+                    "D. Al-Latīf = Maha Lembut"
+                ],
+                correct: 3,
+                explanation: "Al-Latīf berarti Maha Lembut, Al-Ghaffār = Maha Pengampun, Al-Wahhāb = Maha Pemberi Karunia, Al-Fattāh = Maha Pembuka."
+            },
+            {
+                question: "10. Kata kunci kata bantu menghafal: 'Wahhāb → Pemberian', maka kalimat keteladanannya adalah...",
+                options: [
+                    "A. Aku mau memaafkan",
+                    "B. Aku mau berbagi",
+                    "C. Aku tidak mudah menyerah",
+                    "D. Aku bersikap lembut"
+                ],
+                correct: 1,
+                explanation: "Kata kunci peneladan Asmaul Husna: Ghaffār (memaafkan), Wahhāb (berbagi), Fattāh (tidak mudah menyerah), Latīf (bersikap lembut)."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = (score / quizData.length) * 100;
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

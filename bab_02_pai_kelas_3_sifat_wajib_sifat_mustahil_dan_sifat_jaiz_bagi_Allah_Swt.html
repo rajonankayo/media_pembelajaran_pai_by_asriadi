@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sifat Wajib, Mustahil, dan Jaiz Bagi Allah Swt.</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-kaaba"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 02. Sifat Wajib, Sifat Mustahil, dan Sifat Jaiz bagi Allah Swt.</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B -Kelas 3 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('wajib', this)">
+                    <i class="fa-solid fa-star"></i> Sifat Wajib
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('mustahil', this)">
+                    <i class="fa-solid fa-ban"></i> Sifat Mustahil
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('jaiz', this)">
+                    <i class="fa-solid fa-gear"></i> Sifat Jaiz
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Mengenal Sifat-Sifat Allah Swt.</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed mb-4">
+                        Sebagai seorang muslim, kita wajib meyakini bahwa Allah Swt. memiliki sifat-sifat yang sempurna dan terhindar dari segala kekurangan.
+                    </p>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 text-left max-w-xl mx-auto">
+                        <p class="font-bold text-yellow-300 mb-2 text-xs md:text-sm">Materi Utama yang Dipelajari:</p>
+                        <ul class="text-xs md:text-sm space-y-1 list-disc list-inside text-teal-50">
+                            <li>Sifat Wajib (Pasti dimiliki Allah - 20 Sifat)</li>
+                            <li>Sifat Mustahil (Tidak mungkin dimiliki Allah - 20 Sifat)</li>
+                            <li>Sifat Jaiz (Kebebasan kehendak Allah - 1 Sifat)</li>
+                            <li>Hikmah Mempelajari Sifat-Sifat Allah Swt.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pembagian Sifat Allah Swt.
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+                <!-- Card 1: Sifat Wajib -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('wajib')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">20 Sifat</span>
+                            <i class="fa-solid fa-star text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌟 Sifat Wajib</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pasti Dimiliki Allah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Sifat-sifat yang pasti dimiliki oleh Allah Swt. yang menunjukkan kesempurnaan-Nya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2: Sifat Mustahil -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('mustahil')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-rose-600 bg-rose-100 px-2.5 py-1 rounded-full">20 Sifat</span>
+                            <i class="fa-solid fa-ban text-2xl text-rose-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">❌ Sifat Mustahil</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tidak Mungkin Dimiliki Allah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Sifat yang tidak mungkin dimiliki oleh Allah Swt. dan merupakan kebalikan sifat wajib.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3: Sifat Jaiz -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('jaiz')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-amber-600 bg-amber-100 px-2.5 py-1 rounded-full">1 Sifat</span>
+                            <i class="fa-solid fa-gear text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌷 Sifat Jaiz</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Kebebasan Kehendak</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Sifat yang boleh dilakukan atau tidak dilakukan oleh Allah Swt. sesuai kehendak-Nya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hikmah Mempelajari -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-heart text-rose-500"></i> ❤️ Hikmah Mempelajari Sifat Allah
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Dengan mempelajari sifat-sifat Allah Swt., kita dapat:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 text-xs text-slate-700">Meningkatkan keimanan kepada Allah Swt.</div>
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 text-xs text-slate-700">Menyadari bahwa Allah Maha Sempurna.</div>
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 text-xs text-slate-700">Tidak menyamakan Allah dengan makhluk.</div>
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 text-xs text-slate-700">Selalu bersyukur atas nikmat Allah.</div>
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 text-xs text-slate-700">Rajin beribadah dan memohon pertolongan.</div>
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 text-xs text-slate-700">Menjadi anak jujur, rendah hati, dan bertanggung jawab.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SIFAT WAJIB -->
+        <div id="tab-wajib" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <h2 class="text-xl md:text-3xl font-extrabold">🌟 1. Sifat Wajib bagi Allah Swt.</h2>
+                    <p class="text-sm md:text-base text-teal-200 font-semibold mt-1">Sifat yang pasti dimiliki oleh Allah Swt.</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Sifat wajib bagi Allah Swt. adalah sifat-sifat yang pasti dimiliki oleh Allah Swt. Sifat tersebut menunjukkan kesempurnaan Allah. Kita wajib meyakini bahwa Allah memiliki sifat-sifat yang sempurna. Ada 20 sifat wajib bagi Allah Swt.
+                    </p>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse rounded-xl overflow-hidden shadow-sm">
+                            <thead>
+                                <tr class="bg-teal-800 text-white text-xs md:text-sm">
+                                    <th class="p-3 w-12 text-center">No.</th>
+                                    <th class="p-3">Sifat Wajib</th>
+                                    <th class="p-3">Arti</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-xs md:text-sm">
+                                <tr><td class="p-2.5 text-center font-bold">1</td><td class="p-2.5 font-semibold text-teal-800">Wujud</td><td class="p-2.5">Ada</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">2</td><td class="p-2.5 font-semibold text-teal-800">Qidam</td><td class="p-2.5">Terdahulu</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">3</td><td class="p-2.5 font-semibold text-teal-800">Baqa'</td><td class="p-2.5">Kekal</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">4</td><td class="p-2.5 font-semibold text-teal-800">Mukhalafatu lil-hawaditsi</td><td class="p-2.5">Berbeda dengan makhluk</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">5</td><td class="p-2.5 font-semibold text-teal-800">Qiyamuhu binafsihi</td><td class="p-2.5">Berdiri sendiri</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">6</td><td class="p-2.5 font-semibold text-teal-800">Wahdaniyah</td><td class="p-2.5">Esa</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">7</td><td class="p-2.5 font-semibold text-teal-800">Qudrat</td><td class="p-2.5">Berkuasa</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">8</td><td class="p-2.5 font-semibold text-teal-800">Iradat</td><td class="p-2.5">Berkehendak</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">9</td><td class="p-2.5 font-semibold text-teal-800">Ilmu</td><td class="p-2.5">Mengetahui</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">10</td><td class="p-2.5 font-semibold text-teal-800">Hayat</td><td class="p-2.5">Hidup</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">11</td><td class="p-2.5 font-semibold text-teal-800">Sama'</td><td class="p-2.5">Mendengar</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">12</td><td class="p-2.5 font-semibold text-teal-800">Basar</td><td class="p-2.5">Melihat</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">13</td><td class="p-2.5 font-semibold text-teal-800">Kalam</td><td class="p-2.5">Berfirman</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">14</td><td class="p-2.5 font-semibold text-teal-800">Qadiran</td><td class="p-2.5">Maha Kuasa</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">15</td><td class="p-2.5 font-semibold text-teal-800">Muridan</td><td class="p-2.5">Maha Berkehendak</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">16</td><td class="p-2.5 font-semibold text-teal-800">'Aliman</td><td class="p-2.5">Maha Mengetahui</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">17</td><td class="p-2.5 font-semibold text-teal-800">Hayyan</td><td class="p-2.5">Maha Hidup</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">18</td><td class="p-2.5 font-semibold text-teal-800">Sami'an</td><td class="p-2.5">Maha Mendengar</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">19</td><td class="p-2.5 font-semibold text-teal-800">Basiran</td><td class="p-2.5">Maha Melihat</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">20</td><td class="p-2.5 font-semibold text-teal-800">Mutakalliman</td><td class="p-2.5">Maha Berfirman</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl">
+                        <h4 class="text-amber-800 font-bold text-xs md:text-sm mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb"></i>💡 Contoh Sederhana:
+                        </h4>
+                        <ul class="text-xs md:text-sm text-amber-900 space-y-1 list-disc list-inside">
+                            <li>Allah Wujud, artinya Allah itu ada.</li>
+                            <li>Allah Qudrat, artinya Allah Maha Kuasa.</li>
+                            <li>Allah Ilmu, artinya Allah Maha Mengetahui.</li>
+                            <li>Allah Sama', artinya Allah Maha Mendengar.</li>
+                            <li>Allah Basar, artinya Allah Maha Melihat.</li>
+                            <li>Allah Wahdaniyah, artinya Allah itu satu atau Maha Esa.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SIFAT MUSTAHIL -->
+        <div id="tab-mustahil" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-rose-800 to-rose-600 text-white p-6 md:p-8 text-center relative">
+                    <h2 class="text-xl md:text-3xl font-extrabold">❌ 2. Sifat Mustahil bagi Allah Swt.</h2>
+                    <p class="text-sm md:text-base text-rose-200 font-semibold mt-1">Sifat yang tidak mungkin dimiliki Allah Swt.</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Sifat mustahil bagi Allah adalah sifat yang tidak mungkin dimiliki oleh Allah Swt. Sifat mustahil merupakan kebalikan dari sifat wajib. Ada 20 sifat mustahil bagi Allah.
+                    </p>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse rounded-xl overflow-hidden shadow-sm">
+                            <thead>
+                                <tr class="bg-rose-800 text-white text-xs md:text-sm">
+                                    <th class="p-3 w-12 text-center">No.</th>
+                                    <th class="p-3">Sifat Mustahil</th>
+                                    <th class="p-3">Arti</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-xs md:text-sm">
+                                <tr><td class="p-2.5 text-center font-bold">1</td><td class="p-2.5 font-semibold text-rose-800">Adam</td><td class="p-2.5">Tidak ada</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">2</td><td class="p-2.5 font-semibold text-rose-800">Hudus</td><td class="p-2.5">Baru</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">3</td><td class="p-2.5 font-semibold text-rose-800">Fana</td><td class="p-2.5">Binasa</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">4</td><td class="p-2.5 font-semibold text-rose-800">Mumatsalatu lil-hawaditsi</td><td class="p-2.5">Menyerupai makhluk</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">5</td><td class="p-2.5 font-semibold text-rose-800">Ihtiyaju ila ghairihi</td><td class="p-2.5">Membutuhkan yang lain</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">6</td><td class="p-2.5 font-semibold text-rose-800">Ta'addud</td><td class="p-2.5">Berbilang</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">7</td><td class="p-2.5 font-semibold text-rose-800">'Ajz</td><td class="p-2.5">Lemah</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">8</td><td class="p-2.5 font-semibold text-rose-800">Karahah</td><td class="p-2.5">Terpaksa</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">9</td><td class="p-2.5 font-semibold text-rose-800">Jahl</td><td class="p-2.5">Bodoh / tidak mengetahui</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">10</td><td class="p-2.5 font-semibold text-rose-800">Maut</td><td class="p-2.5">Mati</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">11</td><td class="p-2.5 font-semibold text-rose-800">Shamam</td><td class="p-2.5">Tuli</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">12</td><td class="p-2.5 font-semibold text-rose-800">'Ama</td><td class="p-2.5">Buta</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">13</td><td class="p-2.5 font-semibold text-rose-800">Bukm</td><td class="p-2.5">Bisu</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">14</td><td class="p-2.5 font-semibold text-rose-800">'Ajizan</td><td class="p-2.5">Dalam keadaan lemah</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">15</td><td class="p-2.5 font-semibold text-rose-800">Mukrahan</td><td class="p-2.5">Dalam keadaan terpaksa</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">16</td><td class="p-2.5 font-semibold text-rose-800">Jahilan</td><td class="p-2.5">Dalam keadaan tidak mengetahui</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">17</td><td class="p-2.5 font-semibold text-rose-800">Mayyitan</td><td class="p-2.5">Dalam keadaan mati</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">18</td><td class="p-2.5 font-semibold text-rose-800">Ashamma</td><td class="p-2.5">Dalam keadaan tuli</td></tr>
+                                <tr><td class="p-2.5 text-center font-bold">19</td><td class="p-2.5 font-semibold text-rose-800">A'ma</td><td class="p-2.5">Dalam keadaan buta</td></tr>
+                                <tr class="bg-slate-50"><td class="p-2.5 text-center font-bold">20</td><td class="p-2.5 font-semibold text-rose-800">Abkama</td><td class="p-2.5">Dalam keadaan bisu</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-rose-50 border-l-4 border-rose-600 p-4 rounded-r-xl">
+                        <h4 class="text-rose-800 font-bold text-xs md:text-sm mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-exclamation"></i>🌟 Contoh Kebalikan:
+                        </h4>
+                        <ul class="text-xs md:text-sm text-rose-900 space-y-1 list-disc list-inside">
+                            <li>Allah memiliki sifat <strong>Wujud</strong> (ada), maka mustahil bersifat <strong>Adam</strong> (tidak ada).</li>
+                            <li>Allah memiliki sifat <strong>Qudrat</strong> (berkuasa), maka mustahil bersifat <strong>'Ajz</strong> (lemah).</li>
+                            <li>Allah memiliki sifat <strong>Ilmu</strong> (mengetahui), maka mustahil bersifat <strong>Jahl</strong> (bodoh).</li>
+                            <li>Allah memiliki sifat <strong>Hayat</strong> (hidup), maka mustahil bersifat <strong>Maut</strong> (mati).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SIFAT JAIZ -->
+        <div id="tab-jaiz" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-6 md:p-8 text-center relative">
+                    <h2 class="text-xl md:text-3xl font-extrabold">🌷 3. Sifat Jaiz bagi Allah Swt.</h2>
+                    <p class="text-sm md:text-base text-amber-200 font-semibold mt-1">Kebebasan kehendak Allah Swt.</p>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Sifat jaiz bagi Allah adalah sifat yang boleh bagi Allah untuk melakukan atau tidak melakukan sesuatu sesuai dengan kehendak-Nya. Sifat jaiz bagi Allah hanya ada satu.
+                    </p>
+
+                    <div class="bg-amber-50 p-6 rounded-2xl border border-amber-200 text-center">
+                        <div class="font-arabic text-2xl md:text-3xl text-amber-900 font-bold mb-3">
+                            فِعْلُ كُلِّ مُمْكِنٍ أَوْ تَرْكُهُ
+                        </div>
+                        <div class="text-xs md:text-sm font-semibold text-amber-800 mb-2">
+                            "Fi'lu kulli mumkinin au tarkuhu"
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700 italic">
+                            Artinya: "Allah Swt. boleh melakukan sesuatu atau tidak melakukan sesuatu sesuai dengan kehendak-Nya."
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                            <i class="fa-solid fa-seedling"></i> Contoh Sifat Jaiz
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl flex items-start gap-3 text-xs md:text-sm">
+                                <i class="fa-solid fa-check text-emerald-600 text-base mt-0.5"></i>
+                                <span>Allah menciptakan manusia dengan berbagai bentuk, warna kulit, dan keadaan. Semua terjadi berdasarkan kehendak dan kekuasaan Allah Swt.</span>
+                            </li>
+                            <li class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl flex items-start gap-3 text-xs md:text-sm">
+                                <i class="fa-solid fa-check text-emerald-600 text-base mt-0.5"></i>
+                                <span>Allah bebas memberikan rezeki kepada siapa saja sesuai dengan kehendak-Nya.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-brain"></i> 🧠 Perbedaan & Pasangan Sifat Allah
+            </h2>
+            <p class="text-xs md:text-sm text-slate-500 mb-4">Rangkuman perbedaan sifat serta pasangan sifat wajib dan mustahil:</p>
+
+            <!-- Tabel Perbedaan -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden mb-6">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                            <th class="p-3">Jenis Sifat</th>
+                            <th class="p-3">Pengertian</th>
+                            <th class="p-3 text-center w-24">Jumlah</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-700">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 font-bold text-teal-900">Wajib</td>
+                            <td class="p-3">Sifat yang pasti dimiliki Allah</td>
+                            <td class="p-3 text-center font-bold">20</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <td class="p-3 font-bold text-rose-900">Mustahil</td>
+                            <td class="p-3">Sifat yang tidak mungkin dimiliki Allah</td>
+                            <td class="p-3 text-center font-bold">20</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 font-bold text-amber-900">Jaiz</td>
+                            <td class="p-3">Sifat yang boleh dilakukan atau tidak dilakukan Allah sesuai kehendak-Nya</td>
+                            <td class="p-3 text-center font-bold">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pasangan Sifat Wajib & Mustahil -->
+            <div class="bg-white rounded-2xl p-5 md:p-6 border border-slate-200 mb-6 shadow-sm">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-arrows-rotate text-teal-600"></i> 🔄 Pasangan Sifat Wajib dan Mustahil
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs md:text-sm text-slate-700">
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Wujud ↔ Adam</strong> (Ada ↔ Tidak ada)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Qidam ↔ Hudus</strong> (Terdahulu ↔ Baru)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Baqa' ↔ Fana</strong> (Kekal ↔ Binasa)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Mukhalafatu lil-hawaditsi ↔ Mumatsalatu lil-hawaditsi</strong> (Berbeda ↔ Menyerupai)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Qiyamuhu binafsihi ↔ Ihtiyaju ila ghairihi</strong> (Berdiri sendiri ↔ Membutuhkan)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Wahdaniyah ↔ Ta'addud</strong> (Esa ↔ Berbilang)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Qudrat ↔ 'Ajz</strong> (Berkuasa ↔ Lemah)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Iradat ↔ Karahah</strong> (Berkehendak ↔ Terpaksa)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Ilmu ↔ Jahl</strong> (Mengetahui ↔ Bodoh)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Hayat ↔ Maut</strong> (Hidup ↔ Mati)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Sama' ↔ Shamam</strong> (Mendengar ↔ Tuli)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Basar ↔ 'Ama</strong> (Melihat ↔ Buta)</div>
+                    <div class="p-2.5 bg-slate-50 rounded-lg"><strong>Kalam ↔ Bukm</strong> (Berfirman ↔ Bisu)</div>
+                </div>
+            </div>
+
+            <!-- Kesimpulan -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Sifat wajib adalah sifat yang pasti dimiliki Allah. Sifat mustahil adalah sifat yang tidak mungkin dimiliki Allah. Sifat jaiz adalah sesuatu yang boleh Allah lakukan atau tidak lakukan sesuai kehendak-Nya. Allah Swt. adalah Tuhan Yang Maha Sempurna. Tidak ada satu pun makhluk yang menyamai-Nya.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Sifat Allah Kelas 3 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Aplikasi Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions disesuaikan khusus materi Kelas 3 SD (Sifat Wajib, Mustahil, Jaiz)
+        const quizData = [
+            {
+                question: "1. Sifat-sifat yang pasti dimiliki oleh Allah Swt. yang menunjukkan kesempurnaan-Nya disebut sifat...",
+                options: [
+                    "A. Mustahil",
+                    "B. Jaiz",
+                    "C. Wajib",
+                    "D. Makruh"
+                ],
+                correct: 2,
+                explanation: "Sifat wajib adalah sifat yang pasti dimiliki oleh Allah Swt."
+            },
+            {
+                question: "2. Berapakah jumlah sifat wajib bagi Allah Swt. yang harus kita yakini?",
+                options: [
+                    "A. 10",
+                    "B. 20",
+                    "C. 99",
+                    "D. 1"
+                ],
+                correct: 1,
+                explanation: "Ada 20 sifat wajib bagi Allah Swt."
+            },
+            {
+                question: "3. Sifat wajib Allah 'Wujud' artinya...",
+                options: [
+                    "A. Terdahulu",
+                    "B. Kekal",
+                    "C. Ada",
+                    "D. Berkuasa"
+                ],
+                correct: 2,
+                explanation: "Wujud artinya Ada. Allah pasti Ada."
+            },
+            {
+                question: "4. Sifat yang tidak mungkin dimiliki oleh Allah Swt. disebut sifat...",
+                options: [
+                    "A. Wajib",
+                    "B. Mustahil",
+                    "C. Jaiz",
+                    "D. Sunnah"
+                ],
+                correct: 1,
+                explanation: "Sifat mustahil adalah sifat yang tidak mungkin dimiliki oleh Allah Swt."
+            },
+            {
+                question: "5. Kebalikan dari sifat wajib 'Qudrat' (Berkuasa) adalah sifat mustahil...",
+                options: [
+                    "A. Adam (Tidak ada)",
+                    "B. 'Ajz (Lemah)",
+                    "C. Jahl (Bodoh)",
+                    "D. Maut (Mati)"
+                ],
+                correct: 1,
+                explanation: "Qudrat artinya Berkuasa, kebalikannya adalah 'Ajz yang artinya Lemah."
+            },
+            {
+                question: "6. Allah memiliki sifat 'Hayat' yang artinya Hidup. Maka mustahil Allah bersifat Maut, yang artinya...",
+                options: [
+                    "A. Bisu",
+                    "B. Tuli",
+                    "C. Mati",
+                    "D. Bodoh"
+                ],
+                correct: 2,
+                explanation: "Maut adalah sifat mustahil bagi Allah yang artinya Mati."
+            },
+            {
+                question: "7. Berapakah jumlah sifat Jaiz bagi Allah Swt.?",
+                options: [
+                    "A. 20",
+                    "B. 10",
+                    "C. 1",
+                    "D. 5"
+                ],
+                correct: 2,
+                explanation: "Sifat Jaiz bagi Allah Swt. hanya ada 1."
+            },
+            {
+                question: "8. Sifat Jaiz bagi Allah Swt. artinya...",
+                options: [
+                    "A. Sifat yang pasti dimiliki Allah",
+                    "B. Sifat yang boleh dilakukan atau tidak dilakukan Allah sesuai kehendak-Nya",
+                    "C. Sifat yang tidak mungkin ada pada Allah",
+                    "D. Sifat yang dibenci Allah"
+                ],
+                correct: 1,
+                explanation: "Sifat Jaiz adalah kebebasan Allah untuk melakukan atau tidak melakukan sesuatu."
+            },
+            {
+                question: "9. Pasangan sifat wajib dan kebalikan sifat mustahil yang benar di bawah ini adalah...",
+                options: [
+                    "A. Ilmu (Mengetahui) ↔ Jahl (Bodoh)",
+                    "B. Wujud (Ada) ↔ Fana (Binasa)",
+                    "C. Baqa' (Kekal) ↔ Adam (Tidak Ada)",
+                    "D. Sama' (Mendengar) ↔ 'Ama (Buta)"
+                ],
+                correct: 0,
+                explanation: "Ilmoe (Mengetahui) kebalikannya adalah Jahl (Bodoh/tidak mengetahui)."
+            },
+            {
+                question: "10. Salah satu hikmah mempelajari sifat wajib, mustahil, dan jaiz bagi Allah Swt. adalah...",
+                options: [
+                    "A. Menyamakan Allah dengan makhluk",
+                    "B. Meningkatkan keimanan kepada Allah Swt.",
+                    "C. Meminta pertolongan kepada pohon",
+                    "D. Menjadi sombong dan angkuh"
+                ],
+                correct: 1,
+                explanation: "Mempelajari sifat-sifat Allah berguna untuk meningkatkan keimanan kita kepada Allah Swt."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = (score / quizData.length) * 100;
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

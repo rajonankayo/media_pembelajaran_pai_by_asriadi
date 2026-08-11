@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 2 SD - Hijaiyah Bersambung, Surah Al-Falaq & An-Nas</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 01. Hijaiyah Bersambung 3 Huruf, Surah Al-Falaq & An-Nas</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 2 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hijaiyah', this)">
+                    <i class="fa-solid fa-spell-check"></i> Hijaiyah Bersambung
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('alfalaq', this)">
+                    <i class="fa-solid fa-sun"></i> Surah Al-Falaq
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('annas', this)">
+                    <i class="fa-solid fa-users"></i> Surah An-Nas
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('perbandingan', this)">
+                    <i class="fa-solid fa-code-compare"></i> Perbandingan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan & Sikap
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Materi PAI Kelas 2 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Membaca Huruf Hijaiyah Bersambung, memahami dan menghafal Surah Al-Falaq serta Surah An-Nas, serta meneladani sikap terpuji dalam kehidupan sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hijaiyah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">بَتَثَ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">✍️ Hijaiyah Bersambung</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Awal, Tengah & Akhir</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal bentuk perubahan huruf hijaiyah saat disambung dan aturan membacanya dari kanan ke kiri.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Huruf <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('alfalaq')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْفَلَقِ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌅 Surah Al-Falaq</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Waktu Subuh (5 Ayat)</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Surah ke-113, mengajarkan memohon perlindungan kepada Allah dari berbagai kejahatan makhluk.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Baca Surah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('annas')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">النَّاسِ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">👥 Surah An-Nas</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Manusia (6 Ayat)</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Surah ke-114 dan terakhir, mengajarkan memohon perlindungan dari bisikan dan godaan setan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Baca Surah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('perbandingan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">المُعَوِّذَتَيْنِ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌟 Al-Mu'awwidzatain</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Dua Surah Perlindungan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Perbandingan Surah Al-Falaq dan An-Nas serta penerapannya dalam membentuk akhlak terpuji.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Perbandingan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Peringatan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-emerald-600"></i> 💡 Kunci Membaca Al-Qur'an dengan Baik
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Membaca Al-Qur'an harus dilakukan dengan <strong>teliti, perlahan (tartil)</strong>, dan sesuai dengan <strong>makhraj huruf</strong>. Ingat selalu untuk membaca dari <strong>kanan ke kiri</strong>!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: HURUF HIJAIYAH BERSAMBUNG -->
+        <div id="tab-hijaiyah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-spell-check"></i> Membaca Huruf Hijaiyah Bersambung
+                    </h2>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">1. Pengertian Huruf Hijaiyah Bersambung</h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Huruf hijaiyah adalah huruf yang digunakan untuk membaca Al-Qur'an. Dalam Al-Qur'an, sebagian besar huruf hijaiyah ditulis bersambung dengan huruf sebelum atau sesudahnya.
+                    </p>
+
+                    <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl mb-4">
+                        <p class="text-xs md:text-sm font-bold text-teal-900 mb-1">Contoh Tiga Huruf yang Bersambung:</p>
+                        <p class="font-arabic text-3xl text-teal-800 font-bold text-center py-2">ب + ت + ث = بَتَثَ</p>
+                    </div>
+
+                    <p class="text-xs md:text-sm font-bold text-slate-800 mb-2">Contoh Lainnya:</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
+                            <span class="font-arabic text-2xl font-bold text-teal-800 block">كَتَبَ</span>
+                            <span class="text-xs font-semibold text-slate-600">ka-ta-ba</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
+                            <span class="font-arabic text-2xl font-bold text-teal-800 block">جَلَسَ</span>
+                            <span class="text-xs font-semibold text-slate-600">ja-la-sa</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
+                            <span class="font-arabic text-2xl font-bold text-teal-800 block">دَرَسَ</span>
+                            <span class="text-xs font-semibold text-slate-600">da-ra-sa</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
+                            <span class="font-arabic text-2xl font-bold text-teal-800 block">ذَهَبَ</span>
+                            <span class="text-xs font-semibold text-slate-600">dza-ha-ba</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-200">
+                    <h3 class="font-bold text-slate-800 text-base mb-2">2. Cara Membaca Huruf Bersambung</h3>
+                    <p class="text-xs md:text-sm text-slate-600 mb-3">Agar dapat membaca huruf hijaiyah bersambung dengan baik:</p>
+                    <ul class="list-disc list-inside space-y-1 text-xs md:text-sm text-slate-700 bg-amber-50/50 p-4 rounded-xl border border-amber-200">
+                        <li>Kenali setiap huruf hijaiyah.</li>
+                        <li>Perhatikan bentuk huruf ketika berada di awal, tengah, dan akhir.</li>
+                        <li>Perhatikan harakatnya.</li>
+                        <li>Bacalah dari kanan ke kiri.</li>
+                        <li>Latih membaca secara perlahan dan berulang-ulang.</li>
+                    </ul>
+                </div>
+
+                <div class="pt-4 border-t border-slate-200">
+                    <h3 class="font-bold text-slate-800 text-base mb-3">3. Contoh Bentuk Huruf saat Sambung</h3>
+                    <p class="text-xs md:text-sm text-slate-600 mb-4">Beberapa huruf dapat berubah bentuk ketika disambungkan di awal, tengah, maupun akhir kata:</p>
+                    
+                    <div class="overflow-x-auto rounded-xl border border-slate-200">
+                        <table class="w-full text-center border-collapse">
+                            <thead>
+                                <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                    <th class="p-3">Huruf Asli</th>
+                                    <th class="p-3">Di Awal</th>
+                                    <th class="p-3">Di Tengah</th>
+                                    <th class="p-3">Di Akhir</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-xl font-arabic text-teal-900">
+                                <tr>
+                                    <td class="p-3 font-bold text-amber-700">ب</td>
+                                    <td class="p-3">بـ</td>
+                                    <td class="p-3">ـبـ</td>
+                                    <td class="p-3">ـب</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 font-bold text-amber-700">ت</td>
+                                    <td class="p-3">تـ</td>
+                                    <td class="p-3">ـتـ</td>
+                                    <td class="p-3">ـت</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-amber-700">ث</td>
+                                    <td class="p-3">ثـ</td>
+                                    <td class="p-3">ـثـ</td>
+                                    <td class="p-3">ـث</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 font-bold text-amber-700">ج</td>
+                                    <td class="p-3">جـ</td>
+                                    <td class="p-3">ـجـ</td>
+                                    <td class="p-3">ـج</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-amber-700">س</td>
+                                    <td class="p-3">سـ</td>
+                                    <td class="p-3">ـسـ</td>
+                                    <td class="p-3">ـس</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 font-bold text-amber-700">ع</td>
+                                    <td class="p-3">عـ</td>
+                                    <td class="p-3">ـعـ</td>
+                                    <td class="p-3">ـع</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl text-xs md:text-sm text-amber-900 font-semibold">
+                    💡 <strong>Ingat:</strong> Membaca Al-Qur'an harus dilakukan dengan teliti, perlahan, dan sesuai makhraj huruf.
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SURAH AL-FALAQ -->
+        <div id="tab-alfalaq" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-2 drop-shadow-sm">سُورَةُ الْفَلَقِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">1. Mengenal Surah Al-Falaq</h2>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Urutan Surah</p>
+                            <p class="text-lg font-bold text-teal-800">Surah ke-113</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Jumlah Ayat & Golongan</p>
+                            <p class="text-lg font-bold text-teal-800">5 Ayat (Makkiyah)</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Arti Nama</p>
+                            <p class="text-lg font-bold text-teal-800">Waktu Subuh</p>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed text-center font-medium">
+                        Surah Al-Falaq mengajarkan kita untuk selalu memohon perlindungan hanya kepada Allah Swt. dari berbagai kejahatan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Teks Bacaan & Arti Surah Al-Falaq -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-teal-700 text-white p-4 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> 2. Bacaan & Arti Surah Al-Falaq
+                </div>
+                <div class="p-6 md:p-8 space-y-6 bg-amber-50/30">
+                    <div class="text-center font-arabic text-2xl md:text-3xl text-teal-900 pb-4 border-b border-slate-200">
+                        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيْمِ
+                        <p class="text-xs md:text-sm font-sans font-normal text-slate-600 mt-2">Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Ayat 1 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 1</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝١</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "Katakanlah: Aku berlindung kepada Tuhan yang menguasai waktu subuh,"</p>
+                        </div>
+                        <!-- Ayat 2 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 2</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">مِنْ شَرِّ مَا خَلَقَ ۝٢</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "dari kejahatan makhluk-Nya,"</p>
+                        </div>
+                        <!-- Ayat 3 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 3</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝٣</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "dan dari kejahatan malam apabila telah gelap gulita,"</p>
+                        </div>
+                        <!-- Ayat 4 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 4</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝٤</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "dan dari kejahatan tukang sihir yang meniup pada buhul-buhul,"</p>
+                        </div>
+                        <!-- Ayat 5 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 5</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ ۝٥</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "dan dari kejahatan orang yang dengki apabila dia dengki."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan Pokok & Menghafal -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
+                    <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-rose-500"></i> 4. Pesan Pokok Surah Al-Falaq
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-xs md:text-sm text-slate-700">
+                        <li>Memohon perlindungan kepada Allah Swt.</li>
+                        <li>Berlindung dari berbagai macam kejahatan.</li>
+                        <li>Tidak takut kepada makhluk karena Allah adalah pelindung kita.</li>
+                        <li>Menjauhi sifat dengki dan iri hati.</li>
+                        <li>Membiasakan diri berdoa kepada Allah ketika merasa takut atau menghadapi bahaya.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
+                    <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-brain text-amber-500"></i> 5. Cara Menghafal Surah Al-Falaq
+                    </h3>
+                    <ol class="list-decimal list-inside space-y-2 text-xs md:text-sm text-slate-700">
+                        <li>Bacalah ayat pertama berulang-ulang.</li>
+                        <li>Lanjutkan ke ayat berikutnya.</li>
+                        <li>Gabungkan ayat yang sudah hafal.</li>
+                        <li>Dengarkan bacaan guru atau orang tua.</li>
+                        <li>Bacalah dengan tartil.</li>
+                        <li>Ulangi hafalan setiap hari.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SURAH AN-NAS -->
+        <div id="tab-annas" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-2 drop-shadow-sm">سُورَةُ النَّاسِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">1. Mengenal Surah An-Nas</h2>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Urutan Surah</p>
+                            <p class="text-lg font-bold text-teal-800">Surah ke-114 (Terakhir)</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Jumlah Ayat & Golongan</p>
+                            <p class="text-lg font-bold text-teal-800">6 Ayat (Makkiyah)</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Arti Nama</p>
+                            <p class="text-lg font-bold text-teal-800">Manusia</p>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed text-center font-medium">
+                        Surah An-Nas mengajarkan kita untuk memohon perlindungan kepada Allah Swt. dari kejahatan dan bisikan setan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Teks Bacaan & Arti Surah An-Nas -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-teal-700 text-white p-4 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> 2. Bacaan & Arti Surah An-Nas
+                </div>
+                <div class="p-6 md:p-8 space-y-6 bg-amber-50/30">
+                    <div class="space-y-4">
+                        <!-- Ayat 1 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 1</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝١</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "Katakanlah: Aku berlindung kepada Tuhan manusia,"</p>
+                        </div>
+                        <!-- Ayat 2 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 2</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">مَلِكِ النَّاسِ ۝٢</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "Raja manusia,"</p>
+                        </div>
+                        <!-- Ayat 3 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 3</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">إِلَٰهِ النَّاسِ ۝٣</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "sembahan manusia,"</p>
+                        </div>
+                        <!-- Ayat 4 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 4</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝٤</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "dari kejahatan bisikan setan yang bersembunyi,"</p>
+                        </div>
+                        <!-- Ayat 5 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 5</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝٥</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "yang membisikkan kejahatan ke dalam dada manusia,"</p>
+                        </div>
+                        <!-- Ayat 6 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 6</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">مِنَ الْجِنَّةِ وَالنَّاسِ ۝٦</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> "dari golongan jin dan manusia."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan Pokok & Menghafal -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
+                    <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-rose-500"></i> 4. Pesan Pokok Surah An-Nas
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-xs md:text-sm text-slate-700">
+                        <li>Memohon perlindungan kepada Allah Swt.</li>
+                        <li>Meyakini bahwa Allah adalah Tuhan dan Raja seluruh manusia.</li>
+                        <li>Berlindung dari bisikan setan.</li>
+                        <li>Tidak mengikuti ajakan kepada keburukan.</li>
+                        <li>Selalu mengingat dan mendekatkan diri kepada Allah.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
+                    <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-brain text-amber-500"></i> 5. Cara Menghafal Surah An-Nas
+                    </h3>
+                    <ol class="list-decimal list-inside space-y-2 text-xs md:text-sm text-slate-700">
+                        <li>Bacalah setiap ayat dengan benar.</li>
+                        <li>Ulangi satu ayat sampai lancar.</li>
+                        <li>Tambahkan ayat berikutnya.</li>
+                        <li>Gabungkan ayat-ayat yang sudah dikuasai.</li>
+                        <li>Mintalah guru atau orang tua menyimak hafalan.</li>
+                        <li>Amalkan membaca Surah An-Nas dalam kehidupan sehari-hari.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PERBANDINGAN SURAH -->
+        <div id="tab-perbandingan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-code-compare"></i> Perbandingan Surah Al-Falaq dan An-Nas
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-600 mb-4">
+                        Berikut adalah tabel perbandingan antara Surah Al-Falaq dan Surah An-Nas:
+                    </p>
+
+                    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                    <th class="p-3 md:p-4 w-1/2 border-r border-teal-700">Surah Al-Falaq</th>
+                                    <th class="p-3 md:p-4 w-1/2">Surah An-Nas</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-700">
+                                <tr>
+                                    <td class="p-3 md:p-4 border-r border-slate-200">Surah ke-113</td>
+                                    <td class="p-3 md:p-4">Surah ke-114</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 md:p-4 border-r border-slate-200">5 ayat</td>
+                                    <td class="p-3 md:p-4">6 ayat</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 md:p-4 border-r border-slate-200">Al-Falaq berarti waktu subuh</td>
+                                    <td class="p-3 md:p-4">An-Nas berarti manusia</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 md:p-4 border-r border-slate-200">Memohon perlindungan dari berbagai kejahatan</td>
+                                    <td class="p-3 md:p-4">Memohon perlindungan dari bisikan setan</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 md:p-4 border-r border-slate-200">Mengajarkan menjauhi kedengkian</td>
+                                    <td class="p-3 md:p-4">Mengajarkan menjauhi bisikan dan ajakan buruk</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl text-xs md:text-sm text-teal-900 font-semibold text-center">
+                        ✨ Kedua surah tersebut disebut <strong>Al-Mu'awwidzatain</strong>, yaitu dua surah yang berisi permohonan perlindungan kepada Allah Swt.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN & SIKAP -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-600"></i> Sikap yang Dapat Kita Teladani
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-4">Setelah mempelajari Surah Al-Falaq dan An-Nas, kita hendaknya mempraktikkan sikap terpuji berikut:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-medium flex items-center gap-2">
+                        <span>✅</span> Rajin membaca Al-Qur'an.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-medium flex items-center gap-2">
+                        <span>✅</span> Berdoa dan memohon perlindungan kepada Allah.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-medium flex items-center gap-2">
+                        <span>✅</span> Tidak iri dan dengki kepada orang lain.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-medium flex items-center gap-2">
+                        <span>✅</span> Menjauhi perbuatan buruk.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-medium flex items-center gap-2">
+                        <span>✅</span> Tidak mengikuti bisikan atau ajakan setan.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-medium flex items-center gap-2">
+                        <span>✅</span> Membiasakan membaca Al-Falaq dan An-Nas.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-medium flex items-center gap-2 col-span-1 md:col-span-2">
+                        <span>✅</span> Menjaga diri dan selalu mengingat Allah Swt.
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Kesimpulan Pembelajaran
+                </h3>
+                <ul class="list-disc list-inside space-y-2 text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <li><strong>Huruf hijaiyah bersambung</strong> harus dibaca dengan benar dan teliti.</li>
+                    <li><strong>Surah Al-Falaq</strong> mengajarkan kita untuk memohon perlindungan kepada Allah dari berbagai kejahatan dan sifat dengki.</li>
+                    <li><strong>Surah An-Nas</strong> mengajarkan kita untuk memohon perlindungan kepada Allah dari bisikan setan dan ajakan kepada keburukan.</li>
+                    <li>Dengan membaca dan menghafal kedua surah tersebut, kita belajar menjadi anak yang rajin beribadah, selalu berdoa, tidak dengki, dan menjauhi perbuatan buruk.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis PAI Kelas 2 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 8</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Aplikasi Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions disesuaikan khusus materi PAI Kelas 2 SD
+        const quizData = [
+            {
+                question: "1. Huruf hijaiyah dalam Al-Qur'an dibaca dari arah...",
+                options: [
+                    "A. Kiri ke kanan",
+                    "B. Kanan ke kiri",
+                    "C. Atas ke bawah",
+                    "D. Bawah ke atas"
+                ],
+                correct: 1,
+                explanation: "Huruf hijaiyah dan tulisan Al-Qur'an dibaca dari kanan ke kiri."
+            },
+            {
+                question: "2. Gabungan tiga huruf hijaiyah ب + ت + ث jika dibaca adalah...",
+                options: [
+                    "A. بَتَثَ",
+                    "B. جَلَسَ",
+                    "C. كَتَبَ",
+                    "D. دَرَسَ"
+                ],
+                correct: 0,
+                explanation: "Gabungan huruf ب + ت + ث dengan harakat fathah menjadi بَتَثَ."
+            },
+            {
+                question: "3. Saat membaca huruf hijaiyah bersambung, kita harus memperhatikan...",
+                options: [
+                    "A. Warna huruf",
+                    "B. Bentuk dan harakat huruf",
+                    "C. Ukuran buku",
+                    "D. Warna halaman"
+                ],
+                correct: 1,
+                explanation: "Ketika membaca huruf hijaiyah bersambung, kita harus memperhatikan bentuk dan harakat setiap huruf."
+            },
+            {
+                question: "4. Surah Al-Falaq merupakan surah ke-... dalam Al-Qur'an.",
+                options: [
+                    "A. 112",
+                    "B. 113",
+                    "C. 114",
+                    "D. 115"
+                ],
+                correct: 1,
+                explanation: "Surah Al-Falaq adalah surah ke-113 dalam Al-Qur'an."
+            },
+            {
+                question: "5. Surah Al-Falaq terdiri dari ... ayat.",
+                options: [
+                    "A. 4 ayat",
+                    "B. 5 ayat",
+                    "C. 6 ayat",
+                    "D. 7 ayat"
+                ],
+                correct: 1,
+                explanation: "Surah Al-Falaq terdiri dari 5 ayat."
+            },
+            {
+                question: "6. Apakah arti dari Al-Falaq?",
+                options: [
+                    "A. Manusia",
+                    "B. Waktu subuh",
+                    "C. Malam",
+                    "D. Pertolongan"
+                ],
+                correct: 1,
+                explanation: "Al-Falaq berarti waktu subuh."
+            },
+            {
+                question: "7. Pesan pokok Surah Al-Falaq adalah kita harus memohon perlindungan kepada...",
+                options: [
+                    "A. Malaikat",
+                    "B. Nabi",
+                    "C. Allah Swt.",
+                    "D. Teman"
+                ],
+                correct: 2,
+                explanation: "Surah Al-Falaq mengajarkan kita untuk memohon perlindungan kepada Allah Swt. dari berbagai kejahatan."
+            },
+            {
+                question: "8. Surah An-Nas merupakan surah ke-... dalam Al-Qur'an.",
+                options: [
+                    "A. 112",
+                    "B. 113",
+                    "C. 114",
+                    "D. 115"
+                ],
+                correct: 2,
+                explanation: "Surah An-Nas adalah surah ke-114 dan merupakan surah terakhir dalam Al-Qur'an."
+            },
+            {
+                question: "9. Apakah arti dari An-Nas?",
+                options: [
+                    "A. Waktu subuh",
+                    "B. Manusia",
+                    "C. Malam",
+                    "D. Kejahatan"
+                ],
+                correct: 1,
+                explanation: "An-Nas berarti manusia."
+            },
+            {
+                question: "10. Surah An-Nas mengajarkan kita untuk memohon perlindungan dari...",
+                options: [
+                    "A. Bisikan setan",
+                    "B. Rasa lapar",
+                    "C. Hujan",
+                    "D. Panas matahari"
+                ],
+                correct: 0,
+                explanation: "Surah An-Nas mengajarkan kita memohon perlindungan kepada Allah Swt. dari bisikan dan kejahatan setan."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

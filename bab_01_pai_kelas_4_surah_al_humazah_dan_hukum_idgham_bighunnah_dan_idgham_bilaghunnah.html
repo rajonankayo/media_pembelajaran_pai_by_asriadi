@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surah Al-Humazah dan Hukum Tajwid Idgham - PAI Kelas 4 SD</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 01. Surah Al-Humazah & Hukum Idgham Bighunnah & Idgham Bilaghunnah</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 4 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('mengenal', this)">
+                    <i class="fa-solid fa-circle-info"></i> Surah Al-Humazah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('idgham', this)">
+                    <i class="fa-solid fa-spell-check"></i> Hukum Idgham
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pesan', this)">
+                    <i class="fa-solid fa-heart"></i> Makna & Pesan Pokok
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('panduan', this)">
+                    <i class="fa-solid fa-brain"></i> Panduan Hafalan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📖 Surah Al-Humazah & Hukum Idgham</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Pembelajaran mengenai Surah Al-Humazah, memahami hukum tajwid Idgham Bighunnah dan Idgham Bilaghunnah, membaca beserta artinya, serta memetik pesan-pesan pokok untuk kehidupan sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('mengenal')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">اَلْهُمَزَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📖 Surah Al-Humazah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pengumpat dan Pencela</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Surah ke-104, terdiri dari 9 ayat, tergolong surah Makkiyah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Baca Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('idgham')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">إِدْغَامْ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">✨ Hukum Idgham</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tajwid Nun Sukun / Tanwin</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memasukkan atau meleburkan bacaan: Bighunnah (dengan dengung) dan Bilaghunnah (tanpa dengung).</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Tajwid <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pesan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْمَعْنَى</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">❤️ Makna & Pesan Pokok</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pelajaran Hidup</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Larangan mencela, menjaga lisan, tidak sombong dengan harta, dan mengingat hari akhir.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pahami Pesan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('panduan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْحِفْظُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📝 Panduan Hafalan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Langkah Menghafal</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Langkah-langkah praktis dan sistematis untuk menghafal Surah Al-Humazah dengan lancar.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Panduan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ringkasan Hukum Idgham -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-emerald-600"></i> 💡 Cara Mudah Mengingat Hukum Idgham
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">Dengung (2 Harakat)</span>
+                        <h4 class="text-teal-700 font-bold text-lg mt-2">Idgham Bighunnah</h4>
+                        <p class="text-xs text-slate-600 mt-1">Huruf: <strong class="text-emerald-700 font-arabic text-base">ي – ن – م – و</strong> (Singkatan: <strong>YANMU / يَنْمُو</strong>)</p>
+                        <p class="text-xs text-slate-500 mt-1">Cara Baca: <strong>Melebur dengan dengung</strong></p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold bg-teal-100 text-teal-800 px-2.5 py-1 rounded-full">Tanpa Dengung</span>
+                        <h4 class="text-teal-700 font-bold text-lg mt-2">Idgham Bilaghunnah</h4>
+                        <p class="text-xs text-slate-600 mt-1">Huruf: <strong class="text-teal-700 font-arabic text-base">ل – ر</strong></p>
+                        <p class="text-xs text-slate-500 mt-1">Cara Baca: <strong>Melebur tanpa dengung</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MENGENAL & TEKS SURAH AL-HUMAZAH -->
+        <div id="tab-mengenal" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-2 drop-shadow-sm">سُورَةُ الْهُمَزَةِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">1. Mengenal Surah Al-Humazah</h2>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Nomor Surah</p>
+                            <p class="text-lg font-bold text-teal-800">Surah ke-104</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Jumlah Ayat</p>
+                            <p class="text-lg font-bold text-teal-800">9 Ayat</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Golongan Surah</p>
+                            <p class="text-lg font-bold text-teal-800">Makkiyah</p>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Kata <strong>Al-Humazah (الهمزة)</strong> berarti <em>orang yang suka mencela atau mengumpat</em>. Surah ini memberikan peringatan keras kepada orang yang suka mencela, menghina, menggunjing, serta mengumpulkan dan membanggakan harta.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Teks Arab Surah Al-Humazah & Terjemahan -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-teal-700 text-white p-4 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> 5. Membaca dan Terjemahan Surah Al-Humazah
+                </div>
+                <div class="p-6 md:p-8 space-y-6 bg-amber-50/30">
+                    <div class="text-center font-arabic text-2xl md:text-3xl text-teal-900 pb-4 border-b border-slate-200">
+                        بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+                        <p class="text-xs md:text-sm font-sans font-normal text-slate-600 mt-2">Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Ayat 1 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 1</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ ۝١</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> Celakalah bagi setiap pengumpat dan pencela.</p>
+                        </div>
+                        <!-- Ayat 2 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 2</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">الَّذِيْ جَمَعَ مَالًا وَعَدَّدَهُ ۝٢</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> Yang mengumpulkan harta dan menghitung-hitungnya.</p>
+                        </div>
+                        <!-- Ayat 3 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 3</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">يَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ ۝٣</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> Dia mengira bahwa hartanya itu dapat mengekalkannya.</p>
+                        </div>
+                        <!-- Ayat 4 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 4</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">كَلَّا لَيُنْبَذَنَّ فِي الْحُطَمَةِ ۝٤</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> Sekali-kali tidak! Pasti dia akan dilemparkan ke dalam (neraka) Hutamah.</p>
+                        </div>
+                        <!-- Ayat 5 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 5</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">وَمَا أَدْرَاكَ مَا الْحُطَمَةُ ۝٥</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> Dan tahukah kamu apakah Hutamah itu?</p>
+                        </div>
+                        <!-- Ayat 6 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 6</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">نَارُ اللَّهِ الْمُوقَدَةُ ۝٦</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> (Yaitu) api Allah yang dinyalakan.</p>
+                        </div>
+                        <!-- Ayat 7 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 7</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">الَّتِيْ تَطَّلِعُ عَلَى الْأَفْئِدَةِ ۝٧</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> Yang (membakar) sampai ke hati.</p>
+                        </div>
+                        <!-- Ayat 8 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 8</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">إِنَّهَا عَلَيْهِمْ مُّؤْصَدَةٌ ۝٨</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> Sungguh, api itu ditutup rapat atas mereka.</p>
+                        </div>
+                        <!-- Ayat 9 -->
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <div class="flex justify-between items-center gap-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">Ayat 9</span>
+                                <p class="font-arabic text-2xl md:text-3xl text-slate-800 text-right leading-loose">فِيْ عَمَدٍ مُّمَدَّدَةٍ ۝٩</p>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-2"><strong>Artinya:</strong> (Sedang mereka) diikat pada tiang-tiang yang panjang.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HUKUM TAJWID IDGHAM -->
+        <div id="tab-idgham" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-spell-check"></i> 2. Hukum Tajwid Idgham
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        <strong>Idgham</strong> berarti <em>memasukkan atau meleburkan</em>. Idgham terjadi ketika <strong>nun sukun (نْ)</strong> atau <strong>tanwin (ــًــٍــٌ)</strong> bertemu dengan huruf-huruf tertentu.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-base md:text-lg font-bold text-slate-800 mb-4">Pembagian Hukum Idgham:</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Hukum A: Idgham Bighunnah -->
+                        <div class="bg-teal-50/50 p-4 md:p-5 rounded-2xl border border-teal-200">
+                            <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+                                <h4 class="text-teal-800 font-extrabold text-base md:text-lg">A. Idgham Bighunnah</h4>
+                                <span class="text-xs font-bold bg-teal-200 text-teal-800 px-3 py-1 rounded-full">Dengung ± 2 Harakat</span>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2">
+                                Memasukkan atau meleburkan bacaan nun sukun atau tanwin ke huruf setelahnya <strong>disertai dengung</strong>.
+                            </p>
+                            <p class="text-xs md:text-sm font-semibold text-slate-700 mb-3">
+                                Huruf Idgham Bighunnah ada 4: <span class="font-arabic text-xl font-bold text-teal-800 ml-1">ي – ن – م – و</span> 
+                                <span class="ml-2 text-amber-700 font-bold">(Mudah diingat: YANMU / يَنْمُو)</span>
+                            </p>
+                            <div class="bg-white p-3 rounded-xl border border-slate-200 space-y-2">
+                                <span class="text-xs font-bold text-teal-600 block mb-1">Contoh Bacaan:</span>
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 font-arabic text-xl text-teal-900 text-center font-bold">
+                                    <div class="bg-teal-50/50 p-2 rounded-lg">مَنْ يَعْمَلْ</div>
+                                    <div class="bg-teal-50/50 p-2 rounded-lg">مِنْ مَالٍ</div>
+                                    <div class="bg-teal-50/50 p-2 rounded-lg">عَذَابٌ مُّهِينٌ</div>
+                                    <div class="bg-teal-50/50 p-2 rounded-lg">غَفُورٌ وَدُودٌ</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hukum B: Idgham Bilaghunnah -->
+                        <div class="bg-amber-50/50 p-4 md:p-5 rounded-2xl border border-amber-200">
+                            <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+                                <h4 class="text-amber-900 font-extrabold text-base md:text-lg">B. Idgham Bilaghunnah</h4>
+                                <span class="text-xs font-bold bg-amber-200 text-amber-900 px-3 py-1 rounded-full">Tanpa Dengung</span>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-700 mb-2">
+                                Memasukkan atau meleburkan bacaan nun sukun atau tanwin ke huruf setelahnya <strong>tanpa dengung</strong>.
+                            </p>
+                            <p class="text-xs md:text-sm font-semibold text-slate-700 mb-3">
+                                Huruf Idgham Bilaghunnah ada 2: <span class="font-arabic text-xl font-bold text-amber-800 ml-1">ل – ر</span>
+                            </p>
+                            <div class="bg-white p-3 rounded-xl border border-slate-200 space-y-2">
+                                <span class="text-xs font-bold text-amber-700 block mb-1">Contoh Bacaan:</span>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 font-arabic text-xl text-amber-950 text-center font-bold">
+                                    <div class="bg-amber-50/50 p-2 rounded-lg">مِنْ رَبِّهِمْ</div>
+                                    <div class="bg-amber-50/50 p-2 rounded-lg">هُدًى لِّلْمُتَّقِينَ</div>
+                                    <div class="bg-amber-50/50 p-2 rounded-lg">غَفُورٌ رَّحِيمٌ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian 4: Praktik Tajwid dalam Surah Al-Humazah -->
+                <div class="pt-4 border-t border-slate-200 space-y-4">
+                    <h3 class="text-base md:text-lg font-bold text-teal-800 mb-2">4. Praktik Tajwid dalam Surah Al-Humazah</h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Saat membaca Surah Al-Humazah, siswa dapat berlatih menemukan hukum Idgham Bighunnah dan Idgham Bilaghunnah.
+                    </p>
+
+                    <!-- Contoh Idgham Bilaghunnah -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                        <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded">Contoh Idgham Bilaghunnah (Ayat 1)</span>
+                        <p class="font-arabic text-2xl text-teal-900 font-bold text-right py-1">وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ</p>
+                        <p class="text-xs md:text-sm text-slate-700"><strong>Perhatikan:</strong></p>
+                        <ul class="list-disc list-inside text-xs md:text-sm text-slate-600 space-y-1">
+                            <li>Pada <span class="font-arabic text-base font-bold text-teal-800">وَيْلٌ لِّكُلِّ</span> : Tanwin (ــٌ) bertemu dengan huruf <span class="font-arabic font-bold">ل</span>, dibaca tanpa dengung (Idgham Bilaghunnah).</li>
+                            <li>Pada <span class="font-arabic text-base font-bold text-teal-800">هُمَزَةٍ لُّمَزَةٍ</span> : Tanwin (ــٍ) bertemu dengan huruf <span class="font-arabic font-bold">ل</span>, juga termasuk Idgham Bilaghunnah.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contoh Idgham Bighunnah / Catatan Membedakan -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                        <span class="text-xs font-bold text-teal-700 bg-teal-100 px-2.5 py-0.5 rounded">Catatan Penting Pemahaman (Ayat 8)</span>
+                        <p class="font-arabic text-2xl text-teal-900 font-bold text-right py-1">إِنَّهَا عَلَيْهِمْ مُّؤْصَدَةٌ</p>
+                        <p class="text-xs md:text-sm text-slate-700">
+                            <strong>Perhatikan bagian <span class="font-arabic text-lg font-bold text-teal-800">عَلَيْهِمْ مُّؤْصَدَةٌ</span>:</strong><br>
+                            Mim sukun bertemu mim merupakan <strong>Idgham Mimi</strong> (hukum Mim Sukun), bukan Idgham Bighunnah (hukum Nun Sukun/Tanwin). Jadi, siswa perlu membedakan hukum nun sukun/tanwin dengan hukum mim sukun.
+                        </p>
+                    </div>
+
+                    <!-- Latihan Membaca -->
+                    <div class="p-4 bg-emerald-50/60 rounded-xl border border-emerald-200">
+                        <h4 class="font-bold text-xs md:text-sm text-emerald-900 mb-2">Latihan Membaca Surah Al-Humazah:</h4>
+                        <ol class="list-decimal list-inside text-xs md:text-sm text-slate-700 space-y-1">
+                            <li>Bacalah ayat dengan tartil.</li>
+                            <li>Perhatikan nun sukun (<span class="font-arabic font-bold">نْ</span>) dan tanwin.</li>
+                            <li>Perhatikan huruf yang datang setelahnya.</li>
+                            <li>Jika bertemu <span class="font-arabic font-bold">ي، ن، م، و</span>, perhatikan Idgham Bighunnah.</li>
+                            <li>Jika bertemu <span class="font-arabic font-bold">ل، ر</span>, perhatikan Idgham Bilaghunnah.</li>
+                            <li>Praktikkan bacaan sesuai kaidah tajwid.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MAKNA & PESAN POKOK -->
+        <div id="tab-pesan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-book-bookmark"></i> 6. Makna Surah Al-Humazah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Secara umum, Surah Al-Humazah berisi peringatan keras bagi orang yang suka mencela dan menghina orang lain serta terlalu mencintai harta. Allah memperingatkan orang yang suka:
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Mencela dan menghina orang lain.
+                        </li>
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Mengumpat dan membicarakan keburukan orang lain.
+                        </li>
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Mengumpulkan harta secara berlebihan.
+                        </li>
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Menghitung-hitung dan membanggakan hartanya.
+                        </li>
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Menganggap harta membuat hidup selamanya.
+                        </li>
+                        <li class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex items-center gap-2 text-xs md:text-sm text-slate-700">
+                            <i class="fa-solid fa-xmark text-rose-500"></i> Melupakan bahwa manusia kembali kepada Allah.
+                        </li>
+                    </ul>
+                    <div class="mt-4 p-3.5 bg-rose-50 border-l-4 border-rose-600 rounded-r-xl text-xs md:text-sm text-rose-900">
+                        Allah juga menjelaskan tentang <strong>Neraka Hutamah</strong>, yaitu neraka yang disediakan bagi orang-orang yang melakukan perbuatan buruk tersebut.
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart"></i> 7. Pesan Penting Surah Al-Humazah
+                    </h2>
+                    <div class="space-y-3">
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-2xl">🤝</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">1. Tidak Boleh Mencela Orang Lain</h4>
+                                <p class="text-xs text-slate-600">Kita harus menghormati teman dan tidak merendahkan kekurangan mereka. <em>Contoh: Tidak mengejek teman karena bentuk tubuh, kemampuan belajar, keadaan keluarga, atau kekurangannya.</em></p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-2xl">🗣️</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">2. Menjaga Perkataan</h4>
+                                <p class="text-xs text-slate-600">Kita harus berhati-hati ketika berbicara dan tidak menyebarkan keburukan orang lain. <em>Contoh: Tidak menggunjing teman dan tidak menyebarkan aib orang lain.</em></p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-2xl">💰</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">3. Tidak Berlebihan Mencintai Harta</h4>
+                                <p class="text-xs text-slate-600">Harta adalah nikmat dan titipan dari Allah. Harta harus digunakan untuk kebaikan.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-2xl">❤️</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">4. Menjauhi Sifat Sombong</h4>
+                                <p class="text-xs text-slate-600">Banyak harta bukan alasan untuk merasa lebih tinggi daripada orang lain.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                            <div class="text-2xl">⚖️</div>
+                            <div>
+                                <h4 class="font-bold text-xs md:text-sm text-slate-800">5. Mengingat Hari Akhir</h4>
+                                <p class="text-xs text-slate-600">Setiap perbuatan manusia akan dipertanggungjawabkan di hadapan Allah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PANDUAN HAFALAN -->
+        <div id="tab-panduan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 md:p-8 space-y-6">
+                <h2 class="text-lg md:text-xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                    <i class="fa-solid fa-brain"></i> 8. Menghafal Surah Al-Humazah
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600">Agar mudah menghafal Surah Al-Humazah, lakukan langkah-langkah praktis berikut:</p>
+                <ol class="space-y-3 text-xs md:text-sm text-slate-700">
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">1</span>
+                        <span>Dengarkan bacaan Surah Al-Humazah dengan tartil.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">2</span>
+                        <span>Baca ayat pertama berulang-ulang sampai lancar.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">3</span>
+                        <span>Lanjutkan ke ayat kedua.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">4</span>
+                        <span>Gabungkan ayat pertama dan kedua.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">5</span>
+                        <span>Lakukan langkah yang sama sampai ayat ke-9.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">6</span>
+                        <span>Pahami arti setiap ayat agar lebih mudah mengingatnya.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">7</span>
+                        <span>Ulangi hafalan secara rutin.</span>
+                    </li>
+                    <li class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-600 text-white font-bold rounded-lg flex items-center justify-center shrink-0">8</span>
+                        <span>Setorkan hafalan kepada guru atau orang tua.</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-table"></i> 3. Perbedaan Idgham Bighunnah dan Bilaghunnah
+            </h2>
+            <p class="text-xs md:text-sm text-slate-500 mb-4">Tabel perbandingan hukum bacaan Idgham:</p>
+
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-x-auto mb-6">
+                <table class="w-full min-w-[600px] text-left border-collapse">
+                    <thead>
+                        <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                            <th class="p-3 md:p-4">Hukum Bacaan</th>
+                            <th class="p-3 md:p-4">Huruf</th>
+                            <th class="p-3 md:p-4">Cara Membaca</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-700">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-3 md:p-4 font-bold text-teal-900">Idgham Bighunnah</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl font-bold text-teal-800">ي، ن، م، و</td>
+                            <td class="p-3 md:p-4 font-semibold text-emerald-700">Melebur dengan dengung</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <td class="p-3 md:p-4 font-bold text-teal-900">Idgham Bilaghunnah</td>
+                            <td class="p-3 md:p-4 font-arabic text-xl font-bold text-teal-800">ل، ر</td>
+                            <td class="p-3 md:p-4 font-semibold text-amber-700">Melebur tanpa dengung</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> 🌟 Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-2">
+                    <strong>Idgham Bighunnah</strong> adalah hukum bacaan ketika nun sukun atau tanwin bertemu <span class="font-arabic font-bold">ي، ن، م، و</span> dan dibaca melebur dengan dengung. <strong>Idgham Bilaghunnah</strong> terjadi ketika nun sukun atau tanwin bertemu <span class="font-arabic font-bold">ل</span> atau <span class="font-arabic font-bold">ر</span> dan dibaca melebur tanpa dengung.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-2">
+                    <strong>Surah Al-Humazah</strong> mengajarkan kita untuk tidak mencela, menghina, mengumpat, sombong, dan terlalu mencintai harta.
+                </p>
+                <p class="text-xs md:text-sm font-bold text-teal-800 italic">
+                    Kita harus menjaga lisan, menghormati orang lain, menggunakan harta untuk kebaikan, bersyukur kepada Allah, dan selalu mengingat kehidupan akhirat.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Surah Al-Humazah & Hukum Idgham
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 5</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Aplikasi Media Pembelajaran Interaktif Tajwid.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions disesuaikan khusus materi Surah Al-Humazah & Hukum Idgham
+        const quizData = [
+            {
+                question: "1. Surah Al-Humazah adalah surah ke-104 dalam Al-Qur'an. Berapakah jumlah ayat dalam Surah Al-Humazah?",
+                options: [
+                    "A. 7 ayat",
+                    "B. 8 ayat",
+                    "C. 9 ayat",
+                    "D. 10 ayat"
+                ],
+                correct: 2,
+                explanation: "Surah Al-Humazah merupakan surah ke-104 dan terdiri dari 9 ayat. Surah ini termasuk surah Makkiyah."
+            },
+            {
+                question: "2. Apakah arti dari nama 'Al-Humazah'?",
+                options: [
+                    "A. Orang yang suka mencela atau mengumpat",
+                    "B. Orang yang suka bersedekah",
+                    "C. Orang yang rajin beribadah",
+                    "D. Orang yang suka menolong"
+                ],
+                correct: 0,
+                explanation: "Al-Humazah berarti orang yang suka mencela, mengumpat, atau membicarakan keburukan orang lain."
+            },
+            {
+                question: "3. Huruf Idgham Bighunnah berjumlah 4 dan dapat diingat dengan kata YANMU. Manakah yang termasuk huruf Idgham Bighunnah?",
+                options: [
+                    "A. ي، ن، م، و",
+                    "B. ل، ر",
+                    "C. ء، ه، ع، ح",
+                    "D. ب، ت، ج، د"
+                ],
+                correct: 0,
+                explanation: "Huruf Idgham Bighunnah adalah ي، ن، م، و yang dapat diingat dengan kata يَنْمُو (YANMU)."
+            },
+            {
+                question: "4. Bagaimana cara membaca Idgham Bighunnah ketika nun sukun atau tanwin bertemu huruf ي، ن، م، atau و?",
+                options: [
+                    "A. Dibaca jelas tanpa dengung",
+                    "B. Dibaca samar tanpa dengung",
+                    "C. Dilebur dengan dengung sekitar 2 harakat",
+                    "D. Dilebur tanpa dengung"
+                ],
+                correct: 2,
+                explanation: "Idgham Bighunnah dibaca dengan cara meleburkan nun sukun atau tanwin ke huruf berikutnya disertai dengung sekitar 2 harakat."
+            },
+            {
+                question: "5. Jika nun sukun (نْ) atau tanwin bertemu dengan huruf Lam (ل) atau Ra (ر), hukum bacaannya adalah...",
+                options: [
+                    "A. Idgham Bighunnah",
+                    "B. Idgham Bilaghunnah",
+                    "C. Ikhfa Syafawi",
+                    "D. Izhar Halqi"
+                ],
+                correct: 1,
+                explanation: "Idgham Bilaghunnah terjadi ketika nun sukun atau tanwin bertemu huruf ل atau ر dan dibaca melebur tanpa dengung."
+            },
+            {
+                question: "6. Manakah contoh bacaan Idgham Bighunnah yang benar?",
+                options: [
+                    "A. مِنْ رَبِّهِمْ",
+                    "B. هُدًى لِّلْمُتَّقِينَ",
+                    "C. مَنْ يَعْمَلْ",
+                    "D. غَفُورٌ رَّحِيمٌ"
+                ],
+                correct: 2,
+                explanation: "مَنْ يَعْمَلْ merupakan contoh Idgham Bighunnah karena nun sukun bertemu huruf ي dan dibaca dengan dengung."
+            },
+            {
+                question: "7. Perhatikan potongan ayat berikut: وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ. Hukum tajwid pada tanwin yang bertemu huruf ل adalah...",
+                options: [
+                    "A. Idgham Bighunnah",
+                    "B. Idgham Bilaghunnah",
+                    "C. Iqlab",
+                    "D. Ikhfa Haqiqi"
+                ],
+                correct: 1,
+                explanation: "Pada وَيْلٌ لِّكُلِّ dan هُمَزَةٍ لُّمَزَةٍ, tanwin bertemu huruf ل sehingga termasuk Idgham Bilaghunnah dan dibaca tanpa dengung."
+            },
+            {
+                question: "8. Salah satu pesan utama Surah Al-Humazah adalah larangan untuk...",
+                options: [
+                    "A. Menjaga perkataan",
+                    "B. Bersyukur kepada Allah",
+                    "C. Mencela dan mengumpat orang lain",
+                    "D. Membantu orang yang membutuhkan"
+                ],
+                correct: 2,
+                explanation: "Surah Al-Humazah memberikan peringatan keras kepada orang yang suka mencela, mengumpat, dan merendahkan orang lain."
+            },
+            {
+                question: "9. Dalam Surah Al-Humazah, orang yang suka mencela, mengumpat, dan terlalu mencintai harta diancam dengan neraka...",
+                options: [
+                    "A. Hutamah",
+                    "B. Hawiyah",
+                    "C. Saqar",
+                    "D. Jahim"
+                ],
+                correct: 0,
+                explanation: "Dalam Surah Al-Humazah ayat 4 disebutkan bahwa orang tersebut akan dilemparkan ke dalam neraka Hutamah."
+            },
+            {
+                question: "10. Perilaku manakah yang paling sesuai dengan pesan Surah Al-Humazah?",
+                options: [
+                    "A. Mengejek teman yang memiliki kekurangan",
+                    "B. Membanggakan harta yang dimiliki",
+                    "C. Menggunjing teman ketika tidak ada di hadapannya",
+                    "D. Menjaga lisan, menghormati orang lain, dan menggunakan harta untuk kebaikan"
+                ],
+                correct: 3,
+                explanation: "Surah Al-Humazah mengajarkan kita untuk menjaga lisan, tidak mencela atau mengumpat, tidak sombong karena harta, serta menggunakan harta untuk kebaikan."
+            }
+        ];
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

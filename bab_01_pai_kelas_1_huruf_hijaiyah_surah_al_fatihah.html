@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 1 SD - Huruf Hijaiyah, Makharijul Huruf & Surah Al-Fatihah</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 01. Hijaiyah & Surah Al-Fatihah</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 1 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hijaiyah', this)">
+                    <i class="fa-solid fa-arrow-down-a-z"></i> Hijaiyah & Harakat
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('makhraj', this)">
+                    <i class="fa-solid fa-[#0d5c56]"></i> Makharijul Huruf
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('alfatihah', this)">
+                    <i class="fa-solid fa-book-open"></i> Surah Al-Fatihah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan & Latihan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 1 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Mengenal Huruf Hijaiyah, Makharijul Huruf secara lengkap, Tanda Baca (Harakat Fathah, Kasrah, Dammah), serta Memahami dan Menghafal Surah Al-Fatihah.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hijaiyah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">ا ب ت</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🔤 Hijaiyah & Harakat</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">29 Huruf & Tanda Baca</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal 29 huruf hijaiyah, cara membedakan bentuk titik, serta tanda baca Fathah (a), Kasrah (i), dan Dammah (u).</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Huruf <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('makhraj')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">مَخَارِجُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🗣️ Makharijul Huruf</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">5 Tempat Keluar Suara</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Detail lengkap tempat keluarnya 29 huruf hijaiyah dari Rongga Mulut, Tenggorokan, Lidah, Bibir, dan Hidung.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Detail Makhraj <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('alfatihah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الْفَاتِحَة</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📖 Surah Al-Fatihah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pembukaan (7 Ayat)</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Surah pertama dalam Al-Qur’an (Makkiyah), pesan pokok pujian kepada Allah, serta panduan cara mudah menghafalnya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Baca Surah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('ringkasan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">تَدْرِيْب</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌟 Ringkasan & Latihan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rangkuman & Praktek Siswa</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Kesimpulan materi PAI Kelas 1 SD dan panduan latihan membaca huruf bertahap untuk dipraktikkan bersama guru/orang tua.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Latihan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Peringatan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-emerald-600"></i> 💡 Kunci Membaca Al-Qur'an Bagi Siswa Kelas 1
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Membaca Al-Qur'an harus diawali dengan mengenal huruf hijaiyah secara teliti, melafalkan sesuai tempat keluarnya (makharijul huruf), serta memperhatikan tanda baca (harakat) dengan tepat.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: HURUF HIJAIYAH & HARAKAT -->
+        <div id="tab-hijaiyah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-arrow-down-a-z"></i> 1. Mengenal Huruf Hijaiyah & Membedakannya
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Huruf hijaiyah adalah huruf yang digunakan untuk membaca Al-Qur’an. Huruf hijaiyah berjumlah <strong>29 huruf</strong>. Kita harus belajar membaca huruf hijaiyah dengan benar dan jelas.
+                    </p>
+
+                    <!-- Daftar 29 Huruf -->
+                    <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl mb-6">
+                        <p class="text-xs md:text-sm font-bold text-teal-900 mb-2">29 Huruf Hijaiyah:</p>
+                        <p class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold text-center leading-loose tracking-widest dir-rtl" dir="rtl">
+                            ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن و ه ء ي
+                        </p>
+                    </div>
+
+                    <!-- Membedakan Huruf -->
+                    <h3 class="font-bold text-slate-800 text-base mb-2">3. Membedakan Huruf Hijaiyah</h3>
+                    <p class="text-xs md:text-sm text-slate-600 mb-3">Beberapa huruf hijaiyah memiliki bentuk yang hampir sama sehingga harus diperhatikan jumlah dan letak titiknya dengan baik:</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                            <p class="font-bold text-xs md:text-sm text-teal-800 border-b pb-1">Kelompok Bentuk Perahu:</p>
+                            <div class="flex items-center justify-between font-arabic text-xl text-teal-900">
+                                <span><b>ب</b> = ba (1 titik di bawah)</span>
+                            </div>
+                            <div class="flex items-center justify-between font-arabic text-xl text-teal-900">
+                                <span><b>ت</b> = ta (2 titik di atas)</span>
+                            </div>
+                            <div class="flex items-center justify-between font-arabic text-xl text-teal-900">
+                                <span><b>ث</b> = tsa (3 titik di atas)</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                            <p class="font-bold text-xs md:text-sm text-teal-800 border-b pb-1">Kelompok Lengkung Tengah:</p>
+                            <div class="flex items-center justify-between font-arabic text-xl text-teal-900">
+                                <span><b>ج</b> = jim (titik di dalam/bawah)</span>
+                            </div>
+                            <div class="flex items-center justify-between font-arabic text-xl text-teal-900">
+                                <span><b>ح</b> = ha (tanpa titik)</span>
+                            </div>
+                            <div class="flex items-center justify-between font-arabic text-xl text-teal-900">
+                                <span><b>خ</b> = kha (titik di atas)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm font-semibold text-amber-700 bg-amber-50 p-3 rounded-lg border border-amber-200 mb-6">
+                        👉 <strong>Perhatian:</strong> Perhatikan bentuk dan jumlah titik agar tidak keliru dalam membaca huruf hijaiyah!
+                    </p>
+                </div>
+
+                <!-- Harakat -->
+                <div class="pt-4 border-t border-slate-200">
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-sliders"></i> 4. Harakat Fathah, Kasrah, dan Dammah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Harakat adalah tanda baca yang diletakkan pada huruf hijaiyah untuk menentukan bunyi vokalnya.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="p-4 bg-rose-50 border border-rose-200 rounded-xl text-center space-y-2">
+                            <span class="text-xs font-bold text-rose-700 bg-rose-100 px-3 py-1 rounded-full">🔴 Fathah ( ـَ )</span>
+                            <p class="text-xs text-slate-600 mt-2">Berbunyi suara <strong>"a"</strong></p>
+                            <div class="font-arabic text-2xl font-bold text-rose-900 pt-2">بَ = ba | تَ = ta | مَ = ma</div>
+                        </div>
+
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl text-center space-y-2">
+                            <span class="text-xs font-bold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">🔵 Kasrah ( ـِ )</span>
+                            <p class="text-xs text-slate-600 mt-2">Berbunyi suara <strong>"i"</strong></p>
+                            <div class="font-arabic text-2xl font-bold text-blue-900 pt-2">بِ = bi | تِ = ti | مِ = mi</div>
+                        </div>
+
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                            <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">🟢 Dammah ( ـُ )</span>
+                            <p class="text-xs text-slate-600 mt-2">Berbunyi suara <strong>"u"</strong></p>
+                            <div class="font-arabic text-2xl font-bold text-emerald-900 pt-2">بُ = bu | تُ = tu | مُ = mu</div>
+                        </div>
+                    </div>
+
+                    <!-- Ringkasan Harakat Table -->
+                    <h4 class="font-bold text-slate-800 text-sm mb-2">Cara Mudah Mengingat Harakat:</h4>
+                    <div class="overflow-x-auto rounded-xl border border-slate-200">
+                        <table class="w-full text-center border-collapse">
+                            <thead>
+                                <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                    <th class="p-3">Harakat</th>
+                                    <th class="p-3">Bunyi</th>
+                                    <th class="p-3">Contoh</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-800">
+                                <tr>
+                                    <td class="p-3 font-semibold text-rose-600">Fathah ( ـَ )</td>
+                                    <td class="p-3 font-bold">a</td>
+                                    <td class="p-3 font-arabic text-xl text-teal-900">بَ = ba</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 font-semibold text-blue-600">Kasrah ( ـِ )</td>
+                                    <td class="p-3 font-bold">i</td>
+                                    <td class="p-3 font-arabic text-xl text-teal-900">بِ = bi</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-semibold text-emerald-600">Dammah ( ـُ )</td>
+                                    <td class="p-3 font-bold">u</td>
+                                    <td class="p-3 font-arabic text-xl text-teal-900">بُ = bu</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MAKHARIJUL HURUF (LENGKAP DAN DETAIL) -->
+        <div id="tab-makhraj" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-head-side-cough"></i> 2. Makharijul Huruf (Detail 5 Tempat Utama)
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        <strong>Makharijul huruf</strong> adalah tempat keluarnya huruf ketika kita mengucapkannya. Setiap huruf hijaiyah memiliki tempat keluar suara yang berbeda agar bacaan Al-Qur'an benar dan tidak keliru.
+                    </p>
+
+                    <!-- Ringkasan 5 Tempat Utama -->
+                    <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 mb-6">
+                        <h3 class="font-bold text-amber-900 text-sm mb-2">📌 Secara umum, makharijul huruf dibagi menjadi 5 tempat utama:</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-2 text-xs text-center font-semibold">
+                            <div class="bg-white p-2 rounded-lg border border-amber-300">1. Al-Jauf<br><span class="text-slate-500 font-normal">(Rongga Mulut)</span></div>
+                            <div class="bg-white p-2 rounded-lg border border-amber-300">2. Al-Halq<br><span class="text-slate-500 font-normal">(Tenggorokan)</span></div>
+                            <div class="bg-white p-2 rounded-lg border border-amber-300">3. Al-Lisan<br><span class="text-slate-500 font-normal">(Lidah)</span></div>
+                            <div class="bg-white p-2 rounded-lg border border-amber-300">4. Asy-Syafatain<br><span class="text-slate-500 font-normal">(Kedua Bibir)</span></div>
+                            <div class="bg-white p-2 rounded-lg border border-amber-300">5. Al-Khaisyum<br><span class="text-slate-500 font-normal">(Rongga Hidung)</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Detail A - E -->
+                    <div class="space-y-6">
+
+                        <!-- A. Al-Jauf -->
+                        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+                            <h3 class="font-bold text-teal-800 text-base mb-1 flex items-center gap-2 font-arabic">
+                                <span class="bg-teal-800 text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">A</span>
+                                Al-Jauf (الجوف) – Rongga Mulut
+                            </h3>
+                            <p class="text-xs md:text-sm text-slate-600 mb-3">Rongga mulut dan tenggorokan bagian dalam. Tempat keluarnya huruf-huruf mad (panjang).</p>
+                            <div class="overflow-x-auto rounded-lg border border-slate-200 bg-white mb-3">
+                                <table class="w-full text-center border-collapse text-xs md:text-sm">
+                                    <thead class="bg-teal-700 text-white font-bold">
+                                        <tr>
+                                            <th class="p-2">Huruf</th>
+                                            <th class="p-2">Nama</th>
+                                            <th class="p-2">Keterangan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-200">
+                                        <tr><td class="p-2 font-arabic text-xl font-bold text-teal-900">ا</td><td class="p-2">Alif</td><td class="p-2">Keluar dari rongga mulut</td></tr>
+                                        <tr class="bg-slate-50"><td class="p-2 font-arabic text-xl font-bold text-teal-900">و</td><td class="p-2">Wau</td><td class="p-2">Keluar dari rongga mulut ketika menjadi huruf mad</td></tr>
+                                        <tr><td class="p-2 font-arabic text-xl font-bold text-teal-900">ي</td><td class="p-2">Ya</td><td class="p-2">Keluar dari rongga mulut ketika menjadi huruf mad</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-xs text-slate-600 bg-teal-50 p-2.5 rounded-lg border border-teal-100">
+                                <strong>Contoh:</strong> قَالَ (alif mad) | يَقُولُ (wau mad) | قِيلَ (ya mad)
+                            </p>
+                        </div>
+
+                        <!-- B. Al-Halq -->
+                        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+                            <h3 class="font-bold text-teal-800 text-base mb-1 flex items-center gap-2 font-arabic">
+                                <span class="bg-teal-800 text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">B</span>
+                                Al-Halq (الحلق) – Tenggorokan (6 Huruf)
+                            </h3>
+                            <p class="text-xs md:text-sm text-slate-600 mb-3">Tenggorokan dibagi menjadi 3 bagian tempat keluar huruf:</p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3 text-xs md:text-sm font-arabic">
+                                <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                    <p class="font-bold text-teal-800 mb-1">1. Pangkal Tenggorokan</p>
+                                    <p class="font-arabic text-xl font-bold text-teal-900 mb-2">ء ، ه</p>
+                                    <p class="text-slate-500 text-xs mt-1">Contoh: أَ (a), هَ (ha)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                    <p class="font-bold text-teal-800 mb-1">2. Tengah Tenggorokan</p>
+                                    <p class="font-arabic text-xl font-bold text-teal-900 mb-2">ع ، ح</p>
+                                    <p class="text-slate-500 text-xs mt-1">Contoh: عَ (‘a), حَ (ha)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                    <p class="font-bold text-teal-800 mb-1">3. Ujung Tenggorokan</p>
+                                    <p class="font-arabic text-xl font-bold text-teal-900 mb-2">غ ، خ</p>
+                                    <p class="text-slate-500 text-xs mt-1">Contoh: غَ (gha), خَ (kha)</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-amber-800 bg-amber-50 p-2.5 rounded-lg border border-amber-200 font-arabic">
+                                💡 <strong>Catatan:</strong> Ringkasan 6 huruf tenggorokan adalah: <strong>ء ه ع ح غ خ</strong>. Huruf <strong>ع</strong> dibaca dari tenggorokan, berbeda dari huruf <strong>ا</strong>.
+                            </p>
+                        </div>
+
+                        <!-- C. Al-Lisan -->
+                        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+                            <h3 class="font-bold text-teal-800 text-base mb-1 flex items-center gap-2 font-arabic">
+                                <span class="bg-teal-800 text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">C</span>
+                                Al-Lisan (اللسان) – Lidah (18 Huruf)
+                            </h3>
+                            <p class="text-xs md:text-sm text-slate-600 mb-3">Sebagian besar huruf hijaiyah keluar dari lidah. Huruf-hurufnya yaitu: <span class="font-arabic font-bold text-base text-teal-900">ق ك ج ش ي ض ل ن ر ط د ت ص ز س ظ ذ ث</span></p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                                <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                    <p class="font-bold text-teal-800">1. Pangkal Lidah</p>
+                                    <p class="text-slate-600 font-arabic"><b>ق (qaf)</b> → mendekati langit-langit atas (قَ = qa)</p>
+                                    <p class="text-slate-600 font-arabic"><b>ك (kaf)</b> → sedikit lebih ke depan (كَ = ka)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                    <p class="font-bold text-teal-800">2. Tengah Lidah</p>
+                                    <p class="text-slate-600 font-arabic"><b>ج (jim), ش (syin), ي (ya)</b> → menyentuh/mendekati langit-langit mulut (جَ, شَ, يَ)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                    <p class="font-bold text-teal-800">3. Sisi Lidah</p>
+                                    <p class="text-slate-600 font-arabic"><b>ض (dhad)</b> → sisi lidah menyentuh gigi geraham atas (ضَ = dha)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                    <p class="font-bold text-teal-800">4. Ujung Lidah (Lisan Umum)</p>
+                                    <p class="text-slate-600 font-arabic"><b>ل (lam)</b> → menyentuh gusi/langit-langit (لَ)</p>
+                                    <p class="text-slate-600 font-arabic"><b>ن (nun)</b> → menyentuh gusi gigi seri atas (نَ)</p>
+                                    <p class="text-slate-600 font-arabic"><b>ر (ra)</b> → dekat gusi gigi seri atas (رَ)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                    <p class="font-bold text-teal-800">5. Ujung Lidah + Pangkal Gigi Seri Atas</p>
+                                    <p class="text-slate-600 font-arabic"><b>ط (tha), د (dal), ت (ta)</b> → menyentuh belakang gigi seri atas (طَ, دَ, تَ)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                    <p class="font-bold text-teal-800">6. Ujung Lidah + Gigi / Antara Gigi</p>
+                                    <p class="text-slate-600 font-arabic"><b>ظ (zha), ذ (dza), ث (tsa)</b> → ujung lidah di antara gigi seri atas & bawah (ظَ, ذَ, ثَ)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-slate-200 sm:col-span-2">
+                                    <p class="font-bold text-teal-800">7. Ujung Lidah Dekat Gigi Seri</p>
+                                    <p class="text-slate-600 font-arabic"><b>ص (shad), ز (zai), س (sin)</b> → dibaca dari ujung lidah dekat gigi seri (صَ, زَ, سَ)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- D. Asy-Syafatain -->
+                        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+                            <h3 class="font-bold text-teal-800 text-base mb-1 flex items-center gap-2 font-arabic">
+                                <span class="bg-teal-800 text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">D</span>
+                                Asy-Syafatain (الشفتان) – Kedua Bibir (4 Huruf)
+                            </h3>
+                            <p class="text-xs md:text-sm text-slate-600 mb-3">Huruf yang keluar dengan pergerakan kedua bibir:</p>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs md:text-sm text-center">
+                                <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                                    <span class="font-arabic text-xl font-bold text-teal-900 block">ب</span>
+                                    <span class="font-semibold text-slate-700">Ba (بَ)</span>
+                                    <p class="text-[11px] text-slate-500 mt-1">Pertemuan kedua bibir</p>
+                                </div>
+                                <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                                    <span class="font-arabic text-xl font-bold text-teal-900 block">م</span>
+                                    <span class="font-semibold text-slate-700">Mim (مَ)</span>
+                                    <p class="text-[11px] text-slate-500 mt-1">Pertemuan kedua bibir</p>
+                                </div>
+                                <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                                    <span class="font-arabic text-xl font-bold text-teal-900 block">و</span>
+                                    <span class="font-semibold text-slate-700">Wau (وَ)</span>
+                                    <p class="text-[11px] text-slate-500 mt-1">Membulatkan kedua bibir</p>
+                                </div>
+                                <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                                    <span class="font-arabic text-xl font-bold text-teal-900 block">ف</span>
+                                    <span class="font-semibold text-slate-700">Fa (فَ)</span>
+                                    <p class="text-[11px] text-slate-500 mt-1">Bibir bawah & gigi seri atas</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- E. Al-Khaisyum -->
+                        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+                            <h3 class="font-bold text-teal-800 text-base mb-1 flex items-center gap-2 font-arabic">
+                                <span class="bg-teal-800 text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">E</span>
+                                Al-Khaisyum (الخيشوم) – Rongga Hidung
+                            </h3>
+                            <p class="text-xs md:text-sm text-slate-600 mb-2">
+                                Tempat keluarnya suara dengung (ghunnah), terutama pada huruf nun bertasydid (<strong>نّ</strong>) dan mim bertasydid (<strong>مّ</strong>).
+                            </p>
+                            <p class="text-xs text-slate-700 bg-white p-2.5 rounded-lg border border-slate-200 font-arabic text-lg font-bold text-center">
+                                Contoh: إِنَّ | ثُمَّ
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Tabel Summary 5 Makhraj -->
+                    <h3 class="font-bold text-slate-800 text-base mt-6 mb-2">📌 Tabel Ringkasan 5 Tempat Makharijul Huruf</h3>
+                    <div class="overflow-x-auto rounded-xl border border-slate-200">
+                        <table class="w-full text-center border-collapse text-xs md:text-sm">
+                            <thead>
+                                <tr class="bg-teal-800 text-white font-bold">
+                                    <th class="p-3">No.</th>
+                                    <th class="p-3">Tempat</th>
+                                    <th class="p-3">Arti</th>
+                                    <th class="p-3">Huruf</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-slate-800">
+                                <tr>
+                                    <td class="p-2.5 font-bold">1</td>
+                                    <td class="p-2.5 font-semibold text-teal-800">Al-Jauf</td>
+                                    <td class="p-2.5">Rongga mulut</td>
+                                    <td class="p-2.5 font-arabic text-lg text-teal-900 font-bold">ا و ي</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-2.5 font-bold">2</td>
+                                    <td class="p-2.5 font-semibold text-teal-800">Al-Halq</td>
+                                    <td class="p-2.5">Tenggorokan</td>
+                                    <td class="p-2.5 font-arabic text-lg text-teal-900 font-bold">ء ه ع ح غ خ</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2.5 font-bold">3</td>
+                                    <td class="p-2.5 font-semibold text-teal-800">Al-Lisan</td>
+                                    <td class="p-2.5">Lidah</td>
+                                    <td class="p-2.5 font-arabic text-lg text-teal-900 font-bold">ق ك ج ش ي ض ل ن ر ط د ت ص ز س ظ ذ ث</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-2.5 font-bold">4</td>
+                                    <td class="p-2.5 font-semibold text-teal-800">Asy-Syafatain</td>
+                                    <td class="p-2.5">Kedua bibir</td>
+                                    <td class="p-2.5 font-arabic text-lg text-teal-900 font-bold">ب م و ف</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2.5 font-bold">5</td>
+                                    <td class="p-2.5 font-semibold text-teal-800">Al-Khaisyum</td>
+                                    <td class="p-2.5">Rongga hidung</td>
+                                    <td class="p-2.5 font-semibold text-teal-900">Ghunnah / Dengung</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Tip Mengingat Urutan -->
+                    <div class="mt-4 p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-semibold text-center">
+                        🌟 <strong>Cara Mudah Mengingat Urutan:</strong> Rongga Mulut → Tenggorokan → Lidah → Bibir → Hidung
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SURAH AL-FATIHAH -->
+        <div id="tab-alfatihah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-2 drop-shadow-sm">سُورَةُ الْفَاتِحَةِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">📖 5. Surah Al-Fatihah</h2>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Urutan Surah</p>
+                            <p class="text-lg font-bold text-teal-800">Surah Pertama (ke-1)</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Jumlah Ayat & Golongan</p>
+                            <p class="text-lg font-bold text-teal-800">7 Ayat (Makkiyah)</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Arti Nama</p>
+                            <p class="text-lg font-bold text-teal-800">Pembukaan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teks Bacaan Surah Al-Fatihah -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-teal-700 text-white p-4 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> Bacaan 7 Ayat Surah Al-Fatihah
+                </div>
+                <div class="p-6 md:p-8 space-y-4 bg-amber-50/30">
+                    
+                    <!-- Ayat 1 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ ۝١
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang.
+                        </div>
+                    </div>
+
+                    <!-- Ayat 2 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ ۝٢
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Segala puji bagi Allah, Tuhan seluruh alam,
+                        </div>
+                    </div>
+
+                    <!-- Ayat 3 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            الرَّحْمٰنِ الرَّحِيْمِ ۝٣
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Yang Maha Pengasih lagi Maha Penyayang,
+                        </div>
+                    </div>
+
+                    <!-- Ayat 4 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            مٰلِكِ يَوْمِ الدِّيْنِ ۝٤
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Pemilik hari pembalasan.
+                        </div>
+                    </div>
+
+                    <!-- Ayat 5 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُ ۝٥
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Hanya kepada Engkaulah kami menyembah dan hanya kepada Engkaulah kami memohon pertolongan.
+                        </div>
+                    </div>
+
+                    <!-- Ayat 6 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ ۝٦
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Tunjukkanlah kami jalan yang lurus,
+                        </div>
+                    </div>
+
+                    <!-- Ayat 7 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            صِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ ۙ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّاۤلِّيْنَ ۝٧
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            (yaitu) jalan orang-orang yang telah Engkau beri nikmat kepadanya; bukan (jalan) mereka yang dimurkai, dan bukan (pula jalan) mereka yang sesat.
+                        </div>
+                    </div>
+
+                    <!-- Aamiin -->
+                    <div class="p-3 bg-teal-100/60 rounded-xl text-center font-arabic text-xl font-bold text-teal-900">
+                        آمِيْن
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Pesan Pokok & Menghafal -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
+                    <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-rose-500"></i> 🌷 6. Pesan-Pesan Pokok Surah Al-Fatihah
+                    </h3>
+                    <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                        <li class="p-2 bg-rose-50/50 rounded-lg"><strong>a. Memuji Allah Swt.:</strong> Bersyukur karena Allah Tuhan seluruh alam.</li>
+                        <li class="p-2 bg-rose-50/50 rounded-lg"><strong>b. Maha Pengasih & Penyayang:</strong> Allah menyayangi semua makhluk-Nya (Ar-Rahman & Ar-Rahim).</li>
+                        <li class="p-2 bg-rose-50/50 rounded-lg"><strong>c. Hanya Allah yang Disembah:</strong> Kita beribadah hanya kepada Allah Swt.</li>
+                        <li class="p-2 bg-rose-50/50 rounded-lg"><strong>d. Memohon Pertolongan:</strong> Selalu meminta bantuan Allah dalam kebaikan.</li>
+                        <li class="p-2 bg-rose-50/50 rounded-lg"><strong>e. Memohon Petunjuk:</strong> Berdoa agar selalu berada di jalan yang benar.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
+                    <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-brain text-amber-500"></i> 🧠 7. Langkah Mudah Menghafal Surah Al-Fatihah
+                    </h3>
+                    <ol class="list-decimal list-inside space-y-1.5 text-xs md:text-sm text-slate-700">
+                        <li>Dengarkan guru membaca.</li>
+                        <li>Ikuti bacaan guru secara perlahan.</li>
+                        <li>Ulangi setiap ayat beberapa kali.</li>
+                        <li>Hafalkan ayat demi ayat.</li>
+                        <li>Gabungkan ayat yang sudah dihafal.</li>
+                        <li>Bacalah dengan tartil.</li>
+                        <li>Latihan setiap hari.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN & LATIHAN -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-child-reaching text-emerald-600"></i> 🧒 Latihan Bacaan untuk Siswa Kelas 1 SD
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-4">
+                    Agar mudah memahami makharijul huruf, siswa dapat berlatih membaca urutan huruf berikut secara bertahap sambil memperhatikan posisi lidah, bibir, dan tenggorokan:
+                </p>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-arabic text-2xl font-bold text-teal-900 mb-6">
+                    <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl">بَ – تَ – ثَ</div>
+                    <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl">جَ – حَ – خَ</div>
+                    <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl">دَ – ذَ – رَ</div>
+                    <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl">سَ – شَ – صَ</div>
+                    <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl">طَ – ظَ – عَ</div>
+                    <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl">فَ – قَ – كَ</div>
+                    <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl">لَ – مَ – نَ</div>
+                    <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl">هَ – وَ – يَ</div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> 🌟 Kesimpulan Pembelajaran Kelas 1 SD
+                </h3>
+                <ul class="list-disc list-inside space-y-2 text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <li><strong>Huruf hijaiyah</strong> berjumlah 29 huruf dan digunakan untuk membaca Al-Qur'an. Kita harus dapat membedakan huruf dan titiknya.</li>
+                    <li><strong>Makharijul huruf</strong> adalah tempat keluarnya huruf agar dibaca dengan benar, terbagi menjadi 5 tempat (Rongga mulut, Tenggorokan, Lidah, Bibir, Hidung).</li>
+                    <li>Huruf hijaiyah dapat diberi <strong>harakat Fathah (a), Kasrah (i), dan Dammah (u)</strong>.</li>
+                    <li><strong>Surah Al-Fatihah</strong> adalah surah pertama dalam Al-Qur'an (7 ayat) yang mengajarkan kita memuji Allah, menyembah hanya kepada-Nya, serta memohon pertolongan dan petunjuk.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 1 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 8</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 1 SD
+        const quizData = [
+            {
+                question: "1. Berapakah jumlah huruf hijaiyah?",
+                options: [
+                    "A. 20 huruf",
+                    "B. 25 huruf",
+                    "C. 29 huruf",
+                    "D. 30 huruf"
+                ],
+                correct: 2,
+                explanation: "Huruf hijaiyah berjumlah 29 huruf."
+            },
+            {
+                question: "2. Apakah arti dari Makharijul Huruf?",
+                options: [
+                    "A. Jumlah huruf hijaiyah",
+                    "B. Tempat keluarnya huruf ketika dibaca",
+                    "C. Tanda baca Al-Qur'an",
+                    "D. Arti nama surah"
+                ],
+                correct: 1,
+                explanation: "Makharijul huruf artinya tempat keluarnya huruf ketika diucapkan."
+            },
+            {
+                question: "3. Huruf hijaiyah yang keluar dari kedua bibir (Asy-Syafatain) adalah...",
+                options: [
+                    "A. ب (ba) dan م (mim)",
+                    "B. ع (‘ain) dan ح (ha)",
+                    "C. ء (hamzah) dan ه (ha)",
+                    "D. ق (qaf) dan ك (kaf)"
+                ],
+                correct: 0,
+                explanation: "Huruf ب (ba) dan م (mim) keluar dari pertemuan kedua bibir."
+            },
+            {
+                question: "4. Huruf ع (‘ain) dan ح (ha) keluar dari...",
+                options: [
+                    "A. Kedua bibir",
+                    "B. Rongga hidung",
+                    "C. Tengah tenggorokan",
+                    "D. Ujung lidah"
+                ],
+                correct: 2,
+                explanation: "Huruf ع (‘ain) dan ح (ha) termasuk huruf Al-Halq yang keluar dari bagian tengah tenggorokan."
+            },
+            {
+                question: "5. Tanda baca Kasrah ( ـِ ) menghasilkan bunyi...",
+                options: [
+                    "A. Berbunyi 'a'",
+                    "B. Berbunyi 'i'",
+                    "C. Berbunyi 'u'",
+                    "D. Berbunyi 'an'"
+                ],
+                correct: 1,
+                explanation: "Kasrah berbunyi 'i'. Contohnya بِ dibaca 'bi'."
+            },
+            {
+                question: "6. Tanda baca Dammah ( ـُ ) menghasilkan bunyi...",
+                options: [
+                    "A. 'a'",
+                    "B. 'i'",
+                    "C. 'u'",
+                    "D. 'e'"
+                ],
+                correct: 2,
+                explanation: "Dammah berbunyi 'u'. Contohnya بُ dibaca 'bu'."
+            },
+            {
+                question: "7. Al-Halq adalah tempat keluarnya huruf dari...",
+                options: [
+                    "A. Rongga hidung",
+                    "B. Kedua bibir",
+                    "C. Tenggorokan",
+                    "D. Lidah"
+                ],
+                correct: 2,
+                explanation: "Al-Halq berarti tenggorokan. Huruf yang keluar dari tenggorokan antara lain ء، ه، ع، ح، غ، خ."
+            },
+            {
+                question: "8. Al-Khaisyum adalah tempat keluarnya suara...",
+                options: [
+                    "A. Dengung atau ghunnah",
+                    "B. Panjang atau mad",
+                    "C. Tebal atau tafkhim",
+                    "D. Tipis atau tarqiq"
+                ],
+                correct: 0,
+                explanation: "Al-Khaisyum berarti rongga hidung dan menjadi tempat keluarnya suara dengung (ghunnah), seperti pada نّ dan مّ."
+            },
+            {
+                question: "9. Surah Al-Fatihah terdiri dari ... ayat.",
+                options: [
+                    "A. 5 ayat",
+                    "B. 6 ayat",
+                    "C. 7 ayat",
+                    "D. 8 ayat"
+                ],
+                correct: 2,
+                explanation: "Surah Al-Fatihah terdiri dari 7 ayat dan merupakan surah pertama dalam Al-Qur'an."
+            },
+            {
+                question: "10. Dalam Surah Al-Fatihah, kita diajarkan untuk memohon pertolongan hanya kepada...",
+                options: [
+                    "A. Malaikat",
+                    "B. Manusia",
+                    "C. Allah Swt.",
+                    "D. Teman"
+                ],
+                correct: 2,
+                explanation: "Surah Al-Fatihah mengajarkan kita untuk menyembah Allah dan memohon pertolongan hanya kepada Allah Swt."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>
