@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 5 SD - Kisah Nabi Muhammad SAW di Kota Madinah</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-mosque"></i>
+                </div>
+                <div> 
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 05. Kisah Nabi Muhammad SAW di Kota Madinah</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Face C - Kelas 5 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('materi', this)">
+                    <i class="fa-solid fa-book-open"></i> Materi Peristiwa
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('keteladanan', this)">
+                    <i class="fa-solid fa-heart"></i> Keteladanan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('rangkuman', this)">
+                    <i class="fa-solid fa-list-check"></i> Rangkuman
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Materi PAI Kelas 5 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed font-semibold">
+                        📖 Perjalanan Hijrah, Pembangunan, Kepemimpinan, dan Dakwah Nabi Muhammad SAW di Kota Madinah
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('materi')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الْهِجْرَةُ وَالْمَدِينَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📖 Kisah & Peristiwa</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Hijrah & Membangun Madinah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Hijrah ke Madinah, bersembunyi di Gua Tsur, membangun Masjid Nabawi, mempersaudarakan Muhajirin-Ansar, dan Piagam Madinah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Baca Pelajaran <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('keteladanan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الأَخْلاَقُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">💡 Keteladanan Nabi</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sifat Terpuji & Aplikasi Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Meneladani sifat jujur, amanah, adil, sabar, tolong-menolong, musyawarah, dan menjaga persatuan dalam kehidupan siswa.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Keteladanan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('rangkuman')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الْخُلاَصَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📝 Kesimpulan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Hikmah & Ringkasan Penting</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Hikmah dari perjalanan hijrah Nabi Muhammad SAW dan ringkasan singkat sebagai pedoman hidup bermasyarakat.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Rangkuman <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Pesan Penting Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Ringkasan Singkat
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    <strong>Hijrah</strong> ➔ <strong>Membangun Masjid</strong> ➔ <strong>Mempersaudarakan Muhajirin dan Ansar</strong> ➔ <strong>Membentuk masyarakat Madinah</strong> ➔ <strong>Berdakwah</strong> ➔ <strong>Membangun persatuan dan kedamaian.</strong>
+                </p>
+                <div class="p-3 bg-white rounded-xl border border-teal-200 text-teal-900 text-xs md:text-sm font-bold text-center">
+                    “Mari bersikap sabar, berani berusaha, bertawakal kepada Allah SWT, menjaga persaudaraan, dan menjadi pribadi yang adil serta amanah.”
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MATERI MATERI PERISTIWA -->
+        <div id="tab-materi" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                
+                <!-- Sub A -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-route text-amber-600"></i> A. Hijrah Nabi Muhammad SAW ke Madinah
+                    </h2>
+                    <div class="space-y-3 text-xs md:text-sm text-slate-700 leading-relaxed">
+                        <p>Nabi Muhammad SAW berdakwah di Kota Makkah selama kurang lebih 13 tahun. Selama berdakwah, Nabi Muhammad SAW dan para sahabat mendapatkan banyak gangguan dan tekanan dari kaum kafir Quraisy.</p>
+                        <p>Karena keadaan semakin sulit, Allah SWT memerintahkan Nabi Muhammad SAW untuk hijrah ke Madinah. <strong>Hijrah</strong> berarti berpindah dari satu tempat ke tempat lain untuk menyelamatkan agama dan melanjutkan dakwah.</p>
+                        <p>Nabi Muhammad SAW bersama <strong>Abu Bakar Ash-Shiddiq r.a.</strong> melakukan perjalanan menuju Madinah. Dalam perjalanan, mereka bersembunyi di <strong>Gua Tsur</strong> untuk menghindari kejaran kaum Quraisy.</p>
+                        <p>Setelah perjalanan yang panjang, Nabi Muhammad SAW akhirnya sampai di Madinah. Kedatangan beliau disambut dengan penuh kegembiraan oleh penduduk Madinah.</p>
+                    </div>
+                </div>
+
+                <!-- Sub B -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-city text-amber-600"></i> B. Nabi Muhammad SAW Membangun Kota Madinah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">Setelah tiba di Madinah, Nabi Muhammad SAW tidak hanya berdakwah, tetapi juga membangun kehidupan masyarakat agar menjadi masyarakat yang aman, damai, rukun, dan beriman. Beberapa langkah pentingnya adalah:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm">
+                        <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+                            <h3 class="font-bold text-teal-800 mb-1">1. Membangun Masjid Nabawi</h3>
+                            <p class="text-slate-600">Masjid Nabawi tidak hanya digunakan untuk salat, tetapi juga sebagai tempat belajar, bermusyawarah, dan berkumpulnya umat Islam.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+                            <h3 class="font-bold text-teal-800 mb-1">2. Mempersaudarakan Kaum Muhajirin dan Ansar</h3>
+                            <p class="text-slate-600"><strong>Kaum Muhajirin:</strong> umat Islam yang hijrah dari Makkah.<br><strong>Kaum Ansar:</strong> penduduk Madinah yang membantu. Mereka ikhlas berbagi tempat tinggal, makanan, dan pekerjaan.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+                            <h3 class="font-bold text-teal-800 mb-1">3. Membuat Piagam Madinah</h3>
+                            <p class="text-slate-600">Mengatur kehidupan masyarakat untuk hidup bersama secara damai, saling menghormati, menjaga keamanan, dan melaksanakan kewajiban masing-masing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub C -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-user-tie text-amber-600"></i> C. Kepemimpinan Nabi Muhammad SAW di Madinah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">Nabi Muhammad SAW menjadi pemimpin masyarakat Madinah secara adil, bijaksana, amanah, dan penuh kasih sayang. Sebagai pemimpin, beliau:</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs md:text-sm text-slate-700">
+                        <li class="bg-teal-50 p-2.5 rounded-lg border border-teal-100"><i class="fa-solid fa-check text-teal-600 mr-2"></i>Berlaku adil kepada semua orang.</li>
+                        <li class="bg-teal-50 p-2.5 rounded-lg border border-teal-100"><i class="fa-solid fa-check text-teal-600 mr-2"></i>Tidak membeda-bedakan suku/kelompok.</li>
+                        <li class="bg-teal-50 p-2.5 rounded-lg border border-teal-100"><i class="fa-solid fa-check text-teal-600 mr-2"></i>Selalu bermusyawarah mengambil keputusan.</li>
+                        <li class="bg-teal-50 p-2.5 rounded-lg border border-teal-100"><i class="fa-solid fa-check text-teal-600 mr-2"></i>Menjaga keamanan masyarakat.</li>
+                        <li class="bg-teal-50 p-2.5 rounded-lg border border-teal-100"><i class="fa-solid fa-check text-teal-600 mr-2"></i>Mengajarkan taat kepada Allah SWT.</li>
+                        <li class="bg-teal-50 p-2.5 rounded-lg border border-teal-100"><i class="fa-solid fa-check text-teal-600 mr-2"></i>Menolong orang yang membutuhkan.</li>
+                        <li class="bg-teal-50 p-2.5 rounded-lg border border-teal-100 sm:col-span-2"><i class="fa-solid fa-check text-teal-600 mr-2"></i>Menjaga hubungan baik dengan masyarakat yang berbeda agama.</li>
+                    </ul>
+                </div>
+
+                <!-- Sub D -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-bullhorn text-amber-600"></i> D. Dakwah Nabi Muhammad SAW di Madinah
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-slate-700">
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                            <strong class="text-teal-800 block mb-1">1. Mengajarkan Tauhid</strong>
+                            Hanya Allah SWT satu-satunya Tuhan yang wajib disembah.
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                            <strong class="text-teal-800 block mb-1">2. Mengajarkan Ibadah</strong>
+                            Melaksanakan salat, puasa, zakat, dan ibadah lainnya.
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                            <strong class="text-teal-800 block mb-1">3. Mengajarkan Akhlak Mulia</strong>
+                            Jujur, amanah, saling menolong, menghormati, menjaga persaudaraan, memaafkan, dan tidak zalim.
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                            <strong class="text-teal-800 block mb-1">4. Membangun Persatuan</strong>
+                            Perbedaan suku, bangsa, dan kelompok tidak boleh menjadi alasan bermusuhan.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB: KETELADANAN -->
+        <div id="tab-keteladanan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart text-rose-500"></i> F. Keteladanan Nabi Muhammad SAW di Madinah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Sebagai siswa, kita dapat meneladani Nabi Muhammad SAW dalam kehidupan sehari-hari melalui contoh berikut:
+                    </p>
+
+                    <!-- Tabel Keteladanan -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs md:text-sm">
+                            <thead>
+                                <tr class="bg-teal-800 text-white">
+                                    <th class="p-3 font-bold rounded-tl-xl">Keteladanan Nabi</th>
+                                    <th class="p-3 font-bold rounded-tr-xl">Contoh dalam Kehidupan Sehari-hari</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 border-x border-b border-slate-200">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-teal-900 bg-teal-50/50">Jujur</td>
+                                    <td class="p-3 text-slate-700">Tidak berbohong kepada guru dan orang tua</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-teal-900 bg-teal-50/50">Amanah</td>
+                                    <td class="p-3 text-slate-700">Menjaga barang yang dititipkan</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-teal-900 bg-teal-50/50">Adil</td>
+                                    <td class="p-3 text-slate-700">Tidak pilih kasih kepada teman</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-teal-900 bg-teal-50/50">Sabar</td>
+                                    <td class="p-3 text-slate-700">Tidak mudah marah ketika menghadapi masalah</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-teal-900 bg-teal-50/50">Tolong-menolong</td>
+                                    <td class="p-3 text-slate-700">Membantu teman yang kesulitan</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-teal-900 bg-teal-50/50">Musyawarah</td>
+                                    <td class="p-3 text-slate-700">Berdiskusi sebelum mengambil keputusan bersama</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-teal-900 bg-teal-50/50">Menjaga persatuan</td>
+                                    <td class="p-3 text-slate-700">Tidak mengejek atau bertengkar karena perbedaan</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-teal-900 bg-teal-50/50">Peduli</td>
+                                    <td class="p-3 text-slate-700">Menolong teman yang membutuhkan</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RANGKUMAN & HIKMAH -->
+        <div id="tab-rangkuman" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb text-amber-500"></i> E. Hikmah Hijrah Nabi Muhammad SAW ke Madinah
+                    </h2>
+                    <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                        <li class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>1. Bersabar dalam menghadapi kesulitan:</strong> Nabi Muhammad SAW tetap sabar meskipun menghadapi banyak tantangan dalam berdakwah.</li>
+                        <li class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>2. Berani mengambil keputusan:</strong> Hijrah membutuhkan keberanian meninggalkan Makkah demi keselamatan dakwah.</li>
+                        <li class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>3. Selalu bertawakal kepada Allah SWT:</strong> Berusaha sungguh-sungguh, lalu menyerahkan hasilnya kepada Allah SWT.</li>
+                        <li class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>4. Pentingnya persaudaraan:</strong> Kaum Muhajirin dan Ansar menunjukkan sikap saling membantu dan menyayangi.</li>
+                        <li class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>5. Pentingnya persatuan:</strong> Perbedaan tidak boleh menyebabkan permusuhan. Kita harus menjaga rukun.</li>
+                        <li class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>6. Menjadi pemimpin yang baik:</strong> Mengajarkan kita untuk bersikap adil, jujur, amanah, dan bertanggung jawab.</li>
+                        <li class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>7. Berusaha mengubah keadaan menjadi lebih baik:</strong> Saat situasi sulit, harus berusaha mencari jalan keluar yang baik di jalan Allah SWT.</li>
+                    </ul>
+                </div>
+
+                <div class="pt-4 border-t border-slate-200">
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check"></i> G. Kesimpulan
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Hijrah Nabi Muhammad SAW ke Madinah merupakan peristiwa penting dalam sejarah Islam. Di Madinah, Nabi Muhammad SAW membangun masyarakat Islam yang beriman, bersatu, damai, dan saling membantu. Beliau membangun Masjid Nabawi, mempersaudarakan kaum Muhajirin dan Ansar, serta mengatur kehidupan masyarakat melalui Piagam Madinah.
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Sebagai pemimpin, beliau bersikap adil, amanah, bijaksana, sabar, dan penuh kasih sayang. Dakwah beliau mengajarkan tentang keimanan, ibadah, akhlak, persaudaraan, persatuan, dan kehidupan yang damai.
+                    </p>
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 font-semibold text-center">
+                        📌 <strong>Ringkasan Singkat:</strong> Hijrah ➔ Membangun Masjid ➔ Mempersaudarakan Muhajirin dan Ansar ➔ Membentuk masyarakat Madinah ➔ Berdakwah ➔ Membangun persatuan dan kedamaian.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Kisah Nabi Muhammad SAW di Madinah
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif PAI.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Soal Materi PAI Kelas 5 SD - Nabi Muhammad SAW di Madinah
+        const quizData = [
+            {
+                question: "1. Berapa lama Nabi Muhammad SAW berdakwah di Kota Makkah sebelum diperintahkan untuk hijrah?",
+                options: [
+                    "A. 10 tahun",
+                    "B. 12 tahun",
+                    "C. 13 tahun",
+                    "D. 15 tahun"
+                ],
+                correct: 2,
+                explanation: "Nabi Muhammad SAW berdakwah di Kota Makkah selama kurang lebih 13 tahun."
+            },
+            {
+                question: "2. Siapa sahabat yang mendampingi Nabi Muhammad SAW saat melakukan perjalanan hijrah ke Madinah?",
+                options: [
+                    "A. Umar bin Khattab r.a.",
+                    "B. Utsman bin Affan r.a.",
+                    "C. Ali bin Abi Thalib r.a.",
+                    "D. Abu Bakar Ash-Shiddiq r.a."
+                ],
+                correct: 3,
+                explanation: "Nabi Muhammad SAW bersama Abu Bakar Ash-Shiddiq r.a. melakukan perjalanan menuju Madinah."
+            },
+            {
+                question: "3. Tempat persembunyian Nabi Muhammad SAW dan Abu Bakar r.a. dari kejaran kaum Quraisy adalah...",
+                options: [
+                    "A. Gua Hira",
+                    "B. Gua Tsur",
+                    "C. Jabal Nur",
+                    "D. Masjid Nabawi"
+                ],
+                correct: 1,
+                explanation: "Nabi Muhammad SAW dan Abu Bakar r.a. bersembunyi di Gua Tsur."
+            },
+            {
+                question: "4. Apa sebutan bagi umat Islam yang berpindah (hijrah) dari Makkah ke Madinah?",
+                options: [
+                    "A. Kaum Ansar",
+                    "B. Kaum Muhajirin",
+                    "C. Kaum Quraisy",
+                    "D. Kaum Yahudi"
+                ],
+                correct: 1,
+                explanation: "Kaum Muhajirin adalah umat Islam yang hijrah dari Makkah ke Madinah."
+            },
+            {
+                question: "5. Penduduk asli Madinah yang menyambut dan membantu kaum yang hijrah disebut...",
+                options: [
+                    "A. Kaum Ansar",
+                    "B. Kaum Muhajirin",
+                    "C. Kaum Quraisy",
+                    "D. Kaum Baduy"
+                ],
+                correct: 0,
+                explanation: "Kaum Ansar adalah penduduk Madinah yang membantu kaum Muhajirin."
+            },
+            {
+                question: "6. Masjid pertama yang dibangun oleh Nabi Muhammad SAW di Kota Madinah adalah...",
+                options: [
+                    "A. Masjidil Haram",
+                    "B. Masjidil Aqsa",
+                    "C. Masjid Nabawi",
+                    "D. Masjid Quba"
+                ],
+                correct: 2,
+                explanation: "Nabi Muhammad SAW membangun Masjid Nabawi di Madinah."
+            },
+            {
+                question: "7. Dokumen tertulis yang dibuat Nabi Muhammad SAW untuk mengatur kehidupan beragama dan perdamaian di Madinah bernama...",
+                options: [
+                    "A. Piagam Madinah",
+                    "B. Perjanjian Hudaibiyah",
+                    "C. Ikrar Makkah",
+                    "D. Deklarasi Madinah"
+                ],
+                correct: 0,
+                explanation: "Nabi Muhammad SAW mengatur kehidupan masyarakat Madinah melalui Piagam Madinah."
+            },
+            {
+                question: "8. Contoh keteladanan sifat 'Amanah' Nabi Muhammad SAW yang diterapkan siswa sehari-hari adalah...",
+                options: [
+                    "A. Berdiskusi sebelum mengambil keputusan",
+                    "B. Menjaga barang yang dititipkan teman/orang tua",
+                    "C. Tidak berbohong kepada orang tua",
+                    "D. Memaafkan kesalahan teman"
+                ],
+                correct: 1,
+                explanation: "Sifat Amanah diteladani dengan cara menjaga barang yang dititipkan."
+            },
+            {
+                question: "9. Ajaran utama Nabi Muhammad SAW dalam hal keyakinan bahwa hanya Allah SWT satu-satunya Tuhan dinamakan...",
+                options: [
+                    "A. Akhlak",
+                    "B. Muamalah",
+                    "C. Tauhid",
+                    "D. Tarikh"
+                ],
+                correct: 2,
+                explanation: "Mengajarkan Tauhid berarti mengajarkan bahwa hanya Allah SWT satu-satunya Tuhan yang wajib disembah."
+            },
+            {
+                question: "10. Pengertian 'Hijrah' secara bahasa dan istilah berdasarkan materi adalah...",
+                options: [
+                    "A. Berperang melawan musuh",
+                    "B. Berpindah tempat untuk menyelamatkan agama dan melanjutkan dakwah",
+                    "C. Berdagang ke negeri asing",
+                    "D. Berdiam diri di dalam gua"
+                ],
+                correct: 1,
+                explanation: "Hijrah berarti berpindah dari satu tempat ke tempat lain untuk menyelamatkan agama dan melanjutkan dakwah."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

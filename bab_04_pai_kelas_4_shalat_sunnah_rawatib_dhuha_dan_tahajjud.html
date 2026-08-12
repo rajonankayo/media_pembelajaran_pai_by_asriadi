@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 4 SD - Shalat Sunnah</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 04. Shalat Sunnah: Rawatib, Dhuha, dan Tahajjud</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 4 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-book-open"></i> Pengertian
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('macam', this)">
+                    <i class="fa-solid fa-list-check"></i> Macam-Macam
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('tatacara', this)">
+                    <i class="fa-solid fa-person-praying"></i> Tata Cara
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('sikap', this)">
+                    <i class="fa-solid fa-heart"></i> Pembiasaan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 4 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        🌟 Shalat Sunnah: Rawatib, Dhuha, dan Tahajjud
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الصَّلَاةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">✨ Pengertian Shalat Sunnah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Ibadah yang Dianjurkan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal arti shalat sunnah, hukum melaksanakannya, serta berbagai tujuan dan manfaat ibadah sunnah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Pengertian <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('macam')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الأَنْوَاعُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🤲 Macam Shalat Sunnah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rawatib, Dhuha, Tahajjud</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami shalat Rawatib (Qabliyah & Ba'diyah), Dhuha, dan Tahajjud beserta keutamaannya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Jenisnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('tatacara')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الكَيْفِيَّةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🕋 Tata Cara Shalat</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Langkah Pelaksanaan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Urutan tata cara shalat sunnah secara benar mulai dari wudu, niat, gerakan shalat, hingga salam.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Tata Cara <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('sikap')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">التَّعَوُّدُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌱 Pembiasaan Diri</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sikap Terpuji</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Sikap positif yang dapat dibiasakan dalam kehidupan sehari-hari setelah mempelajari shalat sunnah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Pembiasaan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> 🌟 Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    Shalat sunnah adalah shalat yang dianjurkan oleh Rasulullah saw. dan memiliki banyak keutamaan. Di antara shalat sunnah yang perlu diketahui adalah shalat Rawatib, Dhuha, dan Tahajjud.
+                </p>
+                <ul class="text-xs md:text-sm text-slate-700 space-y-1 mb-3 list-disc list-inside">
+                    <li><strong>Rawatib</strong> → dikerjakan sebelum atau sesudah shalat wajib.</li>
+                    <li><strong>Dhuha</strong> → dikerjakan pada pagi hari.</li>
+                    <li><strong>Tahajjud</strong> → dikerjakan pada malam hari setelah tidur.</li>
+                </ul>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Dengan rajin melaksanakan shalat sunnah, kita dapat lebih dekat kepada Allah Swt., memperoleh pahala, dan membiasakan diri menjadi anak yang rajin beribadah.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-book-open"></i> 1. Pengertian Shalat Sunnah
+                    </h2>
+                    
+                    <div class="p-5 bg-teal-50 border border-teal-200 rounded-xl mb-6 space-y-2">
+                        <p class="text-xs md:text-sm text-teal-900 leading-relaxed">
+                            <strong>Shalat sunnah</strong> adalah shalat yang dianjurkan oleh Rasulullah saw. untuk dikerjakan oleh umat Islam.
+                        </p>
+                        <p class="text-xs md:text-sm text-teal-800 font-semibold">
+                            💡 Hukumnya: Orang yang mengerjakannya mendapat pahala, sedangkan orang yang tidak mengerjakannya tidak berdosa.
+                        </p>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-bullseye text-amber-600"></i> Tujuan dan Manfaat Shalat Sunnah
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Shalat sunnah merupakan salah satu cara untuk:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-heart text-teal-600 text-base"></i>
+                            <span>Mendekatkan diri kepada Allah Swt.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-plus-circle text-teal-600 text-base"></i>
+                            <span>Menambah pahala dan kebaikan.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-shield-halved text-teal-600 text-base"></i>
+                            <span>Menyempurnakan kekurangan dalam shalat wajib.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-rotate text-teal-600 text-base"></i>
+                            <span>Membiasakan diri beribadah kepada Allah Swt.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 md:col-span-2">
+                            <i class="fa-solid fa-hands-holding text-teal-600 text-base"></i>
+                            <span>Memohon pertolongan dan keberkahan dari Allah Swt.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MACAM-MACAM SHALAT SUNNAH -->
+        <div id="tab-macam" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-list-check"></i> 2. Macam-Macam Shalat Sunnah
+                    </h2>
+
+                    <!-- A. RAWATIB -->
+                    <div class="mb-8 border border-slate-200 rounded-xl p-5 bg-slate-50/50">
+                        <h3 class="text-lg font-bold text-teal-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-amber-600"></i> A. Shalat Sunnah Rawatib
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                            Shalat sunnah rawatib adalah shalat sunnah yang dikerjakan sebelum atau sesudah shalat wajib. Shalat rawatib dibagi menjadi:
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-teal-800 text-sm mb-2">1. Qabliyah</h4>
+                                <p class="text-xs text-slate-600 mb-2">Dikerjakan <strong>sebelum</strong> shalat wajib. Contoh:</p>
+                                <ul class="text-xs text-slate-700 space-y-1 list-disc list-inside">
+                                    <li>Dua rakaat sebelum Subuh.</li>
+                                    <li>Dua atau empat rakaat sebelum Zuhur.</li>
+                                    <li>Dua rakaat sebelum Magrib.</li>
+                                    <li>Dua rakaat sebelum Isya.</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-teal-800 text-sm mb-2">2. Ba'diyah</h4>
+                                <p class="text-xs text-slate-600 mb-2">Dikerjakan <strong>sesudah</strong> shalat wajib. Contoh:</p>
+                                <ul class="text-xs text-slate-700 space-y-1 list-disc list-inside">
+                                    <li>Dua rakaat sesudah Zuhur.</li>
+                                    <li>Dua rakaat sesudah Magrib.</li>
+                                    <li>Dua rakaat sesudah Isya.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs md:text-sm text-amber-900">
+                            <strong>Manfaat shalat rawatib:</strong> Menyempurnakan ibadah shalat wajib dan menambah pahala.
+                        </div>
+                    </div>
+
+                    <!-- B. DHUHA -->
+                    <div class="mb-8 border border-slate-200 rounded-xl p-5 bg-slate-50/50">
+                        <h3 class="text-lg font-bold text-teal-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-sun text-amber-500"></i> B. Shalat Sunnah Dhuha
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Shalat Dhuha adalah shalat sunnah yang dikerjakan pada waktu pagi hari, setelah matahari terbit sampai sebelum masuk waktu Zuhur. Sekurang-kurangnya 2 rakaat dan dapat dikerjakan lebih dari dua rakaat secara berpasangan.
+                        </p>
+                        <p class="text-xs md:text-sm font-semibold text-teal-800 mb-2">Keutamaan Shalat Dhuha:</p>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1 list-disc list-inside mb-4">
+                            <li>Mendapat pahala dari Allah Swt.</li>
+                            <li>Membiasakan diri bersyukur.</li>
+                            <li>Memohon keberkahan dan rezeki kepada Allah Swt.</li>
+                            <li>Membuat hati menjadi lebih tenang.</li>
+                        </ul>
+                        <div class="p-3 bg-teal-50 border border-teal-200 rounded-lg text-xs md:text-sm text-teal-900">
+                            <strong>Contoh waktu:</strong> Sekitar pukul 07.00–11.00, selama belum masuk waktu Zuhur.
+                        </div>
+                    </div>
+
+                    <!-- C. TAHAJJUD -->
+                    <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/50">
+                        <h3 class="text-lg font-bold text-teal-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-moon text-indigo-600"></i> C. Shalat Sunnah Tahajjud
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Shalat Tahajjud adalah shalat sunnah yang dikerjakan pada malam hari setelah tidur. Waktunya dimulai setelah shalat Isya dan tidur, kemudian bangun untuk melaksanakan shalat. Waktu yang paling utama adalah sepertiga malam terakhir. Sekurang-kurangnya 2 rakaat dan dapat ditambah sesuai kemampuan.
+                        </p>
+                        <p class="text-xs md:text-sm font-semibold text-teal-800 mb-2">Keutamaan Shalat Tahajjud:</p>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1 list-disc list-inside">
+                            <li>Mendekatkan diri kepada Allah Swt.</li>
+                            <li>Mendapat pahala dan ampunan Allah Swt.</li>
+                            <li>Melatih ketekunan dalam beribadah.</li>
+                            <li>Membiasakan berdoa kepada Allah Swt.</li>
+                            <li>Menenangkan hati dan pikiran.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: TATA CARA -->
+        <div id="tab-tatacara" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-person-praying"></i> 3. Tata Cara Melaksanakan Shalat Sunnah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        Pada dasarnya, shalat sunnah dilakukan seperti shalat biasa, yaitu dengan urutan sebagai berikut:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">1</span>
+                            <span>Berwudu dan memastikan badan, pakaian, serta tempat shalat bersih.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">2</span>
+                            <span>Menutup aurat.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">3</span>
+                            <span>Menghadap kiblat.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">4</span>
+                            <span>Berniat shalat sunnah.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">5</span>
+                            <span>Takbiratul ihram.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">6</span>
+                            <span>Membaca doa iftitah, Al-Fatihah, dan surah pendek.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">7</span>
+                            <span>Melakukan rukuk.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">8</span>
+                            <span>Melakukan i'tidal.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">9</span>
+                            <span>Melakukan sujud pertama.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">10</span>
+                            <span>Duduk di antara dua sujud.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">11</span>
+                            <span>Melakukan sujud kedua.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">12</span>
+                            <span>Berdiri untuk rakaat berikutnya.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">13</span>
+                            <span>Melaksanakan rakaat kedua.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">14</span>
+                            <span>Tasyahud akhir.</span>
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3 sm:col-span-2">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center shrink-0 font-bold text-xs">15</span>
+                            <span>Salam.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PEMBIASAAN / SIKAP -->
+        <div id="tab-sikap" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-heart"></i> 4. Sikap yang Dapat Dibiasakan
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-6">
+                    Setelah mempelajari shalat sunnah, kita hendaknya membiasakan sikap terpuji berikut:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-800">
+                        <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                        <span>Rajin melaksanakan shalat sunnah.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-800">
+                        <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                        <span>Tidak meninggalkan shalat wajib.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-800">
+                        <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                        <span>Membiasakan shalat Dhuha di pagi hari.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-800">
+                        <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                        <span>Membiasakan shalat Tahajjud pada malam hari.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-800">
+                        <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                        <span>Membiasakan shalat Rawatib sebelum/sesudah shalat wajib.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-800">
+                        <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                        <span>Ikhlas beribadah hanya karena Allah Swt.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3 text-xs md:text-sm font-semibold text-slate-800 md:col-span-2">
+                        <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                        <span>Tidak sombong ketika rajin beribadah.</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-semibold text-center">
+                    Dengan pembiasaan ini, kita akan menjadi anak muslim yang taat, rendah hati, dan makin dicintai Allah Swt!
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Shalat Sunnah
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Shalat Sunnah Kelas 4 SD
+        const quizData = [
+            {
+                question: "1. Apa yang dimaksud dengan shalat sunnah?",
+                options: [
+                    "A. Shalat yang wajib dikerjakan lima kali sehari",
+                    "B. Shalat yang dianjurkan oleh Rasulullah saw.",
+                    "C. Shalat yang jika ditinggalkan mendapat dosa",
+                    "D. Shalat pengganti puasa Ramadan"
+                ],
+                correct: 1,
+                explanation: "Shalat sunnah adalah shalat yang dianjurkan oleh Rasulullah saw. Jika dikerjakan mendapat pahala, jika ditinggalkan tidak berdosa."
+            },
+            {
+                question: "2. Shalat sunnah yang dikerjakan sebelum shalat wajib disebut...",
+                options: [
+                    "A. Shalat Ba'diyah",
+                    "B. Shalat Qabliyah",
+                    "C. Shalat Tahajjud",
+                    "D. Shalat Dhuha"
+                ],
+                correct: 1,
+                explanation: "Shalat Qabliyah adalah shalat sunnah Rawatib yang dikerjakan SEBELUM shalat wajib."
+            },
+            {
+                question: "3. Shalat sunnah yang dikerjakan sesudah shalat wajib disebut...",
+                options: [
+                    "A. Shalat Qabliyah",
+                    "B. Shalat Ba'diyah",
+                    "C. Shalat Witir",
+                    "D. Shalat Dhuha"
+                ],
+                correct: 1,
+                explanation: "Shalat Ba'diyah adalah shalat sunnah Rawatib yang dikerjakan SESUDAH shalat wajib."
+            },
+            {
+                question: "4. Kapan waktu pelaksanaan shalat Dhuha?",
+                options: [
+                    "A. Tengah malam setelah tidur",
+                    "B. Sebelum matahari terbit",
+                    "C. Pagi hari, setelah matahari terbit sampai sebelum Zuhur",
+                    "D. Langsung sesudah shalat Magrib"
+                ],
+                correct: 2,
+                explanation: "Shalat Dhuha dikerjakan pada pagi hari (sekitar pukul 07.00-11.00) sebelum masuk waktu Zuhur."
+            },
+            {
+                question: "5. Syarat utama untuk melaksanakan shalat Tahajjud adalah...",
+                options: [
+                    "A. Dikerjakan pada siang hari",
+                    "B. Dikerjakan pada malam hari setelah tidur",
+                    "C. Harus dikerjakan berjamaah di masjid",
+                    "D. Dikerjakan sebelum masuk waktu Isya"
+                ],
+                correct: 1,
+                explanation: "Shalat Tahajjud dikerjakan pada malam hari setelah tidur terlebih dahulu."
+            },
+            {
+                question: "6. Berapa rakaat minimal pelaksanaan shalat Dhuha dan Tahajjud?",
+                options: [
+                    "A. 1 Rakaat",
+                    "B. 2 Rakaat",
+                    "C. 4 Rakaat",
+                    "D. 3 Rakaat"
+                ],
+                correct: 1,
+                explanation: "Shalat Dhuha dan shalat Tahajjud sekurang-kurangnya dikerjakan 2 rakaat."
+            },
+            {
+                question: "7. Waktu paling utama untuk melaksanakan shalat Tahajjud adalah...",
+                options: [
+                    "A. Awal malam sebelum Isya",
+                    "B. Tepat jam 12 siang",
+                    "C. Sepertiga malam terakhir",
+                    "D. Sesudah shalat Subuh"
+                ],
+                correct: 2,
+                explanation: "Waktu yang paling utama untuk shalat Tahajjud adalah pada sepertiga malam terakhir."
+            },
+            {
+                question: "8. Manfaat utama shalat sunnah Rawatib adalah...",
+                options: [
+                    "A. Menggantikan shalat wajib yang lupa",
+                    "B. Menyempurnakan kekurangan dalam shalat wajib",
+                    "C. Menghilangkan kewajiban berpuasa",
+                    "D. Supaya dipuji oleh teman"
+                ],
+                correct: 1,
+                explanation: "Salah satu keutamaan shalat sunnah Rawatib adalah menyempurnakan kekurangan dalam shalat wajib."
+            },
+            {
+                question: "9. Berikut ini yang BUKAN merupakan contoh shalat Ba'diyah adalah...",
+                options: [
+                    "A. Dua rakaat sesudah Zuhur",
+                    "B. Dua rakaat sesudah Magrib",
+                    "C. Dua rakaat sebelum Subuh",
+                    "D. Dua rakaat sesudah Isya"
+                ],
+                correct: 2,
+                explanation: "Dua rakaat sebelum Subuh adalah contoh shalat Qabliyah, bukan Ba'diyah."
+            },
+            {
+                question: "10. Sikap yang tepat saat kita rajin melaksanakan shalat sunnah adalah...",
+                options: [
+                    "A. Pamer dan sombong kepada teman",
+                    "B. Tetap rendah hati dan ikhlas karena Allah Swt.",
+                    "C. Meninggalkan shalat wajib",
+                    "D. Merasa diri paling suci"
+                ],
+                correct: 1,
+                explanation: "Sikap terpuji setelah rajin shalat sunnah adalah tetap ikhlas beribadah dan tidak sombong."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

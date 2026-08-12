@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 2 SD - Shalat Fardu: Ketentuan, Bacaan, dan Gerakan Shalat</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-kaaba"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 04. Shalat Fardu: Ketentuan, Bacaan, dan Gerakan Shalat</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 2 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-clock"></i> Pengertian & Waktu
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ketentuan', this)">
+                    <i class="fa-solid fa-list-check"></i> Ketentuan & Persiapan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('gerakan', this)">
+                    <i class="fa-solid fa-person-praying"></i> Bacaan & Gerakan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('sikap', this)">
+                    <i class="fa-solid fa-heart"></i> Sikap Shalat
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 2 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        🕌 Shalat Fardu: Ketentuan, Bacaan, dan Gerakan Shalat
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الصَّلَاةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌅 Shalat Fardu</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pengertian & Waktu</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal ibadah wajib 5 waktu sehari semalam serta jumlah rakaat masing-masing shalat.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Shalat Fardu <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('ketentuan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الشُّرُوطُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📋 Ketentuan & Persiapan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Syarat & Hal Sebelum Shalat</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami syarat wajib, syarat sah shalat, serta hal-hal yang perlu disiapkan sebelum beribadah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Ketentuan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('gerakan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الأَفْعَالُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🕌 Bacaan & Gerakan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Urutan Shalat Lengkap</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Pelajari 11 urutan gerakan dan bacaan shalat mulai dari niat hingga salam.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Gerakan & Bacaan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('sikap')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الخُشُوعُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">❤️ Sikap Ketika Shalat</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Khusyuk & Adab Beribadah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Sikap terpuji, khusyuk, dan menjaga kesopanan saat melaksanakan ibadah shalat.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Sikap Shalat <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Shalat fardu adalah kewajiban umat Islam yang dilakukan lima kali sehari. Kita harus mengetahui waktu, jumlah rakaat, syarat, bacaan, dan gerakan shalat. Shalat harus dilakukan dengan tertib, khusyuk, bersih, dan ikhlas karena Allah SWT.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & WAKTU -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-clock"></i> 1. Pengertian Shalat Fardu
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        Shalat fardu adalah ibadah wajib yang harus dikerjakan oleh setiap muslim yang telah memenuhi syarat. Shalat fardu dilakukan lima kali sehari semalam.
+                    </p>
+
+                    <h3 class="font-bold text-slate-800 text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-days text-amber-600"></i> Lima Shalat Fardu dan Jumlah Rakaatnya:
+                    </h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                        <div class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-2xl">🌅</span>
+                            <div>
+                                <h4 class="font-bold text-teal-800 text-base">Subuh</h4>
+                                <p class="text-slate-600 font-semibold">2 rakaat</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-2xl">☀️</span>
+                            <div>
+                                <h4 class="font-bold text-teal-800 text-base">Zuhur</h4>
+                                <p class="text-slate-600 font-semibold">4 rakaat</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-2xl">🌤️</span>
+                            <div>
+                                <h4 class="font-bold text-teal-800 text-base">Asar</h4>
+                                <p class="text-slate-600 font-semibold">4 rakaat</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <span class="text-2xl">🌇</span>
+                            <div>
+                                <h4 class="font-bold text-teal-800 text-base">Magrib</h4>
+                                <p class="text-slate-600 font-semibold">3 rakaat</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 sm:col-span-2 lg:col-span-1">
+                            <span class="text-2xl">🌙</span>
+                            <div>
+                                <h4 class="font-bold text-teal-800 text-base">Isya</h4>
+                                <p class="text-slate-600 font-semibold">4 rakaat</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl">
+                        <p class="text-xs md:text-sm text-amber-900 leading-relaxed">
+                            💡 <strong>Keutamaan:</strong> Melaksanakan shalat fardu lima waktu tepat pada waktunya adalah bentuk ketaatan utama seorang muslim kepada Allah SWT.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KETENTUAN & PERSIAPAN -->
+        <div id="tab-ketentuan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-8">
+                <!-- Ketentuan Shalat Fardu -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-list-check"></i> 2. Ketentuan Shalat Fardu
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        Sebelum melaksanakan shalat, kita harus memperhatikan beberapa ketentuan, yaitu:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Syarat Wajib -->
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                            <h3 class="font-bold text-teal-800 text-base mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-user-check text-teal-600"></i> Syarat Wajib Shalat:
+                            </h3>
+                            <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600"></i> Beragama Islam.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600"></i> Sudah baligh.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600"></i> Berakal sehat.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Syarat Sah -->
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                            <h3 class="font-bold text-teal-800 text-base mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-teal-600"></i> Syarat Sah Shalat:
+                            </h3>
+                            <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600"></i> Suci dari hadats dan najis.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600"></i> Menutup aurat.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600"></i> Menghadap kiblat.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600"></i> Sudah masuk waktu shalat.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600"></i> Mengetahui bahwa shalat yang dilakukan adalah shalat fardu.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Persiapan Sebelum Shalat -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-broom"></i> 3. Persiapan Sebelum Shalat
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Sebelum shalat, kita sebaiknya:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2.5">
+                            <i class="fa-solid fa-droplet text-teal-600 text-base"></i>
+                            <span>Berwudu terlebih dahulu.</span>
+                        </div>
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2.5">
+                            <i class="fa-solid fa-shirt text-teal-600 text-base"></i>
+                            <span>Memakai pakaian yang bersih dan menutup aurat.</span>
+                        </div>
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2.5">
+                            <i class="fa-solid fa-sparkles text-teal-600 text-base"></i>
+                            <span>Memastikan tempat shalat bersih.</span>
+                        </div>
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2.5">
+                            <i class="fa-solid fa-compass text-teal-600 text-base"></i>
+                            <span>Menghadap kiblat.</span>
+                        </div>
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2.5">
+                            <i class="fa-solid fa-heart text-teal-600 text-base"></i>
+                            <span>Berniat melaksanakan shalat.</span>
+                        </div>
+                        <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2.5">
+                            <i class="fa-solid fa-person-praying text-teal-600 text-base"></i>
+                            <span>Melaksanakan shalat dengan tertib dan khusyuk.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: BACAAN & GERAKAN SHALAT -->
+        <div id="tab-gerakan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-person-praying"></i> 4. Bacaan dan Gerakan Shalat
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        Urutan gerakan shalat secara umum adalah:
+                    </p>
+
+                    <div class="space-y-4">
+                        <!-- Step 1 -->
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">1</span>
+
+                            <div class="w-full">
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">
+                                    Berdiri Tegak dan Niat
+                                </h3>
+
+                                <p class="text-xs md:text-sm text-slate-600 mt-1 mb-4">
+                                    Berdiri menghadap kiblat dan berniat melaksanakan shalat fardu sesuai dengan
+                                    shalat yang akan dikerjakan.
+                                </p>
+
+                                <!-- Shalat Subuh -->
+                                <div class="mb-4 p-4 bg-white rounded-xl border border-slate-200">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-teal-100 text-teal-800 px-2.5 py-1 rounded-lg text-xs font-bold">
+                                            1
+                                        </span>
+                                        <h4 class="font-bold text-teal-800 text-sm md:text-base">
+                                            Niat Shalat Subuh – 2 Rakaat
+                                        </h4>
+                                    </div>
+
+                                    <div class="p-3 bg-teal-50 rounded-lg border border-teal-100 text-center">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            أُصَلِّي فَرْضَ الصُّبْحِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لِلَّهِ تَعَالَى
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold mb-2">
+                                            Ushallī fardhash-shubḥi rak‘ataini mustaqbilal-qiblati adā’an lillāhi ta‘ālā.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs md:text-sm italic">
+                                            Artinya: Aku berniat shalat fardu Subuh dua rakaat menghadap kiblat karena Allah Ta'ala.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shalat Zuhur -->
+                                <div class="mb-4 p-4 bg-white rounded-xl border border-slate-200">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-teal-100 text-teal-800 px-2.5 py-1 rounded-lg text-xs font-bold">
+                                            2
+                                        </span>
+                                        <h4 class="font-bold text-teal-800 text-sm md:text-base">
+                                            Niat Shalat Zuhur – 4 Rakaat
+                                        </h4>
+                                    </div>
+
+                                    <div class="p-3 bg-teal-50 rounded-lg border border-teal-100 text-center">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            أُصَلِّي فَرْضَ الظُّهْرِ أَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لِلَّهِ تَعَالَى
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold mb-2">
+                                            Ushallī fardhazh-zhuhri arba‘a raka‘ātin mustaqbilal-qiblati adā’an lillāhi ta‘ālā.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs md:text-sm italic">
+                                            Artinya: Aku berniat shalat fardu Zuhur empat rakaat menghadap kiblat karena Allah Ta'ala.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shalat Asar -->
+                                <div class="mb-4 p-4 bg-white rounded-xl border border-slate-200">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-teal-100 text-teal-800 px-2.5 py-1 rounded-lg text-xs font-bold">
+                                            3
+                                        </span>
+                                        <h4 class="font-bold text-teal-800 text-sm md:text-base">
+                                            Niat Shalat Asar – 4 Rakaat
+                                        </h4>
+                                    </div>
+
+                                    <div class="p-3 bg-teal-50 rounded-lg border border-teal-100 text-center">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            أُصَلِّي فَرْضَ الْعَصْرِ أَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لِلَّهِ تَعَالَى
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold mb-2">
+                                            Ushallī fardhal-‘ashri arba‘a raka‘ātin mustaqbilal-qiblati adā’an lillāhi ta‘ālā.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs md:text-sm italic">
+                                            Artinya: Aku berniat shalat fardu Asar empat rakaat menghadap kiblat karena Allah Ta'ala.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shalat Magrib -->
+                                <div class="mb-4 p-4 bg-white rounded-xl border border-slate-200">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-teal-100 text-teal-800 px-2.5 py-1 rounded-lg text-xs font-bold">
+                                            4
+                                        </span>
+                                        <h4 class="font-bold text-teal-800 text-sm md:text-base">
+                                            Niat Shalat Magrib – 3 Rakaat
+                                        </h4>
+                                    </div>
+
+                                    <div class="p-3 bg-teal-50 rounded-lg border border-teal-100 text-center">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            أُصَلِّي فَرْضَ الْمَغْرِبِ ثَلَاثَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لِلَّهِ تَعَالَى
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold mb-2">
+                                            Ushallī fardhal-maghribi tsalātsa raka‘ātin mustaqbilal-qiblati adā’an lillāhi ta‘ālā.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs md:text-sm italic">
+                                            Artinya: Aku berniat shalat fardu Magrib tiga rakaat menghadap kiblat karena Allah Ta'ala.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shalat Isya -->
+                                <div class="p-4 bg-white rounded-xl border border-slate-200">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-teal-100 text-teal-800 px-2.5 py-1 rounded-lg text-xs font-bold">
+                                            5
+                                        </span>
+                                        <h4 class="font-bold text-teal-800 text-sm md:text-base">
+                                            Niat Shalat Isya – 4 Rakaat
+                                        </h4>
+                                    </div>
+
+                                    <div class="p-3 bg-teal-50 rounded-lg border border-teal-100 text-center">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            أُصَلِّي فَرْضَ الْعِشَآءِ أَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لِلَّهِ تَعَالَى
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold mb-2">
+                                            Ushallī fardhal-‘isyā’i arba‘a raka‘ātin mustaqbilal-qiblati adā’an lillāhi ta‘ālā.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs md:text-sm italic">
+                                            Artinya: Aku berniat shalat fardu Isya empat rakaat menghadap kiblat karena Allah Ta'ala.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Catatan -->
+                                <div class="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                                    <p class="text-xs md:text-sm text-amber-800">
+                                        💡 <strong>Catatan:</strong> Niat adalah maksud dalam hati untuk melaksanakan
+                                        shalat tertentu karena Allah SWT. Bacaan niat di atas membantu kita
+                                        mengingat jenis shalat yang akan dikerjakan.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">2</span>
+
+                            <div class="w-full">
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">
+                                    Takbiratul Ihram dan Doa Iftitah
+                                </h3>
+
+                                <p class="text-xs md:text-sm text-slate-600 mt-1 mb-2">
+                                    Mengangkat kedua tangan sambil membaca takbiratul ihram:
+                                </p>
+
+                                <!-- Takbiratul Ihram -->
+                                <div class="p-3 bg-teal-50 rounded-lg text-center border border-teal-100 mb-4">
+                                    <div class="text-xs font-bold text-teal-700 mb-4">
+                                        Takbiratul Ihram
+                                    </div>
+
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-2">
+                                        اللّٰهُ أَكْبَرُ
+                                    </div>
+
+                                    <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                        Allahu Akbar
+                                    </div>
+
+                                    <div class="text-slate-500 text-xs italic mt-1">
+                                        Artinya: Allah Mahabesar.
+                                    </div>
+                                </div>
+
+                                <!-- Doa Iftitah -->
+                                <p class="text-xs md:text-sm text-slate-600 mt-2 mb-2">
+                                    Setelah takbiratul ihram, membaca doa iftitah:
+                                </p>
+
+                                <div class="p-4 bg-white rounded-lg text-center border border-slate-200">
+
+                                    <!-- Arab -->
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-3" style="line-height: 2.5;">
+                                        اللّٰهُمَّ بَاعِدْ بَيْنِيْ وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ，
+                                        اللّٰهُمَّ نَقِّنِي مِنْ خَطَايَايَ كَمَا يُنَقَّى الثَّوْبُ الْأَبْيَضُ مِنَ الدَّنَسِ，
+                                        اللّٰهُمَّ اغْسِلْنِي مِنْ خَطَايَايَ بِالْمَآءِ وَلثَّلْجِ وَالْبَرَدِ
+                                    </div>
+
+                                    <!-- Latin -->
+                                    <div class="text-teal-800 text-xs md:text-sm font-semibold leading-relaxed mb-2">
+                                        Allāhumma bā'id bainī wa baina khaṭāyāya kamā bā'adta
+                                        bainal-masyriqi wal-maghrib. Allāhumma naqqinī min khaṭāyāya
+                                        kamā yunaqqats-tsaubul-abyaḍu minad-danas.
+                                        Allāhummaghsilnī min khaṭāyāya bits-tsalji wal-mā'i wal-barad.
+                                    </div>
+
+                                    <!-- Terjemahan -->
+                                    <div class="text-slate-600 text-xs md:text-sm italic leading-relaxed">
+                                        Artinya: Ya Allah, jauhkanlah antara aku dan kesalahan-kesalahanku
+                                        sebagaimana Engkau telah menjauhkan antara timur dan barat.
+                                        Ya Allah, bersihkanlah aku dari kesalahan-kesalahanku sebagaimana
+                                        pakaian putih dibersihkan dari kotoran.
+                                        Ya Allah, cucilah aku dari kesalahan-kesalahanku dengan air,
+                                        salju, dan air es.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Catatan -->
+                                <div class="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                                    <p class="text-xs md:text-sm text-amber-800">
+                                        💡 <strong>Catatan:</strong> Doa iftitah dibaca setelah takbiratul ihram
+                                        dan sebelum membaca Surah Al-Fatihah. Doa iftitah hukumnya sunnah.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">3</span>
+
+                            <div class="w-full">
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">
+                                    Berdiri dan Membaca Al-Fatihah
+                                </h3>
+
+                                <p class="text-xs md:text-sm text-slate-600 mt-1 mb-3">
+                                    Setelah takbiratul ihram dan membaca doa iftitah, membaca Surah Al-Fatihah.
+                                    Setelah Al-Fatihah, membaca surah pendek pada rakaat pertama dan kedua.
+                                </p>
+
+                                <!-- Surah Al-Fatihah -->
+                                <div class="p-4 bg-teal-50 rounded-lg text-center border border-teal-100">
+
+                                    <!-- Basmalah -->
+                                    <div class="mb-4">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                            Bismillaahir-rahmaanir-rahiim.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs italic mt-1">
+                                            Artinya: Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.
+                                        </div>
+                                    </div>
+
+                                    <!-- Ayat 1 -->
+                                    <div class="mb-4">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِيْنَ
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                            Al-hamdu lillaahi rabbil-'aalamiin.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs italic mt-1">
+                                            Artinya: Segala puji bagi Allah, Tuhan seluruh alam.
+                                        </div>
+                                    </div>
+
+                                    <!-- Ayat 2 -->
+                                    <div class="mb-4">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            الرَّحْمَنِ الرَّحِيْمِ
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                            Ar-rahmaanir-rahiim.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs italic mt-1">
+                                            Artinya: Yang Maha Pengasih, Maha Penyayang.
+                                        </div>
+                                    </div>
+
+                                    <!-- Ayat 3 -->
+                                    <div class="mb-4">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            مَالِكِ يَوْمِ الدِّيْنِ
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                            Maaliki yaumid-diin.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs italic mt-1">
+                                            Artinya: Pemilik hari pembalasan.
+                                        </div>
+                                    </div>
+
+                                    <!-- Ayat 4 -->
+                                    <div class="mb-4">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                            Iyyaaka na'budu wa iyyaaka nasta'iin.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs italic mt-1">
+                                            Artinya: Hanya kepada-Mu kami menyembah dan hanya kepada-Mu kami memohon pertolongan.
+                                        </div>
+                                    </div>
+
+                                    <!-- Ayat 5 -->
+                                    <div class="mb-4">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            اهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                            Ihdinash-shiraathal-mustaqiim.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs italic mt-1">
+                                            Artinya: Tunjukilah kami jalan yang lurus.
+                                        </div>
+                                    </div>
+
+                                    <!-- Ayat 6 -->
+                                    <div class="mb-4">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                            Shiraathalladziina an'amta 'alaihim.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs italic mt-1">
+                                            Artinya: (Yaitu) jalan orang-orang yang telah Engkau beri nikmat kepada mereka.
+                                        </div>
+                                    </div>
+
+                                    <!-- Ayat 7 -->
+                                    <div>
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                            غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّالِّيْنَ
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                            Ghairil-maghdhuubi 'alaihim wa ladh-dhaalliin.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs italic mt-1">
+                                            Artinya: Bukan jalan mereka yang dimurkai dan bukan pula jalan mereka yang sesat.
+                                        </div>
+                                    </div>
+
+                                    <!-- Aamiin -->
+                                    <div class="mt-4 pt-3 border-t border-teal-100">
+                                        <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">
+                                            آمِيْنَ
+                                        </div>
+
+                                        <div class="text-teal-800 text-xs md:text-sm font-semibold">
+                                            Aamiin.
+                                        </div>
+
+                                        <div class="text-slate-600 text-xs italic mt-1">
+                                            Artinya: Kabulkanlah, ya Allah.
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Catatan -->
+                                <div class="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                                    <p class="text-xs md:text-sm text-amber-800">
+                                        <strong>Setelah Surah Al-Fatihah:</strong> Dilanjutkan dengan membaca surah pendek, misalnya Surah An-Naas, Surah Al-Falaq atau lainnya.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Step 4 -->
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                        <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">4</span>
+
+                        <div class="w-full">
+                            <h3 class="font-bold text-teal-800 text-sm md:text-base">Rukuk</h3>
+
+                            <p class="text-xs md:text-sm text-slate-600 mt-1 mb-2">
+                                Membungkukkan badan dengan punggung lurus dan kedua tangan memegang lutut.
+                                Saat rukuk membaca:
+                            </p>
+
+                            <div class="p-4 bg-teal-50 rounded-lg text-center border border-teal-100">
+
+                                <!-- Bacaan Arab -->
+                                <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-2 leading-loose">
+                                     سُبْحَانَ رَبِّيَ الْعَظِيْمِ وَبِحَمْدِهِ
+                                </div>
+
+                                <!-- Latin -->
+                                <div class="text-teal-800 text-sm md:text-base font-semibold mb-2">
+                                    Subḥāna rabbiyal-‘aẓīm wa bihamdih.
+                                </div>
+
+                                <!-- Arti -->
+                                <div class="text-slate-600 text-xs md:text-sm italic">
+                                    Artinya: <strong>Mahasuci Tuhanku Yang Mahaagung dan segala puji bagi-Nya.</strong>
+                                </div>
+
+                            </div>
+
+                            <!-- Pengulangan bacaan -->
+                            <div class="mt-3 p-3 bg-white rounded-lg border border-slate-200">
+                                <p class="text-xs md:text-sm text-slate-600">
+                                    📌 <strong>Bacaan rukuk dibaca sebanyak tiga kali</strong>.
+                                    Kita membaca bacaan rukuk dengan tenang dan khusyuk.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Step 5 -->
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">5</span>
+                            <div class="w-full">
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">Iktidal</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1 mb-2">Bangkit dari rukuk hingga berdiri tegak. Membaca:</p>
+                                <div class="p-3 bg-teal-50 rounded-lg text-center border border-teal-100 mb-2">
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">سَمِعَ اللّٰهُ لِمَنْ حَمِدَهُ</div>
+                                    <div class="text-teal-800 text-xs md:text-sm font-semibold">Sami'allahu liman hamidah.</div>
+                                    <div class="text-slate-500 text-xs italic mt-0.5">Artinya: Allah mendengar orang yang memuji-Nya.</div>
+                                </div>
+                                <p class="text-xs md:text-sm text-slate-600 mb-2">Kemudian membaca:</p>
+                                <div class="p-4 bg-teal-50 rounded-lg text-center border border-teal-100">
+                                    <!-- Arab -->
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-2">
+                                        رَبَّنَا وَلَكَ الْحَمْدُ، مِلْءُ السَّمَاوَاتِ وَمِلْءُ الْأَرْضِ، وَمِلْءُ مَا شِئْتَ مِنْ شَيْءٍ بَعْدُ
+                                    </div>
+
+                                    <!-- Latin -->
+                                    <div class="text-teal-800 text-sm md:text-base font-semibold leading-relaxed">
+                                        Rabbanaa wa lakal hamdu, mil'us-samaawaati wa mil'ul-ardhi,
+                                        wa mil'u maa syi'ta min syai'in ba'du.
+                                    </div>
+
+                                    <!-- Arti -->
+                                    <div class="text-slate-600 text-xs md:text-sm italic mt-2 leading-relaxed">
+                                        Artinya: Wahai Tuhan kami, bagi-Mu segala puji sepenuh langit,
+                                        sepenuh bumi, dan sepenuh apa saja yang Engkau kehendaki setelah itu.
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Step 6 -->
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">6</span>
+                            <div class="w-full">
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">Sujud</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1 mb-2">Meletakkan dahi dan hidung, kedua telapak tangan, kedua lutut, serta ujung jari kaki di lantai. Membaca:</p>
+                                <div class="p-3 bg-teal-50 rounded-lg text-center border border-teal-100">
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">سُبْحَانَ رَبِّيَ الْأَعْلَى وَبِحَمْدِهِ</div>
+                                    <div class="text-teal-800 text-xs md:text-sm font-semibold">Subhaana rabbiyal a'laa wa bihamdih.</div>
+                                    <div class="text-slate-500 text-xs italic mt-0.5">Artinya: Mahasuci Tuhanku Yang Mahatinggi dan segala puji bagi-Nya.</div>
+                                </div>
+                                <!-- Pengulangan bacaan -->
+                                <div class="mt-3 p-3 bg-white rounded-lg border border-slate-200">
+                                    <p class="text-xs md:text-sm text-slate-600">
+                                        📌 <strong>Bacaan sujud dibaca sebanyak tiga kali</strong>.
+                                        Kita membaca bacaan sujud dengan tenang dan khusyuk.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 7 -->
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">7</span>
+                            <div class="w-full">
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">Duduk di antara dua sujud</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1 mb-2">Duduk setelah sujud dan membaca doa:</p>
+                                <div class="p-4 bg-teal-50 rounded-lg text-center border border-teal-100">
+                                    <!-- Arab -->
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4">
+                                        رَبِّ اغْفِرْ لِيْ، وَارْحَمْنِيْ، وَاجْبُرْنِيْ، وَارْفَعْنِيْ، وَارْزُقْنِيْ، وَاهْدِنِيْ، وَعَافِنِيْ، وَاعْفُ عَنِّيْ
+                                    </div>
+
+                                    <!-- Latin -->
+                                    <div class="text-teal-800 text-sm md:text-base font-semibold leading-relaxed">
+                                        Rabbighfir lii, warhamnii, wajburnii, warfa'nii, warzuqnii,
+                                        wahdinii, wa'aafinii, wa'fu 'annii.
+                                    </div>
+
+                                    <!-- Arti -->
+                                    <div class="text-slate-600 text-xs md:text-sm italic mt-2 leading-relaxed">
+                                        Artinya: Ya Tuhanku, ampunilah aku, rahmatilah aku, cukupilah kekuranganku,
+                                        angkatlah derajatku, berilah aku rezeki, berilah aku petunjuk,
+                                        sehatkanlah aku, dan maafkanlah aku.
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Step 8 -->
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">8</span>
+                            <div>
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">Sujud kedua</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1">Melakukan sujud kembali dengan membaca bacaan sujud.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 9 -->
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">9</span>
+                            <div>
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">Berdiri untuk rakaat berikutnya</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1">Setelah sujud kedua, berdiri untuk melanjutkan rakaat berikutnya.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 10 -->
+
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">10</span>
+
+                            <div class="w-full">
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">
+                                    Duduk Tahiyat Akhir
+                                </h3>
+
+                                <p class="text-xs md:text-sm text-slate-600 mt-1 mb-3">
+                                    Pada rakaat terakhir, duduk tahiyat akhir dengan membaca tasyahud,
+                                    salawat Nabi, kemudian doa sebelum salam.
+                                </p>
+
+                                <!-- Tasyahud -->
+                                <div class="p-4 bg-teal-50 rounded-lg text-center border border-teal-100 mb-3">
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4"  style="line-height: 2.5;">
+                                        التَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ لِلَّهِ . السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ . السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِيْنَ . أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ . وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللَّهِ
+                                    </div>
+
+                                    <div class="text-teal-800 text-xs md:text-sm font-semibold leading-relaxed">
+                                        At-tahiyyaatul mubaarakaatush-shalawaatuth-thayyibaatu lillaah.
+                                        Assalaamu 'alaika ayyuhan-nabiyyu wa rahmatullaahi wa barakaatuh.
+                                        Assalaamu 'alainaa wa 'alaa 'ibaadillaahish-shaalihiin.
+                                        Asyhadu allaa ilaaha illallaah, wa asyhadu anna Muhammadar rasuulullaah.
+                                    </div>
+
+                                    <div class="text-slate-600 text-xs italic mt-2 leading-relaxed">
+                                        Artinya: Segala penghormatan, keberkahan, salawat dan kebaikan hanyalah bagi Allah.
+                                        Semoga keselamatan, rahmat Allah dan keberkahan-Nya tercurah kepadamu, wahai Nabi.
+                                        Semoga keselamatan tercurah kepada kami dan kepada hamba-hamba Allah yang saleh.
+                                        Aku bersaksi bahwa tidak ada Tuhan selain Allah dan aku bersaksi bahwa Muhammad adalah utusan Allah.
+                                    </div>
+                                </div>
+
+                                <!-- Salawat Nabi -->
+                                <div class="p-4 bg-teal-50 rounded-lg text-center border border-teal-100 mb-3">
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4"  style="line-height: 2.5;">
+                                        اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ . كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيْمَ وَعَلَى آلِ إِبْرَاهِيْمَ . وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ . كَمَا بَارَكْتَ عَلَى إِبْرَاهِيْمَ وَعَلَى آلِ إِبْرَاهِيْمَ . فِيْ الْعَالَمِيْنَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ
+                                    </div>
+
+                                    <div class="text-teal-800 text-xs md:text-sm font-semibold leading-relaxed">
+                                        Allaahumma shalli 'alaa Muhammad wa 'alaa aali Muhammad,
+                                        kamaa shallaita 'alaa Ibraahiima wa 'alaa aali Ibraahiim, wa baarik 'alaa Muhammad wa 'alaa aali Muhammad,
+                                        kamaa baarakta 'alaa Ibraahiima wa 'alaa aali Ibraahiim,
+                                        innaka hamiidum majiid.
+                                    </div>
+
+                                    <div class="text-slate-600 text-xs italic mt-2 leading-relaxed">
+                                        Artinya: Ya Allah, limpahkanlah rahmat kepada Muhammad dan kepada keluarga Muhammad,
+                                        sebagaimana Engkau telah melimpahkan rahmat kepada Ibrahim dan keluarga Ibrahim, dan limpahkanlah keberkahan kepada Muhammad dan keluarga Muhammad,
+                                        sebagaimana Engkau telah melimpahkan keberkahan kepada Ibrahim dan keluarga Ibrahim.
+                                        Di seluruh alam sesungguhnya Engkau Maha Terpuji lagi Maha Mulia.
+                                    </div>
+                                </div>
+
+                                <!-- Doa Sebelum Salam -->
+                                <div class="p-4 bg-teal-50 rounded-lg text-center border border-teal-100">
+                                    <p class="text-xs text-start font-bold md:text-sm text-teal-900 mt-1 mb-3">
+                                        Doa Sebelum Salam.
+                                    </p>
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose mb-4"  style="line-height: 2.5;">
+                                        اللَّهُمَّ إِنِّيْ أَعُوْذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ . وَمِنْ عَذَابِ الْقَبْرِ وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ . وَمِنْ شَرِّ فِتْنَةِ الْمَسِيْحِ الدَّجَّالِ
+                                    </div>
+
+                                    <div class="text-teal-800 text-xs md:text-sm font-semibold leading-relaxed">
+                                        Allaahumma innii a'uudzu bika min 'adzaabi jahannam,
+                                        wa min 'adzaabil-qabri, wa min fitnatil-mahyaa wal-mamaat,
+                                        wa min syarri fitnatil-masiihid-dajjaal.
+                                    </div>
+
+                                    <div class="text-slate-600 text-xs italic mt-2 leading-relaxed">
+                                        Artinya: Ya Allah, sesungguhnya aku berlindung kepada-Mu dari azab Jahanam,
+                                        dari azab kubur, dari fitnah kehidupan dan kematian,
+                                        serta dari kejahatan fitnah Al-Masih Ad-Dajjal.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 11 -->
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col md:flex-row items-start gap-4">
+                            <span class="bg-teal-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shrink-0">11</span>
+                            <div class="w-full">
+                                <h3 class="font-bold text-teal-800 text-sm md:text-base">Salam</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1 mb-2">Menoleh ke kanan dan kemudian ke kiri sambil membaca:</p>
+                                <div class="p-3 bg-teal-50 rounded-lg text-center border border-teal-100">
+                                    <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ </div>
+                                    <div class="text-teal-800 text-xs md:text-sm font-semibold">Assalaamu'alaikum warahmatullaahi wabarakaatuh.</div>
+                                    <div class="text-slate-500 text-xs italic mt-0.5">Artinya: Semoga keselamatan, keberkahan dan rahmat Allah tercurah kepada kalian.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SIKAP KETIKA SHALAT -->
+        <div id="tab-sikap" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-heart"></i> 5. Sikap Ketika Shalat
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-6">
+                    Saat melaksanakan shalat fardu, kita harus memperhatikan adab dan sikap yang baik berikut ini:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <i class="fa-solid fa-face-smile text-teal-600 text-xl"></i>
+                        <span class="text-xs md:text-sm font-semibold text-slate-800">Khusyuk dan tidak bermain-main.</span>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <i class="fa-solid fa-book-quran text-teal-600 text-xl"></i>
+                        <span class="text-xs md:text-sm font-semibold text-slate-800">Membaca bacaan shalat dengan benar.</span>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <i class="fa-solid fa-list-ol text-teal-600 text-xl"></i>
+                        <span class="text-xs md:text-sm font-semibold text-slate-800">Melakukan gerakan dengan tertib.</span>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <i class="fa-solid fa-volume-xmark text-teal-600 text-xl"></i>
+                        <span class="text-xs md:text-sm font-semibold text-slate-800">Tidak berbicara.</span>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <i class="fa-solid fa-hand-sparkles text-teal-600 text-xl"></i>
+                        <span class="text-xs md:text-sm font-semibold text-slate-800">Menjaga kebersihan dan kesopanan.</span>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3">
+                        <i class="fa-solid fa-hands-praying text-teal-600 text-xl"></i>
+                        <span class="text-xs md:text-sm font-semibold text-slate-800">Mengingat dan mengagungkan Allah SWT.</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-semibold text-center">
+                    Dengan menjaga sikap dan adab dalam beribadah, shalat kita akan lebih sempurna dan diterima oleh Allah SWT.
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Shalat Fardu
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Shalat Fardu Kelas 2 SD
+        const quizData = [
+            {
+                question: "1. Berapa kali shalat fardu dilakukan dalam sehari semalam?",
+                options: [
+                    "A. 3 kali",
+                    "B. 4 kali",
+                    "C. 5 kali",
+                    "D. 7 kali"
+                ],
+                correct: 2,
+                explanation: "Shalat fardu wajib dilakukan sebanyak 5 kali sehari semalam."
+            },
+            {
+                question: "2. Shalat Subuh dilaksanakan sebanyak ... rakaat.",
+                options: [
+                    "A. 2 rakaat",
+                    "B. 3 rakaat",
+                    "C. 4 rakaat",
+                    "D. 5 rakaat"
+                ],
+                correct: 0,
+                explanation: "Shalat Subuh terdiri dari 2 rakaat."
+            },
+            {
+                question: "3. Shalat apakah yang memiliki jumlah rakaat sebanyak 3 rakaat?",
+                options: [
+                    "A. Zuhur",
+                    "B. Magrib",
+                    "C. Asar",
+                    "D. Isya"
+                ],
+                correct: 1,
+                explanation: "Shalat Magrib terdiri dari 3 rakaat, sedangkan Zuhur, Asar, dan Isya 4 rakaat."
+            },
+            {
+                question: "4. Berikut yang merupakan salah satu syarat wajib shalat adalah...",
+                options: [
+                    "A. Suci dari najis",
+                    "B. Beragama Islam",
+                    "C. Menghadap kiblat",
+                    "D. Menutup aurat"
+                ],
+                correct: 1,
+                explanation: "Beragama Islam, sudah baligh, dan berakal sehat adalah syarat wajib shalat."
+            },
+            {
+                question: "5. Apa yang harus kita lakukan sebelum shalat agar suci dari hadats kecil?",
+                options: [
+                    "A. Makan",
+                    "B. Berwudu",
+                    "C. Tidur",
+                    "D. Olahraga"
+                ],
+                correct: 1,
+                explanation: "Sebelum shalat kita sebaiknya berwudu terlebih dahulu."
+            },
+            {
+                question: "6. Gerakan membungkukkan badan dengan tangan memegang lutut disebut...",
+                options: [
+                    "A. Sujud",
+                    "B. Iktidal",
+                    "C. Rukuk",
+                    "D. Tasyahud"
+                ],
+                correct: 2,
+                explanation: "Rukuk adalah gerakan membungkukkan badan dengan tangan memegang lutut."
+            },
+            {
+                question: "7. Mengangkat kedua tangan sambil membaca 'Allahu Akbar' disebut...",
+                options: [
+                    "A. Takbiratul ihram",
+                    "B. Salam",
+                    "C. Iktidal",
+                    "D. Sujud"
+                ],
+                correct: 0,
+                explanation: "Takbiratul ihram adalah mengangkat kedua tangan sambil membaca Allahu Akbar."
+            },
+            {
+                question: "8. Bacaan 'Subhaana rabbiyal a'laa' dibaca ketika gerakan...",
+                options: [
+                    "A. Rukuk",
+                    "B. Iktidal",
+                    "C. Sujud",
+                    "D. Duduk di antara dua sujud"
+                ],
+                correct: 2,
+                explanation: "Bacaan 'Subhaana rabbiyal a'laa' dibaca saat melakukan gerakan sujud."
+            },
+            {
+                question: "9. Gerakan terakhir dalam shalat yang ditandai dengan menoleh ke kanan dan ke kiri adalah...",
+                options: [
+                    "A. Rukuk",
+                    "B. Salam",
+                    "C. Niat",
+                    "D. Tasyahud"
+                ],
+                correct: 1,
+                explanation: "Salam dilakukan pada akhir shalat dengan menoleh ke kanan dan ke kiri."
+            },
+            {
+                question: "10. Bagaimanakah sikap yang baik ketika melaksanakan shalat?",
+                options: [
+                    "A. Boleh sambil ngobrol",
+                    "B. Khusyuk dan tidak bermain-main",
+                    "C. Benda mainan dibawa bergerak",
+                    "D. Tertawa saat shalat"
+                ],
+                correct: 1,
+                explanation: "Saat shalat kita harus khusyuk, tertib, tidak berbicara, dan tidak bermain-main."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

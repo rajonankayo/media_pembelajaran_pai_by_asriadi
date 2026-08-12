@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 6 SD - Kisah & Jasa Khalifah Abu Bakar & Umar bin Khattab</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-mosque"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 05. Kisah & Jasa Khalifah Abu Bakar Shiddiq & Umar bin Khattab</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase C - Kelas 6 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('abubakar', this)">
+                    <i class="fa-solid fa-user-shield"></i> Abu Bakar r.a.
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('umar', this)">
+                    <i class="fa-solid fa-scale-balanced"></i> Umar bin Khattab r.a.
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('perbandingan', this)">
+                    <i class="fa-solid fa-code-compare"></i> Perbandingan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hikmah', this)">
+                    <i class="fa-solid fa-lightbulb"></i> Hikmah & Rangkuman
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Materi PAI Kelas 6 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed font-semibold">
+                        📖 Kisah dan Jasa Khalifah Abu Bakar Shiddiq r.a. dan Umar bin Khattab r.a.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('abubakar')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-lg font-bold text-teal-800">أَبُو بَكْرٍ الصِّدِّيقُ</span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-800 mb-1">📖 Abu Bakar Shiddiq r.a.</h3>
+                        <p class="text-xs font-semibold text-amber-600 mb-2">Khalifah Pertama (632–634 M)</p>
+                        <p class="text-xs text-slate-500 mb-4 line-clamp-3">Mengenal sosok jujur dan dermawan, kisah menemani Hijrah di Gua Tsur, kepemimpinan, jasa pengumpulan Al-Qur'an, dan keteladanannya.</p>
+                    </div>
+                    <div class="text-xs font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Abu Bakar <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('umar')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-lg font-bold text-teal-800">عُمَرُ بْنُ الْخَطَّابِ</span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-800 mb-1">📖 Umar bin Khattab r.a.</h3>
+                        <p class="text-xs font-semibold text-amber-600 mb-2">Khalifah Kedua (634–644 M)</p>
+                        <p class="text-xs text-slate-500 mb-4 line-clamp-3">Mengenal sosok Al-Faruq yang berani dan adil, masuknya Umar ke Islam, perluasan wilayah, penataan pemerintahan, kalender Hijriah, dan keteladanannya.</p>
+                    </div>
+                    <div class="text-xs font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Umar <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('perbandingan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-lg font-bold text-teal-800">الْمُقَارَنَةُ</span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-800 mb-1">⚖️ Perbandingan</h3>
+                        <p class="text-xs font-semibold text-amber-600 mb-2">Abu Bakar vs Umar</p>
+                        <p class="text-xs text-slate-500 mb-4 line-clamp-3">Tabel komparatif perbedaan dan keutamaan gelar, masa kepemimpinan, fokus perjuangan, serta karakter kedua khalifah.</p>
+                    </div>
+                    <div class="text-xs font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Tabel <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hikmah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-lg font-bold text-teal-800">الْحِكْمَةُ</span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-800 mb-1">📝 Hikmah & Kesimpulan</h3>
+                        <p class="text-xs font-semibold text-amber-600 mb-2">Pesan Pembelajaran</p>
+                        <p class="text-xs text-slate-500 mb-4 line-clamp-3">Pelajaran berharga seperti kejujuran, keberanian, keadilan, dan kesimpulan materi untuk diterapkan siswa sehari-hari.</p>
+                    </div>
+                    <div class="text-xs font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Pesan Penting Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Pesan Teladan Utama
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    Sebagai siswa, kita dapat meneladani kejujuran Abu Bakar Shiddiq r.a. dan keadilan Umar bin Khattab r.a. dalam kehidupan sehari-hari.
+                </p>
+                <div class="p-3 bg-white rounded-xl border border-teal-200 text-teal-900 text-xs md:text-sm font-bold text-center">
+                    “Jujur dalam perkataan dan perbuatan, berani membela kebenaran, serta adil dan bertanggung jawab terhadap amanah.”
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: ABU BAKAR SHIDDIQ -->
+        <div id="tab-abubakar" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-user-shield text-amber-600"></i> A. Abu Bakar Shiddiq r.a.
+                    </h2>
+                    
+                    <!-- 1. Mengenal Abu Bakar -->
+                    <div class="mb-6">
+                        <h3 class="text-base md:text-lg font-bold text-teal-900 mb-2 flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span> Mengenal Abu Bakar Shiddiq
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Abu Bakar Shiddiq r.a. adalah salah satu sahabat terdekat Nabi Muhammad saw. Nama lengkap beliau adalah <strong>Abdullah bin Abi Quhafah</strong>. Abu Bakar termasuk orang yang pertama kali beriman kepada Nabi Muhammad saw. dari kalangan laki-laki dewasa.
+                        </p>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Beliau selalu membenarkan perkataan Rasulullah saw. Karena itulah beliau mendapat gelar <strong>Ash-Shiddiq</strong>, yang berarti <em>orang yang sangat membenarkan atau jujur</em>.
+                        </p>
+                        <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+                            <p class="font-bold text-xs md:text-sm text-slate-800 mb-2">Abu Bakar dikenal sebagai orang yang:</p>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs md:text-sm text-slate-700">
+                                <li class="flex items-center gap-2 bg-white p-2 rounded-lg border border-slate-200"><i class="fa-solid fa-check text-teal-600"></i> Sangat jujur</li>
+                                <li class="flex items-center gap-2 bg-white p-2 rounded-lg border border-slate-200"><i class="fa-solid fa-check text-teal-600"></i> Lembut dan penyayang</li>
+                                <li class="flex items-center gap-2 bg-white p-2 rounded-lg border border-slate-200"><i class="fa-solid fa-check text-teal-600"></i> Dermawan</li>
+                                <li class="flex items-center gap-2 bg-white p-2 rounded-lg border border-slate-200"><i class="fa-solid fa-check text-teal-600"></i> Setia kepada Rasulullah saw.</li>
+                                <li class="flex items-center gap-2 bg-white p-2 rounded-lg border border-slate-200 sm:col-span-2"><i class="fa-solid fa-check text-teal-600"></i> Berani membela agama Islam</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2. Menemani Rasulullah -->
+                    <div class="mb-6">
+                        <h3 class="text-base md:text-lg font-bold text-teal-900 mb-2 flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">2</span> Abu Bakar Menemani Rasulullah saw.
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Ketika Rasulullah saw. hijrah dari Mekah ke Madinah, Abu Bakar menjadi teman perjalanan beliau. Keduanya bersembunyi di <strong>Gua Tsur</strong> untuk menghindari kejaran kaum Quraisy. Peristiwa ini menunjukkan betapa besar keberanian dan kesetiaan Abu Bakar kepada Rasulullah saw.
+                        </p>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Abu Bakar juga selalu menggunakan hartanya untuk membantu perjuangan Islam dan membebaskan orang-orang yang disiksa karena memeluk Islam.
+                        </p>
+                    </div>
+
+                    <!-- 3. Menjadi Khalifah -->
+                    <div class="mb-6">
+                        <h3 class="text-base md:text-lg font-bold text-teal-900 mb-2 flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">3</span> Abu Bakar Menjadi Khalifah
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Setelah Rasulullah Muhammad saw. wafat, umat Islam membutuhkan seorang pemimpin. Para sahabat kemudian memilih Abu Bakar Shiddiq r.a. sebagai khalifah pertama. Masa kepemimpinan Abu Bakar berlangsung sekitar dua tahun, yaitu dari <strong>632–634 M</strong>.
+                        </p>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Sebagai khalifah, Abu Bakar menghadapi berbagai masalah. Ada sebagian orang yang keluar dari Islam, menolak membayar zakat, dan muncul orang-orang yang mengaku sebagai nabi. Abu Bakar dengan tegas mempertahankan ajaran Islam dan menjaga persatuan umat.
+                        </p>
+                    </div>
+
+                    <!-- 4. Jasa-Jasa -->
+                    <div class="mb-6">
+                        <h3 class="text-base md:text-lg font-bold text-teal-900 mb-3 flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">4</span> Jasa-Jasa Abu Bakar Shiddiq r.a.
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm">
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">a. Memerangi orang-orang yang murtad</span>
+                                <p class="text-slate-600">Abu Bakar menghadapi kelompok yang meninggalkan Islam setelah Rasulullah saw. wafat.</p>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">b. Memerangi orang yang mengaku sebagai nabi</span>
+                                <p class="text-slate-600">Beliau melawan orang-orang yang mengaku sebagai nabi untuk menjaga kemurnian ajaran Islam.</p>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">c. Memerangi orang yang tidak mau membayar zakat</span>
+                                <p class="text-slate-600">Abu Bakar menegaskan bahwa zakat merupakan kewajiban umat Islam.</p>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">d. Mengumpulkan ayat-ayat Al-Qur'an</span>
+                                <p class="text-slate-600">Setelah banyak penghafal Al-Qur'an gugur dalam peperangan, Abu Bakar memerintahkan pengumpulkan ayat-ayat Al-Qur'an dalam satu kumpulan tulisan agar tetap terjaga.</p>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl md:col-span-2">
+                                <span class="font-bold text-teal-800 block mb-1">e. Menjaga persatuan umat Islam</span>
+                                <p class="text-slate-600">Abu Bakar berusaha menjaga umat Islam agar tetap bersatu setelah wafatnya Rasulullah saw.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Keteladanan Abu Bakar -->
+                    <div class="bg-amber-50 border border-amber-200 p-5 rounded-2xl">
+                        <h3 class="text-base md:text-lg font-bold text-amber-900 mb-3 flex items-center gap-2">
+                            🌟 Keteladanan Abu Bakar Shiddiq
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 mb-3">Dari kisah Abu Bakar, kita dapat meneladani:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs md:text-sm text-slate-800">
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-amber-100"><i class="fa-solid fa-star text-amber-600"></i> Kejujuran dalam perkataan dan perbuatan.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-amber-100"><i class="fa-solid fa-star text-amber-600"></i> Kesetiaan kepada kebenaran.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-amber-100"><i class="fa-solid fa-star text-amber-600"></i> Keberanian dalam membela agama.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-amber-100"><i class="fa-solid fa-star text-amber-600"></i> Kedermawanan dengan suka membantu orang lain.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-amber-100"><i class="fa-solid fa-star text-amber-600"></i> Tanggung jawab ketika mendapatkan amanah.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-amber-100"><i class="fa-solid fa-star text-amber-600"></i> Teguh pendirian dalam menjalankan ajaran Islam.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: UMAR BIN KHATTAB -->
+        <div id="tab-umar" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-scale-balanced text-emerald-600"></i> B. Umar bin Khattab r.a.
+                    </h2>
+
+                    <!-- 1. Mengenal Umar -->
+                    <div class="mb-6">
+                        <h3 class="text-base md:text-lg font-bold text-teal-900 mb-2 flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span> Mengenal Umar bin Khattab
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Umar bin Khattab r.a. adalah salah satu sahabat utama Rasulullah saw. Beliau berasal dari suku Quraisy. Sebelum masuk Islam, Umar dikenal sebagai orang yang tegas dan berani. Setelah masuk Islam, keberanian tersebut digunakan untuk membela dan memperjuangkan agama Islam.
+                        </p>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Umar mendapat gelar <strong>Al-Faruq</strong>, yang berarti <em>orang yang mampu membedakan antara kebenaran dan kebatilan</em>.
+                        </p>
+                    </div>
+
+                    <!-- 2. Umar Masuk Islam -->
+                    <div class="mb-6">
+                        <h3 class="text-base md:text-lg font-bold text-teal-900 mb-2 flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">2</span> Umar Masuk Islam
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Pada awalnya Umar menentang dakwah Rasulullah saw. Namun, setelah mengetahui dan membaca ayat-ayat Al-Qur'an yang dibaca oleh saudarinya, hati Umar tersentuh. Umar kemudian menemui Rasulullah saw. dan menyatakan keislamannya.
+                        </p>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Masuk Islamnya Umar menjadi kekuatan bagi kaum Muslimin. Beliau berani menunjukkan keislamannya dan membela Rasulullah saw.
+                        </p>
+                    </div>
+
+                    <!-- 3. Umar Menjadi Khalifah -->
+                    <div class="mb-6">
+                        <h3 class="text-base md:text-lg font-bold text-teal-900 mb-2 flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">3</span> Umar Menjadi Khalifah
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Setelah Abu Bakar Shiddiq r.a. wafat, Umar bin Khattab r.a. menjadi khalifah kedua. Umar memimpin umat Islam sekitar 10 tahun, yaitu dari <strong>634–644 M</strong>.
+                        </p>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Pada masa pemerintahannya, wilayah Islam berkembang semakin luas. Umar juga sangat memperhatikan kesejahteraan rakyat.
+                        </p>
+                    </div>
+
+                    <!-- 4. Jasa-Jasa Umar -->
+                    <div class="mb-6">
+                        <h3 class="text-base md:text-lg font-bold text-teal-900 mb-3 flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">4</span> Jasa-Jasa Umar bin Khattab r.a.
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm">
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">a. Memperluas wilayah Islam</span>
+                                <p class="text-slate-600">Pada masa Umar, wilayah pemerintahan Islam berkembang ke berbagai daerah seperti Syam, Persia, Mesir, dan wilayah lainnya.</p>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">b. Menata pemerintahan</span>
+                                <p class="text-slate-600">Umar membangun sistem pemerintahan yang lebih teratur. Beliau mengangkat para pemimpin daerah dan mengawasi mereka agar menjalankan amanah dengan baik.</p>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">c. Membentuk lembaga pemerintahan</span>
+                                <p class="text-slate-600">Umar mengembangkan sistem administrasi dan pengelolaan keuangan negara untuk mengatur kebutuhan masyarakat.</p>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">d. Menetapkan kalender Hijriah</span>
+                                <p class="text-slate-600">Pada masa pemerintahan Umar, ditetapkan kalender Hijriah dengan peristiwa hijrah Nabi Muhammad saw. dari Mekah ke Madinah sebagai awal perhitungannya.</p>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">e. Memperhatikan kesejahteraan rakyat</span>
+                                <p class="text-slate-600">Umar sangat peduli kepada masyarakat. Beliau sering memeriksa keadaan rakyat secara langsung dan membantu orang yang membutuhkan.</p>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                                <span class="font-bold text-teal-800 block mb-1">f. Menegakkan keadilan</span>
+                                <p class="text-slate-600">Umar terkenal sebagai pemimpin yang adil. Beliau tidak membedakan orang kaya dan miskin dalam memberikan keadilan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Keteladanan Umar -->
+                    <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-2xl">
+                        <h3 class="text-base md:text-lg font-bold text-emerald-900 mb-3 flex items-center gap-2">
+                            🌟 Keteladanan Umar bin Khattab
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 mb-3">Dari kisah Umar bin Khattab, kita dapat meneladani:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs md:text-sm text-slate-800">
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-emerald-100"><i class="fa-solid fa-star text-emerald-600"></i> Berani membela kebenaran.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-emerald-100"><i class="fa-solid fa-star text-emerald-600"></i> Adil kepada semua orang.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-emerald-100"><i class="fa-solid fa-star text-emerald-600"></i> Bertanggung jawab terhadap amanah.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-emerald-100"><i class="fa-solid fa-star text-emerald-600"></i> Peduli kepada orang yang membutuhkan.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-emerald-100"><i class="fa-solid fa-star text-emerald-600"></i> Tegas tetapi tetap memperhatikan kepentingan rakyat.</div>
+                            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-emerald-100"><i class="fa-solid fa-star text-emerald-600"></i> Sederhana meskipun menjadi seorang pemimpin.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PERBANDINGAN -->
+        <div id="tab-perbandingan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-code-compare text-amber-600"></i> C. Perbandingan Abu Bakar dan Umar
+                </h2>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs md:text-sm">
+                        <thead>
+                            <tr class="bg-teal-800 text-white">
+                                <th class="p-3.5 rounded-tl-xl border-b border-teal-700 w-1/2">Abu Bakar Shiddiq r.a.</th>
+                                <th class="p-3.5 rounded-tr-xl border-b border-teal-700 w-1/2">Umar bin Khattab r.a.</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 font-semibold text-slate-700">Khalifah pertama</td>
+                                <td class="p-3.5 font-semibold text-slate-700">Khalifah kedua</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 font-semibold text-slate-700">Dijuluki Ash-Shiddiq</td>
+                                <td class="p-3.5 font-semibold text-slate-700">Dijuluki Al-Faruq</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 font-semibold text-slate-700">Memimpin sekitar 2 tahun (632–634 M)</td>
+                                <td class="p-3.5 font-semibold text-slate-700">Memimpin sekitar 10 tahun (634–644 M)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 text-slate-700">Menjaga umat Islam setelah wafatnya Rasulullah saw.</td>
+                                <td class="p-3.5 text-slate-700">Mengembangkan dan menata pemerintahan Islam</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 text-slate-700">Mengumpulkan ayat-ayat Al-Qur'an</td>
+                                <td class="p-3.5 text-slate-700">Menetapkan kalender Hijriah</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 text-slate-700 rounded-bl-xl">Terkenal lembut, jujur, dan dermawan</td>
+                                <td class="p-3.5 text-slate-700 rounded-br-xl">Terkenal tegas, berani, dan adil</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HIKMAH & RANGKUMAN -->
+        <div id="tab-hikmah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-amber-500"></i> D. Hikmah yang Dapat Diambil
+                </h2>
+                
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Kisah Abu Bakar Shiddiq dan Umar bin Khattab memberikan banyak pelajaran bagi kita:
+                </p>
+
+                <div class="space-y-3 mb-8">
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <span class="bg-teal-700 text-white font-bold px-2.5 py-0.5 rounded-full text-xs shrink-0">1</span>
+                        <div>
+                            <strong class="text-xs md:text-sm text-teal-900 block">Menjadi orang yang jujur</strong>
+                            <p class="text-xs text-slate-600">Kita harus selalu berkata dan berbuat jujur seperti Abu Bakar Shiddiq.</p>
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <span class="bg-teal-700 text-white font-bold px-2.5 py-0.5 rounded-full text-xs shrink-0">2</span>
+                        <div>
+                            <strong class="text-xs md:text-sm text-teal-900 block">Berani membela kebenaran</strong>
+                            <p class="text-xs text-slate-600">Kita tidak boleh takut melakukan sesuatu yang benar.</p>
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <span class="bg-teal-700 text-white font-bold px-2.5 py-0.5 rounded-full text-xs shrink-0">3</span>
+                        <div>
+                            <strong class="text-xs md:text-sm text-teal-900 block">Menjaga amanah</strong>
+                            <p class="text-xs text-slate-600">Jika diberi tugas, kita harus melaksanakannya dengan sebaik-baiknya.</p>
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <span class="bg-teal-700 text-white font-bold px-2.5 py-0.5 rounded-full text-xs shrink-0">4</span>
+                        <div>
+                            <strong class="text-xs md:text-sm text-teal-900 block">Bersikap adil</strong>
+                            <p class="text-xs text-slate-600">Kita harus memperlakukan teman dengan adil dan tidak pilih kasih.</p>
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <span class="bg-teal-700 text-white font-bold px-2.5 py-0.5 rounded-full text-xs shrink-0">5</span>
+                        <div>
+                            <strong class="text-xs md:text-sm text-teal-900 block">Peduli kepada sesama</strong>
+                            <p class="text-xs text-slate-600">Kita hendaknya membantu teman, tetangga, dan orang lain yang membutuhkan.</p>
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <span class="bg-teal-700 text-white font-bold px-2.5 py-0.5 rounded-full text-xs shrink-0">6</span>
+                        <div>
+                            <strong class="text-xs md:text-sm text-teal-900 block">Menjadi pemimpin yang baik</strong>
+                            <p class="text-xs text-slate-600">Seorang pemimpin harus bertanggung jawab, adil, sederhana, dan mengutamakan kepentingan orang yang dipimpinnya.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-6 border-slate-200">
+
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-list-check"></i> Kesimpulan
+                </h2>
+                <div class="space-y-3 text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                    <p class="p-3 bg-teal-50 border border-teal-200 rounded-xl">
+                        <strong>Abu Bakar Shiddiq r.a.</strong> adalah khalifah pertama yang dikenal sangat jujur, setia, dermawan, dan teguh dalam mempertahankan ajaran Islam. Salah satu jasa pentingnya adalah mengumpulkan ayat-ayat Al-Qur'an.
+                    </p>
+                    <p class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl">
+                        <strong>Umar bin Khattab r.a.</strong> adalah khalifah kedua yang dikenal berani, tegas, dan adil. Pada masa kepemimpinannya, pemerintahan Islam berkembang luas dan tertata dengan lebih baik. Salah satu jasanya adalah menetapkan kalender Hijriah.
+                    </p>
+                </div>
+
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 font-semibold text-center">
+                    ⭐ <strong>Pesan untuk Siswa:</strong> “Sebagai siswa, kita dapat meneladani kejujuran Abu Bakar dan keadilan Umar dalam kehidupan sehari-hari.”
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Khalifah Abu Bakar & Umar
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Kisah dan Jasa Khalifah Abu Bakar & Umar bin Khattab Kelas 6 SD
+        const quizData = [
+            {
+                question: "1. Siapa nama lengkap dari Abu Bakar Shiddiq r.a.?",
+                options: [
+                    "A. Umar bin Khattab",
+                    "B. Abdullah bin Abi Quhafah",
+                    "C. Usman bin Affan",
+                    "D. Ali bin Abi Thalib"
+                ],
+                correct: 1,
+                explanation: "Nama lengkap Abu Bakar Shiddiq r.a. adalah Abdullah bin Abi Quhafah."
+            },
+            {
+                question: "2. Mengapa Abu Bakar r.a. mendapat gelar Ash-Shiddiq?",
+                options: [
+                    "A. Karena selalu membenarkan perkataan Rasulullah saw.",
+                    "B. Karena pandai berdagang",
+                    "C. Karena merupakan pemimpin tentara",
+                    "D. Karena pernah menjadi raja"
+                ],
+                correct: 0,
+                explanation: "Abu Bakar mendapat gelar Ash-Shiddiq karena selalu membenarkan perkataan dan ajaran Rasulullah saw."
+            },
+            {
+                question: "3. Tempat yang digunakan Rasulullah saw. dan Abu Bakar untuk bersembunyi saat hijrah ke Madinah adalah...",
+                options: [
+                    "A. Gua Hira",
+                    "B. Gua Tsur",
+                    "C. Jabal Nur",
+                    "D. Jabal Uhud"
+                ],
+                correct: 1,
+                explanation: "Rasulullah saw. dan Abu Bakar r.a. bersembunyi dari kejaran Quraisy di Gua Tsur."
+            },
+            {
+                question: "4. Salah satu jasa besar Abu Bakar Shiddiq r.a. pada masa kepemimpinannya adalah...",
+                options: [
+                    "A. Menetapkan kalender Hijriah",
+                    "B. Mengumpulkan ayat-ayat Al-Qur'an",
+                    "C. Membangun istana",
+                    "D. Membuat mata uang baru"
+                ],
+                correct: 1,
+                explanation: "Abu Bakar memerintahkan pengumpulan ayat-ayat Al-Qur'an dalam satu kumpulan tulisan agar tetap terjaga."
+            },
+            {
+                question: "5. Umar bin Khattab r.a. mendapat gelar Al-Faruq, yang artinya...",
+                options: [
+                    "A. Orang yang jujur",
+                    "B. Pemimpin yang kaya",
+                    "C. Orang yang mampu membedakan antara kebenaran dan kebatilan",
+                    "D. Sang penakluk benteng"
+                ],
+                correct: 2,
+                explanation: "Al-Faruq berarti pembeda atau orang yang mampu membedakan kebenaran dari kebatilan."
+            },
+            {
+                question: "6. Berapa lama masa kepemimpinan Umar bin Khattab r.a. sebagai khalifah kedua?",
+                options: [
+                    "A. Sekitar 2 tahun",
+                    "B. Sekitar 5 tahun",
+                    "C. Sekitar 10 tahun",
+                    "D. Sekitar 20 tahun"
+                ],
+                correct: 2,
+                explanation: "Umar bin Khattab r.a. memimpin umat Islam selama sekitar 10 tahun (634–644 M)."
+            },
+            {
+                question: "7. Penetapan awal kalender Hijriah didasarkan pada peristiwa hijrah Nabi Muhammad saw. Kebijakan ini ditetapkan pada masa khalifah...",
+                options: [
+                    "A. Abu Bakar Shiddiq r.a.",
+                    "B. Umar bin Khattab r.a.",
+                    "C. Usman bin Affan r.a.",
+                    "D. Ali bin Abi Thalib r.a."
+                ],
+                correct: 1,
+                explanation: "Penetapan kalender Hijriah dilakukan pada masa pemerintahan Khalifah Umar bin Khattab r.a."
+            },
+            {
+                question: "8. Salah satu tindakan tegas Abu Bakar Shiddiq r.a. demi menjaga ajaran Islam adalah memerangi...",
+                options: [
+                    "A. Pedagang kaya",
+                    "B. Orang yang mengaku sebagai nabi dan menolak zakat",
+                    "C. Orang tua dan anak-anak",
+                    "D. Penduduk Madinah"
+                ],
+                correct: 1,
+                explanation: "Abu Bakar bersikap tegas memerangi orang murtad, nabi palsu, dan orang yang menolak zakat."
+            },
+            {
+                question: "9. Sikap Umar bin Khattab r.a. yang tidak membedakan orang kaya dan miskin menunjukkan keteladanan dalam hal...",
+                options: [
+                    "A. Keadilan",
+                    "B. Kekayaan",
+                    "C. Kesombongan",
+                    "D. Kecepatan"
+                ],
+                correct: 0,
+                explanation: "Umar terkenal sebagai pemimpin yang sangat adil tanpa membeda-bedakan kedudukan sosial."
+            },
+            {
+                question: "10. Apa hikmah utama yang dapat diambil siswa dari keteladanan Abu Bakar dan Umar?",
+                options: [
+                    "A. Berkata jujur, berani membela kebenaran, adil, dan bertanggung jawab",
+                    "B. Minta dipuji teman saat berbuat baik",
+                    "C. Menjauhi teman yang kekurangan",
+                    "D. Bersikap acuh tak acuh pada tugas"
+                ],
+                correct: 0,
+                explanation: "Kita dituntut meneladani kejujuran Abu Bakar serta keberanian dan keadilan Umar dalam kehidupan sehari-hari."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 3 SD - Adzan dan Iqamah</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 04. Adzan dan Iqamah</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 3 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('Adzan', this)">
+                    <i class="fa-solid fa-mosque"></i> Adzan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('lafaz-Adzan', this)">
+                    <i class="fa-solid fa-volume-high"></i> Lafaz Adzan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('iqamah', this)">
+                    <i class="fa-solid fa-person-praying"></i> Iqamah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('praktik', this)">
+                    <i class="fa-solid fa-clipboard-check"></i> Praktik & Adab
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 3 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        🌟 Seruan Salat: Memahami Adzan dan Iqamah
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('Adzan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الأَذَانُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📢 Pengertian & Makna Adzan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Panggilan Salat Berjamaah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal pengertian Adzan, muazin, adab saat mendengar Adzan, serta makna agung di balik kalimat Adzan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Adzan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('lafaz-Adzan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">اَللّٰهُ أَكْبَرُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📜 Bacaan Lafaz Adzan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Teks Arab, Latin & Arti</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Lafaz Adzan lengkap beserta tulisan latin, terjemahan, dan catatan khusus untuk Adzan Subuh.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Lafaz Adzan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('iqamah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الإِقَامَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🕌 Pengertian & Lafaz Iqamah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tanda Salat Dimulai</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal pengertian iqamah, perbedaannya dengan Adzan, serta lafaz tambahan "Qad qāmatis-shalāh".</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Iqamah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('praktik')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">القِبْلَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">✨ Cara Mempraktikkan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tata Cara & Adab</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Petunjuk lengkap cara mempraktikkan Adzan dan iqamah dengan benar, sopan, dan menghadap kiblat.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Tata Cara Praktik <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Adzan adalah panggilan untuk memberitahukan masuknya waktu salat, sedangkan iqamah adalah tanda bahwa salat berjamaah akan segera dimulai. Sebagai seorang muslim, kita harus menghormati Adzan dan iqamah, menjawab Adzan, segera bersiap untuk salat, serta melaksanakan salat dengan tertib dan khusyuk.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: Adzan -->
+        <div id="tab-Adzan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-bullhorn"></i> 1. Pengertian Adzan
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        <strong>Adzan</strong> adalah seruan atau panggilan untuk memberitahukan bahwa waktu salat telah tiba dan mengajak umat Islam untuk melaksanakan salat berjamaah.
+                    </p>
+
+                    <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl mb-6">
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-user-check text-teal-600 mt-1"></i>
+                                <span>Adzan dikumandangkan oleh seorang <strong>muazin</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-ear-listen text-teal-600 mt-1"></i>
+                                <span>Ketika mendengar Adzan, kita sebaiknya <strong>diam, mendengarkan, dan menjawab lafaz Adzan</strong> yang dikumandangkan.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-heart"></i> 2. Makna Adzan
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Adzan mengandung ajakan kepada umat Islam untuk:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                        <div class="flex items-center gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Mengagungkan dan mengingat Allah SWT.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Bersaksi bahwa tidak ada Tuhan selain Allah.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Bersaksi bahwa Nabi Muhammad SAW adalah utusan Allah.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Mengajak melaksanakan salat.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Mengajak memperoleh kemenangan dan kebahagiaan.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Mengingatkan bahwa Allah Maha Besar dan hanya Dia yang wajib disembah.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: LAFAZ Adzan -->
+        <div id="tab-lafaz-Adzan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-volume-high"></i> 3. Lafaz Adzan
+                    </h2>
+
+                    <div class="space-y-4">
+                        <!-- Lafaz 1 -->
+                        <div class="p-4 bg-teal-50/60 border border-teal-200 rounded-xl flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+                            <div>
+                                <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">اَللّٰهُ أَكْبَرُ، اَللّٰهُ أَكْبَرُ</div>
+                                <div class="text-teal-800 font-semibold text-xs md:text-sm mt-1">Allāhu akbar, Allāhu akbar (2x)</div>
+                            </div>
+                            <div class="text-xs md:text-sm text-slate-600 italic">"Allah Maha Besar, Allah Maha Besar."</div>
+                        </div>
+
+                        <!-- Lafaz 2 -->
+                        <div class="p-4 bg-teal-50/60 border border-teal-200 rounded-xl flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+                            <div>
+                                <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللّٰهُ</div>
+                                <div class="text-teal-800 font-semibold text-xs md:text-sm mt-1">Asyhadu allā ilāha illallāh</div>
+                            </div>
+                            <div class="text-xs md:text-sm text-slate-600 italic">"Aku bersaksi bahwa tidak ada Tuhan selain Allah."</div>
+                        </div>
+
+                        <!-- Lafaz 3 -->
+                        <div class="p-4 bg-teal-50/60 border border-teal-200 rounded-xl flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+                            <div>
+                                <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">أَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللّٰهِ</div>
+                                <div class="text-teal-800 font-semibold text-xs md:text-sm mt-1">Asyhadu anna Muhammadar rasūlullāh</div>
+                            </div>
+                            <div class="text-xs md:text-sm text-slate-600 italic">"Aku bersaksi bahwa Nabi Muhammad adalah utusan Allah."</div>
+                        </div>
+
+                        <!-- Lafaz 4 -->
+                        <div class="p-4 bg-teal-50/60 border border-teal-200 rounded-xl flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+                            <div>
+                                <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">حَيَّ عَلَى الصَّلَاةِ</div>
+                                <div class="text-teal-800 font-semibold text-xs md:text-sm mt-1">Hayya 'alash-shalāh</div>
+                            </div>
+                            <div class="text-xs md:text-sm text-slate-600 italic">"Marilah melaksanakan salat."</div>
+                        </div>
+
+                        <!-- Lafaz 5 -->
+                        <div class="p-4 bg-teal-50/60 border border-teal-200 rounded-xl flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+                            <div>
+                                <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">حَيَّ عَلَى الْفَلَاحِ</div>
+                                <div class="text-teal-800 font-semibold text-xs md:text-sm mt-1">Hayya 'alal-falāh</div>
+                            </div>
+                            <div class="text-xs md:text-sm text-slate-600 italic">"Marilah menuju kemenangan."</div>
+                        </div>
+
+                        <!-- Lafaz 6 -->
+                        <div class="p-4 bg-teal-50/60 border border-teal-200 rounded-xl flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+                            <div>
+                                <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">اَللّٰهُ أَكْبَرُ، اَللّٰهُ أَكْبَرُ</div>
+                                <div class="text-teal-800 font-semibold text-xs md:text-sm mt-1">Allāhu akbar, Allāhu akbar</div>
+                            </div>
+                            <div class="text-xs md:text-sm text-slate-600 italic">"Allah Maha Besar, Allah Maha Besar."</div>
+                        </div>
+
+                        <!-- Lafaz 7 -->
+                        <div class="p-4 bg-teal-50/60 border border-teal-200 rounded-xl flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+                            <div>
+                                <div class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold mb-4">لَا إِلٰهَ إِلَّا اللّٰهُ</div>
+                                <div class="text-teal-800 font-semibold text-xs md:text-sm mt-1">Lā ilāha illallāh</div>
+                            </div>
+                            <div class="text-xs md:text-sm text-slate-600 italic">"Tidak ada Tuhan selain Allah."</div>
+                        </div>
+                    </div>
+
+                    <!-- Catatan Adzan Subuh -->
+                    <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+                        <p class="text-xs md:text-sm text-amber-900 leading-relaxed font-arabic">
+                            📌 <strong>Catatan Khusus Adzan Subuh:</strong> Pada Adzan Subuh terdapat tambahan lafaz <strong>“Ash-shalātu khairum minan-naum”</strong> (الصَّلَاةُ خَيْرٌ مِّنَ النَّوْمِ) yang berarti <em>"salat lebih baik daripada tidur"</em>, dibaca sebanyak <strong>dua kali</strong> setelah lafaz <em>Hayya 'alal-falāh</em>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: IQAMAH -->
+        <div id="tab-iqamah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-person-praying"></i> 5. Pengertian Iqamah
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        <strong>Iqamah</strong> adalah seruan yang menandakan bahwa salat berjamaah akan segera dimulai. Iqamah dikumandangkan setelah Adzan dan setelah jamaah bersiap untuk melaksanakan salat. 
+                    </p>
+
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl mb-6 text-xs md:text-sm text-emerald-900 font-semibold">
+                        💡 <strong>Perbedaan Utama:</strong> Jika Adzan merupakan tanda waktu salat telah masuk, maka iqamah merupakan tanda salat akan segera dimulai.
+                    </div>
+
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-bell"></i> 6. Makna Iqamah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Iqamah mengingatkan kita untuk:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Segera bersiap melaksanakan salat.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Berdiri dan merapikan barisan (saf).
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Bersiap mengikuti imam.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Melaksanakan salat dengan tertib dan khusyuk.
+                        </div>
+                    </div>
+
+                    <!-- LAFAZ IQAMAH -->
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-scroll"></i> 7. Lafaz Iqamah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Lafaz iqamah pada dasarnya sama dengan Adzan, dengan tambahan lafaz khusus berikut yang dibaca dua kali setelah lafaz <em>Hayya 'alal-falāh</em>:
+                    </p>
+
+                    <div class="p-6 bg-teal-50 border border-teal-200 rounded-xl text-center space-y-3">
+                        <div class="font-arabic text-3xl md:text-4xl text-teal-900 font-bold">
+                            قَدْ قَامَتِ الصَّلَاةُ
+                        </div>
+                        <div class="text-teal-800 font-semibold text-sm md:text-base">
+                            Qad qāmatis-shalāh (2x)
+                        </div>
+                        <div class="text-slate-600 text-xs md:text-sm italic pt-2 border-t border-teal-200/60 max-w-md mx-auto">
+                            Artinya: “Sesungguhnya salat telah ditegakkan.”
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PRAKTIK & ADAB -->
+        <div id="tab-praktik" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-clipboard-check"></i> 4. Cara Mempraktikkan Adzan dengan Benar
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-600 mb-4">
+                        Saat melakukan praktik Adzan, perhatikan poin-poin berikut:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-compass text-teal-600 text-base"></i>
+                            <span>Menghadap kiblat.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-user-large text-teal-600 text-base"></i>
+                            <span>Berdiri dengan sikap sopan.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-heart text-teal-600 text-base"></i>
+                            <span>Berniat mengumandangkan Adzan karena Allah SWT.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-list-ol text-teal-600 text-base"></i>
+                            <span>Mengucapkan lafaz Adzan dengan tertib dan benar.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-volume-high text-teal-600 text-base"></i>
+                            <span>Suara jelas dan terdengar oleh orang lain.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-gauge text-teal-600 text-base"></i>
+                            <span>Tidak terburu-buru.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 md:col-span-2">
+                            <i class="fa-solid fa-hands-praying text-teal-600 text-base"></i>
+                            <span>Menjaga adab dan kesopanan ketika Adzan.</span>
+                        </div>
+                    </div>
+
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-clipboard-check"></i> 8. Cara Mempraktikkan Iqamah dengan Benar
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-600 mb-4">
+                        Saat melakukan praktik iqamah:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-user-large text-teal-600 text-base"></i>
+                            <span>Berdiri dengan sikap sopan.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-compass text-teal-600 text-base"></i>
+                            <span>Menghadap kiblat.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-list-ol text-teal-600 text-base"></i>
+                            <span>Mengucapkan lafaz iqamah dengan benar dan tertib.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-volume-low text-teal-600 text-base"></i>
+                            <span>Suara jelas dan tidak berlebihan.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-quote-left text-teal-600 text-base"></i>
+                            <span>Mengucapkan “Qad qāmatis-shalāh” dengan benar.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-users text-teal-600 text-base"></i>
+                            <span>Setelah iqamah selesai, jamaah segera bersiap mengikuti salat berjamaah.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Adzan & Iqamah
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Adzan & Iqamah Kelas 3 SD
+        const quizData = [
+            {
+                question: "1. Apakah yang dimaksud dengan Adzan?",
+                options: [
+                    "A. Seruan atau panggilan untuk memberitahukan bahwa waktu salat telah tiba",
+                    "B. Tanda bahwa salat berjamaah akan segera dimulai",
+                    "C. Bacaan doa setelah wudu",
+                    "D. Bacaan dzikir setelah salat"
+                ],
+                correct: 0,
+                explanation: "Adzan adalah seruan atau panggilan untuk memberitahukan bahwa waktu salat telah tiba dan mengajak umat Islam salat berjamaah."
+            },
+            {
+                question: "2. Orang yang mengumandangkan Adzan disebut...",
+                options: [
+                    "A. Imam",
+                    "B. Muazin",
+                    "C. Makmum",
+                    "D. Khatib"
+                ],
+                correct: 1,
+                explanation: "Orang yang mengumandangkan Adzan disebut muazin."
+            },
+            {
+                question: "3. Apa yang sebaiknya kita lakukan saat mendengar Adzan?",
+                options: [
+                    "A. Tetap bermain dan berbicara keras",
+                    "B. Diam, mendengarkan, dan menjawab lafaz Adzan",
+                    "C. Langsung tidur",
+                    "D. Mengabaikan suara Adzan"
+                ],
+                correct: 1,
+                explanation: "Ketika mendengar Adzan, kita sebaiknya diam, mendengarkan, dan menjawab lafaz Adzan yang dikumandangkan."
+            },
+            {
+                question: "4. Lafaz 'Hayya 'alash-shalāh' dalam Adzan berarti...",
+                options: [
+                    "A. Marilah menuju kemenangan",
+                    "B. Marilah melaksanakan salat",
+                    "C. Allah Maha Besar",
+                    "D. Tidak ada Tuhan selain Allah"
+                ],
+                correct: 1,
+                explanation: "'Hayya 'alash-shalāh' artinya marilah melaksanakan salat."
+            },
+            {
+                question: "5. Pada Adzan Subuh terdapat lafaz tambahan yang berbunyi...",
+                options: [
+                    "A. Qad qāmatis-shalāh",
+                    "B. Ash-shalātu khairum minan-naum",
+                    "C. Subhanallah",
+                    "D. Alhamdulillah"
+                ],
+                correct: 1,
+                explanation: "Pada Adzan Subuh terdapat tambahan 'Ash-shalātu khairum minan-naum' yang artinya salat lebih baik daripada tidur."
+            },
+            {
+                question: "6. Seruan yang menandakan bahwa salat berjamaah akan segera dimulai adalah...",
+                options: [
+                    "A. Adzan",
+                    "B. Iqamah",
+                    "C. Takbiratul ihram",
+                    "D. Khotbah"
+                ],
+                correct: 1,
+                explanation: "Iqamah adalah seruan yang menandakan bahwa salat berjamaah akan segera dimulai."
+            },
+            {
+                question: "7. Lafaz tambahan dalam iqamah 'Qad qāmatis-shalāh' artinya...",
+                options: [
+                    "A. Sesungguhnya salat telah ditegakkan",
+                    "B. Marilah melaksanakan salat",
+                    "C. Salat lebih baik dari pada tidur",
+                    "D. Marilah meraih kemenangan"
+                ],
+                correct: 0,
+                explanation: "'Qad qāmatis-shalāh' artinya Sesungguhnya salat telah ditegakkan."
+            },
+            {
+                question: "8. Arah yang wajib dihadap ketika mengumandangkan Adzan dan iqamah adalah...",
+                options: [
+                    "A. Timur",
+                    "B. Barat",
+                    "C. Kiblat",
+                    "D. Selatan"
+                ],
+                correct: 2,
+                explanation: "Saat mengumandangkan Adzan maupun iqamah, kita disunahkan menghadap ke arah kiblat."
+            },
+            {
+                question: "9. Berikut ini yang BUKAN merupakan adab/cara praktik Adzan yang benar adalah...",
+                options: [
+                    "A. Berdiri dengan sikap sopan",
+                    "B. Terburu-buru dan bersuara tidak jelas",
+                    "C. Menghadap kiblat",
+                    "D. Berniat mengumandangkan Adzan karena Allah SWT"
+                ],
+                correct: 1,
+                explanation: "Saat Adzan, kita tidak boleh terburu-buru dan harus bersuara jelas agar dapat didengar oleh orang lain."
+            },
+            {
+                question: "10. Apa yang harus dilakukan jamaah setelah iqamah selesai dikumandangkan?",
+                options: [
+                    "A. Segera bersiap mengikuti salat berjamaah",
+                    "B. Berjalan-jalan di dalam masjid",
+                    "C. Mengobrol dengan teman",
+                    "D. Keluar dari masjid"
+                ],
+                correct: 0,
+                explanation: "Setelah iqamah selesai, jamaah harus segera berdiri, merapikan saf, dan bersiap mengikuti salat berjamaah."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

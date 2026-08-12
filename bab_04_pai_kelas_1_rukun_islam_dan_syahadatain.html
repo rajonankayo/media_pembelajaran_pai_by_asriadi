@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 1 SD - Rukun Islam & Syahadatain</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-star-and-crescent"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 04. Rukun Islam dan Syahadatain</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 1 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('rukun-islam', this)">
+                    <i class="fa-solid fa-kaaba"></i> Rukun Islam
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('syahadatain', this)">
+                    <i class="fa-solid fa-mosque"></i> Syahadatain
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('penerapan', this)">
+                    <i class="fa-solid fa-heart"></i> Penerapan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 1 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        🌙 Rukun Islam dan Syahadatain
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('rukun-islam')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">أَرْكَانُ الْإِسْلَامِ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌙 5 Rukun Islam</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Dasar Utama Umat Islam</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal 5 dasar utama yaitu Syahadat, Salat, Zakat, Puasa, dan Haji beserta penerapannya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Rukun Islam <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('syahadatain')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الشَّهَادَتَيْنِ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🕌 Syahadatain</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Dua Kalimat Syahadat</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal Syahadat Tauhid dan Syahadat Rasul, bacaan, arti, serta maknanya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Syahadatain <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">التَّطْبِيْقُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">❤️ Penerapan Sehari-hari</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Amalan & Akhlak Mulia</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Cara menerapkan Rukun Islam dan makna Syahadatain dalam kehidupan sehari-hari.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Penerapan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> ⭐ Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed font-medium mb-2">
+                    Rukun Islam ada 5, yaitu: <strong>Syahadat → Salat → Zakat → Puasa → Haji</strong>
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Syahadatain terdiri dari Syahadat Tauhid dan Syahadat Rasul. Dengan memahami syahadatain, kita belajar untuk menyembah hanya kepada Allah dan mengikuti ajaran Nabi Muhammad saw.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: RUKUN ISLAM -->
+        <div id="tab-rukun-islam" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-kaaba"></i> A. Mengenal 5 Rukun Islam
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        Rukun Islam adalah lima dasar utama yang harus dilakukan oleh setiap orang Islam.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <!-- Rukun 1 -->
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl flex items-start gap-3">
+                            <span class="w-8 h-8 rounded-full bg-teal-800 text-white flex items-center justify-center font-bold text-sm shrink-0">1</span>
+                            <div>
+                                <h3 class="font-bold text-teal-900 text-sm md:text-base">Mengucapkan Dua Kalimat Syahadat</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1">Syahadat adalah kesaksian bahwa tidak ada Tuhan selain Allah dan Nabi Muhammad adalah utusan Allah.</p>
+                            </div>
+                        </div>
+
+                        <!-- Rukun 2 -->
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl flex items-start gap-3">
+                            <span class="w-8 h-8 rounded-full bg-teal-800 text-white flex items-center justify-center font-bold text-sm shrink-0">2</span>
+                            <div>
+                                <h3 class="font-bold text-teal-900 text-sm md:text-base">Mendirikan Salat</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1 mb-2">Salat wajib dilakukan 5 kali sehari, yaitu:</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 bg-white border border-teal-300 text-teal-800 font-semibold rounded-lg text-xs">Subuh</span>
+                                    <span class="px-2.5 py-1 bg-white border border-teal-300 text-teal-800 font-semibold rounded-lg text-xs">Zuhur</span>
+                                    <span class="px-2.5 py-1 bg-white border border-teal-300 text-teal-800 font-semibold rounded-lg text-xs">Asar</span>
+                                    <span class="px-2.5 py-1 bg-white border border-teal-300 text-teal-800 font-semibold rounded-lg text-xs">Magrib</span>
+                                    <span class="px-2.5 py-1 bg-white border border-teal-300 text-teal-800 font-semibold rounded-lg text-xs">Isya</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rukun 3 -->
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl flex items-start gap-3">
+                            <span class="w-8 h-8 rounded-full bg-teal-800 text-white flex items-center justify-center font-bold text-sm shrink-0">3</span>
+                            <div>
+                                <h3 class="font-bold text-teal-900 text-sm md:text-base">Membayar Zakat</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1">Zakat adalah memberikan sebagian harta kepada orang yang berhak menerimanya.</p>
+                            </div>
+                        </div>
+
+                        <!-- Rukun 4 -->
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl flex items-start gap-3">
+                            <span class="w-8 h-8 rounded-full bg-teal-800 text-white flex items-center justify-center font-bold text-sm shrink-0">4</span>
+                            <div>
+                                <h3 class="font-bold text-teal-900 text-sm md:text-base">Berpuasa pada Bulan Ramadan</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1">Puasa Ramadan dilakukan dari terbit fajar sampai terbenam matahari dengan menahan diri dari makan, minum, dan hal-hal yang membatalkan puasa.</p>
+                            </div>
+                        </div>
+
+                        <!-- Rukun 5 -->
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl flex items-start gap-3">
+                            <span class="w-8 h-8 rounded-full bg-teal-800 text-white flex items-center justify-center font-bold text-sm shrink-0">5</span>
+                            <div>
+                                <h3 class="font-bold text-teal-900 text-sm md:text-base">Menunaikan Ibadah Haji Bagi yang Mampu</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-1">Haji dilakukan di Makkah dan wajib bagi umat Islam yang mampu secara fisik, mental, dan biaya.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-hands-praying"></i> B. Membiasakan Menerapkan Rukun Islam
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Sebagai seorang muslim, kita harus membiasakan diri melaksanakan Rukun Islam sesuai kemampuan dan usia. Contohnya:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Mengucapkan syahadat dengan benar.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Belajar dan melaksanakan salat.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Senang berbagi dan bersedekah.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Belajar berpuasa Ramadan.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800 md:col-span-2">
+                            <i class="fa-solid fa-check text-emerald-600 text-base"></i>
+                            <span>Mengetahui bahwa haji adalah salah satu Rukun Islam.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SYAHADATAIN -->
+        <div id="tab-syahadatain" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-mosque"></i> C. Mengenal Syahadatain
+                    </h2>
+                    
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        <strong>Syahadatain</strong> berarti dua kalimat syahadat. Syahadatain terdiri dari:
+                    </p>
+
+                    <!-- 1. Syahadat Tauhid -->
+                    <div class="p-6 bg-teal-50 border border-teal-200 rounded-xl mb-6 space-y-3">
+                        <div class="flex items-center justify-between border-b border-teal-200/80 pb-2">
+                            <h3 class="font-bold text-teal-800 text-base">1. Syahadat Tauhid</h3>
+                            <span class="text-xs font-semibold px-2.5 py-0.5 bg-teal-200 text-teal-800 rounded-full">Menyembah Allah</span>
+                        </div>
+                        <div class="font-arabic text-3xl md:text-4xl text-teal-900 font-bold leading-relaxed text-center py-2">
+                            أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ
+                        </div>
+                        <div class="text-teal-800 font-semibold text-sm md:text-base text-center">
+                            Asyhadu alla ilaha illallah
+                        </div>
+                        <div class="text-slate-700 text-xs md:text-sm italic text-center">
+                            Artinya: “Aku bersaksi bahwa tidak ada Tuhan selain Allah.”
+                        </div>
+                        <div class="text-xs md:text-sm text-slate-600 bg-white p-3 rounded-lg border border-teal-100 mt-2">
+                            💡 <strong>Maknanya:</strong> Kita percaya dan yakin bahwa Allah adalah satu-satunya Tuhan yang wajib disembah.
+                        </div>
+                    </div>
+
+                    <!-- 2. Syahadat Rasul -->
+                    <div class="p-6 bg-teal-50 border border-teal-200 rounded-xl mb-6 space-y-3">
+                        <div class="flex items-center justify-between border-b border-teal-200/80 pb-2">
+                            <h3 class="font-bold text-teal-800 text-base">2. Syahadat Rasul</h3>
+                            <span class="text-xs font-semibold px-2.5 py-0.5 bg-teal-200 text-teal-800 rounded-full">Mengikuti Rasul</span>
+                        </div>
+                        <div class="font-arabic text-3xl md:text-4xl text-teal-900 font-bold leading-relaxed text-center py-2">
+                            وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللهِ
+                        </div>
+                        <div class="text-teal-800 font-semibold text-sm md:text-base text-center">
+                            Wa asyhadu anna Muhammadar Rasulullah
+                        </div>
+                        <div class="text-slate-700 text-xs md:text-sm italic text-center">
+                            Artinya: “Dan aku bersaksi bahwa Nabi Muhammad adalah utusan Allah.”
+                        </div>
+                        <div class="text-xs md:text-sm text-slate-600 bg-white p-3 rounded-lg border border-teal-100 mt-2">
+                            💡 <strong>Maknanya:</strong> Kita percaya bahwa Nabi Muhammad saw. adalah utusan Allah dan kita harus mengikuti ajaran beliau.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PENERAPAN -->
+        <div id="tab-penerapan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-heart"></i> D. Cara Menerapkan Makna Syahadatain
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-6">
+                    Menerapkan syahadatain dalam kehidupan sehari-hari dapat dilakukan dengan:
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                        <i class="fa-solid fa-hands-praying text-teal-600 text-lg"></i>
+                        <span>Menyembah dan beribadah hanya kepada Allah.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                        <i class="fa-solid fa-person-praying text-teal-600 text-lg"></i>
+                        <span>Berdoa kepada Allah.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                        <i class="fa-solid fa-clock text-teal-600 text-lg"></i>
+                        <span>Melaksanakan salat.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                        <i class="fa-solid fa-heart text-teal-600 text-lg"></i>
+                        <span>Menyayangi dan menghormati Nabi Muhammad saw.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                        <i class="fa-solid fa-book-quran text-teal-600 text-lg"></i>
+                        <span>Mengikuti akhlak dan ajaran Nabi Muhammad saw.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                        <i class="fa-solid fa-comment-dots text-teal-600 text-lg"></i>
+                        <span>Berkata jujur.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                        <i class="fa-solid fa-users text-teal-600 text-lg"></i>
+                        <span>Berbuat baik kepada orang tua dan guru.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600 text-lg"></i>
+                        <span>Menolong dan menyayangi sesama.</span>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-semibold text-center">
+                    Dengan mempraktikkan hal-hal di atas, kita menjadi anak muslim yang saleh dan dicintai Allah Swt. serta Nabi Muhammad saw.
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Rukun Islam & Syahadatain
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Rukun Islam & Syahadatain Kelas 1 SD
+        const quizData = [
+            {
+                question: "1. Berapakah jumlah Rukun Islam?",
+                options: [
+                    "A. 3",
+                    "B. 4",
+                    "C. 5",
+                    "D. 6"
+                ],
+                correct: 2,
+                explanation: "Rukun Islam ada 5, yaitu Syahadat, Salat, Zakat, Puasa, dan Haji."
+            },
+            {
+                question: "2. Rukun Islam yang pertama adalah...",
+                options: [
+                    "A. Mendirikan salat",
+                    "B. Mengucapkan dua kalimat syahadat",
+                    "C. Membayar zakat",
+                    "D. Berpuasa Ramadan"
+                ],
+                correct: 1,
+                explanation: "Rukun Islam pertama adalah mengucapkan dua kalimat syahadat (Syahadatain)."
+            },
+            {
+                question: "3. Berapa kali salat wajib dilaksanakan dalam sehari?",
+                options: [
+                    "A. 3 kali",
+                    "B. 5 kali",
+                    "C. 7 kali",
+                    "D. 10 kali"
+                ],
+                correct: 1,
+                explanation: "Salat wajib dilakukan 5 kali sehari (Subuh, Zuhur, Asar, Magrib, dan Isya)."
+            },
+            {
+                question: "4. Memberikan sebagian harta kepada orang yang berhak menerimanya disebut...",
+                options: [
+                    "A. Puasa",
+                    "B. Haji",
+                    "C. Zakat",
+                    "D. Salat"
+                ],
+                correct: 2,
+                explanation: "Membayar zakat adalah memberikan sebagian harta kepada orang yang berhak menerimanya."
+            },
+            {
+                question: "5. Puasa Ramadan dilakukan sejak terbit fajar sampai...",
+                options: [
+                    "A. Terbit matahari",
+                    "B. Tengah hari",
+                    "C. Terbenam matahari",
+                    "D. Malam hari"
+                ],
+                correct: 2,
+                explanation: "Puasa Ramadan dilakukan dari terbit fajar sampai terbenam matahari."
+            },
+            {
+                question: "6. Di manakah ibadah Haji dilaksanakan?",
+                options: [
+                    "A. Madinah",
+                    "B. Jakarta",
+                    "C. Makkah",
+                    "D. Mesir"
+                ],
+                correct: 2,
+                explanation: "Ibadah Haji dilakukan di Makkah bagi umat Islam yang mampu secara fisik, mental, dan biaya."
+            },
+            {
+                question: "7. Syahadat Tauhid berisi kesaksian bahwa tidak ada Tuhan selain...",
+                options: [
+                    "A. Malaikat",
+                    "B. Nabi",
+                    "C. Allah",
+                    "D. Rasul"
+                ],
+                correct: 2,
+                explanation: "Syahadat Tauhid berbunyi 'Asyhadu alla ilaha illallah' yang artinya 'Aku bersaksi bahwa tidak ada Tuhan selain Allah'."
+            },
+            {
+                question: "8. Bunyi bacaan Syahadat Rasul adalah...",
+                options: [
+                    "A. أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ",
+                    "B. وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللهِ",
+                    "C. اَلْحَمْدُ لِلّٰهِ",
+                    "D. بِسْمِ اللّٰهِ"
+                ],
+                correct: 1,
+                explanation: "Syahadat Rasul berbunyi 'Wa asyhadu anna Muhammadar Rasulullah'."
+            },
+            {
+                question: "9. Nabi Muhammad saw. adalah utusan...",
+                options: [
+                    "A. Allah",
+                    "B. Malaikat",
+                    "C. Raja",
+                    "D. Manusia biasa"
+                ],
+                correct: 0,
+                explanation: "Nabi Muhammad saw. adalah utusan Allah yang harus kita ikuti ajaran dan akhlaknya."
+            },
+            {
+                question: "10. Berikut ini merupakan cara menerapkan makna syahadatain dalam kehidupan sehari-hari, KECUALI...",
+                options: [
+                    "A. Berkata jujur",
+                    "B. Berbuat baik kepada orang tua dan guru",
+                    "C. Suka berbohong dan mengganggu teman",
+                    "D. Menolong dan menyayangi sesama"
+                ],
+                correct: 2,
+                explanation: "Suka berbohong adalah perbuatan tercela dan bukan penerapan makna syahadatain."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

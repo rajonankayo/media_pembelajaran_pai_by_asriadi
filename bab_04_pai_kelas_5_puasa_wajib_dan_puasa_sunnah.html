@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 5 SD - Puasa Wajib dan Puasa Sunnah</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 04. Puasa Wajib dan Puasa Sunnah</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase C - Kelas 5 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-book-open"></i> Pengertian & Jenis
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ketentuan', this)">
+                    <i class="fa-solid fa-list-check"></i> Ketentuan Puasa
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('adab-pembiasaan', this)">
+                    <i class="fa-solid fa-hands-holding-circle"></i> Adab & Pembiasaan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hikmah', this)">
+                    <i class="fa-solid fa-star"></i> Hikmah Puasa
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Ringkasan Materi PAI Kelas 5 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        🌙 Puasa Wajib dan Puasa Sunnah
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الصَّوْمُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌙 Puasa Wajib & Sunnah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pengertian & Jenis Puasa</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti puasa, serta perbedaan antara puasa wajib (Ramadan, Kafarat, Nazar) dan puasa sunnah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Jenis Puasa <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('ketentuan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الشُّرُوطُ وَالأَرْكَانُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📋 Ketentuan Puasa</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Syarat, Rukun & Pembatal</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mempelajari syarat wajib berpuasa, rukun puasa, serta hal-hal yang dapat membatalkan ibadah puasa.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Ketentuan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('adab-pembiasaan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الآدَابُ وَالتَّعَوُّدُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🤲 Adab & Pembiasaan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sikap Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Adab-adab saat berpuasa serta cara membiasakan diri melaksanakan puasa dalam kehidupan sehari-hari.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Pembiasaan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hikmah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الحِكْمَةُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌟 Hikmah Puasa</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Manfaat Wajib & Sunnah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Manfaat dan hikmah luar biasa dari ibadah puasa untuk membentuk pribadi yang bertakwa dan bersabar.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> 📌 Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Puasa adalah ibadah dengan menahan diri dari hal-hal yang membatalkan puasa sejak terbit fajar hingga terbenam matahari karena Allah Swt. Puasa ada puasa wajib dan puasa sunnah. Puasa wajib harus dilaksanakan, sedangkan puasa sunnah dianjurkan untuk dilaksanakan. Dengan berpuasa, kita belajar menjadi pribadi yang bertakwa, sabar, disiplin, jujur, mampu mengendalikan diri, dan peduli kepada sesama.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & JENIS PUASA -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <!-- Section 1: Pengertian -->
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-book-open"></i> 1. Pengertian Puasa
+                    </h2>
+                    
+                    <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl mb-6">
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            <strong>Puasa</strong> adalah menahan diri dari makan, minum, dan segala sesuatu yang membatalkan puasa, mulai dari terbit fajar hingga terbenam matahari, disertai dengan niat karena Allah Swt. Puasa merupakan salah satu bentuk ibadah kepada Allah Swt. yang mengajarkan kita untuk mengendalikan diri dan meningkatkan ketakwaan.
+                        </p>
+                    </div>
+
+                    <!-- Section 2: Puasa Wajib -->
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-circle-exclamation"></i> 2. Puasa Wajib
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Puasa wajib adalah puasa yang harus dilaksanakan oleh setiap muslim yang memenuhi syarat. Jika dilaksanakan mendapat pahala, sedangkan jika ditinggalkan tanpa alasan yang dibenarkan akan berdosa.
+                    </p>
+
+                    <p class="text-xs md:text-sm font-bold text-slate-800 mb-2">Contoh puasa wajib:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <div class="font-bold text-teal-800 text-sm mb-1">🌙 Puasa Ramadan</div>
+                            <p class="text-xs text-slate-600">Puasa selama bulan Ramadan. Merupakan puasa wajib yang paling utama.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <div class="font-bold text-teal-800 text-sm mb-1">⚖️ Puasa Kafarat</div>
+                            <p class="text-xs text-slate-600">Puasa sebagai tebusan atas pelanggaran tertentu.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <div class="font-bold text-teal-800 text-sm mb-1">🤝 Puasa Nazar</div>
+                            <p class="text-xs text-slate-600">Puasa yang dilakukan karena seseorang telah bernazar kepada Allah Swt.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Puasa Sunnah -->
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-seedling"></i> 3. Puasa Sunnah
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Puasa sunnah adalah puasa yang dianjurkan untuk dilakukan oleh umat Islam. Jika dikerjakan mendapat pahala, sedangkan jika tidak dikerjakan tidak berdosa.
+                    </p>
+
+                    <p class="text-xs md:text-sm font-bold text-slate-800 mb-2">Contoh puasa sunnah:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700">
+                            <strong>📅 Puasa Senin dan Kamis</strong> – Dilaksanakan pada hari Senin dan Kamis.
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700">
+                            <strong>🏔️ Puasa Arafah</strong> – Dilaksanakan tanggal 9 Zulhijah bagi yang tidak berhaji.
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700">
+                            <strong>✨ Puasa Asyura</strong> – Dilaksanakan pada tanggal 10 Muharam.
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700">
+                            <strong>🌅 Puasa Tasu'a</strong> – Dilaksanakan pada tanggal 9 Muharam.
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700">
+                            <strong>🌸 Puasa Syawal</strong> – Dilakukan selama 6 hari di bulan Syawal.
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700">
+                            <strong>🌕 Puasa Ayyamul Bidh</strong> – Dilakukan tanggal 13, 14, dan 15 setiap bulan Hijriah.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KETENTUAN PUASA -->
+        <div id="tab-ketentuan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-list-check"></i> 4. Ketentuan Puasa
+                    </h2>
+
+                    <!-- A. Syarat Wajib -->
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-user-check text-teal-600"></i> A. Syarat Wajib Puasa
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-600 mb-3">Seseorang wajib berpuasa apabila:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Beragama Islam.
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Sudah balig.
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Berakal sehat.
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-800">
+                            <i class="fa-solid fa-check text-emerald-600"></i> Mampu melaksanakan puasa.
+                        </div>
+                    </div>
+
+                    <!-- B. Rukun Puasa -->
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-kaaba text-teal-600"></i> B. Rukun Puasa
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl">
+                            <span class="text-xs font-bold text-teal-700 bg-teal-100 px-2 py-0.5 rounded">Rukun 1</span>
+                            <h4 class="font-bold text-teal-900 text-sm mt-1">Niat</h4>
+                            <p class="text-xs text-slate-600 mt-1">Berniat berpuasa karena Allah Swt.</p>
+                        </div>
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl">
+                            <span class="text-xs font-bold text-teal-700 bg-teal-100 px-2 py-0.5 rounded">Rukun 2</span>
+                            <h4 class="font-bold text-teal-900 text-sm mt-1">Menahan Diri</h4>
+                            <p class="text-xs text-slate-600 mt-1">Menahan diri dari hal-hal yang membatalkan puasa sejak terbit fajar sampai terbenam matahari.</p>
+                        </div>
+                    </div>
+
+                    <!-- C. Hal-Hal yang Membatalkan -->
+                    <h3 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-xmark text-rose-600"></i> C. Hal-Hal yang Membatalkan Puasa
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-900 flex items-center gap-2">
+                            <i class="fa-solid fa-ban text-rose-500"></i> Makan atau minum dengan sengaja.
+                        </div>
+                        <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-900 flex items-center gap-2">
+                            <i class="fa-solid fa-ban text-rose-500"></i> Muntah dengan sengaja.
+                        </div>
+                        <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-900 flex items-center gap-2">
+                            <i class="fa-solid fa-ban text-rose-500"></i> Memasukkan sesuatu ke dalam tubuh via jalan terbuka dengan sengaja.
+                        </div>
+                        <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-900 flex items-center gap-2">
+                            <i class="fa-solid fa-ban text-rose-500"></i> Haid atau nifas bagi perempuan.
+                        </div>
+                        <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-900 flex items-center gap-2">
+                            <i class="fa-solid fa-ban text-rose-500"></i> Hilang akal atau mabuk.
+                        </div>
+                        <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-900 flex items-center gap-2">
+                            <i class="fa-solid fa-ban text-rose-500"></i> Bersetubuh pada siang hari Ramadan.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: ADAB & PEMBIASAAN -->
+        <div id="tab-adab-pembiasaan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <!-- 5. Adab Berpuasa -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart"></i> 5. Adab Ketika Berpuasa
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Agar puasa menjadi lebih baik, kita sebaiknya memperhatikan adab-adab berikut:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-8">
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-teal-600"></i> Membaca niat puasa.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-teal-600"></i> Melaksanakan sahur.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-teal-600"></i> Menyegerakan berbuka.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-teal-600"></i> Berdoa ketika berbuka.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-teal-600"></i> Memperbanyak tadarus Al-Qur'an.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-teal-600"></i> Memperbanyak zikir & doa.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-teal-600"></i> Bersedekah & membantu sesama.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-teal-600"></i> Menjaga ucapan & perbuatan.
+                        </div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs md:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-check text-teal-600"></i> Menghindari pertengkaran.
+                        </div>
+                    </div>
+
+                    <!-- 6. Pembiasaan Hari-Hari -->
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-repeat"></i> 6. Membiasakan Puasa Sehari-hari
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Sebagai seorang muslim, kita dapat membiasakan diri melaksanakan puasa dengan cara:
+                    </p>
+
+                    <div class="space-y-2 mb-6">
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 flex items-center gap-2">
+                            ✅ Berlatih puasa sunnah sesuai kemampuan.
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 flex items-center gap-2">
+                            ✅ Membiasakan bangun untuk sahur.
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 flex items-center gap-2">
+                            ✅ Menjaga diri dari makanan dan minuman yang haram.
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 flex items-center gap-2">
+                            ✅ Menahan amarah dan tidak mudah marah.
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 flex items-center gap-2">
+                            ✅ Menjaga perkataan agar tidak menyakiti orang lain.
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 flex items-center gap-2">
+                            ✅ Bersabar ketika menghadapi kesulitan.
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 flex items-center gap-2">
+                            ✅ Berbagi makanan kepada orang yang membutuhkan.
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 font-semibold text-center">
+                        💡 Puasa bukan hanya menahan lapar dan haus, tetapi juga melatih diri agar menjadi anak yang sabar, disiplin, jujur, dan bertakwaw.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HIKMAH PUASA -->
+        <div id="tab-hikmah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> 7. Hikmah Puasa Wajib dan Sunnah
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 mb-6">
+                    Puasa memiliki banyak hikmah dan manfaat bagi kehidupan seorang muslim, antara lain:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                        <div class="font-bold text-sm text-teal-800">🌟 Meningkatkan Ketakwaan</div>
+                        <p class="text-xs text-slate-600">Puasa mengajarkan kita untuk menaati segala perintah Allah Swt.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                        <div class="font-bold text-sm text-teal-800">🌟 Melatih Kesabaran</div>
+                        <p class="text-xs text-slate-600">Kita belajar menahan lapar, haus, amarah, dan keinginan buruk.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                        <div class="font-bold text-sm text-teal-800">🌟 Melatih Kedisiplinan</div>
+                        <p class="text-xs text-slate-600">Kita belajar mengikuti jadwal sahur, berpuasa, dan tepat waktu berbuka.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                        <div class="font-bold text-sm text-teal-800">🌟 Menumbuhkan Rasa Peduli</div>
+                        <p class="text-xs text-slate-600">Rasa lapar membuat kita memahami keadaan saudara kita yang kekurangan.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                        <div class="font-bold text-sm text-teal-800">🌟 Mengendalikan Hawa Nafsu</div>
+                        <p class="text-xs text-slate-600">Puasa membantu mengendalikan emosi dan keinginan berlebihan.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                        <div class="font-bold text-sm text-teal-800">🌟 Membiasakan Hidup Sederhana</div>
+                        <p class="text-xs text-slate-600">Kita belajar untuk tidak berlebihan dalam makan dan minum.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1 md:col-span-2">
+                        <div class="font-bold text-sm text-teal-800">🌟 Mendapat Pahala dari Allah Swt.</div>
+                        <p class="text-xs text-slate-600">Puasa yang dilakukan dengan ikhlas menjadi amal ibadah yang bernilai pahala berlimpah.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Puasa Wajib & Sunnah
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Puasa Wajib & Sunnah Kelas 5 SD
+        const quizData = [
+            {
+                question: "1. Kapan batas waktu dimulainya puasa hingga berakhirnya puasa?",
+                options: [
+                    "A. Terbit matahari hingga terbenam matahari",
+                    "B. Terbit fajar hingga terbenam matahari",
+                    "C. Jam 6 pagi hingga jam 6 sore",
+                    "D. Salat Subuh hingga salat Isya"
+                ],
+                correct: 1,
+                explanation: "Puasa dimulai dari terbit fajar hingga terbenam matahari disertai dengan niat."
+            },
+            {
+                question: "2. Berikut ini yang merupakan contoh puasa wajib adalah...",
+                options: [
+                    "A. Puasa Senin dan Kamis",
+                    "B. Puasa Arafah",
+                    "C. Puasa Ramadan",
+                    "D. Puasa Syawal"
+                ],
+                correct: 2,
+                explanation: "Puasa Ramadan, puasa kafarat, dan puasa nazar tergolong sebagai puasa wajib."
+            },
+            {
+                question: "3. Puasa yang dilaksanakan sebagai tebusan atas pelanggaran tertentu disebut puasa...",
+                options: [
+                    "A. Nazar",
+                    "B. Kafarat",
+                    "C. Arafah",
+                    "D. Asyura"
+                ],
+                correct: 1,
+                explanation: "Puasa kafarat adalah puasa tebusan atas pelanggaran hukum agama tertentu."
+            },
+            {
+                question: "4. Puasa sunnah yang dilaksanakan pada tanggal 9 Zulhijah disebut puasa...",
+                options: [
+                    "A. Arafah",
+                    "B. Asyura",
+                    "C. Tasu'a",
+                    "D. Syawal"
+                ],
+                correct: 0,
+                explanation: "Puasa Arafah dilaksanakan tanggal 9 Zulhijah khusus bagi orang yang tidak sedang menunaikan ibadah haji."
+            },
+            {
+                question: "5. Puasa Ayyamul Bidh dilaksanakan pada tanggal...",
+                options: [
+                    "A. 1, 2, dan 3 setiap bulan Hijriah",
+                    "B. 9 dan 10 setiap bulan Hijriah",
+                    "C. 13, 14, dan 15 setiap bulan Hijriah",
+                    "D. Akhir bulan Hijriah"
+                ],
+                correct: 2,
+                explanation: "Puasa Ayyamul Bidh adalah puasa sunnah tanggal 13, 14, dan 15 setiap bulan Hijriah."
+            },
+            {
+                question: "6. Di bawah ini yang merupakan salah satu RUKUN puasa adalah...",
+                options: [
+                    "A. Beragama Islam",
+                    "B. Sudag Balig",
+                    "C. Niat",
+                    "D. Menyegerakan berbuka"
+                ],
+                correct: 2,
+                explanation: "Rukun puasa ada 2: (1) Niat dan (2) Menahan diri dari hal yang membatalkan puasa."
+            },
+            {
+                question: "7. Manakah hal berikut yang TIDAK membatalkan puasa?",
+                options: [
+                    "A. Makan dengan sengaja",
+                    "B. Muntah tidak sengaja",
+                    "C. Muntah dengan sengaja",
+                    "D. Haid atau nifas"
+                ],
+                correct: 1,
+                explanation: "Muntah yang TIDAK disengaja tidak membatalkan puasa, selama tidak ada yang tertelan kembali."
+            },
+            {
+                question: "8. Salah satu adab baik ketika berpuasa adalah...",
+                options: [
+                    "A. Menunda-nunda waktu berbuka",
+                    "B. Meninggalkan makan sahur",
+                    "C. Menyegerakan berbuka ketika tiba waktunya",
+                    "D. Tidur seharian tanpa salat"
+                ],
+                correct: 2,
+                explanation: "Disunnahkan/diadabkan untuk menyegerakan berbuka puasa apabila waktu maghrib telah tiba."
+            },
+            {
+                question: "9. Hikmah puasa yang melatih kita untuk merasakan rasa lapar orang miskin adalah...",
+                options: [
+                    "A. Menumbuhkan rasa peduli sesama",
+                    "B. Melatih kecerdasan berpikir",
+                    "C. Menghemat pengeluaran",
+                    "D. Menjaga tubuh agar gemuk"
+                ],
+                correct: 0,
+                explanation: "Rasa lapar saat berpuasa menumbuhkan rasa simpati dan kepedulian terhadap orang yang kurang mampu."
+            },
+            {
+                question: "10. Puasa sunnah yang dilaksanakan pada tanggal 10 Muharam adalah puasa...",
+                options: [
+                    "A. Tasu'a",
+                    "B. Asyura",
+                    "C. Arafah",
+                    "D. Shawwal"
+                ],
+                correct: 1,
+                explanation: "Puasa Asyura dilaksanakan pada tanggal 10 Muharam (sedangkan tanggal 9 Muharam adalah puasa Tasu'a)."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>
