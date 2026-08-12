@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 6 SD - Hukum Ra (Tafkhim & Tarqiq) & Hadis Berbuat Baik kepada Teman</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 06. Hukum Bacaan Ra & Hadis Berbuat Baik Kepada Teman</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase C - Kelas 6 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hukum-ra', this)">
+                    <i class="fa-solid fa-book-open-reader"></i> Hukum Bacaan Ra
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hadis', this)">
+                    <i class="fa-solid fa-hands-holding-child"></i> Hadis Berbuat Baik
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('penerapan', this)">
+                    <i class="fa-solid fa-heart-circle-check"></i> Makna & Hikmah
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Rangkuman Materi PAI Kelas 6 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Mempelajari Hukum Bacaan Ra (Tafkhim dan Tarqiq) serta Memahami, Menulis, dan Mengamalkan Hadis Rasulullah SAW tentang Berbuat Baik kepada Teman.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hukum-ra')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">01</span>
+                            <span class="font-arabic text-3xl font-bold text-teal-800">ر</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📖 Hukum Bacaan Ra</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tafkhim & Tarqiq</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Ketentuan membaca huruf Ra secara tebal (tafkhim) atau tipis (tarqiq) beserta contoh-contoh bacaannya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hukum Ra <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hadis')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">02</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الْحَدِيْث</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🤝 Hadis Rasulullah SAW</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Berbuat Baik kepada Teman</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Membaca, menulis, dan menghafalkan hadis riwayat Bukhari & Muslim tentang mencintai saudara/teman.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Baca Hadis <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">03</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">الْأَخْلَاق</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">💖 Makna & Hikmah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Penerapan Budi Pekerti</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Contoh perilaku berbuat baik kepada teman sehari-hari serta hikmah mulia yang didapatkan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Penerapan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('kuis')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">04</span>
+                            <span class="font-arabic text-xl font-bold text-teal-800">تَدْرِيْب</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌟 Evaluasi & Kuis</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Latihan Pemahaman</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Uji pemahamanmu melalui kuis interaktif 10 soal pilihan ganda beserta kunci jawaban dan tugas praktik.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Mulai Kuis <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Kesimpulan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-emerald-600"></i> Inti Ringkasan Pembelajaran
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <strong>Tafkhim</strong> adalah membaca huruf Ra dengan suara tebal, sedangkan <strong>Tarqiq</strong> adalah membaca huruf Ra dengan suara tipis. Selain menguasai bacaan Al-Qur'an, Islam mengajarkan kita untuk menyayangi teman, membantu, berbagi, memaarkan, dan tidak mengejek agar tercipta persahabatan yang rukun dan penuh kasih sayang.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: HUKUM BACAAN RA -->
+        <div id="tab-hukum-ra" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                    <i class="fa-solid fa-book-open-reader"></i> A. Hukum Bacaan Ra (ر): Tafkhim dan Tarqiq
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Dalam membaca Al-Qur'an, huruf Ra (ر) memiliki beberapa ketentuan cara membaca. Huruf Ra dapat dibaca tebal (tafkhim) atau tipis (tarqiq) sesuai dengan harakat dan keadaan huruf di sekitarnya.
+                </p>
+
+                <!-- 1. Pengertian Tafkhim -->
+                <div class="bg-amber-50/60 p-5 rounded-2xl border border-amber-200 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-900 flex items-center gap-2">
+                        <span class="bg-amber-600 text-white w-7 h-7 rounded-lg flex items-center justify-center text-xs">1</span>
+                        Pengertian Tafkhim (Tebal)
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700">
+                        <strong>Tafkhim</strong> berarti membaca huruf dengan suara <strong>tebal atau berat</strong>. Huruf Ra (ر) dibaca tafkhim apabila memenuhi keadaan berikut:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm pt-2">
+                        <div class="bg-white p-4 rounded-xl border border-amber-200">
+                            <p class="font-bold text-teal-800 mb-1">a. Ra berharakat fathah</p>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold">رَحْمَةٌ <span class="text-xs font-sans text-slate-500">(Rahmatun = rahmat)</span></div>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold mt-1">رَبِّيْ <span class="text-xs font-sans text-slate-500">(Rabbī = Tuhanku)</span></div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-amber-200">
+                            <p class="font-bold text-teal-800 mb-1">b. Ra berharakat dammah</p>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold">رُسُلٌ <span class="text-xs font-sans text-slate-500">(Rusulun = para rasul)</span></div>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold mt-1">رُزِقُوْا <span class="text-xs font-sans text-slate-500">(Ruziqū = mereka diberi rezeki)</span></div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-amber-200">
+                            <p class="font-bold text-teal-800 mb-1">c. Ra sukun didahului huruf berharakat fathah</p>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold">مَرْيَمَ <span class="text-xs font-sans text-slate-500">(Maryama)</span></div>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold mt-1">الْأَرْضِ <span class="text-xs font-sans text-slate-500">(Al-ardhi = bumi)</span></div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-amber-200">
+                            <p class="font-bold text-teal-800 mb-1">d. Ra sukun didahului huruf berharakat dammah</p>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold">قُرْآنٌ <span class="text-xs font-sans text-slate-500">(Qur'ānun = Al-Qur'an)</span></div>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold mt-1">غُرْفَةٌ <span class="text-xs font-sans text-slate-500">(Ghurfatun = kamar/ruangan)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Pengertian Tarqiq -->
+                <div class="bg-blue-50/60 p-5 rounded-2xl border border-blue-200 space-y-3">
+                    <h3 class="text-lg font-bold text-blue-900 flex items-center gap-2">
+                        <span class="bg-blue-600 text-white w-7 h-7 rounded-lg flex items-center justify-center text-xs">2</span>
+                        Pengertian Tarqiq (Tipis)
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700">
+                        <strong>Tarqiq</strong> berarti membaca huruf dengan suara <strong>tipis atau ringan</strong>. Huruf Ra (ر) dibaca tarqiq dalam keadaan berikut:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm pt-2">
+                        <div class="bg-white p-4 rounded-xl border border-blue-200">
+                            <p class="font-bold text-teal-800 mb-1">a. Ra berharakat kasrah</p>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold">رِجَالٌ <span class="text-xs font-sans text-slate-500">(Rijālun = laki-laki)</span></div>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold mt-1">رِزْقًا <span class="text-xs font-sans text-slate-500">(Rizqan = rezeki)</span></div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-blue-200">
+                            <p class="font-bold text-teal-800 mb-1">b. Ra sukun didahului huruf berharakat kasrah</p>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold">فِرْعَوْنَ <span class="text-xs font-sans text-slate-500">(Fir'auna)</span></div>
+                            <div class="font-arabic text-2xl text-teal-900 font-bold mt-1">مِرْيَةٍ <span class="text-xs font-sans text-slate-500">(Mir-yatin = keraguan)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Perbedaan & 4. Cara Mudah Mengingat -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-2">
+                    <div>
+                        <h3 class="text-base font-bold text-slate-800 mb-3">3. Perbedaan Tafkhim dan Tarqiq</h3>
+                        <div class="overflow-x-auto rounded-xl border border-slate-200">
+                            <table class="w-full text-center border-collapse text-xs md:text-sm">
+                                <thead>
+                                    <tr class="bg-teal-800 text-white font-bold">
+                                        <th class="p-3">Hukum</th>
+                                        <th class="p-3">Cara Membaca</th>
+                                        <th class="p-3">Contoh</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200">
+                                    <tr><td class="p-2.5 font-bold text-amber-700">Tafkhim</td><td class="p-2.5">Tebal / berat</td><td class="p-2.5 font-arabic text-xl font-bold text-teal-900">رَحْمَةٌ</td></tr>
+                                    <tr class="bg-slate-50"><td class="p-2.5 font-bold text-amber-700">Tafkhim</td><td class="p-2.5">Tebal / berat</td><td class="p-2.5 font-arabic text-xl font-bold text-teal-900">رُسُلٌ</td></tr>
+                                    <tr><td class="p-2.5 font-bold text-amber-700">Tafkhim</td><td class="p-2.5">Tebal / berat</td><td class="p-2.5 font-arabic text-xl font-bold text-teal-900">قُرْآنٌ</td></tr>
+                                    <tr class="bg-slate-50"><td class="p-2.5 font-bold text-blue-700">Tarqiq</td><td class="p-2.5">Tipis / ringan</td><td class="p-2.5 font-arabic text-xl font-bold text-teal-900">رِجَالٌ</td></tr>
+                                    <tr><td class="p-2.5 font-bold text-blue-700">Tarqiq</td><td class="p-2.5">Tipis / ringan</td><td class="p-2.5 font-arabic text-xl font-bold text-teal-900">رِزْقًا</td></tr>
+                                    <tr class="bg-slate-50"><td class="p-2.5 font-bold text-blue-700">Tarqiq</td><td class="p-2.5">Tipis / ringan</td><td class="p-2.5 font-arabic text-xl font-bold text-teal-900">فِرْعَوْنَ</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-base font-bold text-slate-800">4. Cara Mudah Mengingat</h3>
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl space-y-3 text-xs md:text-sm">
+                            <div>
+                                <p class="font-bold text-amber-800">🔴 Tafkhim = Tebal</p>
+                                <p class="text-slate-600">Biasanya Ra dibaca tebal apabila Ra berharakat <strong>fathah</strong> atau <strong>dammah</strong>, atau Ra sukun didahului <strong>fathah/dammah</strong>.</p>
+                            </div>
+                            <hr class="border-teal-200">
+                            <div>
+                                <p class="font-bold text-blue-800">🔵 Tarqiq = Tipis</p>
+                                <p class="text-slate-600">Biasanya Ra dibaca tipis apabila Ra berharakat <strong>kasrah</strong>, atau Ra sukun didahului <strong>kasrah</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-slate-100 rounded-xl border border-slate-300 text-xs text-slate-600 italic">
+                            📌 <strong>Catatan:</strong> Hukum Ra memiliki beberapa keadaan khusus, terutama ketika Ra sukun atau ketika berhenti (waqaf). Untuk tingkat kelas 6 SD, siswa dapat terlebih dahulu menguasai kaidah dasar tafkhim dan tarqiq.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB: HADIS BERBUAT BAIK -->
+        <div id="tab-hadis" class="tab-content hidden transition-opacity duration-300">
+            <div class="space-y-6">
+                <!-- Hadis Utama -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                    <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center">
+                        <h2 class="text-xl md:text-2xl font-extrabold mb-2">B. Hadis Rasulullah SAW tentang Berbuat Baik kepada Teman</h2>
+                        <p class="text-xs md:text-sm text-teal-100">HR. Bukhari dan Muslim</p>
+                    </div>
+
+                    <div class="p-6 md:p-8 space-y-6 text-center">
+                        <div class="p-6 bg-amber-50/50 rounded-2xl border border-amber-200 space-y-4">
+                            <p class="text-xs font-bold text-amber-700 uppercase tracking-widest">Lafal Hadis</p>
+                            <p class="font-arabic text-2xl md:text-4xl text-teal-900 leading-loose font-bold dir-rtl" dir="rtl">
+                                لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيْهِ مَا يُحِبُّ لِنَفْسِهِ
+                            </p>
+                            <p class="text-sm md:text-base font-semibold text-slate-700 italic">
+                                "Lā yu'minu ahadukum hattā yuhibba li-akhīhi mā yuhibbu linafsihi."
+                            </p>
+                            <hr class="border-amber-200">
+                            <p class="text-xs md:text-sm font-medium text-slate-800 max-w-2xl mx-auto">
+                                <strong>Artinya:</strong> “Tidak sempurna iman salah seorang di antara kalian sampai ia mencintai untuk saudaranya apa yang ia mencintai untuk dirinya sendiri.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C. Membaca Hadis & D. Menulis Hadis -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Membaca -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200 space-y-4">
+                        <h3 class="text-base font-bold text-teal-800 flex items-center gap-2">
+                            <i class="fa-solid fa-book-open"></i> C. Membaca Hadis
+                        </h3>
+                        <p class="text-xs text-slate-600">Bacalah perpotongan hadis dengan memperhatikan makhraj dan panjang pendeknya:</p>
+                        
+                        <div class="space-y-2 text-xs md:text-sm font-arabic">
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex justify-between items-center">
+                                <span class="font-sans text-slate-500">Lā yu'minu ahadukum</span>
+                                <span class="text-xl font-bold text-teal-900">لَا يُؤْمِنُ أَحَدُكُمْ</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex justify-between items-center">
+                                <span class="font-sans text-slate-500">hattā yuhibba li-akhīhi</span>
+                                <span class="text-xl font-bold text-teal-900">حَتَّى يُحِبَّ لِأَخِيْهِ</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex justify-between items-center">
+                                <span class="font-sans text-slate-500">mā yuhibbu linafsihi</span>
+                                <span class="text-xl font-bold text-teal-900">مَا يُحِبُّ لِنَفْسِهِ</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-xs text-emerald-900 space-y-1">
+                            <p class="font-bold">Latihan Membaca:</p>
+                            <ul class="list-disc list-inside space-y-0.5 text-slate-700">
+                                <li>Bacalah hadis secara perlahan.</li>
+                                <li>Perhatikan makhraj setiap huruf & bacaan panjang (لَا, حَتَّى).</li>
+                                <li>Mintalah guru untuk menyimak hingga lancar.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Menulis & Menghafal -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200 space-y-4">
+                        <h3 class="text-base font-bold text-teal-800 flex items-center gap-2">
+                            <i class="fa-solid fa-pen-line"></i> D. Menulis & H. Menghafal Hadis
+                        </h3>
+                        <p class="text-xs text-slate-600">Salinlah hadis sebanyak 3 kali pada buku tugas dengan memperhatikan:</p>
+                        
+                        <ul class="list-disc list-inside text-xs text-slate-700 space-y-1 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <li>Bentuk huruf & sambungan huruf hijaiyah.</li>
+                            <li>Harakat fathah, kasrah, dammah, sukun, dan tasydid.</li>
+                            <li>Ketepatan penulisan kata dan kerapian.</li>
+                        </ul>
+
+                        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 space-y-1">
+                            <p class="font-bold">Cara Mudah Menghafal:</p>
+                            <ol class="list-decimal list-inside space-y-0.5 text-slate-700">
+                                <li>Hafalkan bagian 1: <span class="font-arabic font-bold text-teal-900">لَا يُؤْمِنُ أَحَدُكُمْ</span></li>
+                                <li>Hafalkan bagian 2: <span class="font-arabic font-bold text-teal-900">حَتَّى يُحِبَّ لِأَخِيْهِ</span></li>
+                                <li>Hafalkan bagian 3: <span class="font-arabic font-bold text-teal-900">مَا يُحِبُّ لِنَفْسِهِ</span></li>
+                                <li>Gabungkan ketiga bagian & setorkan ke guru.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: PENERAPAN (MAKNA & HIKMAH) -->
+        <div id="tab-penerapan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                
+                <!-- E. Makna Hadis -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart text-rose-500"></i> E. Makna Hadis Berbuat Baik
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Hadis ini mengajarkan bahwa seorang muslim harus memiliki sikap peduli, menyayangi, dan berbuat baik kepada orang lain. Kita tidak boleh hanya menginginkan kebaikan untuk diri sendiri, tetapi juga untuk teman.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">1. Saling membantu</p>
+                            <p class="text-slate-600">Membantu teman yang mengalami kesulitan dalam belajar.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">2. Tidak mengejek teman</p>
+                            <p class="text-slate-600">Tidak menghina kekurangan, nama, bentuk tubuh, atau kemampuan teman.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">3. Berbagi</p>
+                            <p class="text-slate-600">Mau berbagi makanan atau sesuatu yang kita miliki kepada teman.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">4. Menjaga perasaan teman</p>
+                            <p class="text-slate-600">Berbicara dengan sopan dan tidak menyakiti hati teman.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">5. Memaafkan</p>
+                            <p class="text-slate-600">Memaafkan kesalahan teman dan tidak menyimpan dendam.</p>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-teal-800 mb-1">6. Menolong & Tidak Iri</p>
+                            <p class="text-slate-600">Menolong dalam kebaikan serta ikut senang atas keberhasilan teman.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- F. Contoh Perilaku & G. Hikmah -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-200">
+                    <div>
+                        <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-thumbs-up text-amber-500"></i> F. Contoh Perilaku Sehari-hari
+                        </h3>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menolong teman yang kesulitan & meminjamkan alat tulis.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Berbagi makanan & menghibur teman yang sedih.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Mengucapkan selamat atas prestasi teman.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menghormati pendapat & tidak membully/mengejek.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menjenguk teman yang sakit & memaafkan kesalahan.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-star text-amber-500"></i> G. Hikmah Berbuat Baik
+                        </h3>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Mendapat pahala dari Allah SWT.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Memperkuat persaudaraan & terhindar dari permusuhan.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Membuat hidup damai & memiliki banyak teman baik.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Menciptakan suasana kelas yang nyaman.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Menjadi pribadi yang disukai dan dipercaya orang lain.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF & EVALUASI -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-8">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 6 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+
+            <!-- Tugas Praktik & Refleksi -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <h3 class="font-bold text-teal-800 text-base flex items-center gap-2">
+                        <i class="fa-solid fa-list-check"></i> Tugas Praktik
+                    </h3>
+                    <ol class="list-decimal list-inside text-xs md:text-sm text-slate-700 space-y-1.5">
+                        <li>Bacalah hadis di depan guru.</li>
+                        <li>Tulislah hadis dalam huruf Arab sebanyak tiga kali.</li>
+                        <li>Jelaskan arti hadis dengan bahasamu sendiri.</li>
+                        <li>Sebutkan lima contoh berbuat baik kepada teman.</li>
+                        <li>Hafalkan hadis dan setorkan kepada guru.</li>
+                        <li>Temukan contoh bacaan Ra tafkhim dan tarqiq dalam Al-Qur'an.</li>
+                    </ol>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <h3 class="font-bold text-teal-800 text-base flex items-center gap-2">
+                        <i class="fa-solid fa-mirror"></i> Refleksi Diri
+                    </h3>
+                    <ul class="list-disc list-inside text-xs md:text-sm text-slate-700 space-y-1.5">
+                        <li>Apakah saya sudah memperlakukan teman sebagaimana saya ingin diperlakukan?</li>
+                        <li>Apa yang akan saya lakukan jika teman saya mengalami kesulitan?</li>
+                        <li>Mengapa kita tidak boleh mengejek teman?</li>
+                        <li>Apa manfaat berbuat baik kepada teman?</li>
+                        <li>Apakah saya sudah hafal hadis tentang berbuat baik kepada teman?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif PAI.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions dari J. Latihan Pemahaman (Pilihan Ganda Kelas 6 SD)
+        const quizData = [
+            {
+                question: "1. Tafkhim berarti membaca huruf dengan suara ....",
+                options: ["A. panjang", "B. pendek", "C. tebal", "D. samar"],
+                correct: 2,
+                explanation: "Tafkhim berarti membaca huruf dengan suara tebal atau berat."
+            },
+            {
+                question: "2. Tarqiq berarti membaca huruf dengan suara ....",
+                options: ["A. tipis", "B. tebal", "C. panjang", "D. keras"],
+                correct: 0,
+                explanation: "Tarqiq berarti membaca huruf dengan suara tipis atau ringan."
+            },
+            {
+                question: "3. Huruf yang menjadi pembahasan dalam hukum tafkhim dan tarqiq pada materi ini adalah ....",
+                options: ["A. ب", "B. م", "C. ر", "D. ن"],
+                correct: 2,
+                explanation: "Pembahasan utama hukum tafkhim dan tarqiq pada bab ini adalah huruf Ra (ر)."
+            },
+            {
+                question: "4. Ra yang berharakat fathah pada umumnya dibaca ....",
+                options: ["A. tarqiq", "B. tafkhim", "C. ikhfa", "D. idgham"],
+                correct: 1,
+                explanation: "Ra berharakat fathah dibaca tebal (tafkhim), contohnya رَحْمَةٌ."
+            },
+            {
+                question: "5. Contoh Ra yang dibaca tipis (tarqiq) adalah ....",
+                options: ["A. رَحْمَةٌ", "B. رُسُلٌ", "C. رِجَالٌ", "D. قُرْآنٌ"],
+                correct: 2,
+                explanation: "رِجَالٌ dibaca tarqiq (tipis) karena huruf Ra berharakat kasrah."
+            },
+            {
+                question: "6. Hadis tentang mencintai kebaikan untuk saudara mengajarkan kita untuk ....",
+                options: ["A. mementingkan diri sendiri", "B. berbuat baik kepada orang lain", "C. menjauhi teman", "D. mencari kesalahan teman"],
+                correct: 1,
+                explanation: "Hadis tersebut mengajarkan agar kita peduli dan berbuat baik kepada orang lain/teman."
+            },
+            {
+                question: "7. Sikap yang sesuai dengan hadis Rasulullah SAW adalah ....",
+                options: ["A. mengejek teman", "B. membantu teman", "C. memusuhi teman", "D. iri kepada teman"],
+                correct: 1,
+                explanation: "Membantu teman merupakan cerminan sikap berbuat baik sesuai hadis."
+            },
+            {
+                question: "8. Ketika teman mendapatkan prestasi, sebaiknya kita ....",
+                options: ["A. iri", "B. mengejek", "C. mengucapkan selamat", "D. menjauhinya"],
+                correct: 2,
+                explanation: "Kita harus ikut senang dan mengucapkan selamat atas keberhasilan teman."
+            },
+            {
+                question: "9. Jika teman mengalami kesulitan belajar, kita sebaiknya ....",
+                options: ["A. menertawakannya", "B. membiarkannya", "C. membantunya", "D. mengejeknya"],
+                correct: 2,
+                explanation: "Mempertunjukkan rasa kasih sayang dengan cara membantunya belajar."
+            },
+            {
+                question: "10. Salah satu hikmah berbuat baik kepada teman adalah ....",
+                options: ["A. menimbulkan permusuhan", "B. memperkuat persaudaraan", "C. membuat teman menjauh", "D. menimbulkan iri hati"],
+                correct: 1,
+                explanation: "Berbuat baik akan mempererat tali persaudaraan dan menciptakan rasa kedamaian."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

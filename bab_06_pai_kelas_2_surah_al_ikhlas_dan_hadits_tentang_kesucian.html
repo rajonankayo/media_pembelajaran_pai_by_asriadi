@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 2 SD - Kesucian, Surat Al-Ikhlas & Hadis Kesucian</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            850: '#0d5c56',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">Membaca Al-Qur'an dan Hadis tentang Kesucian</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 2 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hijaiyah', this)">
+                    <i class="fa-solid fa-link"></i> Hijaiyah Bersambung
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('alikhlas', this)">
+                    <i class="fa-solid fa-book-open"></i> Surat Al-Ikhlas
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hadis', this)">
+                    <i class="fa-solid fa-pump-soap"></i> Hadis Kesucian
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('ringkasan', this)">
+                    <i class="fa-solid fa-table-list"></i> Ringkasan Materi
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Materi PAI Kelas 2 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Membaca Al-Qur'an dan Hadis tentang Kesucian: Belajar Huruf Hijaiyah Bersambung, Membaca dan Menghafal Surat Al-Ikhlas, serta Menerapkan Hadis tentang Kesucian.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran Materi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hijaiyah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">كَتَبَ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🔗 Hijaiyah Bersambung</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Bentuk Tunggal, Awal, Tengah, Akhir</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal perubahan bentuk huruf hijaiyah saat ditulis terpisah maupun bersambung dalam kata.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Huruf <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('alikhlas')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">B-D</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الإِخْلَاص</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">📖 Surat Al-Ikhlas</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">4 Ayat & Makna Keesaan Allah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Membaca, memahami pesan pokok keesaan Allah Swt., serta langkah mudah menghafal Surat Al-Ikhlas.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Baca Surah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hadis')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">E-G</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">الطُّهُورُ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🧼 Hadis Kesucian</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Kebersihan & Kesucian Diri</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Menghafal hadis "Kesucian adalah separuh dari iman" dan menerapkan contoh perilaku bersih sehari-hari.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hadis <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('ringkasan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">H</span>
+                            <span class="font-arabic text-2xl font-bold text-teal-800">خُلَاصَة</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">🌟 Ringkasan Materi</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rangkuman Kebiasaan Hidup Suci</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Ringkasan tabel seluruh pembelajaran dan kesimpulan membiasakan hidup bersih, suci, rapi, dan sehat.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Lihat Ringkasan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Peringatan Utama -->
+            <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-5 md:p-6 border border-slate-300 mt-6">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-emerald-600"></i> 💡 Pesan Penting untuk Siswa Kelas 2 SD
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Sebagai anak muslim, kita harus rajin membaca Al-Qur'an, mampu membaca huruf hijaiyah bersambung, meyakini bahwa Allah Swt. Maha Esa melalui Surat Al-Ikhlas, serta membiasakan diri menjaga kesucian dan kebersihan setiap hari.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: MEMBACA HURUF HIJAIYAH BERSAMBUNG -->
+        <div id="tab-hijaiyah" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden space-y-6 p-6 md:p-8">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-link"></i> A. Membaca Huruf Hijaiyah Bersambung
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Huruf hijaiyah adalah huruf yang digunakan untuk membaca Al-Qur'an. Huruf hijaiyah dapat ditulis secara terpisah maupun bersambung.
+                        Ketika huruf hijaiyah berada dalam sebuah kata, bentuknya dapat berubah sesuai dengan posisinya.
+                    </p>
+
+                    <!-- 4 Bentuk Huruf Hijaiyah -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl">
+                            <span class="text-xs font-bold text-teal-800 bg-teal-100 px-2.5 py-1 rounded-full mb-2 inline-block">1. Bentuk Tunggal</span>
+                            <p class="text-xs text-slate-600">Huruf berdiri sendiri tanpa bersambung dengan huruf lain.</p>
+                        </div>
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl">
+                            <span class="text-xs font-bold text-teal-800 bg-teal-100 px-2.5 py-1 rounded-full mb-2 inline-block">2. Bentuk Awal</span>
+                            <p class="text-xs text-slate-600">Huruf berada di awal kata dan bersambung ke huruf setelahnya.</p>
+                        </div>
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl">
+                            <span class="text-xs font-bold text-teal-800 bg-teal-100 px-2.5 py-1 rounded-full mb-2 inline-block">3. Bentuk Tengah</span>
+                            <p class="text-xs text-slate-600">Huruf berada di tengah kata dan bersambung sebelum & sesudahnya.</p>
+                        </div>
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl">
+                            <span class="text-xs font-bold text-teal-800 bg-teal-100 px-2.5 py-1 rounded-full mb-2 inline-block">4. Bentuk Akhir</span>
+                            <p class="text-xs text-slate-600">Huruf berada di akhir kata dan bersambung dari huruf sebelumnya.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tabel Contoh Huruf Bersambung -->
+                    <h3 class="font-bold text-slate-800 text-base mb-3">Contoh Huruf Hijaiyah Bersambung</h3>
+                    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+                        <table class="w-full text-center border-collapse">
+                            <thead>
+                                <tr class="bg-teal-800 text-white text-xs md:text-sm font-bold">
+                                    <th class="p-3">Tunggal</th>
+                                    <th class="p-3">Contoh Bersambung</th>
+                                    <th class="p-3">Dibaca</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-800">
+                                <tr>
+                                    <td class="p-3 font-arabic text-2xl font-bold text-teal-900">ب</td>
+                                    <td class="p-3 font-arabic text-2xl font-bold text-teal-900">بَابٌ</td>
+                                    <td class="p-3 font-semibold">bābun</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 font-arabic text-2xl font-bold text-teal-900">ك</td>
+                                    <td class="p-3 font-arabic text-2xl font-bold text-teal-900">كَتَبَ</td>
+                                    <td class="p-3 font-semibold">kataba</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-arabic text-2xl font-bold text-teal-900">م</td>
+                                    <td class="p-3 font-arabic text-2xl font-bold text-teal-900">مُسْلِمٌ</td>
+                                    <td class="p-3 font-semibold">muslimun</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 font-arabic text-2xl font-bold text-teal-900">د</td>
+                                    <td class="p-3 font-arabic text-2xl font-bold text-teal-900">مَدْرَسَةٌ</td>
+                                    <td class="p-3 font-semibold">madrasatun</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Contoh Lainnya & Latihan -->
+                    <div class="bg-amber-50 p-5 rounded-2xl border border-amber-200 space-y-3">
+                        <h4 class="font-bold text-amber-900 text-sm">Contoh Lainnya:</h4>
+                        <div class="font-arabic text-2xl md:text-3xl text-amber-900 font-bold text-center dir-rtl" dir="rtl">
+                            بَابٌ – كَتَبَ – ذَهَبَ – مُسْلِمٌ – مَدْرَسَةٌ
+                        </div>
+                        <div class="pt-2 border-t border-amber-200 text-xs md:text-sm text-amber-800 font-semibold">
+                            ✍️ <strong>Latihan:</strong> Bacalah kata-kata Arab di atas dengan perlahan dan benar.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SURAT AL-IKHLAS -->
+        <div id="tab-alikhlas" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-gradient-to-r from-teal-800 to-teal-600 text-white p-6 md:p-8 text-center relative">
+                    <div class="font-arabic text-4xl md:text-5xl mb-2 drop-shadow-sm">سُورَةُ الإِخْلَاصِ</div>
+                    <h2 class="text-xl md:text-3xl font-extrabold">📖 B. Membaca Surat Al-Ikhlas</h2>
+                </div>
+                <div class="p-5 md:p-8 space-y-6">
+                    <p class="text-xs md:text-sm text-slate-700 text-center max-w-2xl mx-auto">
+                        Surat Al-Ikhlas adalah surat ke-112 dalam Al-Qur'an. Surat ini terdiri dari 4 ayat dan termasuk surat Makkiyah.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Urutan Surat</p>
+                            <p class="text-lg font-bold text-teal-800">Surat ke-112</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Jumlah Ayat & Golongan</p>
+                            <p class="text-lg font-bold text-teal-800">4 Ayat (Makkiyah)</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Tema Utama</p>
+                            <p class="text-lg font-bold text-teal-800">Keesaan Allah Swt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teks Bacaan Surat Al-Ikhlas -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+                <div class="bg-teal-700 text-white p-4 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> Bacaan 4 Ayat Surat Al-Ikhlas
+                </div>
+                <div class="p-6 md:p-8 space-y-4 bg-amber-50/30">
+                    
+                    <!-- Ayat 1 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            قُلْ هُوَ اللّٰهُ أَحَدٌ ۝١
+                        </div>
+                        <div class="text-left text-xs md:text-sm font-semibold text-teal-800">
+                            Qul huwallāhu aḥad
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Katakanlah, “Dialah Allah Yang Maha Esa.”
+                        </div>
+                    </div>
+
+                    <!-- Ayat 2 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            اللّٰهُ الصَّمَدُ ۝٢
+                        </div>
+                        <div class="text-left text-xs md:text-sm font-semibold text-teal-800">
+                            Allāhuṣ-ṣamad
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Allah tempat meminta segala sesuatu.
+                        </div>
+                    </div>
+
+                    <!-- Ayat 3 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            لَمْ يَلِدْ وَلَمْ يُولَدْ ۝٣
+                        </div>
+                        <div class="text-left text-xs md:text-sm font-semibold text-teal-800">
+                            Lam yalid wa lam yūlad
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Allah tidak beranak dan tidak pula diperanakkan.
+                        </div>
+                    </div>
+
+                    <!-- Ayat 4 -->
+                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                        <div class="text-right font-arabic text-2xl md:text-3xl text-teal-900 leading-loose">
+                            وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ۝٤
+                        </div>
+                        <div class="text-left text-xs md:text-sm font-semibold text-teal-800">
+                            Wa lam yakul lahū kufuwan aḥad
+                        </div>
+                        <div class="text-left text-sm md:text-base text-slate-600 italic">
+                            Dan tidak ada sesuatu yang setara dengan Dia.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Pesan Pokok & Menghafal -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
+                    <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-rose-500"></i> C. Pesan Pokok Surat Al-Ikhlas
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-600 mb-3">Surat Al-Ikhlas mengajarkan tentang keesaan Allah Swt.:</p>
+                    <ul class="space-y-2 text-xs md:text-sm text-slate-700 mb-4">
+                        <li class="p-2 bg-rose-50/50 rounded-lg"><strong>1. Allah Maha Esa:</strong> Allah itu satu. Tidak ada Tuhan selain Allah.</li>
+                        <li class="p-2 bg-rose-50/50 rounded-lg"><strong>2. Allah Tempat Meminta:</strong> Kita harus memohon pertolongan dan berdoa kepada Allah.</li>
+                        <li class="p-2 bg-rose-50/50 rounded-lg"><strong>3. Allah Tidak Beranak & Tidak Diperanakkan:</strong> Allah berbeda dengan makhluk. Allah tidak mempunyai anak dan tidak dilahirkan.</li>
+                        <li class="p-2 bg-rose-50/50 rounded-lg"><strong>4. Tidak Ada yang Menyamai Allah:</strong> Tidak ada sesuatu pun yang sama dengan Allah.</li>
+                    </ul>
+
+                    <div class="bg-emerald-50 p-3.5 rounded-xl border border-emerald-200">
+                        <h4 class="font-bold text-emerald-900 text-xs md:text-sm mb-1">Sikap yang dapat kita lakukan sebagai seorang muslim:</h4>
+                        <ul class="list-disc list-inside text-xs md:text-sm text-emerald-800 space-y-1">
+                            <li>Rajin beribadah kepada Allah.</li>
+                            <li>Rajin berdoa.</li>
+                            <li>Tidak menyekutukan Allah.</li>
+                            <li>Bersyukur kepada Allah.</li>
+                            <li>Meyakini bahwa Allah Maha Esa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
+                    <h3 class="text-base font-bold text-teal-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-brain text-amber-500"></i> D. Menghafal Surat Al-Ikhlas
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-600 mb-2">Agar mudah menghafal Surat Al-Ikhlas, hafalkan secara bertahap:</p>
+                    
+                    <div class="space-y-2 text-xs md:text-sm mb-4">
+                        <div class="p-2 bg-amber-50 rounded-lg border border-amber-200">
+                            <span class="font-bold text-amber-900">1. Ayat Pertama:</span>
+                            <span class="font-arabic text-lg font-bold text-teal-900 float-right">قُلْ هُوَ اللّٰهُ أَحَدٌ</span>
+                        </div>
+                        <div class="p-2 bg-amber-50 rounded-lg border border-amber-200">
+                            <span class="font-bold text-amber-900">2. Ayat Kedua:</span>
+                            <span class="font-arabic text-lg font-bold text-teal-900 float-right">اللّٰهُ الصَّمَدُ</span>
+                        </div>
+                        <div class="p-2 bg-amber-50 rounded-lg border border-amber-200">
+                            <span class="font-bold text-amber-900">3. Ayat Ketiga:</span>
+                            <span class="font-arabic text-lg font-bold text-teal-900 float-right">لَمْ يَلِدْ وَلَمْ يُولَدْ</span>
+                        </div>
+                        <div class="p-2 bg-amber-50 rounded-lg border border-amber-200">
+                            <span class="font-bold text-amber-900">4. Ayat Keempat:</span>
+                            <span class="font-arabic text-lg font-bold text-teal-900 float-right">وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ</span>
+                        </div>
+                        <p class="text-xs text-slate-500 italic mt-1">5. Gabungkan semua ayat dan baca tanpa melihat teks.</p>
+                    </div>
+
+                    <div class="bg-teal-50 p-3.5 rounded-xl border border-teal-200">
+                        <h4 class="font-bold text-teal-900 text-xs md:text-sm mb-1">💡 Tips Menghafal:</h4>
+                        <ul class="list-disc list-inside text-xs md:text-sm text-teal-800 space-y-1">
+                            <li>Dengarkan bacaan guru.</li>
+                            <li>Ikuti bacaan guru.</li>
+                            <li>Ulangi setiap ayat beberapa kali.</li>
+                            <li>Pahami arti ayat.</li>
+                            <li>Setorkan hafalan kepada guru atau orang tua.</li>
+                            <li>Rajin mengulang hafalan setiap hari.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HADIS TENTANG KESUCIAN -->
+        <div id="tab-hadis" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-pump-soap"></i> E. Hadis tentang Kesucian
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Islam mengajarkan kita untuk menjaga kesucian dan kebersihan. Rasulullah saw. bersabda:
+                    </p>
+
+                    <!-- Card Matan Hadis -->
+                    <div class="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl text-center space-y-3 mb-6">
+                        <div class="font-arabic text-3xl md:text-4xl font-bold text-emerald-900">
+                            الطُّهُوْرُ شَطْرُ الْإِيْمَانِ
+                        </div>
+                        <div class="text-sm md:text-base font-bold text-teal-800">
+                            Aṭ-ṭuhūru syaṭrul īmān
+                        </div>
+                        <div class="text-xs md:text-sm text-slate-700 italic border-t border-emerald-200 pt-2">
+                            “Kesucian adalah separuh dari iman.” <br>
+                            <span class="font-semibold text-xs text-slate-500">(HR. Muslim)</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-slate-700 mb-6">
+                        Hadis ini mengajarkan bahwa menjaga kesucian merupakan hal yang sangat penting bagi seorang muslim.
+                    </p>
+
+                    <!-- Apa yang dimaksud dengan kesucian -->
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 mb-6">
+                        <h3 class="font-bold text-teal-800 text-base mb-2">Apa yang dimaksud dengan kesucian?</h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-3">
+                            Kesucian atau <strong>ṭahārah</strong> berarti menjaga diri agar tetap bersih dan suci dari hadas dan najis.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
+                                <i class="fa-solid fa-faucet-drip text-teal-600"></i> Berwudu sebelum salat.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
+                                <i class="fa-solid fa-shower text-teal-600"></i> Mandi untuk menghilangkan hadas besar.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
+                                <i class="fa-solid fa-shirt text-teal-600"></i> Membersihkan pakaian dari najis.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
+                                <i class="fa-solid fa-user-check text-teal-600"></i> Membersihkan badan.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
+                                <i class="fa-solid fa-rug text-teal-600"></i> Menjaga kebersihan tempat salat.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
+                                <i class="fa-solid fa-tree text-teal-600"></i> Menjaga kebersihan lingkungan.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- F. Contoh Perilaku -->
+                    <h2 class="text-lg md:text-xl font-extrabold text-teal-800 mb-3">
+                        F. Contoh Perilaku Menjaga Kesucian dan Kebersihan
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-600 mb-4">Kita dapat menerapkan hadis tentang kesucian dalam kehidupan sehari-hari.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+                        <div class="p-5 bg-teal-50 border border-teal-200 rounded-2xl">
+                            <h3 class="font-bold text-teal-900 text-sm md:text-base mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-user text-teal-700"></i> Menjaga kebersihan diri
+                            </h3>
+                            <ul class="list-disc list-inside text-xs md:text-sm text-slate-700 space-y-1.5">
+                                <li>Mandi setiap hari.</li>
+                                <li>Menggosok gigi.</li>
+                                <li>Mencuci tangan.</li>
+                                <li>Memotong kuku.</li>
+                                <li>Memakai pakaian yang bersih.</li>
+                                <li>Rajin berwudu.</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-2xl">
+                            <h3 class="font-bold text-emerald-900 text-sm md:text-base mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-broom text-emerald-700"></i> Menjaga kebersihan lingkungan
+                            </h3>
+                            <ul class="list-disc list-inside text-xs md:text-sm text-slate-700 space-y-1.5">
+                                <li>Membuang sampah pada tempatnya.</li>
+                                <li>Membersihkan kelas.</li>
+                                <li>Membersihkan rumah.</li>
+                                <li>Menjaga kebersihan halaman.</li>
+                                <li>Tidak mencoret-coret dinding.</li>
+                                <li>Menjaga kebersihan masjid atau tempat salat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm font-semibold text-center text-teal-800 bg-teal-100/60 p-3 rounded-xl mb-6">
+                        🌟 Anak muslim harus membiasakan hidup bersih dan menjaga kesucian.
+                    </p>
+
+                    <!-- G. Menghafal Hadis -->
+                    <div class="border-t border-slate-200 pt-6">
+                        <h2 class="text-lg md:text-xl font-extrabold text-teal-800 mb-3">
+                            G. Menghafal Hadis tentang Kesucian
+                        </h2>
+                        <p class="text-xs md:text-sm text-slate-600 mb-4">Bacalah hadis berikut berulang-ulang:</p>
+
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-center mb-4">
+                            <div class="font-arabic text-2xl font-bold text-teal-900 mb-1">الطُّهُوْرُ شَطْرُ الْإِيْمَانِ</div>
+                            <div class="text-xs font-semibold text-teal-800">Aṭ-ṭuhūru syaṭrul īmān</div>
+                            <div class="text-xs text-slate-600 italic mt-1">“Kesucian adalah separuh dari iman.”</div>
+                        </div>
+
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 space-y-3">
+                            <h4 class="font-bold text-amber-900 text-xs md:text-sm">Cara Menghafal:</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                                <div class="bg-white p-3 rounded-lg border border-amber-300">
+                                    <span class="font-bold text-amber-900 block mb-1">Bagian pertama:</span>
+                                    <span class="font-arabic text-xl font-bold text-teal-900 block">الطُّهُوْرُ</span>
+                                    <span class="text-slate-600">Aṭ-ṭuhūru</span>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-amber-300">
+                                    <span class="font-bold text-amber-900 block mb-1">Bagian kedua:</span>
+                                    <span class="font-arabic text-xl font-bold text-teal-900 block">شَطْرُ الْإِيْمَانِ</span>
+                                    <span class="text-slate-600">Syaṭrul īmān</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-amber-800 font-semibold pt-1">
+                                Kemudian gabungkan: <span class="font-arabic text-lg font-bold text-teal-900">الطُّهُوْرُ شَطْرُ الْإِيْمَانِ</span> (Aṭ-ṭuhūru syaṭrul īmān). Ulangi beberapa kali sampai lancar dan hafalkan tanpa melihat teks.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: RINGKASAN MATERI -->
+        <div id="tab-ringkasan" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8 mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-table-list text-emerald-600"></i> H. Ringkasan Materi
+                </h2>
+                
+                <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+                    <table class="w-full text-left border-collapse text-xs md:text-sm">
+                        <thead>
+                            <tr class="bg-teal-800 text-white font-bold">
+                                <th class="p-3 text-center">No.</th>
+                                <th class="p-3">Materi</th>
+                                <th class="p-3">Hal yang Dipelajari</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-800">
+                            <tr>
+                                <td class="p-3 text-center font-bold">1</td>
+                                <td class="p-3 font-semibold text-teal-800">Huruf hijaiyah bersambung</td>
+                                <td class="p-3">Membaca huruf hijaiyah dalam bentuk bersambung</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 text-center font-bold">2</td>
+                                <td class="p-3 font-semibold text-teal-800">Surat Al-Ikhlas</td>
+                                <td class="p-3">Membaca Surat Al-Ikhlas dengan benar</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 text-center font-bold">3</td>
+                                <td class="p-3 font-semibold text-teal-800">Pesan Surat Al-Ikhlas</td>
+                                <td class="p-3">Mengetahui bahwa Allah Maha Esa</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 text-center font-bold">4</td>
+                                <td class="p-3 font-semibold text-teal-800">Hafalan Al-Ikhlas</td>
+                                <td class="p-3">Menghafalkan 4 ayat Surat Al-Ikhlas</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 text-center font-bold">5</td>
+                                <td class="p-3 font-semibold text-teal-800">Hadis kesucian</td>
+                                <td class="p-3 font-arabic text-base text-teal-900 font-bold">الطُّهُوْرُ شَطْرُ الْإِيْمَانِ</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 text-center font-bold">6</td>
+                                <td class="p-3 font-semibold text-teal-800">Makna hadis</td>
+                                <td class="p-3">Kesucian adalah separuh dari iman</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 text-center font-bold">7</td>
+                                <td class="p-3 font-semibold text-teal-800">Hafalan hadis</td>
+                                <td class="p-3">Menghafalkan hadis beserta artinya</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 text-center font-bold">8</td>
+                                <td class="p-3 font-semibold text-teal-800">Penerapan</td>
+                                <td class="p-3">Membiasakan hidup bersih dan menjaga kesucian</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Kesimpulan -->
+                <div class="bg-gradient-to-br from-emerald-50 to-indigo-50 rounded-2xl p-6 border border-slate-300">
+                    <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-star text-amber-500"></i> Kesimpulan
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Sebagai anak muslim, kita harus pandai membaca Al-Qur'an, mampu membaca huruf hijaiyah bersambung, serta menghafal Surat Al-Ikhlas. Surat Al-Ikhlas mengajarkan bahwa Allah Swt. adalah Tuhan Yang Maha Esa.
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Kita juga harus menjaga kesucian dan kebersihan. Rasulullah saw. bersabda:
+                    </p>
+                    <div class="p-3 bg-white rounded-xl border border-slate-200 text-center mb-3">
+                        <span class="font-arabic text-xl font-bold text-teal-900 block">الطُّهُورُ شَطْرُ الإِيمَانِ</span>
+                        <span class="text-xs md:text-sm text-slate-700 italic">“Kesucian adalah separuh dari iman.” (HR. Muslim)</span>
+                    </div>
+                    <p class="text-xs md:text-sm font-semibold text-teal-800">
+                        Oleh karena itu, mari kita biasakan hidup bersih, suci, rapi, dan sehat dalam kehidupan sehari-hari.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 2 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 8</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti Kelas 2 SD.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 2 SD
+        const quizData = [
+            {
+                question: "1. Berada di posisi mana sajakah bentuk huruf hijaiyah dapat berubah dalam sebuah kata?",
+                options: [
+                    "A. Tunggal, awal, tengah, dan akhir",
+                    "B. Atas, bawah, kanan, dan kiri",
+                    "C. Depan dan belakang saja",
+                    "D. Besar dan kecil saja"
+                ],
+                correct: 0,
+                explanation: "Huruf hijaiyah memiliki 4 bentuk: tunggal, awal, tengah, dan akhir."
+            },
+            {
+                question: "2. Surat Al-Ikhlas terdiri dari berapa ayat?",
+                options: [
+                    "A. 3 ayat",
+                    "B. 4 ayat",
+                    "C. 5 ayat",
+                    "D. 7 ayat"
+                ],
+                correct: 1,
+                explanation: "Surat Al-Ikhlas adalah surat ke-112 yang terdiri dari 4 ayat."
+            },
+            {
+                question: "3. Surat Al-Ikhlas tergolong ke dalam surat...",
+                options: [
+                    "A. Madaniyah",
+                    "B. Makkiyah",
+                    "C. Panjang",
+                    "D. Sedang"
+                ],
+                correct: 1,
+                explanation: "Surat Al-Ikhlas termasuk ke dalam golongan surat Makkiyah."
+            },
+            {
+                question: "4. Apakah arti dari ayat 'قُلْ هُوَ اللّٰهُ أَحَدٌ'?",
+                options: [
+                    "A. Allah tempat meminta segala sesuatu.",
+                    "B. Katakanlah, 'Dialah Allah Yang Maha Esa.'",
+                    "C. Allah tidak beranak dan tidak pula diperanakkan.",
+                    "D. Dan tidak ada sesuatu yang setara dengan Dia."
+                ],
+                correct: 1,
+                explanation: "Ayat pertama Surat Al-Ikhlas artinya 'Katakanlah, Dialah Allah Yang Maha Esa.'"
+            },
+            {
+                question: "5. Pesan utama dari Surat Al-Ikhlas adalah tentang...",
+                options: [
+                    "A. Tata cara berwudu",
+                    "B. Keesaan Allah Swt.",
+                    "C. Sejarah para nabi",
+                    "D. Kebersihan tempat salat"
+                ],
+                correct: 1,
+                explanation: "Surat Al-Ikhlas mengajarkan tentang keesaan Allah Swt. bahwa Allah itu satu."
+            },
+            {
+                question: "6. Lengkapilah potongan hadis berikut: 'الطُّهُورُ شَطْرُ ...'",
+                options: [
+                    "A. الإِيمَانِ (al-īmān)",
+                    "B. الإِسْلَامِ (al-islām)",
+                    "C. الصَّلاَةِ (aṣ-ṣalāh)",
+                    "D. القُرْآنِ (al-qur'ān)"
+                ],
+                correct: 0,
+                explanation: "Lanjutan hadis kesucian adalah 'الطُّهُورُ شَطْرُ الْإِيمَانِ' (Aṭ-ṭuhūru syaṭrul īmān)."
+            },
+            {
+                question: "7. Apakah arti dari hadis 'الطُّهُورُ شَطْرُ الْإِيمَانِ'?",
+                options: [
+                    "A. Salat adalah tiang agama.",
+                    "B. Kebersihan pangkal kesehatan.",
+                    "C. Kesucian adalah separuh dari iman.",
+                    "D. Membaca Al-Qur'an mendapat pahala."
+                ],
+                correct: 2,
+                explanation: "Hadis riwayat Muslim tersebut artinya 'Kesucian adalah separuh dari iman.'"
+            },
+            {
+                question: "8. Manakah yang merupakan contoh menjaga kebersihan lingkungan?",
+                options: [
+                    "A. Memotong kuku",
+                    "B. Mandi setiap hari",
+                    "C. Menggosok gigi",
+                    "D. Membuang sampah pada tempatnya"
+                ],
+                correct: 3,
+                explanation: "Membuang sampah pada tempatnya merupakan salah satu contoh perilaku menjaga kebersihan lingkungan."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>
