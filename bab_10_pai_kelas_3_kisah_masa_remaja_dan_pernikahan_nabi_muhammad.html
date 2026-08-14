@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 3 SD - Kisah Masa Remaja & Pernikahan Nabi Muhammad SAW</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-mosque"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 10. Kisah Masa Remaja dan Pernikahan Nabi Muhammad SAW</h1>
+                    <p class="text-xs text-emerald-200 font-medium mt-0.5">Fase B - Kelas 3 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('remaja', this)">
+                    <i class="fa-solid fa-child"></i> Masa Remaja & Sifat
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('pernikahan', this)">
+                    <i class="fa-solid fa-heart"></i> Pernikahan Nabi
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('hikmah', this)">
+                    <i class="fa-solid fa-star"></i> Hikmah & Ringkasan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-emerald-700 to-teal-800 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🕌 Kisah Masa Remaja & Pernikahan Nabi Muhammad SAW</h2>
+                    <p class="text-sm md:text-base text-emerald-100 leading-relaxed">
+                        Mengenal keteladanan akhlak mulia Nabi Muhammad SAW sejak masa remaja hingga pernikahan beliau dengan Sayyidatuna Khadijah binti Khuwailid.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-emerald-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('remaja')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian A</span>
+                            <i class="fa-solid fa-seedling text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Masa Remaja Nabi</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Kisah Pekerjaan & Perjuangan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Kisah Nabi Muhammad SAW menggembala kambing, berdagang ke negeri Syam bersama pamannya Abu Thalib, dan ketabahannya sejak kecil.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Remaja Nabi <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('remaja')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian B</span>
+                            <i class="fa-solid fa-award text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Sifat & Gelar Al-Amin</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Keteladanan Akhlak Mulia</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Sifat terpuji seperti jujur, amanah, sabar, rajin, dan bertanggung jawab yang membuat beliau bergelar Al-Amin.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Akhlak Mulia <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pernikahan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian C-D</span>
+                            <i class="fa-solid fa-heart text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pernikahan Nabi</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Khadijah binti Khuwailid</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Kisah pernikahan Nabi di usia 25 tahun, kerjasama dagang, dan keteladanan dalam membina keluarga yang harmonis.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Pernikahan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hikmah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian E</span>
+                            <i class="fa-solid fa-table text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Hikmah & Ringkasan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pelajaran Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Hikmah yang dapat diterapkan oleh siswa Kelas 3 SD dan tabel ringkasan poin-poin penting materi.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Buka Ringkasan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-emerald-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Siswa Kelas 3 SD
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Mari kita meneladani Nabi Muhammad SAW sejak sekarang. Jadilah anak yang jujur, rajin, sabar, amanah, sopan, dan bertanggung jawab!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: MASA REMAJA & AKHLAK NABI -->
+        <div id="tab-remaja" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- A. Masa Remaja Nabi Muhammad SAW -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-child"></i> A. Masa Remaja Nabi Muhammad SAW
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Nabi Muhammad SAW lahir di Kota Makkah pada <strong>12 Rabiul Awal Tahun Gajah</strong>. Ayah beliau bernama <strong>Abdullah bin Abdul Muthalib</strong>, sedangkan ibu beliau bernama <strong>Aminah binti Wahab</strong>.
+                </p>
+
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-4 text-xs md:text-sm text-slate-700 space-y-2">
+                    <h4 class="font-bold text-amber-900 flex items-center gap-2">
+                        <i class="fa-solid fa-heart-broken text-amber-600"></i> Ujian Hidup Sejak Kecil:
+                    </h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Ayah beliau (Abdullah) meninggal dunia sebelum Nabi Muhammad SAW lahir.</li>
+                        <li>Ibu beliau (Aminah) meninggal dunia ketika Nabi berusia sekitar 6 tahun.</li>
+                        <li>Setelah itu, beliau diasuh oleh kakeknya, <strong>Abdul Muthalib</strong>.</li>
+                        <li>Setelah kakeknya meninggal, beliau diasuh oleh pamannya, <strong>Abu Thalib</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900">
+                        <div class="font-bold text-emerald-800 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-cow"></i> Menggembala Kambing
+                        </div>
+                        Ketika memasuki masa remaja, Nabi Muhammad SAW membantu pamannya menggembalakan kambing. Beliau menjalankan pekerjaan tersebut dengan sabar, rajin, dan bertanggung jawab.
+                    </div>
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900">
+                        <div class="font-bold text-emerald-800 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Berdagang ke Negeri Syam
+                        </div>
+                        Nabi Muhammad SAW juga pernah ikut berdagang bersama pamannya ke negeri Syam. Dari perjalanan tersebut, beliau belajar tentang perdagangan dan kehidupan masyarakat.
+                    </div>
+                </div>
+            </div>
+
+            <!-- B. Keteladanan Nabi Muhammad SAW pada Masa Remaja -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2">
+                    <i class="fa-solid fa-award"></i> B. Keteladanan Nabi Muhammad SAW pada Masa Remaja
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Pada masa remaja, Nabi Muhammad SAW memiliki akhlak yang sangat mulia. Beberapa sifat yang dapat kita teladani adalah:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-600"></i> Jujur
+                        </div>
+                        <p class="text-slate-600">Nabi Muhammad SAW selalu berkata benar dan tidak pernah berbohong.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-emerald-600"></i> Amanah
+                        </div>
+                        <p class="text-slate-600">Beliau dapat dipercaya dalam menjaga tugas dan barang milik orang lain.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase text-emerald-600"></i> Rajin Bekerja
+                        </div>
+                        <p class="text-slate-600">Nabi Muhammad SAW tidak malas. Beliau mau bekerja menggembala kambing dan membantu pamannya.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-hands-holding text-emerald-600"></i> Sabar
+                        </div>
+                        <p class="text-slate-600">Beliau tetap sabar meskipun sejak kecil mengalami berbagai kesulitan.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-emerald-600"></i> Bertanggung Jawab
+                        </div>
+                        <p class="text-slate-600">Setiap pekerjaan yang diberikan kepadanya dilakukan dengan sebaik-baiknya.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-face-smile text-emerald-600"></i> Sopan & Baik Hati
+                        </div>
+                        <p class="text-slate-600">Nabi Muhammad SAW selalu bersikap baik kepada orang lain.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-emerald-100 border border-emerald-300 rounded-xl text-xs md:text-sm text-emerald-900 flex items-center gap-3 mt-4">
+                    <i class="fa-solid fa-certificate text-2xl text-emerald-700"></i>
+                    <div>
+                        <strong>Gelar Al-Amin:</strong> Karena kejujuran dan amanahnya, Nabi Muhammad SAW kemudian dikenal oleh masyarakat Makkah dengan gelar <strong>Al-Amin</strong>, yang berarti <em>"orang yang dapat dipercaya"</em>.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: PERNIKAHAN NABI & KETELADANAN -->
+        <div id="tab-pernikahan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C. Pernikahan Nabi Muhammad SAW -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-heart"></i> C. Pernikahan Nabi Muhammad SAW
+                </h2>
+                
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Ketika Nabi Muhammad SAW berusia <strong>25 tahun</strong>, beliau menikah dengan seorang perempuan mulia bernama <strong>Khadijah binti Khuwailid</strong>.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-700 space-y-2">
+                        <h4 class="font-bold text-emerald-800 text-base flex items-center gap-2">
+                            <i class="fa-solid fa-user-tie"></i> Khadijah binti Khuwailid
+                        </h4>
+                        <p>Khadijah adalah seorang wanita yang terhormat dan merupakan seorang pedagang yang sukses. Ia mengetahui kejujuran dan kehebatan Nabi Muhammad SAW dalam berdagang.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-700 space-y-2">
+                        <h4 class="font-bold text-emerald-800 text-base flex items-center gap-2">
+                            <i class="fa-solid fa-handshake"></i> Kepercayaan & Pernikahan
+                        </h4>
+                        <p>Khadijah mempercayakan barang dagangannya kepada Nabi Muhammad SAW untuk dibawa berdagang. Setelah mengetahui akhlak Nabi yang sangat baik, Khadijah menyampaikan keinginannya untuk menikah.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 leading-relaxed">
+                    <p class="mb-2"><strong>Kehidupan Rumah Tangga:</strong></p>
+                    <p>Pernikahan Nabi Muhammad SAW dan Khadijah merupakan keluarga yang penuh dengan kasih sayang, kesetiaan, dan saling membantu. Khadijah selalu mendukung Nabi Muhammad SAW, terutama ketika beliau menerima wahyu pertama dan menghadapi berbagai kesulitan dalam berdakwah.</p>
+                </div>
+            </div>
+
+            <!-- D. Keteladanan dari Pernikahan Nabi Muhammad SAW -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-people-roof"></i> D. Keteladanan dari Pernikahan Nabi Muhammad SAW
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Dari kisah pernikahan Nabi Muhammad SAW dan Khadijah, kita dapat belajar:</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-heart text-emerald-600 text-xl"></i>
+                        <span>Saling menyayangi dalam keluarga.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-hands-holding-child text-emerald-600 text-xl"></i>
+                        <span>Saling membantu ketika menghadapi kesulitan.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-handshake-angle text-emerald-600 text-xl"></i>
+                        <span>Saling menghormati antara suami dan istri.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-shield-heart text-emerald-600 text-xl"></i>
+                        <span>Setia kepada keluarga.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-scale-balanced text-emerald-600 text-xl"></i>
+                        <span>Jujur dan amanah dalam kehidupan.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-thumbs-up text-emerald-600 text-xl"></i>
+                        <span>Mendukung kebaikan dan perjuangan orang lain.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: HIKMAH & RINGKASAN MATERI -->
+        <div id="tab-hikmah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- E. Hikmah yang Dapat Kita Ambil -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-lightbulb"></i> E. Hikmah yang Dapat Kita Ambil
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Kisah masa remaja dan pernikahan Nabi Muhammad SAW mengajarkan kita bahwa anak yang <strong>rajin, jujur, sabar, dan bertanggung jawab</strong> akan menjadi pribadi yang dipercaya dan disayangi oleh orang lain.
+                </p>
+
+                <h3 class="font-bold text-slate-800 text-sm md:text-base mb-3">Penerapan bagi Siswa Kelas 3 SD:</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-book-open-reader text-emerald-600"></i> Rajin belajar.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-comment-dots text-emerald-600"></i> Berkata jujur.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-house-chimney-user text-emerald-600"></i> Membantu orang tua.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-vault text-emerald-600"></i> Menjaga amanah.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-user-group text-emerald-600"></i> Menyanyangi teman.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-pen-ruler text-emerald-600"></i> Bertanggung jawab terhadap tugas sekolah.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ringkasan Tabel -->
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-slate-300 space-y-4">
+                <h3 class="text-emerald-800 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-table text-amber-500"></i> Ringkasan Materi PAI Kelas 3 SD
+                </h3>
+
+                <!-- Tabel Ringkasan -->
+                <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm mt-4">
+                    <table class="w-full text-left text-xs md:text-sm">
+                        <thead class="bg-emerald-800 text-white font-bold">
+                            <tr>
+                                <th class="p-3 border-b">Materi</th>
+                                <th class="p-3 border-b">Hal Penting</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Masa remaja</td>
+                                <td class="p-3">Nabi Muhammad SAW menggembala kambing dan membantu berdagang</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Sifat Nabi</td>
+                                <td class="p-3">Jujur, amanah, sabar, rajin, dan bertanggung jawab</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Gelar Nabi</td>
+                                <td class="p-3">Al-Amin, artinya orang yang dapat dipercaya</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Usia menikah</td>
+                                <td class="p-3">25 tahun</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Istri pertama</td>
+                                <td class="p-3">Khadijah binti Khuwailid</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Keteladanan keluarga</td>
+                                <td class="p-3">Saling menyayangi, menghormati, membantu, dan setia</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 3 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 3 SD
+        const quizData = [
+            {
+                question: "1. Kapan dan di manakah Nabi Muhammad SAW dilahirkan?",
+                options: [
+                    "A. Makkah, 12 Rabiul Awal Tahun Gajah",
+                    "B. Madinah, 1 Muharram",
+                    "C. Syam, 17 Ramadan",
+                    "D. Makkah, 10 Zulhijjah"
+                ],
+                correct: 0,
+                explanation: "Nabi Muhammad SAW lahir di Kota Makkah pada 12 Rabiul Awal Tahun Gajah."
+            },
+            {
+                question: "2. Siapakah paman yang mengasuh Nabi Muhammad SAW setelah kakeknya meninggal dunia?",
+                options: [
+                    "A. Abdul Muthalib",
+                    "B. Abu Thalib",
+                    "C. Abdullah",
+                    "D. Hamzah"
+                ],
+                correct: 1,
+                explanation: "Setelah kakeknya (Abdul Muthalib) meninggal, Nabi Muhammad SAW diasuh oleh pamannya, Abu Thalib."
+            },
+            {
+                question: "3. Apa pekerjaan yang dilakukan Nabi Muhammad SAW saat memasuki masa remaja untuk membantu pamannya?",
+                options: [
+                    "A. Menjadi nelayan",
+                    "B. Menggembalakan kambing",
+                    "C. Membuat pedang",
+                    "D. Petani padi"
+                ],
+                correct: 1,
+                explanation: "Ketika memasuki masa remaja, Nabi Muhammad SAW membantu pamannya menggembalakan kambing."
+            },
+            {
+                question: "4. Nabi Muhammad SAW pernah diajak berdagang oleh pamannya ke negeri...",
+                options: [
+                    "A. Mesir",
+                    "B. Yaman",
+                    "C. Syam",
+                    "D. Persia"
+                ],
+                correct: 2,
+                explanation: "Nabi Muhammad SAW pernah ikut berdagang bersama pamannya ke negeri Syam."
+            },
+            {
+                question: "5. Karena kejujuran dan sifat amanahnya, masyarakat Makkah memberi gelar Al-Amin kepada Nabi Muhammad SAW yang artinya...",
+                options: [
+                    "A. Orang yang cerdas",
+                    "B. Orang yang kuat",
+                    "C. Orang yang dapat dipercaya",
+                    "D. Orang yang kaya raya"
+                ],
+                correct: 2,
+                explanation: "Al-Amin artinya adalah orang yang dapat dipercaya."
+            },
+            {
+                question: "6. Pada usia berapakah Nabi Muhammad SAW menikah dengan Khadijah binti Khuwailid?",
+                options: [
+                    "A. 15 tahun",
+                    "B. 20 tahun",
+                    "C. 25 tahun",
+                    "D. 40 tahun"
+                ],
+                correct: 2,
+                explanation: "Nabi Muhammad SAW menikah pada usia 25 tahun."
+            },
+            {
+                question: "7. Siapakah nama istri pertama Nabi Muhammad SAW yang merupakan seorang pedagang sukses dan mulia?",
+                options: [
+                    "A. Aminah binti Wahab",
+                    "B. Khadijah binti Khuwailid",
+                    "C. Aisyah binti Abu Bakar",
+                    "D. Fatimah az-Zahra"
+                ],
+                correct: 1,
+                explanation: "Istri pertama beliau adalah Khadijah binti Khuwailid."
+            },
+            {
+                question: "8. Sifat Nabi Muhammad SAW yang selalu berkata benar dan tidak pernah berbohong dinamakan...",
+                options: [
+                    "A. Jujur",
+                    "B. Sombong",
+                    "C. Malas",
+                    "D. Pemarah"
+                ],
+                correct: 0,
+                explanation: "Jujur artinya selalu berkata benar dan tidak pernah berbohong."
+            },
+            {
+                question: "9. Bagaimana sikap Khadijah ketika Nabi Muhammad SAW menghadapi kesulitan dalam berdakwah?",
+                options: [
+                    "A. Membiarkannya sendiri",
+                    "B. Selalu mendukung Nabi Muhammad SAW",
+                    "C. Melarang Nabi berdakwah",
+                    "D. Acuh tak acuh"
+                ],
+                correct: 1,
+                explanation: "Khadijah selalu mendukung Nabi Muhammad SAW, terutama ketika beliau menerima wahyu dan berdakwah."
+            },
+            {
+                question: "10. Sebagai siswa kelas 3 SD, cara meneladani sifat Nabi Muhammad SAW di sekolah adalah...",
+                options: [
+                    "A. Mencontek saat ujian",
+                    "B. Malas mengerjakan tugas",
+                    "C. Berkata jujur dan bertanggung jawab terhadap tugas",
+                    "D. Dimusuhi teman"
+                ],
+                correct: 2,
+                explanation: "Siswa kelas 3 SD dapat meneladani Nabi dengan cara rajin belajar, berkata jujur, dan bertanggung jawab terhadap tugas sekolah."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-emerald-600 bg-emerald-50 text-emerald-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-emerald-400 hover:bg-emerald-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-emerald-100 text-emerald-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-emerald-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

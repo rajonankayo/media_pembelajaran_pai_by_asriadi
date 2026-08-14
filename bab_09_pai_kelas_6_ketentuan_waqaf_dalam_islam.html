@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 6 SD - Ketentuan Waqaf dalam Islam</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 09. Ketentuan Waqaf dalam Islam</h1>
+                    <p class="text-xs text-emerald-200 font-medium mt-0.5">Fase C - Kelas 6 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-book-open"></i> Pengertian & Hukum
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('jenis', this)">
+                    <i class="fa-solid fa-layer-group"></i> Jenis, Rukun & Syarat
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('hikmah', this)">
+                    <i class="fa-solid fa-heart"></i> Hikmah & Sikap
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-emerald-700 to-teal-800 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🕌 Ketentuan Waqaf dalam Islam</h2>
+                    <p class="text-sm md:text-base text-emerald-100 leading-relaxed">
+                        Memahami Pengertian Waqaf, Dasar & Hukum, Jenis-Jenis, Rukun & Syarat, Contoh Kasus, Hikmah, serta Sikap yang Harus Diterapkan Sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-emerald-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">A - C</span>
+                            <i class="fa-solid fa-scale-balanced text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian & Hukum</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Landasan Syariat</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengetahui definisi waqaf, waqif, mauquf, dalil Al-Qur'an (QS. Ali 'Imran: 92), hadis amal jariyah, dan hukumnya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Ketentuan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('jenis')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">D - F</span>
+                            <i class="fa-solid fa-list-check text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Jenis, Rukun & Syarat</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Ketentuan Pelaksanaan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal waqaf ahli & khairi, benda bergerak & tidak bergerak, 5 rukun waqaf, dan syarat sah harta waqaf.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Rukun & Syarat <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hikmah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">G - I</span>
+                            <i class="fa-solid fa-hands-holding-heart text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Hikmah & Penerapan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Manfaat & Teladan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Contoh penerapan waqaf sehari-hari, hikmah sosial dan spiritual waqaf, serta sikap mulia seorang muslim.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hikmah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">J</span>
+                            <i class="fa-solid fa-table text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Ringkasan Materi</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tabel Kesimpulan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Rangkuman poin-poin utama materi waqaf dalam bentuk tabel yang ringkas dan mudah dipahami.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Buka Ringkasan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-emerald-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Siswa Muslim
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Waqaf adalah bentuk amal jariyah yang pahalanya terus mengalir meskipun kita sudah meninggal dunia. Mari kita pelajari ketentuannya dan tingkatkan rasa peduli untuk saling berbagi dan menjaga fasilitas umum!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN, DASAR & HUKUM WAKAF -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- A. Pengertian Waqaf -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-book-open"></i> A. Pengertian Waqaf
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    <strong>Waqaf</strong> adalah menyerahkan atau menahan harta yang dimiliki untuk dimanfaatkan bagi kepentingan ibadah dan kebaikan karena Allah Swt. Harta yang diwaqafkan digunakan untuk memberikan manfaat kepada orang lain dalam waktu yang lama atau sesuai dengan ketentuan waqaf.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900">
+                        <i class="fa-solid fa-user-check text-emerald-600 text-lg mb-1 block"></i>
+                        <strong>Wakif:</strong> Orang yang memberikan harta untuk waqaf.
+                    </div>
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900">
+                        <i class="fa-solid fa-box-archive text-emerald-600 text-lg mb-1 block"></i>
+                        <strong>Mauquf:</strong> Harta atau benda yang diwaqafkan.
+                    </div>
+                </div>
+
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 flex items-center gap-3">
+                    <i class="fa-solid fa-lightbulb text-amber-600 text-xl"></i>
+                    <div><strong>Contoh:</strong> Seseorang mewaqafkan tanah untuk dibangun masjid, sekolah, pesantren, atau tempat pelayanan masyarakat.</div>
+                </div>
+            </div>
+
+            <!-- B. Dasar Hukum Waqaf -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2">
+                    <i class="fa-solid fa-scale-balanced"></i> B. Dasar Hukum Waqaf
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Waqaf merupakan salah satu bentuk amal kebajikan yang sangat dianjurkan dalam Islam. Dasarnya antara lain terdapat dalam Al-Qur'an dan hadis.
+                </p>
+
+                <!-- Ayat Al-Qur'an -->
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">QS. Ali 'Imran: 92</span>
+                    </div>
+                    <div class="text-right text-2xl md:text-3xl font-arabic font-bold text-emerald-900 py-2 leading-loose">
+                        لَنْ تَنَالُوا الْبِرَّ حَتّٰى تُنْفِقُوا مِمَّا تُحِبُّوْنَ
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-700 bg-white p-3 rounded-xl border border-slate-200">
+                        <strong>Artinya:</strong> “Kamu tidak akan memperoleh kebajikan, sebelum kamu menginfakkan sebagian harta yang kamu cintai.”
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-600 italic">
+                        Ayat tersebut mengajarkan kepada umat Islam agar mau memberikan sebagian harta yang dicintainya untuk kebaikan.
+                    </p>
+                </div>
+
+                <!-- Hadis Amal Jariyah -->
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900">
+                    <h4 class="font-bold text-emerald-800 mb-1">Landasan Hadis: Amal Jariyah</h4>
+                    <p>Dalam hadis dijelaskan tentang amal jariyah, yaitu amal yang pahalanya terus mengalir meskipun seseorang telah meninggal dunia. Waqaf termasuk salah satu bentuk amal jariyah.</p>
+                </div>
+            </div>
+
+            <!-- C. Hukum Waqaf -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-gavel"></i> C. Hukum Waqaf
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Hukum waqaf pada dasarnya adalah <strong>sunnah</strong> atau dianjurkan bagi orang yang memiliki kemampuan dan harta yang dapat diwaqafkan. Orang yang melaksanakan waqaf dengan ikhlas akan mendapatkan pahala dari Allah Swt. Selama harta waqaf tersebut terus memberikan manfaat bagi orang lain, pahala waqaf dapat terus mengalir.
+                </p>
+
+                <h3 class="font-bold text-slate-800 text-sm md:text-base mb-2">Contoh Amalan Waqaf:</h3>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-slate-700">
+                    <li class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600"></i> Mewaqafkan tanah untuk masjid.
+                    </li>
+                    <li class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600"></i> Mewaqafkan buku untuk perpustakaan sekolah/pesantren.
+                    </li>
+                    <li class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600"></i> Mewaqafkan tanah untuk sekolah.
+                    </li>
+                    <li class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600"></i> Mewaqafkan sumur untuk digunakan masyarakat.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- TAB: JENIS, RUKUN & SYARAT -->
+        <div id="tab-jenis" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- D. Jenis-Jenis Waqaf -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-layer-group"></i> D. Jenis-Jenis Waqaf
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Waqaf dapat dibedakan menjadi beberapa jenis berdasarkan penerima manfaat dan bentuk bendanya:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Waqaf Ahli -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                        <span class="text-xs font-bold text-blue-800 bg-blue-100 px-3 py-1 rounded-full">1. Waqaf Ahli</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-2">
+                            Waqaf yang manfaatnya ditujukan kepada keluarga atau orang-orang tertentu.
+                        </p>
+                        <p class="text-xs text-slate-500 bg-white p-3 rounded-xl border border-slate-200">
+                            <strong>Contoh:</strong> Mewaqafkan rumah atau tanah yang hasilnya diberikan untuk membantu kehidupan anak dan keluarganya sesuai ketentuan waqaf.
+                        </p>
+                    </div>
+
+                    <!-- Waqaf Khairi -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">2. Waqaf Khairi</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-2">
+                            Waqaf yang manfaatnya ditujukan untuk kepentingan umum dan kebaikan. Bentuk waqaf ini paling banyak dijumpai.
+                        </p>
+                        <p class="text-xs text-slate-500 bg-white p-3 rounded-xl border border-slate-200">
+                            <strong>Contoh:</strong> Tanah untuk masjid/sekolah/pesantren, buku perpustakaan, sumur masyarakat.
+                        </p>
+                    </div>
+
+                    <!-- Waqaf Benda Tidak Bergerak -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                        <span class="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full">3. Waqaf Benda Tidak Bergerak</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-2">
+                            Waqaf berupa harta yang tidak mudah dipindahkan.
+                        </p>
+                        <p class="text-xs text-slate-500 bg-white p-3 rounded-xl border border-slate-200">
+                            <strong>Contoh:</strong> Tanah, bangunan, rumah, gedung, dan kebun.
+                        </p>
+                    </div>
+
+                    <!-- Waqaf Benda Bergerak -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                        <span class="text-xs font-bold text-purple-800 bg-purple-100 px-3 py-1 rounded-full">4. Waqaf Benda Bergerak</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-2">
+                            Waqaf berupa harta yang dapat dipindahkan atau digunakan.
+                        </p>
+                        <p class="text-xs text-slate-500 bg-white p-3 rounded-xl border border-slate-200">
+                            <strong>Contoh:</strong> Buku, kendaraan sosial, uang, peralatan pendidikan, dan peralatan ibadah.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E. Rukun Waqaf -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-list-check"></i> E. Rukun Waqaf
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Agar waqaf dapat dilaksanakan dengan baik, terdapat unsur-unsur penting (rukun) yang harus dipenuhi:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-user text-emerald-600"></i> 1. Wakif</div>
+                        <p class="text-slate-600">Orang yang memberikan waqaf.</p>
+                    </div>
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-box text-emerald-600"></i> 2. Mauquf</div>
+                        <p class="text-slate-600">Harta atau benda yang diwaqafkan.</p>
+                    </div>
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-users text-emerald-600"></i> 3. Mauquf 'Alaih</div>
+                        <p class="text-slate-600">Pihak yang menerima manfaat waqaf.</p>
+                    </div>
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
+                        <div class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-user-gear text-emerald-600"></i> 4. Nazhir</div>
+                        <p class="text-slate-600">Orang/pihak yang mengelola & mengembangkan harta waqaf.</p>
+                    </div>
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl sm:col-span-2 lg:col-span-2">
+                        <div class="font-bold text-emerald-800 mb-1"><i class="fa-solid fa-file-signature text-emerald-600"></i> 5. Ikrar Waqaf</div>
+                        <p class="text-slate-600">Pernyataan kehendak waqif untuk mewaqafkan hartanya.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- F. Syarat Harta yang Diwaqafkan -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-circle-check"></i> F. Syarat Harta yang Diwaqafkan
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Harta yang akan diwaqafkan harus memenuhi ketentuan sebagai berikut:</p>
+                
+                <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                    <li class="flex items-center gap-2.5 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Merupakan harta yang <strong>halal</strong>.</span>
+                    </li>
+                    <li class="flex items-center gap-2.5 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Dimiliki secara <strong>sah</strong> oleh orang yang mewaqafkan.</span>
+                    </li>
+                    <li class="flex items-center gap-2.5 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Mempunyai <strong>manfaat</strong>.</span>
+                    </li>
+                    <li class="flex items-center gap-2.5 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span><strong>Jelas</strong> jenis dan jumlahnya.</span>
+                    </li>
+                    <li class="flex items-center gap-2.5 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Dapat dimanfaatkan <strong>sesuai tujuan waqaf</strong>.</span>
+                    </li>
+                    <li class="flex items-center gap-2.5 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span><strong>Tidak digunakan</strong> untuk sesuatu yang bertentangan dengan ajaran Islam.</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- TAB: HIKMAH, SIKAP & RINGKASAN -->
+        <div id="tab-hikmah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- G. Contoh Waqaf Sehari-hari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-hand-holding-heart"></i> G. Contoh Waqaf dalam Kehidupan Sehari-hari
+                </h2>
+                <ul class="space-y-2 text-xs md:text-sm text-slate-700 mb-4">
+                    <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-emerald-600 mt-1"></i> <span>Orang tua mewaqafkan tanah untuk pembangunan masjid.</span></li>
+                    <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-emerald-600 mt-1"></i> <span>Seseorang mewaqafkan tanah untuk sekolah.</span></li>
+                    <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-emerald-600 mt-1"></i> <span>Seseorang mewaqafkan Al-Qur'an untuk masjid.</span></li>
+                    <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-emerald-600 mt-1"></i> <span>Mewaqafkan buku untuk perpustakaan pesantren.</span></li>
+                    <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-emerald-600 mt-1"></i> <span>Mewaqafkan sumur untuk memenuhi kebutuhan air masyarakat.</span></li>
+                </ul>
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900">
+                    <strong>Peran Siswa:</strong> Sebagai siswa, kita dapat belajar menghargai dan menjaga fasilitas yang berasal dari waqaf. Misalnya, menjaga kebersihan masjid, merawat buku waqaf, dan menggunakan fasilitas sekolah dengan baik.
+                </div>
+            </div>
+
+            <!-- H. Hikmah Waqaf -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-star"></i> H. Hikmah Waqaf
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-award text-emerald-600 text-xl"></i>
+                        <span>Mendapat pahala dari Allah Swt.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-infinity text-emerald-600 text-xl"></i>
+                        <span>Menjadi amal jariyah yang pahalanya mengalir.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-users text-emerald-600 text-xl"></i>
+                        <span>Membantu memenuhi kebutuhan masyarakat.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-building-columns text-emerald-600 text-xl"></i>
+                        <span>Membantu pembangunan fasilitas umum.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-heart-circle-plus text-emerald-600 text-xl"></i>
+                        <span>Menumbuhkan rasa peduli dan berbagi.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-handshake text-emerald-600 text-xl"></i>
+                        <span>Mempererat persaudaraan & kepedulian sosial.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3 sm:col-span-2 md:col-span-3 justify-center">
+                        <i class="fa-solid fa-scale-unbalanced text-emerald-600 text-xl"></i>
+                        <span>Mengurangi kesenjangan sosial dalam masyarakat.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- I. Sikap yang Harus Diterapkan -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-user-shield"></i> I. Sikap yang Harus Diterapkan
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-3">Sebagai seorang muslim, kita dapat meneladani semangat waqaf dengan cara:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Rajin berbagi kepada orang lain.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Menjaga dan merawat fasilitas waqaf.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Menggunakan fasilitas umum dengan bertanggung jawab.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Tidak merusak barang milik bersama.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Bersyukur atas nikmat Allah Swt.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Membiasakan diri berbuat baik.
+                    </div>
+                </div>
+            </div>
+
+            <!-- J. Kesimpulan & Ringkasan Tabel -->
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-slate-300 space-y-4">
+                <h3 class="text-emerald-800 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-table text-amber-500"></i> J. Ringkasan & Kesimpulan Materi Waqaf
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Waqaf adalah menyerahkan atau menahan harta untuk dimanfaatkan bagi kepentingan ibadah dan kebaikan karena Allah Swt. Hukum waqaf pada dasarnya adalah sunnah. Orang yang berwaqaf disebut waqif, sedangkan pihak yang mengelola disebut nazhir. Waqaf merupakan salah satu bentuk amal jariyah yang memberikan manfaat bagi banyak orang.
+                </p>
+
+                <!-- Tabel Ringkasan -->
+                <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm mt-4">
+                    <table class="w-full text-left text-xs md:text-sm">
+                        <thead class="bg-emerald-800 text-white font-bold">
+                            <tr>
+                                <th class="p-3 border-b">Materi</th>
+                                <th class="p-3 border-b">Penjelasan</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Waqaf</td>
+                                <td class="p-3">Menyerahkan atau menahan harta untuk kepentingan kebaikan karena Allah Swt.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Wakif</td>
+                                <td class="p-3">Orang yang memberikan waqaf.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Mauquf</td>
+                                <td class="p-3">Harta atau benda yang diwaqafkan.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Nazhir</td>
+                                <td class="p-3">Pihak yang mengelola waqaf.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Hukum</td>
+                                <td class="p-3">Sunnah/dianjurkan.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Waqaf Ahli</td>
+                                <td class="p-3">Ditujukan kepada keluarga/orang tertentu.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Waqaf Khairi</td>
+                                <td class="p-3">Ditujukan untuk kepentingan umum.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Benda Bergerak</td>
+                                <td class="p-3">Buku, uang, kendaraan, dan sebagainya.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Benda Tidak Bergerak</td>
+                                <td class="p-3">Tanah, rumah, gedung, dan sebagainya.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Hikmah</td>
+                                <td class="p-3">Mendapat pahala, membantu sesama, dan menjadi amal jariyah.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 6 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Ketentuan Waqaf dalam Islam PAI Kelas 6 SD
+        const quizData = [
+            {
+                question: "1. Menyerahkan atau menahan harta yang dimiliki untuk dimanfaatkan bagi kepentingan ibadah dan kebaikan disebut...",
+                options: [
+                    "A. Zakat",
+                    "B. Waqaf",
+                    "C. Pajak",
+                    "D. Jual Beli"
+                ],
+                correct: 1,
+                explanation: "Waqaf adalah menyerahkan atau menahan harta untuk kepentingan ibadah dan kebaikan karena Allah Swt."
+            },
+            {
+                question: "2. Orang yang memberikan harta atau barang miliknya untuk diwaqafkan disebut...",
+                options: [
+                    "A. Nazhir",
+                    "B. Mauquf",
+                    "C. Wakif",
+                    "D. Mauquf 'alaih"
+                ],
+                correct: 2,
+                explanation: "Wakif adalah sebutan bagi orang yang menyerahkan harta waqaf."
+            },
+            {
+                question: "3. Pihak yang bertugas mengelola dan mengembangkan harta waqaf disebut...",
+                options: [
+                    "A. Wakif",
+                    "B. Nazhir",
+                    "C. Mauquf",
+                    "D. Mustahik"
+                ],
+                correct: 1,
+                explanation: "Nazhir adalah orang atau pihak yang mengelola dan mengembangkan harta waqaf."
+            },
+            {
+                question: "4. Apakah hukum dasar melaksanakan waqaf bagi orang yang mampu?",
+                options: [
+                    "A. Wajib 'ain",
+                    "B. Sunnah",
+                    "C. Makruh",
+                    "D. Haram"
+                ],
+                correct: 1,
+                explanation: "Hukum waqaf pada dasarnya adalah sunnah atau dianjurkan bagi yang memiliki kemampuan."
+            },
+            {
+                question: "5. Dalil Al-Qur'an yang mengajarkan menginfakkan sebagian harta yang dicintai terdapat dalam...",
+                options: [
+                    "A. QS. Ali 'Imran: 92",
+                    "B. QS. Al-Baqarah: 183",
+                    "C. QS. Al-Ikhlas: 1",
+                    "D. QS. Al-Ma'un: 3"
+                ],
+                correct: 0,
+                explanation: "QS. Ali 'Imran ayat 92 menjelaskan kewajiban menginfakkan sebagian harta yang dicintai."
+            },
+            {
+                question: "6. Waqaf yang manfaatnya ditujukan khusus kepada keluarga dinamakan...",
+                options: [
+                    "A. Waqaf Khairi",
+                    "B. Waqaf Benda Bergerak",
+                    "C. Waqaf Ahli",
+                    "D. Waqaf Tunai"
+                ],
+                correct: 2,
+                explanation: "Waqaf ahli adalah waqaf yang manfaatnya ditujukan kepada keluarga atau orang-orang tertentu."
+            },
+            {
+                question: "7. Contoh harta waqaf benda bergerak di bawah ini adalah...",
+                options: [
+                    "A. Tanah dan Gedung",
+                    "B. Rumah dan Kebun",
+                    "C. Buku dan Uang",
+                    "D. Sawah dan Bangunan"
+                ],
+                correct: 2,
+                explanation: "Buku, uang, kendaraan, dan alat ibadah termasuk dalam kategori waqaf benda bergerak."
+            },
+            {
+                question: "8. Berikut ini yang BUKAN merupakan rukun waqaf adalah...",
+                options: [
+                    "A. Wakif",
+                    "B. Ikrar Waqaf",
+                    "C. Bunga Bank",
+                    "D. Mauquf"
+                ],
+                correct: 2,
+                explanation: "Rukun waqaf terdiri dari Wakif, Mauquf, Mauquf 'Alaih, Nazhir, dan Ikrar Waqaf."
+            },
+            {
+                question: "9. Harta yang diwaqafkan harus memenuhi syarat utama, yaitu...",
+                options: [
+                    "A. Hasil mencuri",
+                    "B. Harta yang halal dan milik sah",
+                    "C. Barang pinjaman",
+                    "D. Barang yang sudah rusak"
+                ],
+                correct: 1,
+                explanation: "Syarat harta waqaf antara lain harus halal, dimiliki secara sah, dan bermanfaat."
+            },
+            {
+                question: "10. Mengapa waqaf disebut sebagai amalan amal jariyah?",
+                options: [
+                    "A. Pahalanya langsung habis",
+                    "B. Pahalanya terus mengalir selama barang bermanfaat",
+                    "C. Hanya bernilai di dunia",
+                    "D. Hanya mendapat pujian dari manusia"
+                ],
+                correct: 1,
+                explanation: "Waqaf merupakan amal jariyah yang pahalanya terus mengalir meskipun seseorang telah meninggal dunia."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-emerald-600 bg-emerald-50 text-emerald-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-emerald-400 hover:bg-emerald-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-emerald-100 text-emerald-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-emerald-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

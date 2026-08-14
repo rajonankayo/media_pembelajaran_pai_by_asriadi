@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 5 SD - Akhlak Terpuji kepada Teman</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 08. Menerapkan Akhlak Terpuji kepada Teman</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase C - Kelas 5 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('contoh', this)">
+                    <i class="fa-solid fa-heart"></i> Contoh Akhlak Terpuji
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('manfaat', this)">
+                    <i class="fa-solid fa-star"></i> Manfaat & Dihindari
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('penerapan', this)">
+                    <i class="fa-solid fa-square-check"></i> Penerapan & Kesimpulan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🤝 Materi PAI Kelas 5 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed mb-3">
+                        Akhlak terpuji adalah perilaku baik yang sesuai dengan ajaran Islam. Sebagai seorang muslim, kita harus membiasakan diri berperilaku baik kepada siapa saja, termasuk kepada teman.
+                    </p>
+                    <p class="text-xs md:text-sm text-teal-200 leading-relaxed">
+                        Teman adalah orang yang sering bersama kita, baik di sekolah, di rumah, maupun di lingkungan sekitar. Islam mengajarkan kita untuk menyayangi, menghormati, membantu, dan menjaga perasaan teman. Allah Swt. menyukai orang yang berbuat baik kepada sesama.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('contoh')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A & B</span>
+                            <i class="fa-solid fa-hand-holding-heart text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Contoh Akhlak Terpuji</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Saling Menghormati & Menolong</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mempelajari 8 bentuk akhlak terpuji kepada teman seperti jujur, amanah, menyayangi, memaafkan, dan berbagi.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Materi <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('manfaat')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">C & D</span>
+                            <i class="fa-solid fa-star text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Manfaat & Dihindari</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Hikmah & Larangan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengetahui manfaat berakhlak terpuji serta perilaku buruk yang harus dihindari seperti membully dan berbohong.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">E & F</span>
+                            <i class="fa-solid fa-thumbs-up text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Penerapan & Kesimpulan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Praktik Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Contoh penerapan akhlak terpuji di sekolah dan di lingkungan rumah serta rangkuman pesan penting.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Rangkuman <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    📌 Pesan Penting
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    “Jadilah teman yang baik: suka menolong, berkata jujur, menghormati, tidak mengejek, dan selalu menjaga perasaan teman.”
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: CONTOH AKHLAK TERPUJI -->
+        <div id="tab-contoh" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-heart"></i> B. Contoh Akhlak Terpuji kepada Teman
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- 1. Saling Menghormati -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-handshake"></i> 1. Saling Menghormati
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-2">Kita harus menghormati teman meskipun memiliki perbedaan pendapat, kesukaan, kemampuan, atau kebiasaan.</p>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1 list-disc list-inside">
+                            <li>Mendengarkan ketika teman berbicara.</li>
+                            <li>Tidak mengejek kekurangan teman.</li>
+                            <li>Menghargai pendapat teman.</li>
+                            <li>Tidak memaksakan kehendak.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Saling Menyayangi -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-face-smile"></i> 2. Saling Menyayangi
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-2">Sesama teman harus saling menyayangi dan tidak melakukan perbuatan yang menyakiti.</p>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1 list-disc list-inside">
+                            <li>Berbicara dengan sopan.</li>
+                            <li>Tidak berkata kasar.</li>
+                            <li>Tidak melakukan perundungan atau bullying.</li>
+                            <li>Menjaga perasaan teman.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. Saling Menolong -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-hands-holding-child"></i> 3. Saling Menolong
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-2">Islam mengajarkan umatnya untuk saling membantu dalam kebaikan.</p>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1 list-disc list-inside">
+                            <li>Membantu teman yang kesulitan memahami pelajaran.</li>
+                            <li>Menolong teman yang terjatuh.</li>
+                            <li>Meminjamkan alat tulis kepada teman yang membutuhkan.</li>
+                            <li>Membantu teman yang sedang mengalami kesulitan.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. Bersikap Jujur -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved"></i> 4. Bersikap Jujur
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-2">Kejujuran merupakan akhlak yang sangat mulia. Kita harus berkata dan bertindak sesuai dengan kenyataan.</p>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1 list-disc list-inside">
+                            <li>Tidak berbohong kepada teman.</li>
+                            <li>Tidak menuduh teman tanpa bukti.</li>
+                            <li>Mengakui kesalahan.</li>
+                            <li>Tidak mengambil barang milik teman.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 5. Menjaga Amanah -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-lock"></i> 5. Menjaga Amanah
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-2">Amanah berarti dapat dipercaya. Jika teman memberikan kepercayaan kepada kita, maka kita harus menjaganya.</p>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1 list-disc list-inside">
+                            <li>Menjaga barang yang dititipkan teman.</li>
+                            <li>Tidak menyebarkan rahasia teman.</li>
+                            <li>Melaksanakan tugas kelompok dengan baik.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 6. Saling Memaafkan -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-dove"></i> 6. Saling Memaafkan
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-2">Setiap manusia dapat melakukan kesalahan. Oleh karena itu, kita harus belajar meminta maaf dan memaafkan.</p>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1 list-disc list-inside">
+                            <li>Meminta maaf jika melakukan kesalahan.</li>
+                            <li>Menerima permintaan maaf teman.</li>
+                            <li>Tidak menyimpan dendam.</li>
+                            <li>Tidak terus-menerus mengungkit kesalahan teman.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 7. Berbagi dengan Teman -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-share-nodes"></i> 7. Berbagi dengan Teman
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-2">Berbagi merupakan salah satu bentuk kepedulian kepada sesama.</p>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1 list-disc list-inside">
+                            <li>Berbagi makanan.</li>
+                            <li>Meminjamkan buku.</li>
+                            <li>Berbagi ilmu dan pengetahuan.</li>
+                            <li>Membantu teman yang membutuhkan.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 8. Tidak Membeda-bedakan Teman -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-people-group"></i> 8. Tidak Membeda-bedakan Teman
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-600 mb-2">Kita tidak boleh memilih teman berdasarkan kekayaan, kepandaian, penampilan, suku, atau keadaan keluarganya.</p>
+                        <p class="text-xs md:text-sm text-slate-700 font-medium">Semua manusia memiliki kedudukan yang harus dihormati. Oleh karena itu, kita harus berteman dengan siapa saja dalam kebaikan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MANFAAT & HAL YANG HARUS DIHINDARI -->
+        <div id="tab-manfaat" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C. Akhlak yang Harus Dihindari kepada Teman -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-rose-800 pb-2 border-b-2 border-rose-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-triangle-exclamation"></i> C. Akhlak yang Harus Dihindari kepada Teman
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Sebagai seorang muslim, kita harus menghindari perilaku buruk kepada teman, seperti:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Mengejek atau menghina teman.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Membully teman.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Berbohong.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Bertengkar.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Menyebarkan rahasia teman.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Iri dan dengki.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Mengambil barang milik teman.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Mengucilkan teman.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Berkata kasar.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Memfitnah teman.</div>
+                </div>
+            </div>
+
+            <!-- D. Manfaat Berakhlak Terpuji kepada Teman -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-award"></i> D. Manfaat Berakhlak Terpuji kepada Teman
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Menerapkan akhlak terpuji memberikan banyak manfaat, antara lain:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-users text-emerald-600"></i> Memiliki banyak teman yang baik.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-thumbs-up text-emerald-600"></i> Disukai dan dipercaya oleh teman.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-face-smile-beam text-emerald-600"></i> Pertemanan yang menyenangkan.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-shield-heart text-emerald-600"></i> Menghindari pertengkaran.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-people-roof text-emerald-600"></i> Mempererat persaudaraan.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-sun text-emerald-600"></i> Mendapat pahala dari Allah Swt.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2 sm:col-span-2 lg:col-span-3">
+                        <i class="fa-solid fa-user-check text-emerald-600"></i> Membentuk pribadi yang baik dan bertanggung jawab.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: PENERAPAN & KESIMPULAN -->
+        <div id="tab-penerapan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- E. Contoh Penerapan dalam Kehidupan Sehari-hari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-lightbulb"></i> E. Contoh Penerapan dalam Kehidupan Sehari-hari
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-school"></i> Di Sekolah:
+                        </h3>
+                        <ul class="space-y-1.5 list-disc list-inside text-slate-700">
+                            <li>Menyapa teman dengan ramah.</li>
+                            <li>Membantu teman belajar.</li>
+                            <li>Bekerja sama dalam tugas kelompok.</li>
+                            <li>Tidak mengejek teman.</li>
+                            <li>Berbagi alat tulis jika teman membutuhkan.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-700 text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-house-chimney"></i> Di Lingkungan Rumah:
+                        </h3>
+                        <ul class="space-y-1.5 list-disc list-inside text-slate-700">
+                            <li>Bermain dengan teman secara rukun.</li>
+                            <li>Tidak bertengkar.</li>
+                            <li>Menghargai teman yang berbeda pendapat.</li>
+                            <li>Membantu teman yang mengalami kesulitan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- F. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> F. Kesimpulan
+                </h3>
+                <p class="text-xs md:text-base text-slate-700 leading-relaxed mb-3">
+                    Akhlak terpuji kepada teman merupakan perilaku baik yang harus dibiasakan dalam kehidupan sehari-hari. Kita harus menghormati, menyayangi, menolong, jujur, amanah, suka berbagi, dan saling memaafkan.
+                </p>
+                <p class="text-xs md:text-base text-slate-700 leading-relaxed mb-3">
+                    Dengan menerapkan akhlak terpuji, hubungan pertemanan menjadi lebih harmonis dan penuh kasih sayang. Sebagai anak muslim, kita hendaknya selalu berbuat baik kepada teman karena Allah Swt. menyukai orang-orang yang berbuat kebaikan.
+                </p>
+                <div class="p-3.5 bg-amber-100/70 border border-amber-300 rounded-xl text-teal-900 font-extrabold text-xs md:text-sm text-center">
+                    “Jadilah teman yang baik: suka menolong, berkata jujur, menghormati, tidak mengejek, dan selalu menjaga perasaan teman.”
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 5 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 5 SD - Akhlak Terpuji kepada Teman
+        const quizData = [
+            {
+                question: "1. Perilaku baik yang sesuai dengan ajaran Islam dan harus dibiasakan kepada teman disebut...",
+                options: [
+                    "A. Akhlak tercela",
+                    "B. Akhlak terpuji",
+                    "C. Perilaku sombong",
+                    "D. Sikap takabur"
+                ],
+                correct: 1,
+                explanation: "Akhlak terpuji adalah perilaku baik yang sesuai dengan ajaran Islam."
+            },
+            {
+                question: "2. Bagaimana sikap kita jika terdapat perbedaan pendapat atau kesukaan dengan teman?",
+                options: [
+                    "A. Memaksakan kehendak kita",
+                    "B. Mengejek pilihan teman",
+                    "C. Saling menghormati dan menghargai",
+                    "D. Mengucilkan teman tersebut"
+                ],
+                correct: 2,
+                explanation: "Kita harus saling menghormati meskipun memiliki perbedaan pendapat, kesukaan, maupun kemampuan."
+            },
+            {
+                question: "3. Manakah yang termasuk contoh sikap saling menyayangi sesama teman?",
+                options: [
+                    "A. Melakukan perundungan (bullying)",
+                    "B. Berkata kasar saat bercanda",
+                    "C. Berbicara dengan sopan dan menjaga perasaan teman",
+                    "D. Memfitnah teman di kelas"
+                ],
+                correct: 2,
+                explanation: "Saling menyayangi dilakukan dengan berbicara sopan, tidak berkata kasar, dan tidak membully."
+            },
+            {
+                question: "4. Sikap dapat dipercaya saat teman menitipkan barang atau memberikan kepercayaan disebut...",
+                options: [
+                    "A. Jujur",
+                    "B. Amanah",
+                    "C. Pemaaf",
+                    "D. Berbagi"
+                ],
+                correct: 1,
+                explanation: "Amanah berarti dapat dipercaya, seperti menjaga barang titipan atau rahasia teman."
+            },
+            {
+                question: "5. Apa yang sebaiknya kita lakukan ketika melakukan kesalahan kepada teman?",
+                options: [
+                    "A. Pura-pura tidak tahu",
+                    "B. Menyalahkan teman lain",
+                    "C. Segera meminta maaf dengan tulus",
+                    "D. Menyimpan dendam"
+                ],
+                correct: 2,
+                explanation: "Setiap manusia dapat bersalah, sehingga kita harus belajar meminta maaf saat melakukan kesalahan."
+            },
+            {
+                question: "6. Di bawah ini yang BUKAN merupakan alasan berteman adalah...",
+                options: [
+                    "A. Berteman tanpa membeda-bedakan kekayaan",
+                    "B. Berteman hanya dengan anak yang kaya saja",
+                    "C. Berteman dengan siapa saja dalam kebaikan",
+                    "D. Berteman tanpa melihat suku dan penampilan"
+                ],
+                correct: 1,
+                explanation: "Islam melarang membeda-bedakan teman berdasarkan kekayaan, kepandaian, suku, atau penampilan."
+            },
+            {
+                question: "7. Manakah di antara perilaku berikut yang HARUS DIHINDARI kepada teman?",
+                options: [
+                    "A. Berbagi makanan",
+                    "B. Mengucilkan dan memfitnah teman",
+                    "C. Meminjamkan alat tulis",
+                    "D. Membantu teman belajar"
+                ],
+                correct: 1,
+                explanation: "Mengucilkan dan memfitnah adalah contoh akhlak buruk yang harus dihindari."
+            },
+            {
+                question: "8. Manakah salah satu manfaat dari berakhlak terpuji kepada teman?",
+                options: [
+                    "A. Dibenci oleh banyak teman",
+                    "B. Menciptakan pertengkaran",
+                    "C. Mempererat tali persaudaraan dan mendapat pahala",
+                    "D. Membuat suasana bermain menjadi tidak nyaman"
+                ],
+                correct: 2,
+                explanation: "Berakhlak terpuji dapat mempererat persaudaraan, menciptakan suasana harmonis, dan mendatangkan pahala."
+            },
+            {
+                question: "9. Contoh penerapan akhlak terpuji kepada teman saat di sekolah adalah...",
+                options: [
+                    "A. Bekerja sama dan membantu teman dalam tugas kelompok",
+                    "B. Membuang sampah di laci meja teman",
+                    "C. Meminjam alat tulis tanpa izin",
+                    "D. Memotong pembicaraan guru dan teman"
+                ],
+                correct: 0,
+                explanation: "Bekerja sama dalam tugas kelompok dan membantu teman adalah contoh penerapan akhlak terpuji di sekolah."
+            },
+            {
+                question: "10. Mengapa Allah Swt. menyukai orang yang berakhlak terpuji kepada sesama?",
+                options: [
+                    "A. Karena membuat orang lain takut",
+                    "B. Karena berbuat baik menciptakan kedamaian dan kasih sayang",
+                    "C. Agar bisa pamer kebaikan",
+                    "D. Supaya dipuji oleh guru saja"
+                ],
+                correct: 1,
+                explanation: "Allah Swt. menyukai kebaikan karena akhlak terpuji membawa kedamaian, keberkahan, dan kasih sayang."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

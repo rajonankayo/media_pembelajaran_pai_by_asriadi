@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 2 SD - Dzikir dan Doa Sesudah Salat</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 09. Dzikir dan Doa Sesudah Salat</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 2 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-book-open-reader"></i> Dzikir & Bacaan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('doa', this)">
+                    <i class="fa-solid fa-hands-praying"></i> Doa Sesudah Salat
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('adab', this)">
+                    <i class="fa-solid fa-user-check"></i> Adab & Manfaat
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📿 Dzikir dan Doa Sesudah Salat</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Mengenal Pengertian Dzikir, Bacaan Dzikir Sesudah Salat, Adab Berzikir & Berdoa, Doa Harian, serta Manfaat Mengingat Allah Swt.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A - B</span>
+                            <i class="fa-solid fa-heart-pulse text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian & Dzikir</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Mengingat Allah Swt.</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti dzikir dan mempelajari bacaan Istigfar, Tasbih, Tahmid, Takbir, dan Tauhid.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Bacaan Dzikir <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('doa')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">D - E</span>
+                            <i class="fa-solid fa-hands-praying text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Doa Sesudah Salat</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Permohonan Kebaikan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti doa, memohon kebaikan dunia akhirat, dan doa untuk kedua orang tua.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Doa Salat <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('adab')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">C, F, G</span>
+                            <i class="fa-solid fa-star text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Adab & Manfaat</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sikap & Keutamaan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengetahui adab berdzikir, adab berdoa dengan khusyuk, dan manfaat rajin beribadah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Adab & Manfaat <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('adab')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">H</span>
+                            <i class="fa-solid fa-award text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Kesimpulan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rangkuman Materi</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Rangkuman pentingnya membiasakan berdzikir dan berdoa agar selalu dekat dengan Allah Swt.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Kesimpulan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Anak Muslim
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Dzikir dan doa sesudah salat merupakan amalan yang sangat baik dan perlu dibiasakan sejak kecil. Anak yang rajin berzikir dan berdoa akan terbiasa dekat dengan Allah Swt. serta memiliki hati yang tenang dan bersyukur!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & BACAAN ZIKIR -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- A. Pengertian Dzikir -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-book-open-reader"></i> A. Pengertian Dzikir
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    <strong>Dzikir</strong> adalah mengingat dan menyebut nama Allah Swt. dengan membaca kalimat-kalimat yang baik. Dzikir dapat dilakukan kapan saja, termasuk sesudah salat.
+                </p>
+
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl mb-2 text-xs md:text-sm text-teal-900 flex items-center gap-3">
+                    <i class="fa-solid fa-heart text-rose-500 text-xl"></i>
+                    <div><strong>Tujuan Dzikir:</strong> Setelah selesai salat, kita dianjurkan untuk berdzikir sebagai bentuk rasa syukur dan mengingat Allah Swt.</div>
+                </div>
+            </div>
+
+            <!-- B. Dzikir Sesudah Salat -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-list-check"></i> B. Dzikir Sesudah Salat
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Salah satu dzikir yang diajarkan setelah salat adalah membaca:
+                </p>
+
+                <!-- 1. Istigfar -->
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full">1. Istigfar (Dibaca 3x)</span>
+                    </div>
+                    <div class="text-right text-2xl md:text-3xl font-arabic font-bold text-teal-900 py-2 leading-loose">
+                        أَسْتَغْفِرُ اللَّهَ
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-slate-700 italic">
+                        Astaghfirullah
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-600 bg-white p-3 rounded-xl border border-slate-200">
+                        <strong>Artinya:</strong> "Aku memohon ampun kepada Allah."
+                    </div>
+                </div>
+
+                <!-- 2. Tasbih -->
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-teal-800 bg-teal-100 px-3 py-1 rounded-full">2. Tasbih (Dibaca 33x)</span>
+                    </div>
+                    <div class="text-right text-2xl md:text-3xl font-arabic font-bold text-teal-900 py-2 leading-loose">
+                        سُبْحَانَ اللَّهِ
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-slate-700 italic">
+                        Subhanallah
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-600 bg-white p-3 rounded-xl border border-slate-200">
+                        <strong>Artinya:</strong> "Mahasuci Allah."
+                    </div>
+                </div>
+
+                <!-- 3. Tahmid -->
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">3. Tahmid (Dibaca 33x)</span>
+                    </div>
+                    <div class="text-right text-2xl md:text-3xl font-arabic font-bold text-teal-900 py-2 leading-loose">
+                        الْحَمْدُ لِلَّهِ
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-slate-700 italic">
+                        Alhamdulillah
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-600 bg-white p-3 rounded-xl border border-slate-200">
+                        <strong>Artinya:</strong> "Segala puji bagi Allah."
+                    </div>
+                </div>
+
+                <!-- 4. Takbir -->
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-blue-800 bg-blue-100 px-3 py-1 rounded-full">4. Takbir (Dibaca 33x)</span>
+                    </div>
+                    <div class="text-right text-2xl md:text-3xl font-arabic font-bold text-teal-900 py-2 leading-loose">
+                        اللَّهُ أَكْبَرُ
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-slate-700 italic">
+                        Allahu Akbar
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-600 bg-white p-3 rounded-xl border border-slate-200">
+                        <strong>Artinya:</strong> "Allah Mahabesar."
+                    </div>
+                </div>
+
+                <!-- Lanjutan Dzikir -->
+                <div class="p-5 bg-amber-50 border border-amber-200 rounded-2xl space-y-3">
+                    <div class="text-xs font-bold text-amber-900 bg-amber-200/80 px-3 py-1 rounded-full inline-block">
+                        Kemudian dapat dilanjutkan dengan:
+                    </div>
+                    <div class="text-right text-xl md:text-2xl font-arabic font-bold text-teal-900 py-2 leading-loose">
+                        لَآ إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-700 bg-white p-3 rounded-xl border border-amber-200">
+                        <strong>Artinya:</strong> "Tidak ada Tuhan selain Allah Yang Maha Esa, tidak ada sekutu bagi-Nya. Milik-Nya kerajaan dan bagi-Nya segala puji. Dia Mahakuasa atas segala sesuatu."
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TAB: DOA SESUDAH SALAT -->
+        <div id="tab-doa" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- D. Doa Sesudah Salat -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-hands-praying"></i> D. Doa Sesudah Salat
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Selain berdzikir, kita juga dianjurkan berdoa sesudah salat.
+                </p>
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl text-xs md:text-sm text-teal-900">
+                    <strong>Pengertian Doa:</strong> Doa adalah permohonan seorang hamba kepada Allah Swt. Kita boleh memohon kebaikan untuk diri sendiri, orang tua, guru, keluarga, dan orang lain.
+                </div>
+
+                <h3 class="font-bold text-slate-800 text-sm md:text-base mb-2">Salah satu doa yang mudah dihafalkan:</h3>
+                
+                <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-2xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-200/80 px-3 py-1 rounded-full">Doa Kebaikan Dunia Akhirat (QS. Al-Baqarah: 201)</span>
+                    </div>
+                    <div class="text-right text-xl md:text-2xl font-arabic font-bold text-teal-900 py-3 leading-loose">
+                        رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-slate-700 italic">
+                        Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa 'adzaaban-naar.
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-700 bg-white p-3.5 rounded-xl border border-emerald-200 leading-relaxed">
+                        <strong>Artinya:</strong> “Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari siksa neraka.”
+                    </div>
+                </div>
+            </div>
+
+            <!-- E. Contoh Doa untuk Kedua Orang Tua -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-heart"></i> E. Contoh Doa untuk Kedua Orang Tua
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Sebagai anak yang berbakti, kita juga dapat berdoa untuk kedua orang tua kita:
+                </p>
+
+                <div class="p-5 bg-amber-50 border border-amber-200 rounded-2xl space-y-3">
+                    <div class="text-right text-xl md:text-2xl font-arabic font-bold text-teal-900 py-3 leading-loose">
+                        رَبِّ اغْفِرْ لِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرًا
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-slate-700 italic">
+                        Rabbighfir lii wa liwaalidayya warhamhumaa kamaa rabbayaanii shaghiiraa.
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-700 bg-white p-3.5 rounded-xl border border-amber-200 leading-relaxed">
+                        <strong>Artinya:</strong> “Ya Tuhanku, ampunilah aku dan kedua orang tuaku, dan sayangilah mereka sebagaimana mereka menyayangiku ketika aku masih kecil.”
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: ADAB, MANFAAT & KESIMPULAN -->
+        <div id="tab-adab" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C & F. Adab Berdzikir dan Berdoa -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-user-check"></i> Adab Berdzikir & Berdoa
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- C. Adab Berdzikir -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-teal-800 text-sm md:text-base mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-dot text-teal-600"></i> C. Adab Berdzikir Sesudah Salat
+                        </h3>
+                        <p class="text-xs text-slate-600 mb-3">Ketika berdzikir, kita sebaiknya:</p>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Duduk dengan tenang.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Mengingat Allah Swt.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Membaca dzikir dengan khusyuk.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Tidak bercanda atau bermain.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Membaca dengan suara yang baik dan tidak mengganggu orang lain.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Mengikuti tuntunan yang diajarkan.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- F. Adab Berdoa -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-teal-800 text-sm md:text-base mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-dot text-teal-600"></i> F. Adab Berdoa
+                        </h3>
+                        <p class="text-xs text-slate-600 mb-3">Saat berdoa kepada Allah Swt., kita hendaknya:</p>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Menghadap Allah dengan hati yang ikhlas.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Berdoa dengan sopan.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Mengangkat tangan jika memungkinkan.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Mengucapkan doa dengan sungguh-sungguh.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Memohon hal-hal yang baik.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Tidak mudah putus asa jika doa belum terkabul.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>Bersyukur atas nikmat Allah Swt.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- G. Manfaat Dzikir dan Doa Sesudah Salat -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-heart-pulse"></i> G. Manfaat Dzikir dan Doa Sesudah Salat
+                </h2>
+
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Rajin berdzikir dan berdoa memberikan banyak manfaat, antara lain:</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-face-smile text-emerald-600 text-xl"></i>
+                        <span>Hati menjadi lebih tenang.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-brain text-emerald-600 text-xl"></i>
+                        <span>Kita semakin mengingat Allah Swt.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-hands-holding-child text-emerald-600 text-xl"></i>
+                        <span>Menumbuhkan rasa syukur.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-emerald-600 text-xl"></i>
+                        <span>Memohon ampun atas kesalahan.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-shield-halved text-emerald-600 text-xl"></i>
+                        <span>Memohon pertolongan dan perlindungan Allah.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-star text-emerald-600 text-xl"></i>
+                        <span>Membiasakan diri menjadi anak yang rajin beribadah.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3 sm:col-span-2 md:col-span-3 justify-center">
+                        <i class="fa-solid fa-seedling text-emerald-600 text-xl"></i>
+                        <span>Menumbuhkan sikap rendah hati dan tidak sombong.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- H. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> H. Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    Dzikir dan doa sesudah salat merupakan amalan yang baik dan perlu dibiasakan sejak kecil. Dengan berdzikir, kita selalu mengingat Allah Swt. Dengan berdoa, kita memohon pertolongan, ampunan, dan kebaikan kepada Allah Swt.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed font-semibold">
+                    Anak yang rajin berdzikir dan berdoa akan terbiasa dekat dengan Allah Swt. serta memiliki hati yang tenang dan bersyukur.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 2 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 8</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Dzikir dan Doa PAI Kelas 2 SD
+        const quizData = [
+            {
+                question: "1. Mengingat dan menyebut nama Allah Swt. dengan membaca kalimat-kalimat yang baik disebut...",
+                options: [
+                    "A. Salat",
+                    "B. Dzikir",
+                    "C. Wudhu",
+                    "D. Puasa"
+                ],
+                correct: 1,
+                explanation: "Dzikir adalah mengingat dan menyebut nama Allah Swt. dengan membaca kalimat-kalimat yang baik."
+            },
+            {
+                question: "2. Bacaan 'Astaghfirullah' disebut...",
+                options: [
+                    "A. Tasbih",
+                    "B. Tahmid",
+                    "C. Istigfar",
+                    "D. Takbir"
+                ],
+                correct: 2,
+                explanation: "Astaghfirullah adalah bacaan istigfar yang berarti memohon ampun kepada Allah Swt."
+            },
+            {
+                question: "3. Bacaan 'Subhanallah' memiliki arti...",
+                options: [
+                    "A. Allah Mahabesar",
+                    "B. Segala puji bagi Allah",
+                    "C. Mahasuci Allah",
+                    "D. Aku memohon ampun kepada Allah"
+                ],
+                correct: 2,
+                explanation: "Subhanallah adalah bacaan tasbih yang berarti Mahasuci Allah."
+            },
+            {
+                question: "4. Bacaan 'Alhamdulillah' memiliki arti...",
+                options: [
+                    "A. Allah Mahabesar",
+                    "B. Segala puji bagi Allah",
+                    "C. Mahasuci Allah",
+                    "D. Aku memohon ampun kepada Allah"
+                ],
+                correct: 1,
+                explanation: "Alhamdulillah adalah bacaan tahmid yang berarti segala puji bagi Allah."
+            },
+            {
+                question: "5. Berapa kali tasbih, tahmid, dan takbir dianjurkan dibaca sesudah salat?",
+                options: [
+                    "A. 3 kali",
+                    "B. 10 kali",
+                    "C. 33 kali",
+                    "D. 100 kali"
+                ],
+                correct: 2,
+                explanation: "Tasbih, tahmid, dan takbir dianjurkan dibaca sebanyak 33 kali sesudah salat."
+            },
+            {
+                question: "6. Memohon kebaikan, ampunan, dan pertolongan kepada Allah Swt. disebut...",
+                options: [
+                    "A. Doa",
+                    "B. Dzikir",
+                    "C. Salam",
+                    "D. Wudhu"
+                ],
+                correct: 0,
+                explanation: "Doa adalah permohonan seorang hamba kepada Allah Swt."
+            },
+            {
+                question: "7. Sikap yang baik ketika berdzikir sesudah salat adalah...",
+                options: [
+                    "A. Bermain-main",
+                    "B. Berbicara dengan teman",
+                    "C. Duduk tenang dan khusyuk",
+                    "D. Berteriak-teriak"
+                ],
+                correct: 2,
+                explanation: "Saat berdzikir kita hendaknya duduk dengan tenang, khusyuk, dan mengingat Allah Swt."
+            },
+            {
+                question: "8. Doa 'Rabbighfir lii wa liwaalidayya...' berisi permohonan ampun untuk...",
+                options: [
+                    "A. Teman",
+                    "B. Guru",
+                    "C. Kedua orang tua",
+                    "D. Tetangga"
+                ],
+                correct: 2,
+                explanation: "Doa tersebut berisi permohonan ampun dan kasih sayang untuk kedua orang tua."
+            },
+            {
+                question: "9. Salah satu manfaat rajin berdzikir dan berdoa sesudah salat adalah...",
+                options: [
+                    "A. Hati menjadi lebih tenang",
+                    "B. Menjadi malas beribadah",
+                    "C. Menjadi sombong",
+                    "D. Hati menjadi gelisah"
+                ],
+                correct: 0,
+                explanation: "Rajin berdzikir dan berdoa dapat membuat hati menjadi lebih tenang dan menumbuhkan rasa syukur."
+            },
+            {
+                question: "10. Setelah melaksanakan salat, sebaiknya kita...",
+                options: [
+                    "A. Langsung bermain",
+                    "B. Berdzikir dan berdoa",
+                    "C. Berlari-lari",
+                    "D. Mengganggu teman"
+                ],
+                correct: 1,
+                explanation: "Setelah salat, kita dianjurkan berdzikir dan berdoa sebagai bentuk mengingat dan memohon kepada Allah Swt."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 4 SD - Kisah Hijrah Nabi Muhammad SAW</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 10. Kisah Hijrah Nabi Muhammad SAW dan Keteladanannya</h1>
+                    <p class="text-xs text-emerald-200 font-medium mt-0.5">Fase B - Kelas 4 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('kisah', this)">
+                    <i class="fa-solid fa-book-open"></i> Pengertian & Kisah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('keteladanan', this)">
+                    <i class="fa-solid fa-heart"></i> Keteladanan & Hikmah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('penerapan', this)">
+                    <i class="fa-solid fa-arrows-rotate"></i> Penerapan & Kesimpulan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-emerald-700 to-teal-800 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🕌 Kisah Hijrah Nabi Muhammad SAW</h2>
+                    <p class="text-sm md:text-base text-emerald-100 leading-relaxed">
+                        Memahami Pengertian Hijrah, Perjalanan Menuju Madinah, Sikap Teladan Nabi Muhammad SAW, Hikmah Peristiwa, serta Penerapan Hijrah dalam Kehidupan Sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-emerald-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('kisah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">A - B</span>
+                            <i class="fa-solid fa-route text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian & Kisah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sejarah Perjalanan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengetahui arti hijrah, tekanan kafir Quraisy di Makkah, perjalanan bersembunyi di Gua Tsur, hingga sampai di Madinah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Peristiwa <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('keteladanan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">C - D</span>
+                            <i class="fa-solid fa-hands-holding-heart text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Keteladanan & Hikmah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Nilai-Nilai Mulia</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal sikap sabar, tawakal, berani, cerdas menyusun strategi, pantang menyerah, dan hikmah besar dari peristiwa hijrah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Teladan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">E</span>
+                            <i class="fa-solid fa-arrows-rotate text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Penerapan Sehari-hari</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tabel Perubahan Diri</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Menerapkan konsep hijrah bagi siswa, yaitu berpindah dari kebiasaan buruk menuju kebiasaan yang baik.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Penerapan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Rangkuman</span>
+                            <i class="fa-solid fa-list-check text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Kesimpulan & Pesan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Inti Pembelajaran</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Kesimpulan kisah hijrah serta pesan penting untuk menjadi pribadi yang lebih baik setiap harinya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Buka Kesimpulan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-emerald-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan Penting untuk Siswa
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    "Hijrah berarti berusaha menjadi lebih baik. Mari kita tinggalkan kebiasaan buruk dan membiasakan diri melakukan kebaikan!"
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & KISAH HIJRAH -->
+        <div id="tab-kisah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- A. Pengertian Hijrah -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-book-open"></i> A. Pengertian Hijrah
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    <strong>Hijrah</strong> berarti berpindah dari suatu tempat ke tempat lain untuk menyelamatkan diri dan menjalankan perintah Allah Swt.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Dalam sejarah Islam, hijrah Nabi Muhammad saw. adalah perjalanan Nabi Muhammad saw. bersama para sahabat dari Makkah menuju Madinah. Hijrah ini dilakukan karena kaum Muslimin di Makkah mendapatkan tekanan dan gangguan dari kaum kafir Quraisy.
+                </p>
+
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 flex items-center gap-3">
+                    <i class="fa-solid fa-lightbulb text-emerald-600 text-xl"></i>
+                    <div><strong>Makna Luas:</strong> Hijrah bukan sekadar berpindah tempat, tetapi juga berarti berusaha meninggalkan keburukan menuju kebaikan.</div>
+                </div>
+            </div>
+
+            <!-- B. Kisah Hijrah Nabi Muhammad SAW -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2">
+                    <i class="fa-solid fa-compass"></i> B. Kisah Hijrah Nabi Muhammad SAW
+                </h2>
+
+                <!-- 1. Keadaan di Kota Makkah -->
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                    <h3 class="text-sm md:text-base font-bold text-emerald-800 flex items-center gap-2">
+                        <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full">1</span> Keadaan di Kota Makkah
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Nabi Muhammad saw. berdakwah mengajak masyarakat Makkah untuk menyembah Allah Swt. dan meninggalkan penyembahan berhala. Namun, banyak kaum Quraisy menolak dakwah Nabi. Mereka bahkan melakukan berbagai gangguan dan tekanan kepada Nabi Muhammad saw. dan para pengikutnya.
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Kaum Muslimin mengalami kesulitan sehingga Nabi Muhammad saw. mendapat perintah dari Allah Swt. untuk berhijrah ke Madinah.
+                    </p>
+                </div>
+
+                <!-- 2. Perjalanan Menuju Madinah -->
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                    <h3 class="text-sm md:text-base font-bold text-emerald-800 flex items-center gap-2">
+                        <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full">2</span> Perjalanan Menuju Madinah
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Nabi Muhammad saw. tidak langsung pergi ke Madinah. Beliau menyusun rencana dengan hati-hati dan ditemani oleh sahabatnya, Abu Bakar ash-Shiddiq r.a.
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Pada malam hari, Nabi Muhammad saw. keluar dari rumahnya. Beliau kemudian bersama Abu Bakar r.a. bersembunyi di Gua Tsur selama beberapa hari untuk menghindari kejaran kaum Quraisy.
+                    </p>
+
+                    <!-- Quote di Gua Tsur -->
+                    <div class="p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl space-y-2 my-3">
+                        <p class="text-xs md:text-sm text-amber-900 italic">
+                            Selama berada di gua, Abu Bakar r.a. merasa khawatir apabila kaum Quraisy menemukan mereka. Nabi Muhammad saw. menenangkan Abu Bakar r.a. dengan berkata:
+                        </p>
+                        <div class="text-center text-lg md:text-xl font-arabic font-bold text-amber-900 py-1">
+                            “Janganlah engkau bersedih, sesungguhnya Allah bersama kita.”
+                        </div>
+                        <p class="text-xs text-amber-800">
+                            Hal ini menunjukkan bahwa Nabi Muhammad saw. selalu yakin dan bertawakal kepada Allah Swt.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Sampai di Madinah -->
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                    <h3 class="text-sm md:text-base font-bold text-emerald-800 flex items-center gap-2">
+                        <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full">3</span> Sampai di Madinah
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Setelah keadaan aman, Nabi Muhammad saw. dan Abu Bakar r.a. melanjutkan perjalanan menuju Madinah. Penduduk Madinah menyambut kedatangan Nabi Muhammad saw. dengan penuh kegembiraan.
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Di Madinah, Nabi Muhammad saw. membangun kehidupan masyarakat Islam yang damai, saling menolong, dan penuh persaudaraan. Peristiwa hijrah ini menjadi salah satu peristiwa paling penting dalam sejarah Islam.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KETELADANAN & HIKMAH -->
+        <div id="tab-keteladanan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C. Keteladanan Nabi Muhammad SAW dalam Peristiwa Hijrah -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-heart"></i> C. Keteladanan Nabi Muhammad SAW
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Banyak sikap mulia yang dapat kita teladani dari peristiwa hijrah Nabi Muhammad saw.:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- 1. Sabar -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <div class="font-bold text-emerald-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-emerald-600"></i> 1. Sabar
+                        </div>
+                        <p class="text-xs text-slate-600">Nabi Muhammad saw. tetap sabar meskipun mendapatkan banyak gangguan dari kaum Quraisy.</p>
+                        <p class="text-xs font-semibold text-amber-700 bg-amber-50 p-2 rounded-lg border border-amber-200 mt-2">
+                            <strong>Contoh Siswa:</strong> Tetap sabar ketika menghadapi kesulitan dalam belajar.
+                        </p>
+                    </div>
+
+                    <!-- 2. Tawakal kepada Allah -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <div class="font-bold text-emerald-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-hands-praying text-emerald-600"></i> 2. Tawakal kepada Allah
+                        </div>
+                        <p class="text-xs text-slate-600">Nabi Muhammad saw. selalu percaya bahwa Allah Swt. akan memberikan pertolongan.</p>
+                        <p class="text-xs font-semibold text-amber-700 bg-amber-50 p-2 rounded-lg border border-amber-200 mt-2">
+                            <strong>Contoh Siswa:</strong> Belajar dengan sungguh-sungguh kemudian menyerahkan hasilnya kepada Allah Swt.
+                        </p>
+                    </div>
+
+                    <!-- 3. Berani -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <div class="font-bold text-emerald-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-emerald-600"></i> 3. Berani
+                        </div>
+                        <p class="text-xs text-slate-600">Nabi Muhammad saw. berani menghadapi berbagai ancaman demi mempertahankan agama Islam.</p>
+                        <p class="text-xs font-semibold text-amber-700 bg-amber-50 p-2 rounded-lg border border-amber-200 mt-2">
+                            <strong>Contoh Siswa:</strong> Berani mengatakan yang benar dan tidak takut melakukan kebaikan.
+                        </p>
+                    </div>
+
+                    <!-- 4. Cerdas dalam Mengatur Strategi -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <div class="font-bold text-emerald-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-brain text-emerald-600"></i> 4. Cerdas Mengatur Strategi
+                        </div>
+                        <p class="text-xs text-slate-600">Beliau membuat perencanaan yang baik, tidak hanya mengandalkan keberanian tetapi juga strategi.</p>
+                        <p class="text-xs font-semibold text-amber-700 bg-amber-50 p-2 rounded-lg border border-amber-200 mt-2">
+                            <strong>Contoh Siswa:</strong> Membuat jadwal belajar dan mempersiapkan perlengkapan sekolah sebelum berangkat.
+                        </p>
+                    </div>
+
+                    <!-- 5. Tidak Mudah Menyerah -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <div class="font-bold text-emerald-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-person-walking-arrow-right text-emerald-600"></i> 5. Tidak Mudah Menyerah
+                        </div>
+                        <p class="text-xs text-slate-600">Walaupun menghadapi banyak kesulitan, Nabi Muhammad saw. tidak pernah menyerah dalam berdakwah.</p>
+                        <p class="text-xs font-semibold text-amber-700 bg-amber-50 p-2 rounded-lg border border-amber-200 mt-2">
+                            <strong>Contoh Siswa:</strong> Terus belajar meskipun pelajaran terasa sulit.
+                        </p>
+                    </div>
+
+                    <!-- 6. Menjaga Persahabatan -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <div class="font-bold text-emerald-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-user-group text-emerald-600"></i> 6. Menjaga Persahabatan
+                        </div>
+                        <p class="text-xs text-slate-600">Nabi Muhammad saw. ditemani Abu Bakar r.a., mereka saling membantu dan menjaga.</p>
+                        <p class="text-xs font-semibold text-amber-700 bg-amber-50 p-2 rounded-lg border border-amber-200 mt-2">
+                            <strong>Contoh Siswa:</strong> Membantu dan menyayangi teman.
+                        </p>
+                    </div>
+
+                    <!-- 7. Percaya Pertolongan Allah -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1 md:col-span-2">
+                        <div class="font-bold text-emerald-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-sun text-emerald-600"></i> 7. Percaya kepada Pertolongan Allah
+                        </div>
+                        <p class="text-xs text-slate-600">Nabi Muhammad saw. yakin bahwa Allah Swt. selalu memberikan pertolongan kepada hamba-Nya yang beriman.</p>
+                        <p class="text-xs font-semibold text-amber-700 bg-amber-50 p-2 rounded-lg border border-amber-200 mt-2">
+                            <strong>Contoh Siswa:</strong> Selalu berdoa dan berusaha ketika menghadapi masalah.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D. Hikmah dari Peristiwa Hijrah -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-star"></i> D. Hikmah dari Peristiwa Hijrah
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Dari kisah hijrah Nabi Muhammad saw., kita dapat mengambil pelajaran berharga:</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Kita harus sabar menghadapi kesulitan.</span>
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Kita harus percaya dan bertawakal kepada Allah Swt.</span>
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Kita harus berusaha sebelum mendapatkan hasil.</span>
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Kita tidak boleh mudah menyerah.</span>
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Kita harus berani membela kebenaran.</span>
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Kita harus menolong dan menyayangi sesama.</span>
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Kita perlu merencanakan sesuatu dengan baik.</span>
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Kita harus selalu berdoa kepada Allah Swt.</span>
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5 sm:col-span-2">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Hijrah mengajarkan kita untuk meninggalkan kebiasaan buruk menuju kebiasaan yang baik.</span>
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2.5 sm:col-span-2">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> <span>Kita harus menjadi anak yang sabar, rajin, jujur, berani, dan bertanggung jawab.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: PENERAPAN SEHARI-HARI & KESIMPULAN -->
+        <div id="tab-penerapan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- E. Contoh Hijrah dalam Kehidupan Sehari-hari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-arrows-rotate"></i> E. Contoh Hijrah dalam Kehidupan Sehari-hari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Hijrah tidak hanya berarti berpindah tempat. Bagi kita sebagai pelajar, hijrah dapat dilakukan dengan berubah menjadi lebih baik:
+                </p>
+
+                <!-- Tabel Sebelum vs Setelah Hijrah -->
+                <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm mb-4">
+                    <table class="w-full text-left text-xs md:text-sm">
+                        <thead class="bg-emerald-800 text-white font-bold">
+                            <tr>
+                                <th class="p-3.5 border-b w-1/2 bg-rose-900/80">Sebelum Hijrah (Kebiasaan Buruk)</th>
+                                <th class="p-3.5 border-b w-1/2 bg-emerald-900/80">Setelah Hijrah (Kebiasaan Baik)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 text-rose-700 bg-rose-50/30"><i class="fa-solid fa-xmark mr-2 text-rose-500"></i>Malas belajar</td>
+                                <td class="p-3 text-emerald-800 bg-emerald-50/30 font-semibold"><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Rajin belajar</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 text-rose-700 bg-rose-50/30"><i class="fa-solid fa-xmark mr-2 text-rose-500"></i>Suka berkata kasar</td>
+                                <td class="p-3 text-emerald-800 bg-emerald-50/30 font-semibold"><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Berbicara dengan sopan</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 text-rose-700 bg-rose-50/30"><i class="fa-solid fa-xmark mr-2 text-rose-500"></i>Suka bertengkar</td>
+                                <td class="p-3 text-emerald-800 bg-emerald-50/30 font-semibold"><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Suka berdamai</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 text-rose-700 bg-rose-50/30"><i class="fa-solid fa-xmark mr-2 text-rose-500"></i>Sering meninggalkan salat</td>
+                                <td class="p-3 text-emerald-800 bg-emerald-50/30 font-semibold"><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Rajin melaksanakan salat</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 text-rose-700 bg-rose-50/30"><i class="fa-solid fa-xmark mr-2 text-rose-500"></i>Suka berbohong</td>
+                                <td class="p-3 text-emerald-800 bg-emerald-50/30 font-semibold"><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Selalu berkata jujur</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 text-rose-700 bg-rose-50/30"><i class="fa-solid fa-xmark mr-2 text-rose-500"></i>Malas membantu orang tua</td>
+                                <td class="p-3 text-emerald-800 bg-emerald-50/30 font-semibold"><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Rajin membantu orang tua</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 text-rose-700 bg-rose-50/30"><i class="fa-solid fa-xmark mr-2 text-rose-500"></i>Suka mengejek teman</td>
+                                <td class="p-3 text-emerald-800 bg-emerald-50/30 font-semibold"><i class="fa-solid fa-check mr-2 text-emerald-500"></i>Menghargai teman</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kesimpulan & Pesan -->
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-slate-300 space-y-4">
+                <h3 class="text-emerald-800 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-flag text-amber-500"></i> Kesimpulan Pembelajaran
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <strong>Hijrah Nabi Muhammad saw.</strong> adalah perjalanan Nabi Muhammad saw. bersama Abu Bakar r.a. dari Makkah menuju Madinah untuk menyelamatkan dakwah Islam dan membangun kehidupan umat Islam yang lebih baik.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Dari peristiwa hijrah, kita dapat meneladani sikap sabar, tawakal, berani, cerdas, pantang menyerah, suka menolong, dan selalu percaya kepada pertolongan Allah Swt.
+                </p>
+
+                <div class="p-4 bg-amber-50 border border-amber-300 rounded-xl text-center font-bold text-amber-900 text-xs md:text-sm mt-2">
+                    📌 Pesan Penting: Hijrah berarti berusaha menjadi lebih baik. Mari kita tinggalkan kebiasaan buruk dan membiasakan diri melakukan kebaikan!
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 4 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Kisah Hijrah Nabi Muhammad SAW PAI Kelas 4 SD
+        const quizData = [
+            {
+                question: "1. Secara bahasa, hijrah berarti berpindah tempat untuk menyelamatkan diri dan...",
+                options: [
+                    "A. Mencarikan harta bendanya",
+                    "B. Menjalankan perintah Allah Swt.",
+                    "C. Mencari tempat berlibur",
+                    "D. Berdagang ke tempat lain"
+                ],
+                correct: 1,
+                explanation: "Hijrah berarti berpindah dari suatu tempat ke tempat lain untuk menyelamatkan diri dan menjalankan perintah Allah Swt."
+            },
+            {
+                question: "2. Dalam sejarah Islam, Nabi Muhammad saw. berhijrah dari kota Makkah menuju kota...",
+                options: [
+                    "A. Yerusalem",
+                    "B. Mesir",
+                    "C. Madinah",
+                    "D. Thaif"
+                ],
+                correct: 2,
+                explanation: "Hijrah Nabi Muhammad saw. adalah perjalanan bersama sahabat dari Makkah menuju Madinah."
+            },
+            {
+                question: "3. Siapakah sahabat yang menemani Nabi Muhammad saw. dalam perjalanan hijrah?",
+                options: [
+                    "A. Umar bin Khattab r.a.",
+                    "B. Abu Bakar ash-Shiddiq r.a.",
+                    "C. Utsman bin Affan r.a.",
+                    "D. Ali bin Abi Thalib r.a."
+                ],
+                correct: 1,
+                explanation: "Nabi Muhammad saw. ditemani oleh sahabat dekatnya, Abu Bakar ash-Shiddiq r.a., selama perjalanan hijrah."
+            },
+            {
+                question: "4. Gua tempat Nabi Muhammad saw. dan Abu Bakar r.a. bersembunyi dari kejaran Quraisy adalah...",
+                options: [
+                    "A. Gua Hira",
+                    "B. Gua Tsur",
+                    "C. Gua Uhud",
+                    "D. Gua Uhda"
+                ],
+                correct: 1,
+                explanation: "Nabi Muhammad saw. dan Abu Bakar r.a. bersembunyi di Gua Tsur selama beberapa hari."
+            },
+            {
+                question: "5. Perkataan Nabi Muhammad saw. untuk menenangkan Abu Bakar r.a. saat khawatir di gua adalah...",
+                options: [
+                    "A. Janganlah engkau bersedih, sesungguhnya Allah bersama kita",
+                    "B. Lari dengan cepat agar tidak tertangkap",
+                    "C. Mari kita menyerah saja",
+                    "D. Bersembunyilah sendiri-sendiri"
+                ],
+                correct: 0,
+                explanation: "Nabi menenangkan Abu Bakar r.a. dengan bersabda: 'Janganlah engkau bersedih, sesungguhnya Allah bersama kita'."
+            },
+            {
+                question: "6. Bagaimana reaksi penduduk Madinah saat menyambut kedatangan Nabi Muhammad saw.?",
+                options: [
+                    "A. Menolak dan marah",
+                    "B. Menyambut dengan penuh kegembiraan",
+                    "C. Acuh tak acuh",
+                    "D. Mengusir Nabi kembali ke Makkah"
+                ],
+                correct: 1,
+                explanation: "Penduduk Madinah menyambut kedatangan Nabi Muhammad saw. dan para sahabat dengan penuh kegembiraan."
+            },
+            {
+                question: "7. Membuat jadwal belajar dan mempersiapkan peralatan sekolah merupakan contoh meneladani sikap Nabi Muhammad saw., yaitu...",
+                options: [
+                    "A. Menjaga persahabatan",
+                    "B. Cerdas dalam mengatur strategi",
+                    "C. Suka bertengkar",
+                    "D. Pasrah tanpa berusaha"
+                ],
+                correct: 1,
+                explanation: "Merencanakan sesuatu dengan matang adalah bentuk teladan dari kecerdasan Nabi dalam mengatur strategi."
+            },
+            {
+                question: "8. Contoh perilaku siswa yang mencerminkan sikap 'Tawakal kepada Allah' adalah...",
+                options: [
+                    "A. Tidak mau belajar sama sekali",
+                    "B. Belajar sungguh-sungguh lalu menyerahkan hasilnya kepada Allah Swt.",
+                    "C. Menyontek saat ujian",
+                    "D. Menyerah sebelum mencoba"
+                ],
+                correct: 1,
+                explanation: "Tawakal berarti berusaha sungguh-sungguh lalu berserah diri dan menyerahkan hasilnya kepada Allah Swt."
+            },
+            {
+                question: "9. Bagi seorang pelajar, arti hijrah dalam kehidupan sehari-hari adalah...",
+                options: [
+                    "A. Pindah rumah ke luar kota",
+                    "B. Berubah dari kebiasaan buruk menjadi kebiasaan yang baik",
+                    "C. Pindah sekolah setiap tahun",
+                    "D. Berhenti bersekolah"
+                ],
+                correct: 1,
+                explanation: "Hijrah bagi pelajar diartikan sebagai usaha untuk berubah meninggalkan kebiasaan buruk menuju kebiasaan yang baik."
+            },
+            {
+                question: "10. Perubahan perilaku 'Sebelum Hijrah' ke 'Setelah Hijrah' yang BENAR di bawah ini adalah...",
+                options: [
+                    "A. Suka berbohong ➔ Tetap berbohong",
+                    "B. Malas belajar ➔ Rajin belajar",
+                    "C. Suka berdamai ➔ Suka bertengkar",
+                    "D. Rajin salat ➔ Sering meninggalkan salat"
+                ],
+                correct: 1,
+                explanation: "Salah satu contoh hijrah sehari-hari adalah berubah dari yang tadinya malas belajar menjadi rajin belajar."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-emerald-600 bg-emerald-50 text-emerald-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-emerald-400 hover:bg-emerald-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-emerald-100 text-emerald-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-emerald-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

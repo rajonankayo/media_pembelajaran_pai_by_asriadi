@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 2 SD - Beriman kepada Malaikat-Malaikat Allah SWT</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 07. Beriman kepada Malaikat-Malaikat Allah SWT</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 2 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-book-open"></i> Pengertian & Ciri
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('nama-tugas', this)">
+                    <i class="fa-solid fa-list-check"></i> Nama & Tugas
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hikmah-perilaku', this)">
+                    <i class="fa-solid fa-heart"></i> Hikmah & Perilaku
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('kesimpulan', this)">
+                    <i class="fa-solid fa-graduation-cap"></i> Kesimpulan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">✨ Materi PAI Kelas 2 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Mengenal Malaikat-Malaikat Allah SWT, Nama dan Tugasnya, Ciri-ciri, Serta Meneladani Perilaku Beriman dalam Kehidupan Sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A & C</span>
+                            <i class="fa-solid fa-feather text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian & Ciri</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rukun Iman ke-2</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti iman kepada malaikat dan ciri-ciri khusus makhluk ciptaan Allah dari cahaya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Materi <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('nama-tugas')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">B</span>
+                            <i class="fa-solid fa-clipboard-list text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Nama & Tugas</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">10 Malaikat Wajib</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal 10 nama malaikat yang wajib diketahui beserta tugas-tugas dari Allah SWT.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Nama Malaikat <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hikmah-perilaku')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">D, E, F</span>
+                            <i class="fa-solid fa-hands-holding-child text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Hikmah & Perilaku</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Aplikasi Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Meneladani perbuatan terpuji, seperti jujur, rajin beribadah, dan menjauhi larangan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('kesimpulan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">G</span>
+                            <i class="fa-solid fa-star text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Rangkuman</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pesan untuk Anak</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Kesimpulan materi dan pesan khusus agar menjadi anak saleh/salehah yang taat.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Kesimpulan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Anak
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    “Anak yang beriman kepada malaikat akan selalu berusaha melakukan kebaikan dan menjauhi keburukan.”
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & CIRI -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <!-- A. Pengertian -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-book-open"></i> A. Pengertian Iman kepada Malaikat
+                </h2>
+                <div class="space-y-4 text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <p>
+                        Malaikat adalah makhluk Allah SWT yang diciptakan dari <strong>cahaya (nur)</strong>. Malaikat selalu taat kepada Allah SWT dan tidak pernah durhaka kepada-Nya.
+                    </p>
+                    <p>
+                        Malaikat memiliki tugas yang berbeda-beda. Kita sebagai umat Islam wajib percaya bahwa malaikat itu benar-benar ada meskipun kita tidak dapat melihatnya.
+                    </p>
+                    <div class="p-4 bg-teal-50 border-l-4 border-teal-600 rounded-r-xl">
+                        <p class="font-bold text-teal-900">
+                             Beriman kepada malaikat termasuk <strong>Rukun Iman yang kedua</strong>.
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Iman kepada malaikat berarti:</strong> percaya dengan sepenuh hati bahwa malaikat adalah makhluk Allah SWT yang selalu taat dan melaksanakan perintah-Nya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- C. Ciri-Ciri Malaikat -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-sparkles"></i> C. Ciri-Ciri Malaikat
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Malaikat berbeda dengan manusia. Beberapa ciri malaikat adalah:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-sun text-amber-500 text-lg"></i>
+                        <span class="text-xs md:text-sm font-semibold">Diciptakan oleh Allah SWT dari cahaya.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-check-double text-emerald-600 text-lg"></i>
+                        <span class="text-xs md:text-sm font-semibold">Selalu taat kepada Allah SWT.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-shield-halved text-blue-600 text-lg"></i>
+                        <span class="text-xs md:text-sm font-semibold">Tidak pernah berbuat dosa.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-list-check text-indigo-600 text-lg"></i>
+                        <span class="text-xs md:text-sm font-semibold">Selalu melaksanakan perintah Allah SWT.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-briefcase text-teal-600 text-lg"></i>
+                        <span class="text-xs md:text-sm font-semibold">Memiliki tugas masing-masing.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-eye-slash text-purple-600 text-lg"></i>
+                        <span class="text-xs md:text-sm font-semibold">Tidak dapat dilihat mata biasa (kecuali dikehendaki Allah).</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: NAMA & TUGAS MALAIKAT -->
+        <div id="tab-nama-tugas" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-clipboard-list"></i> B. Nama dan Tugas Malaikat
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Allah SWT memiliki banyak malaikat. Ada <strong>10 nama malaikat</strong> yang wajib kita ketahui beserta tugasnya:
+                </p>
+
+                <!-- Tabel 10 Malaikat -->
+                <div class="overflow-x-auto rounded-xl border border-slate-200 mb-4">
+                    <table class="w-full text-left border-collapse text-xs md:text-sm">
+                        <thead>
+                            <tr class="bg-teal-800 text-white font-bold">
+                                <th class="p-3 text-center">No</th>
+                                <th class="p-3">Nama Malaikat</th>
+                                <th class="p-3">Tugas Utama</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-800">
+                            <tr class="hover:bg-teal-50/50"><td class="p-3 text-center font-bold">1</td><td class="p-3 font-bold text-teal-900">Jibril</td><td class="p-3">Menyampaikan wahyu kepada nabi dan rasul</td></tr>
+                            <tr class="bg-slate-50 hover:bg-teal-50/50"><td class="p-3 text-center font-bold">2</td><td class="p-3 font-bold text-teal-900">Mikail</td><td class="p-3">Mengatur rezeki, hujan, dan tumbuh-tumbuhan atas izin Allah</td></tr>
+                            <tr class="hover:bg-teal-50/50"><td class="p-3 text-center font-bold">3</td><td class="p-3 font-bold text-teal-900">Israfil</td><td class="p-3">Meniup sangkakala pada hari kiamat</td></tr>
+                            <tr class="bg-slate-50 hover:bg-teal-50/50"><td class="p-3 text-center font-bold">4</td><td class="p-3 font-bold text-teal-900">Izrail</td><td class="p-3">Mencabut nyawa makhluk atas perintah Allah</td></tr>
+                            <tr class="hover:bg-teal-50/50"><td class="p-3 text-center font-bold">5</td><td class="p-3 font-bold text-teal-900">Munkar</td><td class="p-3">Bertanya kepada manusia di alam kubur</td></tr>
+                            <tr class="bg-slate-50 hover:bg-teal-50/50"><td class="p-3 text-center font-bold">6</td><td class="p-3 font-bold text-teal-900">Nakir</td><td class="p-3">Bertanya kepada manusia di alam kubur</td></tr>
+                            <tr class="hover:bg-teal-50/50"><td class="p-3 text-center font-bold">7</td><td class="p-3 font-bold text-teal-900">Raqib</td><td class="p-3">Mencatat amal baik manusia</td></tr>
+                            <tr class="bg-slate-50 hover:bg-teal-50/50"><td class="p-3 text-center font-bold">8</td><td class="p-3 font-bold text-teal-900">Atid</td><td class="p-3">Mencatat amal buruk manusia</td></tr>
+                            <tr class="hover:bg-teal-50/50"><td class="p-3 text-center font-bold">9</td><td class="p-3 font-bold text-teal-900">Malik</td><td class="p-3">Menjaga neraka</td></tr>
+                            <tr class="bg-slate-50 hover:bg-teal-50/50"><td class="p-3 text-center font-bold">10</td><td class="p-3 font-bold text-teal-900">Ridwan</td><td class="p-3">Menjaga surga</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="p-3.5 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-bell text-amber-600"></i> Ingat! Malaikat selalu melaksanakan perintah Allah SWT.
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HIKMAH & PERILAKU -->
+        <div id="tab-hikmah-perilaku" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- D. Makna Beriman -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-heart"></i> D. Makna Beriman kepada Malaikat
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Beriman kepada malaikat bukan hanya menghafal nama-namanya. Kita harus meyakini keberadaan malaikat dan membuktikannya melalui perilaku sehari-hari.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 text-xs md:text-sm">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600 mt-0.5"></i>
+                        <span>Rajin melaksanakan salat karena yakin Allah SWT selalu mengetahui perbuatan kita.</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600 mt-0.5"></i>
+                        <span>Berkata jujur karena yakin semua perbuatan kita dicatat oleh malaikat.</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600 mt-0.5"></i>
+                        <span>Tidak mengambil barang milik teman.</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600 mt-0.5"></i>
+                        <span>Tidak berbohong kepada orang tua dan guru.</span>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl text-xs md:text-sm text-teal-900 space-y-2">
+                    <p><strong>Pencatatan Amal:</strong></p>
+                    <p>• Ketika kita berbuat baik, kita yakin bahwa amal baik kita dicatat oleh <strong>Malaikat Raqib</strong>.</p>
+                    <p>• Ketika melakukan perbuatan buruk, kita yakin bahwa amal buruk kita dicatat oleh <strong>Malaikat Atid</strong>.</p>
+                </div>
+            </div>
+
+            <!-- E. Hikmah Beriman -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-award"></i> E. Hikmah Beriman kepada Malaikat
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs md:text-sm">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <h4 class="font-bold text-teal-800">1. Menambah Keimanan</h4>
+                        <p class="text-slate-600">Makin yakin Allah Maha Kuasa dan memiliki makhluk yang selalu taat.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <h4 class="font-bold text-teal-800">2. Rajin Berbuat Baik</h4>
+                        <p class="text-slate-600">Terdorong berbuat baik seperti membantu teman, bersedekah, dan menghormati guru.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <h4 class="font-bold text-teal-800">3. Menjauhi Dosa</h4>
+                        <p class="text-slate-600">Berhati-hati agar tidak berbohong, mencuri, mengejek, atau berkata kasar.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <h4 class="font-bold text-teal-800">4. Anak yang Jujur</h4>
+                        <p class="text-slate-600">Membiasakan diri berkata benar meskipun tidak ada orang yang melihat.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <h4 class="font-bold text-teal-800">5. Anak yang Disiplin</h4>
+                        <p class="text-slate-600">Melaksanakan salat dan tugas tepat waktu karena Allah selalu melihat.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                        <h4 class="font-bold text-teal-800">6. Bertanggung Jawab</h4>
+                        <p class="text-slate-600">Belajar bertanggung jawab atas segala perkataan dan perbuatan kita.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- F. Contoh Perilaku -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-hands-holding text-teal-700"></i> F. Contoh Perilaku Beriman
+                </h2>
+                
+                <!-- Studi Kasus -->
+                <div class="p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl mb-4 text-xs md:text-sm">
+                    <h4 class="font-bold text-amber-900 mb-1">🔍 Contoh di Sekolah:</h4>
+                    <p class="text-slate-700 mb-2">
+                        Ali menemukan pensil milik temannya. Ali tidak mengambilnya, tetapi memberikan pensil tersebut kepada pemiliknya.
+                    </p>
+                    <p class="font-semibold text-teal-900">
+                        Mengapa Ali melakukan hal itu? Karena Ali percaya bahwa Allah SWT mengetahui perbuatannya dan malaikat mencatat amalnya.
+                    </p>
+                </div>
+
+                <p class="text-xs md:text-sm font-bold text-slate-800 mb-2">Contoh Perilaku Baik Lainnya:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs md:text-sm">
+                    <div class="p-2.5 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-lg font-semibold">Mengucapkan salam</div>
+                    <div class="p-2.5 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-lg font-semibold">Menghormati orang tua</div>
+                    <div class="p-2.5 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-lg font-semibold">Membantu teman</div>
+                    <div class="p-2.5 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-lg font-semibold">Menjaga kebersihan</div>
+                    <div class="p-2.5 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-lg font-semibold">Berkata jujur</div>
+                    <div class="p-2.5 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-lg font-semibold">Rajin beribadah</div>
+                    <div class="p-2.5 bg-rose-50 text-rose-900 border border-rose-200 rounded-lg font-semibold">Tidak mengejek teman</div>
+                    <div class="p-2.5 bg-rose-50 text-rose-900 border border-rose-200 rounded-lg font-semibold">Tidak mengambil milik orang</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KESIMPULAN -->
+        <div id="tab-kesimpulan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 md:p-8 border border-slate-300">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-200 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-graduation-cap"></i> G. Kesimpulan
+                </h2>
+                
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Beriman kepada malaikat berarti percaya dengan sepenuh hati bahwa malaikat adalah makhluk Allah SWT yang benar-benar ada dan selalu taat kepada perintah-Nya.
+                </p>
+
+                <p class="text-xs md:text-sm font-bold text-slate-800 mb-3">Beriman kepada malaikat membuat kita menjadi anak yang:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs md:text-sm font-bold mb-6">
+                    <div class="p-3 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center gap-2">
+                        🌟 Rajin beribadah
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center gap-2">
+                        🌟 Jujur
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center gap-2">
+                        🌟 Suka menolong
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center gap-2">
+                        🌟 Bertanggung jawab
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center gap-2">
+                        🌟 Berbuat baik
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center gap-2">
+                        🌟 Menjauhi perbuatan buruk
+                    </div>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-teal-200 text-center space-y-2">
+                    <h3 class="text-amber-600 font-extrabold text-base">Pesan untuk Anak</h3>
+                    <p class="italic text-slate-700 font-medium text-xs md:text-sm">
+                        “Anak yang beriman kepada malaikat akan selalu berusaha melakukan kebaikan dan menjauhi keburukan.”
+                    </p>
+                    <p class="text-xs md:text-sm text-teal-800 font-bold pt-2">
+                        Dengan beriman kepada malaikat, mari kita menjadi anak yang jujur, rajin, sopan, suka menolong, dan selalu taat kepada Allah SWT.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 2 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 8</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 2 SD (Beriman kepada Malaikat)
+        const quizData = [
+            {
+                question: "1. Malaikat diciptakan oleh Allah SWT dari...",
+                options: [
+                    "A. Tanah",
+                    "B. Cahaya (Nur)",
+                    "C. Api",
+                    "D. Air"
+                ],
+                correct: 1,
+                explanation: "Malaikat adalah makhluk ciptaan Allah SWT yang diciptakan dari cahaya."
+            },
+            {
+                question: "2. Beriman kepada malaikat-malaikat Allah SWT termasuk Rukun Iman yang ke-...",
+                options: [
+                    "A. Pertama",
+                    "B. Kedua",
+                    "C. Ketiga",
+                    "D. Keempat"
+                ],
+                correct: 1,
+                explanation: "Beriman kepada malaikat merupakan Rukun Iman yang kedua."
+            },
+            {
+                question: "3. Malaikat yang bertugas menyampaikan wahyu kepada Nabi dan Rasul adalah...",
+                options: [
+                    "A. Malaikat Jibril",
+                    "B. Malaikat Mikail",
+                    "C. Malaikat Israfil",
+                    "D. Malaikat Ridwan"
+                ],
+                correct: 0,
+                explanation: "Malaikat Jibril bertugas menyampaikan wahyu Allah SWT kepada Nabi dan Rasul."
+            },
+            {
+                question: "4. Malaikat Raqib bertugas untuk...",
+                options: [
+                    "A. Mencatat amal buruk",
+                    "B. Mencatat amal baik",
+                    "C. Menjaga neraka",
+                    "D. Mencabut nyawa"
+                ],
+                correct: 1,
+                explanation: "Malaikat Raqib bertugas mencatat amal baik manusia."
+            },
+            {
+                question: "5. Malaikat yang bertugas meniup sangkakala pada hari kiamat adalah...",
+                options: [
+                    "A. Malaikat Izrail",
+                    "B. Malaikat Munkar",
+                    "C. Malaikat Israfil",
+                    "D. Malaikat Malik"
+                ],
+                correct: 2,
+                explanation: "Malaikat Israfil bertugas meniup sangkakala pada hari kiamat atas perintah Allah SWT."
+            },
+            {
+                question: "6. Jika kita melakukan perbuatan buruk, malaikat yang mencatatnya adalah...",
+                options: [
+                    "A. Malaikat Atid",
+                    "B. Malaikat Raqib",
+                    "C. Malaikat Nakir",
+                    "D. Malaikat Malik"
+                ],
+                correct: 0,
+                explanation: "Malaikat Atid bertugas mencatat amal buruk manusia."
+            },
+            {
+                question: "7. Malaikat yang menjaga surga dan neraka berturut-turut adalah...",
+                options: [
+                    "A. Malik dan Ridwan",
+                    "B. Ridwan dan Malik",
+                    "C. Munkar dan Nakir",
+                    "D. Raqib dan Atid"
+                ],
+                correct: 1,
+                explanation: "Malaikat Ridwan bertugas menjaga surga, sedangkan Malaikat Malik bertugas menjaga neraka."
+            },
+            {
+                question: "8. Beriman kepada malaikat berarti...",
+                options: [
+                    "A. Percaya bahwa malaikat adalah makhluk Allah SWT",
+                    "B. Menganggap malaikat sebagai Tuhan",
+                    "C. Tidak percaya adanya malaikat",
+                    "D. Menyembah malaikat"
+                ],
+                correct: 0,
+                explanation: "Beriman kepada malaikat berarti percaya dengan sepenuh hati bahwa malaikat adalah makhluk Allah SWT yang benar-benar ada dan selalu taat kepada-Nya."
+            },
+            {
+                question: "9. Salah satu hikmah beriman kepada malaikat adalah...",
+                options: [
+                    "A. Suka berbuat buruk",
+                    "B. Menjadi malas beribadah",
+                    "C. Rajin melakukan kebaikan",
+                    "D. Suka berbohong"
+                ],
+                correct: 2,
+                explanation: "Beriman kepada malaikat membuat kita terdorong untuk rajin melakukan kebaikan karena yakin bahwa setiap amal dicatat oleh malaikat."
+            },
+            {
+                question: "10. Ahmad selalu berkata jujur meskipun tidak ada orang yang melihat. Sikap Ahmad menunjukkan bahwa ia...",
+                options: [
+                    "A. Takut kepada teman",
+                    "B. Beriman kepada malaikat",
+                    "C. Ingin mendapatkan hadiah",
+                    "D. Takut kepada guru"
+                ],
+                correct: 1,
+                explanation: "Orang yang beriman kepada malaikat akan berusaha jujur dan berbuat baik karena yakin bahwa Allah SWT selalu mengetahui perbuatannya dan malaikat mencatat amalnya."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

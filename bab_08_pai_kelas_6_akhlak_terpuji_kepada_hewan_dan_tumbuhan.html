@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 6 SD - Akhlak Terpuji kepada Hewan dan Tumbuhan</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 08. Akhlak Terpuji kepada Hewan dan Tumbuhan</h1>
+                    <p class="text-xs text-emerald-200 font-medium mt-0.5">Fase C - Kelas 6 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('hewan', this)">
+                    <i class="fa-solid fa-paw"></i> Akhlak Hewan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('tumbuhan', this)">
+                    <i class="fa-solid fa-tree"></i> Akhlak Tumbuhan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('hikmah', this)">
+                    <i class="fa-solid fa-star"></i> Hikmah & Larangan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🌱 Materi PAI Kelas 6 SD</h2>
+                    <p class="text-sm md:text-base text-emerald-100 leading-relaxed mb-3">
+                        <strong>Pengertian Akhlak Terpuji kepada Makhluk Allah:</strong> Allah Swt. menciptakan berbagai makhluk di bumi, seperti manusia, hewan, dan tumbuhan. Semua makhluk ciptaan Allah memiliki manfaat bagi kehidupan. Sebagai manusia, kita harus memperlakukan hewan dan tumbuhan dengan baik.
+                    </p>
+                    <p class="text-xs md:text-sm text-emerald-200 leading-relaxed">
+                        Akhlak terpuji kepada hewan dan tumbuhan adalah perilaku baik yang dilakukan dengan penuh kasih sayang, menjaga kelestarian, tidak menyakiti, dan tidak merusak makhluk hidup ciptaan Allah Swt.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dalil Al-Qur'an Card -->
+            <div class="bg-white rounded-2xl p-6 border border-emerald-200 shadow-md mb-8 text-center">
+                <h3 class="text-xs md:text-sm font-bold text-emerald-800 uppercase tracking-wider mb-2">Dalil Al-Qur'an (QS. Hud: 6)</h3>
+                <p class="font-arabic text-xl md:text-2xl text-slate-800 my-3 dir-rtl leading-loose">
+                    وَمَا مِن دَابَّةٍ فِي الْأَرْضِ إِلَّا عَلَى اللَّهِ رِزْقُهَا
+                </p>
+                <p class="text-xs md:text-sm text-slate-600 italic">
+                    Artinya: “Dan tidak ada suatu binatang melata pun di bumi melainkan Allah-lah yang memberi rezekinya.”
+                </p>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-emerald-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hewan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">B & C</span>
+                            <i class="fa-solid fa-cat text-2xl text-emerald-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Akhlak Terpuji Hewan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Ternak, Piaraan & Dilindungi</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Cara merawat hewan piaraan/ternak serta menjaga hewan langka yang dilindungi dari perburuan liar.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Hewan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('tumbuhan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">D & E</span>
+                            <i class="fa-solid fa-seedling text-2xl text-emerald-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Akhlak Terpuji Tumbuhan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sekitar & Tumbuhan Langka</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Menjaga lingkungan sekitar, menyiram tanaman, serta melestarikan tumbuhan langka seperti Rafflesia arnoldii.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Tumbuhan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hikmah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">F & G</span>
+                            <i class="fa-solid fa-shield-cat text-2xl text-emerald-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Hikmah & Larangan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Perilaku Dihindari & Hikmah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Daftar larangan menyiksa makhluk Allah serta keberkahan dan kebaikan yang didapat dari berakhlak terpuji.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan Kesimpulan Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-emerald-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    📌 Pesan Penting
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    “Dengan menjaga hewan dan tumbuhan, kita ikut menjaga keseimbangan alam dan melaksanakan tanggung jawab sebagai manusia yang diberi amanah untuk memelihara bumi.”
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: AKHLAK TERPUJI KEADA HEWAN -->
+        <div id="tab-hewan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- B. Hewan Ternak dan Piaraan -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-dog"></i> B. Akhlak Terpuji kepada Hewan Ternak dan Piaraan
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed mb-4">
+                    Hewan ternak dan hewan piaraan adalah hewan yang dipelihara dan dirawat oleh manusia (Contoh: sapi, kambing, ayam, ikan, burung, kucing, kelinci). Memelihara hewan berarti memiliki tanggung jawab untuk merawatnya.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div class="p-4 bg-emerald-50/50 border border-emerald-200 rounded-xl">
+                        <h3 class="font-bold text-emerald-800 text-sm md:text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-600"></i> Contoh Perbuatan Baik:
+                        </h3>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1.5 list-disc list-inside">
+                            <li>Memberikan makanan dan minuman yang cukup.</li>
+                            <li>Menyediakan tempat tinggal yang bersih dan aman.</li>
+                            <li>Menjaga kesehatan hewan dan membersihkan kandang secara rutin.</li>
+                            <li>Tidak menyiksa, memukul, atau menarik ekornya.</li>
+                            <li>Tidak mengganggu hewan ketika sedang makan/beristirahat.</li>
+                            <li>Tidak membebani hewan melebihi kemampuannya.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 bg-amber-50/50 border border-amber-200 rounded-xl">
+                        <h3 class="font-bold text-amber-800 text-sm md:text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb text-amber-600"></i> Contoh dalam Sehari-hari:
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-2">
+                            Jika kita memiliki kucing, kita harus memberikan makanan dan minuman, membersihkan tempatnya, serta membawanya berobat jika sakit. Kita tidak boleh menarik ekornya, menendangnya, atau menjadikannya sebagai mainan yang menyakitkan.
+                        </p>
+                        <p class="text-xs md:text-sm font-semibold text-emerald-800">
+                            <strong>Hikmah:</strong> Mendapatkan pahala, menumbuhkan rasa kasih sayang, dan menunjukkan rasa syukur kepada Allah Swt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- C. Hewan yang Dilindungi -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-hippo"></i> C. Akhlak Terpuji kepada Hewan yang Dilindungi
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed mb-4">
+                    Ada beberapa jenis hewan yang jumlahnya semakin sedikit sehingga harus dilindungi (Contoh: orangutan, badak, harimau, gajah, dan satwa langka lainnya). Hewan ini tidak boleh diburu, disakiti, diperdagangkan secara ilegal, atau dirusak tempat hidupnya.
+                </p>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-teal-600"></i> Cara Menerapkan Akhlak Terpuji:
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs md:text-sm text-slate-700">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Tidak memburu hewan yang dilindungi.</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Tidak menangkap/memelihara satwa liar langka.</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Tidak membeli hasil perdagangan ilegal.</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menjaga hutan dan habitat tempat hidup satwa.</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Melaporkan perburuan/perdagangan ilegal.</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Mengajak orang lain melindungi hewan.</div>
+                    </div>
+                </div>
+
+                <blockquote class="mt-4 p-3 bg-teal-50 border-l-4 border-teal-600 rounded text-xs md:text-sm text-teal-900">
+                    <strong>Mengapa hewan harus dilindungi?</strong> Hewan merupakan bagian dari keseimbangan alam. Jika suatu jenis hewan punah, keseimbangan ekosistem dapat terganggu.
+                </blockquote>
+            </div>
+
+        </div>
+
+        <!-- TAB: AKHLAK TERPUJI KEADA TUMBUHAN -->
+        <div id="tab-tumbuhan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- D. Tumbuhan di Lingkungan Sekitar -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-plant-wilt"></i> D. Akhlak Terpuji kepada Tumbuhan Lingkungan Sekitar
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed mb-4">
+                    Tumbuhan menghasilkan oksigen, menyediakan makanan, tempat berteduh, mencegah erosi, dan memperindah lingkungan. Contoh: pohon mangga, jambu, kelapa, bunga, dan rumput.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
+                        <h3 class="font-bold text-emerald-800 text-sm md:text-base mb-2">Contoh Akhlak Terpuji:</h3>
+                        <ul class="text-xs md:text-sm text-slate-700 space-y-1.5 list-disc list-inside">
+                            <li>Menanam tumbuhan di lingkungan sekitar.</li>
+                            <li>Menyiram tanaman secara teratur & memberi pupuk.</li>
+                            <li>Tidak merusak, mencabut, atau menginjak tanaman.</li>
+                            <li>Merawat tanaman di sekolah dan rumah.</li>
+                            <li>Tidak menebang pohon secara sembarangan.</li>
+                            <li>Menanam kembali pohon yang telah ditebang (reboisasi).</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-slate-800 text-sm md:text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-school text-emerald-600"></i> Penerapan di Sekolah:
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Siswa dapat menjaga tanaman di halaman sekolah dengan menyiramnya, tidak menginjak taman, tidak memetik bunga sembarangan, serta aktif mengikuti kegiatan penghijauan sekolah.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E. Tumbuhan yang Dilindungi -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-tree text-teal-700"></i> E. Akhlak Terpuji kepada Tumbuhan yang Dilindungi
+                </h2>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed mb-4">
+                    Beberapa tumbuhan harus dilindungi karena jumlahnya langka atau memiliki nilai penting bagi ekosistem. Contohnya: <strong>Rafflesia arnoldii</strong>, <strong>kantong semar</strong>, dan tumbuhan langka lainnya.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 flex items-center gap-2"><i class="fa-solid fa-leaf text-teal-600"></i> Tidak memetik tumbuhan langka di habitatnya.</div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 flex items-center gap-2"><i class="fa-solid fa-leaf text-teal-600"></i> Tidak menebang pohon langka secara sembarangan.</div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 flex items-center gap-2"><i class="fa-solid fa-leaf text-teal-600"></i> Menjaga hutan dan kawasan konservasi.</div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 flex items-center gap-2"><i class="fa-solid fa-leaf text-teal-600"></i> Tidak membuang sampah di habitat tumbuhan.</div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 flex items-center gap-2 sm:col-span-2"><i class="fa-solid fa-leaf text-teal-600"></i> Mengikuti aturan resmi saat berkunjung ke kawasan konservasi alam.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: HIKMAH & HAL YANG HARUS DIHINDARI -->
+        <div id="tab-hikmah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- F. Perilaku yang Harus Dihindari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-rose-800 pb-2 border-b-2 border-rose-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-triangle-exclamation"></i> F. Perilaku yang Harus Dihindari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Sebagai seorang muslim, kita wajib menghindari perilaku buruk yang dapat menyakiti atau merusak makhluk Allah:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Menyiksa & menelantarkan hewan piaraan.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Memburu hewan yang dilindungi.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Membeli satwa hasil perdagangan ilegal.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Merusak habitat hewan dan tempat hidupnya.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Menebang pohon secara sembarangan.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Mencabut & menginjak-injak tanaman.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Merusak tanaman di taman sekolah/rumah.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Membuang sampah sembarangan merusak alam.</div>
+                </div>
+            </div>
+
+            <!-- G. Hikmah Berakhlak Terpuji -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-award"></i> G. Hikmah Berakhlak Terpuji kepada Hewan & Tumbuhan
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-star text-emerald-600"></i> Mendapatkan pahala dan ridha Allah Swt.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-emerald-600"></i> Menunjukkan rasa syukur atas ciptaan Allah.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-hand-holding-heart text-emerald-600"></i> Menumbuhkan sifat kasih sayang.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-earth-americas text-emerald-600"></i> Menjaga keseimbangan alam & ekosistem.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-shield-virus text-emerald-600"></i> Mencegah kepunahan makhluk langka.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-sun text-emerald-600"></i> Membuat lingkungan sehat dan nyaman.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 6 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 6 SD - Akhlak Terpuji kepada Hewan dan Tumbuhan
+        const quizData = [
+            {
+                question: "1. Surat dalam Al-Qur'an yang menjelaskan bahwa Allah-lah yang memberikan rezeki kepada setiap binatang melata di bumi adalah...",
+                options: [
+                    "A. QS. Al-Baqarah: 15",
+                    "B. QS. Hud: 6",
+                    "C. QS. An-Nahl: 12",
+                    "D. QS. Al-Ma'idah: 3"
+                ],
+                correct: 1,
+                explanation: "QS. Hud ayat 6 menegaskan bahwa rezeki setiap binatang di bumi ditanggung oleh Allah Swt."
+            },
+            {
+                question: "2. Berikut ini yang merupakan contoh akhlak terpuji kepada hewan ternak atau piaraan adalah...",
+                options: [
+                    "A. Menarik ekor kucing saat sedang makan",
+                    "B. Membebani kuda melampaui batas kemampuannya",
+                    "C. Memberi makan dan membersihkan kandang secara rutin",
+                    "D. Mengurung burung tanpa memberi minum"
+                ],
+                correct: 2,
+                explanation: "Merawat, memberi makan, serta membersihkan kandang adalah bentuk kewajiban manusia kepada hewan piaraan."
+            },
+            {
+                question: "3. Mengapa hewan langka seperti orangutan, badak, dan harimau harus dilindungi?",
+                options: [
+                    "A. Agar bisa dijual dengan harga mahal",
+                    "B. Karena menjaga keseimbangan alam dan mencegah kepunahan",
+                    "C. Supaya bisa dijadikan bahan permainan di rumah",
+                    "D. Karena berbahaya jika dibiarkan hidup"
+                ],
+                correct: 1,
+                explanation: "Hewan dilindungi wajib dijaga agar keseimbangan ekosistem tidak terganggu dan terhindar dari kepunahan."
+            },
+            {
+                question: "4. Salah satu contoh tumbuhan langka di Indonesia yang wajib kita lindungi adalah...",
+                options: [
+                    "A. Pohon Mangga",
+                    "B. Rafflesia arnoldii",
+                    "C. Bunga Mawar",
+                    "D. Pohon Jambu"
+                ],
+                correct: 1,
+                explanation: "Rafflesia arnoldii dan kantong semar merupakan contoh tumbuhan langka yang terlindungi."
+            },
+            {
+                question: "5. Apa yang harus dilakukan siswa untuk menerapkan akhlak terpuji kepada tumbuhan di sekolah?",
+                options: [
+                    "A. Memetik bunga di taman sekolah untuk mainan",
+                    "B. Menginjak-injak tanaman rumput saat berlari",
+                    "C. Menyiram tanaman dan tidak merusak taman sekolah",
+                    "D. Membuang sampah di dalam pot bunga"
+                ],
+                correct: 2,
+                explanation: "Siswa di sekolah wajib merawat dan tidak merusak taman dengan cara menyiram dan tidak memetik bunga sembarangan."
+            },
+            {
+                question: "6. Di bawah ini yang BUKAN merupakan manfaat tumbuhan bagi kehidupan manusia dan hewan adalah...",
+                options: [
+                    "A. Menghasilkan oksigen",
+                    "B. Mencegah bahaya erosi",
+                    "C. Menyebabkan lingkungan menjadi kotor",
+                    "D. Menyediakan sumber bahan makanan"
+                ],
+                correct: 2,
+                explanation: "Tumbuhan bermanfaat membuat lingkungan indah dan asri, bukan membuatnya kotor."
+            },
+            {
+                question: "7. Sikap yang harus kita hindari terhadap satwa liar yang dilindungi adalah...",
+                options: [
+                    "A. Melaporkan perburuan liar ke pihak berwenang",
+                    "B. Membeli satwa langka hasil perdagangan ilegal",
+                    "C. Menjaga kelestarian hutan habitatnya",
+                    "D. Mengajak teman menyayangi hewan"
+                ],
+                correct: 1,
+                explanation: "Membeli satwa hasil perdagangan ilegal adalah tindakan tercela yang melanggar hukum dan agama."
+            },
+            {
+                question: "8. Apa hikmah berakhlak terpuji kepada hewan dan tumbuhan?",
+                options: [
+                    "A. Mendapatkan dosa dari Allah Swt.",
+                    "B. Menumbuhkan kasih sayang dan mendapat ridha Allah Swt.",
+                    "C. Membuat alam menjadi rusak dan gersang",
+                    "D. Dijauhi oleh teman-teman di sekolah"
+                ],
+                correct: 1,
+                explanation: "Berbuat baik kepada ciptaan Allah menumbuhkan sifat kasih sayang, menjaga alam, serta mendatangkan ridha Allah."
+            },
+            {
+                question: "9. Tindakan menanam kembali pohon di hutan atau lahan yang telah gundul dinamakan...",
+                options: [
+                    "A. Erosi",
+                    "B. Reboisasi/penghijauan",
+                    "C. Reinkarnasi",
+                    "D. Konservasi ilegal"
+                ],
+                correct: 1,
+                explanation: "Menanam kembali pohon yang ditebang atau penghijauan merupakan langkah nyata menjaga keasrian bumi."
+            },
+            {
+                question: "10. Kedudukan manusia di bumi yang diberi amanah oleh Allah Swt. untuk memelihara alam adalah sebagai...",
+                options: [
+                    "A. Penguasa yang bebas merusak",
+                    "B. Khalifah di bumi",
+                    "C. Pemburu satwa",
+                    "D. Penonton alam"
+                ],
+                correct: 1,
+                explanation: "Manusia diciptakan sebagai khalifah di bumi untuk memelihara dan menjaga kelestarian alam."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-emerald-600 bg-emerald-50 text-emerald-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-emerald-400 hover:bg-emerald-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-emerald-100 text-emerald-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-emerald-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

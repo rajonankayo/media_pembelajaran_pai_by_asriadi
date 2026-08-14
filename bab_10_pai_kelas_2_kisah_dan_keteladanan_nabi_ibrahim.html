@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 2 SD - Kisah dan Keteladanan Nabi Ibrahim a.s.</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-star text-yellow-300"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 10. Kisah & Keteladanan Nabi Ibrahim a.s.</h1>
+                    <p class="text-xs text-emerald-200 font-medium mt-0.5">Fase A - Kelas 2 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('kisah', this)">
+                    <i class="fa-solid fa-book-open"></i> Mengenal & Kisah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('keteladanan', this)">
+                    <i class="fa-solid fa-heart"></i> Keteladanan & Sikap
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-emerald-700 to-teal-800 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">✨ Kisah dan Keteladanan Nabi Ibrahim a.s.</h2>
+                    <p class="text-sm md:text-base text-emerald-100 leading-relaxed">
+                        Mengenal Nabi Ibrahim a.s., mempelajari kisah keteladanannya, mencontoh sikap terpuji sehari-hari, serta mengikuti pesan penting untuk anak muslim.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-emerald-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('kisah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian A - B</span>
+                            <i class="fa-solid fa-user-shield text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Mengenal & Kisah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sejarah Nabi Ibrahim a.s.</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengetahui kedudukan Nabi Ibrahim a.s. sebagai Bapak Para Nabi, ajakan meninggalkan berhala, hingga pertolongan Allah Swt. saat dihukum dibakar oleh Raja Namrud.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Kisah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('keteladanan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian C - E</span>
+                            <i class="fa-solid fa-hands-holding-heart text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Keteladanan & Sikap</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Teladan Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">6 sifat utama yang patut dicontoh: taat, teguh pendirian, berani membela kebenaran, sabar, tidak sombong, dan menyayangi keluarga.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Keteladanan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('kuis')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-amber-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-amber-600 bg-amber-100 px-2.5 py-1 rounded-full">Uji Pemahaman</span>
+                            <i class="fa-solid fa-puzzle-piece text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Kuis Interaktif</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Latihan Soal</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Uji pemahamanmu tentang materi Nabi Ibrahim a.s. dengan menjawab kuis pilihan ganda yang interaktif!</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-amber-600 flex items-center gap-2">
+                        Mulai Kuis <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan Pembiasaan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-emerald-800 font-bold text-lg mb-3 flex items-center justify-center gap-2">
+                    🌟 Ayo Kita Biasakan!
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold mb-3">Aku ingin menjadi anak seperti Nabi Ibrahim a.s.</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 text-xs md:text-sm">
+                    <div class="p-2.5 bg-white rounded-xl border border-emerald-200 font-medium text-emerald-900 shadow-sm">🕌 Rajin Salat</div>
+                    <div class="p-2.5 bg-white rounded-xl border border-emerald-200 font-medium text-emerald-900 shadow-sm">🗣️ Berani Berkata Benar</div>
+                    <div class="p-2.5 bg-white rounded-xl border border-emerald-200 font-medium text-emerald-900 shadow-sm">🌷 Sabar Menghadapi Diri</div>
+                    <div class="p-2.5 bg-white rounded-xl border border-emerald-200 font-medium text-emerald-900 shadow-sm">👨‍👩‍👧 Taat Orang Tua</div>
+                    <div class="p-2.5 bg-white rounded-xl border border-emerald-200 font-medium text-emerald-900 shadow-sm">❤️ Menyayangi Keluarga</div>
+                    <div class="p-2.5 bg-white rounded-xl border border-emerald-200 font-medium text-emerald-900 shadow-sm">🌱 Tidak Sombong</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MENGENAL & KISAH NABI IBRAHIM A.S. -->
+        <div id="tab-kisah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- A. Mengenal Nabi Ibrahim a.s. -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-user-check"></i> A. Mengenal Nabi Ibrahim a.s.
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    <strong>Nabi Ibrahim a.s.</strong> adalah salah satu nabi dan rasul Allah Swt. Beliau dikenal sebagai <strong>bapak para nabi</strong>, karena banyak nabi setelah beliau berasal dari keturunannya.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Nabi Ibrahim a.s. adalah keturunan dari <strong>Nabi Nuh a.s.</strong> Beliau diutus Allah Swt. untuk mengajak manusia menyembah Allah Swt. dan meninggalkan penyembahan kepada berhala.
+                </p>
+
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 mb-4">
+                    <h4 class="font-bold text-emerald-800 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-star"></i> Gelar & Tugas Utama
+                    </h4>
+                    <p class="leading-relaxed">Gelar: <strong>Bapak Para Nabi</strong> | Tugas: Mengajak manusia menyembah Allah Swt. dan meninggalkan penyembahan berhala.</p>
+                </div>
+            </div>
+
+            <!-- B. Kisah Nabi Ibrahim a.s. -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> B. Kisah Nabi Ibrahim a.s.
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Pada zaman Nabi Ibrahim a.s., banyak orang menyembah berhala. Mereka membuat patung-patung dari batu lalu menyembahnya.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Nabi Ibrahim a.s. tidak mau menyembah berhala. Beliau mengajarkan kepada kaumnya bahwa hanya Allah Swt. yang wajib disembah.
+                </p>
+
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base flex items-center gap-2">
+                        <i class="fa-solid fa-fire text-amber-600"></i> Peristiwa Penting Perjuangan Nabi Ibrahim a.s.:
+                    </h3>
+                    <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                        <li class="p-3 bg-white border border-slate-200 rounded-xl flex items-start gap-2">
+                            <i class="fa-solid fa-hammer text-emerald-600 font-bold mt-0.5"></i>
+                            <div><strong>Menghancurkan Berhala:</strong> Nabi Ibrahim a.s. menghancurkan berhala-berhala yang disembah oleh kaumnya. Hal itu membuat Raja Namrud dan kaumnya sangat marah.</div>
+                        </li>
+                        <li class="p-3 bg-white border border-slate-200 rounded-xl flex items-start gap-2">
+                            <i class="fa-solid fa-shield-halved text-emerald-600 font-bold mt-0.5"></i>
+                            <div><strong>Dihukum Dibakar:</strong> Nabi Ibrahim a.s. dihukum dengan cara dibakar dalam api. Namun, Allah Swt. menyelamatkan beliau. Api yang panas tidak membakarnya! Peristiwa ini menunjukkan kekuasaan Allah Swt.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 flex items-center gap-3">
+                    <i class="fa-solid fa-heart-shield text-amber-600 text-xl shrink-0"></i>
+                    <div><strong>Keteguhan Keimanan:</strong> Nabi Ibrahim a.s. tetap teguh dalam keimanannya. Beliau tidak takut dan tidak meninggalkan perintah Allah Swt.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KETELADANAN, SIKAP & PESAN -->
+        <div id="tab-keteladanan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C. Keteladanan Nabi Ibrahim a.s. -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-heart"></i> C. Keteladanan Nabi Ibrahim a.s.
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700">Ada banyak sifat baik Nabi Ibrahim a.s. yang dapat kita contoh dalam kehidupan sehari-hari:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- 1. Taat kepada Allah Swt. -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">1. Taat kepada Allah Swt. 🕌</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-1">
+                            Nabi Ibrahim a.s. selalu melaksanakan perintah Allah Swt.
+                        </p>
+                        <p class="text-xs text-slate-600 bg-white p-2.5 rounded-lg border border-slate-200">
+                            <strong>Penerapan:</strong> Kita harus rajin beribadah dan menaati perintah Allah.
+                        </p>
+                    </div>
+
+                    <!-- 2. Teguh Pendirian -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                        <span class="text-xs font-bold text-blue-800 bg-blue-100 px-2.5 py-1 rounded-full">2. Teguh Pendirian 💪</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-1">
+                            Nabi Ibrahim a.s. tetap mempertahankan keimanannya walaupun mendapat ancaman.
+                        </p>
+                        <p class="text-xs text-slate-600 bg-white p-2.5 rounded-lg border border-slate-200">
+                            <strong>Penerapan:</strong> Kita juga harus berani mempertahankan kebenaran.
+                        </p>
+                    </div>
+
+                    <!-- 3. Berani Membela Kebenaran -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                        <span class="text-xs font-bold text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full">3. Berani Membela Kebenaran 🗣️</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-1">
+                            Nabi Ibrahim a.s. berani menyampaikan bahwa menyembah berhala adalah perbuatan yang salah.
+                        </p>
+                        <p class="text-xs text-slate-600 bg-white p-2.5 rounded-lg border border-slate-200">
+                            <strong>Penerapan:</strong> Berani menyuarakan kebaikan dan meluruskan hal yang keliru.
+                        </p>
+                    </div>
+
+                    <!-- 4. Sabar -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                        <span class="text-xs font-bold text-rose-800 bg-rose-100 px-2.5 py-1 rounded-full">4. Sabar 🌷</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-1">
+                            Nabi Ibrahim a.s. menghadapi berbagai ujian dengan sabar.
+                        </p>
+                        <p class="text-xs text-slate-600 bg-white p-2.5 rounded-lg border border-slate-200">
+                            <strong>Penerapan:</strong> Kita juga harus sabar ketika menghadapi kesulitan.
+                        </p>
+                    </div>
+
+                    <!-- 5. Tidak Sombong -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                        <span class="text-xs font-bold text-purple-800 bg-purple-100 px-2.5 py-1 rounded-full">5. Tidak Sombong 🌱</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-1">
+                            Walaupun menjadi nabi yang mulia, Nabi Ibrahim a.s. tetap rendah hati dan selalu taat kepada Allah Swt.
+                        </p>
+                        <p class="text-xs text-slate-600 bg-white p-2.5 rounded-lg border border-slate-200">
+                            <strong>Penerapan:</strong> Selalu bersikap rendah hati kepada siapa saja.
+                        </p>
+                    </div>
+
+                    <!-- 6. Menyayangi Keluarga -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                        <span class="text-xs font-bold text-teal-800 bg-teal-100 px-2.5 py-1 rounded-full">6. Menyayangi Keluarga ❤️</span>
+                        <p class="text-xs md:text-sm text-slate-700 pt-1">
+                            Nabi Ibrahim a.s. menyayangi keluarganya dan selalu mengajarkan kebaikan kepada mereka.
+                        </p>
+                        <p class="text-xs text-slate-600 bg-white p-2.5 rounded-lg border border-slate-200">
+                            <strong>Penerapan:</strong> Menyayangi orang tua, saudara, dan saling membimbing dalam kebaikan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D. Contoh Keteladanan dalam Kehidupan Sehari-hari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-thumbs-up"></i> D. Contoh Keteladanan dalam Kehidupan Sehari-hari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-3">Kita dapat meneladani Nabi Ibrahim a.s. dengan cara:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Rajin melaksanakan salat.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Berdoa kepada Allah Swt.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Tidak menyembah selain Allah Swt.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Berani berkata benar.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Tidak mudah mengikuti ajakan yang buruk.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Sabar ketika menghadapi kesulitan.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Taat kepada orang tua selama dalam kebaikan.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Menyayangi saudara dan teman.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Tidak sombong kepada orang lain.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Selalu bersyukur kepada Allah Swt.
+                    </div>
+                </div>
+            </div>
+
+            <!-- E. Pesan Penting -->
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-slate-300 space-y-3">
+                <h3 class="text-emerald-800 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-amber-500"></i> E. Pesan Penting
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Nabi Ibrahim a.s. mengajarkan kita untuk selalu beriman kepada Allah Swt., taat kepada-Nya, berani membela kebenaran, sabar menghadapi ujian, dan menyayangi keluarga.
+                </p>
+                <div class="p-4 bg-white rounded-xl border border-emerald-200">
+                    <h4 class="font-bold text-emerald-800 text-xs md:text-sm mb-1">📌 Ringkasan:</h4>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Nabi Ibrahim a.s. adalah bapak para nabi. Beliau mengajak manusia untuk menyembah Allah Swt. dan meninggalkan berhala. Walaupun mendapat banyak tantangan, Nabi Ibrahim a.s. tetap teguh dalam keimanannya. Kita harus meneladani sifat beliau dengan menjadi anak yang taat, berani, sabar, teguh pendirian, rendah hati, dan menyayangi keluarga.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 2 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Kisah dan Keteladanan Nabi Ibrahim a.s. PAI Kelas 2 SD
+        const quizData = [
+            {
+                question: "1. Nabi Ibrahim a.s. dikenal dengan sebutan bapak para nabi karena...",
+                options: [
+                    "A. Beliau adalah nabi yang paling tua",
+                    "B. Banyak nabi setelah beliau berasal dari keturunannya",
+                    "C. Beliau adalah nabi pertama di bumi",
+                    "D. Beliau tinggal bersama seluruh nabi"
+                ],
+                correct: 1,
+                explanation: "Nabi Ibrahim a.s. dikenal sebagai bapak para nabi karena banyak nabi setelah beliau berasal dari keturunannya."
+            },
+            {
+                question: "2. Nabi Ibrahim a.s. merupakan keturunan dari nabi...",
+                options: [
+                    "A. Nabi Adam a.s.",
+                    "B. Nabi Nuh a.s.",
+                    "C. Nabi Musa a.s.",
+                    "D. Nabi Isa a.s."
+                ],
+                correct: 1,
+                explanation: "Nabi Ibrahim a.s. adalah keturunan dari Nabi Nuh a.s."
+            },
+            {
+                question: "3. Nabi Ibrahim a.s. diutus Allah Swt. untuk mengajak manusia...",
+                options: [
+                    "A. Menyembah berhala batu",
+                    "B. Menghormati Raja Namrud",
+                    "C. Menyembah Allah Swt. dan meninggalkan berhala",
+                    "D. Membuat patung yang indah"
+                ],
+                correct: 2,
+                explanation: "Nabi Ibrahim a.s. diutus untuk mengajak manusia menyembah Allah Swt. dan meninggalkan penyembahan berhala."
+            },
+            {
+                question: "4. Raja yang marah ketika berhala-berhalanya dihancurkan oleh Nabi Ibrahim a.s. adalah...",
+                options: [
+                    "A. Raja Fir'aun",
+                    "B. Raja Namrud",
+                    "C. Raja Abrahah",
+                    "D. Raja Jalut"
+                ],
+                correct: 1,
+                explanation: "Nabi Ibrahim a.s. menghancurkan berhala sehingga membuat Raja Namrud dan kaumnya marah."
+            },
+            {
+                question: "5. Hukuman yang diberikan Raja Namrud kepada Nabi Ibrahim a.s. adalah...",
+                options: [
+                    "A. Dihukum dibakar dalam api",
+                    "B. Dibuang ke laut",
+                    "C. Dimasukkan ke dalam sumur",
+                    "D. Dipenjara selamanya"
+                ],
+                correct: 0,
+                explanation: "Nabi Ibrahim a.s. dihukum dengan cara dibakar dalam api oleh Raja Namrud."
+            },
+            {
+                question: "6. Apa yang terjadi pada Nabi Ibrahim a.s. saat dimasukkan ke dalam api?",
+                options: [
+                    "A. Nabi Ibrahim a.s. pingsan",
+                    "B. Api membakar Nabi Ibrahim a.s.",
+                    "C. Allah Swt. menyelamatkan beliau sehingga api tidak membakarnya",
+                    "D. Api berubah menjadi air"
+                ],
+                correct: 2,
+                explanation: "Allah Swt. menyelamatkan Nabi Ibrahim a.s. sehingga api yang panas tidak membakarnya."
+            },
+            {
+                question: "7. Sifat Nabi Ibrahim a.s. yang tidak takut ancaman dan tetap mempertahankan keimanan disebut...",
+                options: [
+                    "A. Sombong",
+                    "B. Teguh pendirian",
+                    "C. Pemarah",
+                    "D. Pesimis"
+                ],
+                correct: 1,
+                explanation: "Teguh pendirian berarti tetap mempertahankan keimanan walaupun mendapat ancaman."
+            },
+            {
+                question: "8. Walaupun menjadi nabi yang mulia, Nabi Ibrahim a.s. tetap rendah hati. Hal ini menunjukkan bahwa beliau...",
+                options: [
+                    "A. Sombong",
+                    "B. Tidak sombong / rendah hati",
+                    "C. Pemalu",
+                    "D. Penakut"
+                ],
+                correct: 1,
+                explanation: "Nabi Ibrahim a.s. tidak sombong, selalu rendah hati dan taat kepada Allah Swt."
+            },
+            {
+                question: "9. Berikut ini yang merupakan contoh keteladanan Nabi Ibrahim a.s. dalam kehidupan sehari-hari adalah...",
+                options: [
+                    "A. Malas melaksanakan salat",
+                    "B. Mudah mengikuti ajakan yang buruk",
+                    "C. Rajin melaksanakan salat dan berdoa",
+                    "D. Sombong kepada teman"
+                ],
+                correct: 2,
+                explanation: "Kita meneladani Nabi Ibrahim a.s. dengan rajin salat, berdoa, taat, dan menyayangi sesama."
+            },
+            {
+                question: "10. Bagaimana sikap kita kepada orang tua sesuai keteladanan Nabi Ibrahim a.s.?",
+                options: [
+                    "A. Membentak orang tua",
+                    "B. Taat kepada orang tua selama dalam kebaikan",
+                    "C. Mengabaikan perintah orang tua",
+                    "D. Marah jika ditasihati"
+                ],
+                correct: 1,
+                explanation: "Kita harus taat kepada orang tua selama dalam kebaikan serta menyayangi keluarga."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-emerald-600 bg-emerald-50 text-emerald-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-emerald-400 hover:bg-emerald-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-emerald-100 text-emerald-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-emerald-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Hebat Sekali! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Kamu menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

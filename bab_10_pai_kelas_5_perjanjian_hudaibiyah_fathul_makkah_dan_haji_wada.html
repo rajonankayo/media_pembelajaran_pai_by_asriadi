@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 5 SD - Perjanjian Hudaibiyah, Fathul Makkah, dan Haji Wada’</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-kaaba"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 10. Perjanjian Hudaibiyah, Fathul Makkah, & Haji Wada’</h1>
+                    <p class="text-xs text-emerald-200 font-medium mt-0.5">Fase C - Kelas 5 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('hudaibiyah', this)">
+                    <i class="fa-solid fa-handshake"></i> Hudaibiyah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('fathulmakkah', this)">
+                    <i class="fa-solid fa-city"></i> Fathul Makkah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('hajiwada', this)">
+                    <i class="fa-solid fa-person-praying"></i> Haji Wada’
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-emerald-700 to-teal-800 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🕌 Perjanjian Hudaibiyah, Fathul Makkah, & Haji Wada’</h2>
+                    <p class="text-sm md:text-base text-emerald-100 leading-relaxed">
+                        Memahami Sejarah Penting Perjuangan Nabi Muhammad saw., Pembebasan Kota Makkah, Pesan Terakhir dalam Haji Wada’, serta Keteladanan Mulia untuk Kehidupan Sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-emerald-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hudaibiyah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian A</span>
+                            <i class="fa-solid fa-handshake text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Perjanjian Hudaibiyah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tahun 6 Hijriah (628 M)</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Perjanjian damai antara Nabi Muhammad saw. dan kaum Quraisy Makkah, isi kesepakatan, dan hikmah kesabaran.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Hudaibiyah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('fathulmakkah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian B</span>
+                            <i class="fa-solid fa-city text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Fathul Makkah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tahun 8 Hijriah (630 M)</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Pembebasan Kota Makkah secara damai, pembersihan berhala Ka'bah, dan sifat pemaaf Rasulullah saw.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Fathul Makkah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hajiwada')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian C</span>
+                            <i class="fa-solid fa-person-praying text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Haji Wada’</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tahun 10 Hijriah (632 M)</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Haji perpisahan Rasulullah saw., pesan-pesan penting khutbah wada', dan kesetaraan antar manusia.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Haji Wada’ <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Urutan Peristiwa Ringkas -->
+            <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-200 mb-8">
+                <h3 class="text-lg font-extrabold text-emerald-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-timeline"></i> D. Urutan Peristiwa Sejarah
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+                        <span class="inline-block px-3 py-1 bg-emerald-700 text-white font-bold rounded-full text-xs mb-2">1. 6 Hijriah</span>
+                        <h4 class="font-bold text-slate-800 text-sm">Perjanjian Hudaibiyah</h4>
+                        <p class="text-xs text-slate-600 mt-1">Perjanjian damai antara kaum Muslimin dan Quraisy.</p>
+                    </div>
+                    <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+                        <span class="inline-block px-3 py-1 bg-emerald-700 text-white font-bold rounded-full text-xs mb-2">2. 8 Hijriah</span>
+                        <h4 class="font-bold text-slate-800 text-sm">Fathul Makkah</h4>
+                        <p class="text-xs text-slate-600 mt-1">Pembebasan Kota Makkah & penghancuran berhala Ka'bah.</p>
+                    </div>
+                    <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+                        <span class="inline-block px-3 py-1 bg-emerald-700 text-white font-bold rounded-full text-xs mb-2">3. 10 Hijriah</span>
+                        <h4 class="font-bold text-slate-800 text-sm">Haji Wada’</h4>
+                        <p class="text-xs text-slate-600 mt-1">Haji terakhir Nabi Muhammad saw. & penyampaian pesan penting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-emerald-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Penerapan Keteladanan Siswa Kelas 5 SD
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Mari kita terapkan teladan Nabi Muhammad saw. dalam kehidupan sehari-hari: tidak bertengkar dengan teman, mau memaafkan, menepati janji, menghormati orang lain, berkata jujur, dan rajin beribadah kepada Allah Swt.!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PERJANJIAN HUDAIBIYAH -->
+        <div id="tab-hudaibiyah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-handshake"></i> A. Perjanjian Hudaibiyah
+                </h2>
+                
+                <h3 class="font-bold text-slate-800 text-base md:text-lg mb-2">1. Pengertian Perjanjian Hudaibiyah</h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    <strong>Perjanjian Hudaibiyah</strong> adalah perjanjian damai antara Nabi Muhammad saw. dan kaum Quraisy Makkah. Perjanjian ini terjadi pada <strong>tahun 6 Hijriah (628 M)</strong> di daerah Hudaibiyah, dekat Kota Makkah.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Saat itu Nabi Muhammad saw. bersama sekitar <strong>1.400 sahabat</strong> datang ke Makkah untuk melaksanakan umrah. Mereka tidak bermaksud berperang. Namun, kaum Quraisy melarang kaum Muslimin memasuki Makkah. Setelah melalui perundingan, akhirnya dibuatlah perjanjian antara kaum Muslimin dan kaum Quraisy.
+                </p>
+
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 mb-6">
+                    <i class="fa-solid fa-scroll text-emerald-600 text-lg mb-1 block"></i>
+                    <h4 class="font-bold text-emerald-800 mb-2">2. Isi Perjanjian Hudaibiyah</h4>
+                    <ul class="space-y-1.5 list-disc list-inside">
+                        <li>Kaum Muslimin dan kaum Quraisy sepakat untuk <strong>tidak saling berperang selama 10 tahun</strong>.</li>
+                        <li>Nabi Muhammad saw. dan kaum Muslimin <strong>belum diperbolehkan melaksanakan umrah</strong> pada tahun tersebut.</li>
+                        <li>Kaum Muslimin diperbolehkan datang kembali ke Makkah untuk umrah pada <strong>tahun berikutnya</strong>.</li>
+                        <li>Suku-suku Arab <strong>bebas memilih</strong> untuk bergabung dengan kaum Muslimin atau kaum Quraisy.</li>
+                        <li>Kedua pihak harus menjaga perdamaian dan <strong>tidak saling mengkhianati</strong>.</li>
+                    </ul>
+                </div>
+
+                <h3 class="font-bold text-slate-800 text-base md:text-lg mb-2">3. Hikmah Perjanjian Hudaibiyah</h3>
+                <p class="text-xs md:text-sm text-slate-700 mb-3">Perjanjian Hudaibiyah mengajarkan kita untuk:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs md:text-sm mb-4">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> Mengutamakan perdamaian
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> Menepati janji
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> Bersabar menghadapi kesulitan
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> Tidak mudah marah
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> Mengutamakan kepentingan bersama
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 font-bold"></i> Menyelesaikan masalah dengan musyawarah
+                    </div>
+                </div>
+                
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 flex items-center gap-3">
+                    <i class="fa-solid fa-lightbulb text-amber-600 text-xl"></i>
+                    <div>Perjanjian ini pada awalnya terlihat merugikan kaum Muslimin. Namun, ternyata membawa banyak kebaikan. Dalam suasana damai, dakwah Islam berkembang semakin luas.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: FATHUL MAKKAH -->
+        <div id="tab-fathulmakkah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-city"></i> B. Fathul Makkah
+                </h2>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 text-base md:text-lg mb-2">1. Pengertian Fathul Makkah</h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        <strong>Fathul Makkah</strong> berarti pembebasan atau penaklukan Kota Makkah. Peristiwa ini terjadi pada <strong>tahun 8 Hijriah (630 M)</strong>. Nabi Muhammad saw. bersama sekitar <strong>10.000 kaum Muslimin</strong> menuju Makkah. Peristiwa ini terjadi setelah kaum Quraisy dan sekutunya melanggar Perjanjian Hudaibiyah.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 text-base md:text-lg mb-2">2. Nabi Muhammad saw. Memasuki Kota Makkah</h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Nabi Muhammad saw. memasuki Makkah bersama kaum Muslimin. Dengan pertolongan Allah Swt., Makkah dapat dikuasai dengan <strong>damai</strong>. Nabi Muhammad saw. tidak membalas kejahatan kaum Quraisy dengan dendam. Beliau justru memberikan ampunan kepada banyak penduduk Makkah. Hal ini menunjukkan bahwa Nabi Muhammad saw. adalah seorang pemimpin yang <strong>pemaaf, penyayang, dan tidak pendendam</strong>.
+                    </p>
+                </div>
+
+                <!-- Membersihkan Ka'bah & Ayat Al-Qur'an -->
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                    <h3 class="font-bold text-slate-800 text-base mb-1">3. Membersihkan Ka’bah</h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Setelah memasuki Makkah, Nabi Muhammad saw. menuju Ka’bah. Saat itu di sekitar Ka’bah terdapat banyak berhala. Nabi Muhammad saw. kemudian menghancurkan berhala-berhala tersebut dan mengembalikan Ka’bah sebagai tempat beribadah kepada Allah Swt.
+                    </p>
+                    <div class="flex justify-between items-center pt-2">
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">QS. Al-Isra’: 81</span>
+                    </div>
+                    <div class="text-right text-2xl md:text-3xl font-arabic font-bold text-emerald-900 py-2 leading-loose">
+                        وَقُلْ جَآءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-700 bg-white p-3 rounded-xl border border-slate-200">
+                        <strong>Artinya:</strong> “Dan katakanlah: Yang benar telah datang dan yang batil telah lenyap.”
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 text-base md:text-lg mb-2">4. Keteladanan dari Fathul Makkah</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2 text-emerald-900">
+                            <i class="fa-solid fa-heart text-emerald-600"></i> Memaafkan kesalahan orang lain
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2 text-emerald-900">
+                            <i class="fa-solid fa-shield text-emerald-600"></i> Tidak menyimpan dendam
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2 text-emerald-900">
+                            <i class="fa-solid fa-dove text-emerald-600"></i> Rendah hati ketika memperoleh kemenangan
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2 text-emerald-900">
+                            <i class="fa-solid fa-handshake text-emerald-600"></i> Menjaga perdamaian
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2 text-emerald-900">
+                            <i class="fa-solid fa-scale-balanced text-emerald-600"></i> Berani membela kebenaran
+                        </div>
+                        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2 text-emerald-900">
+                            <i class="fa-solid fa-user-check text-emerald-600"></i> Tidak menyalahgunakan kekuasaan
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: HAJI WADA' -->
+        <div id="tab-hajiwada" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-person-praying"></i> C. Haji Wada’
+                </h2>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 text-base md:text-lg mb-2">1. Pengertian Haji Wada’</h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        <strong>Haji Wada’</strong> berarti <strong>haji perpisahan</strong>. Haji Wada’ adalah ibadah haji yang dilakukan Nabi Muhammad saw. pada <strong>tahun 10 Hijriah (632 M)</strong>. Haji ini merupakan haji terakhir yang dilakukan oleh Nabi Muhammad saw. Dalam kesempatan tersebut, Nabi Muhammad saw. menyampaikan pesan penting kepada umat Islam.
+                    </p>
+                </div>
+
+                <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-2xl space-y-3">
+                    <h3 class="font-bold text-emerald-900 text-base mb-1">2. Isi Pesan Nabi Muhammad saw. dalam Haji Wada’</h3>
+                    <p class="text-xs md:text-sm text-slate-700">Dalam khutbahnya, Nabi Muhammad saw. mengajarkan umat Islam untuk:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs md:text-sm text-emerald-900 font-medium">
+                        <li class="p-2 bg-white rounded-lg border border-emerald-200"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i> Bertakwalah kepada Allah Swt.</li>
+                        <li class="p-2 bg-white rounded-lg border border-emerald-200"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i> Menjaga jiwa dan harta manusia.</li>
+                        <li class="p-2 bg-white rounded-lg border border-emerald-200"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i> Menghormati dan menyayangi sesama.</li>
+                        <li class="p-2 bg-white rounded-lg border border-emerald-200"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i> Menjauhi kezaliman.</li>
+                        <li class="p-2 bg-white rounded-lg border border-emerald-200"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i> Menjaga amanah.</li>
+                        <li class="p-2 bg-white rounded-lg border border-emerald-200"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i> Memperlakuan perempuan dengan baik.</li>
+                        <li class="p-2 bg-white rounded-lg border border-emerald-200"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i> Berpegang teguh kepada ajaran Islam.</li>
+                        <li class="p-2 bg-white rounded-lg border border-emerald-200"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i> Tidak membeda-bedakan suku & keturunan.</li>
+                    </ul>
+
+                    <!-- QS. Al-Hujurat: 13 -->
+                    <div class="mt-4 pt-3 border-t border-emerald-200">
+                        <p class="text-xs md:text-sm text-slate-700 mb-2">
+                            Nabi Muhammad saw. juga mengingatkan bahwa semua manusia memiliki kedudukan yang sama sebagai makhluk Allah Swt. Yang membedakan manusia di hadapan Allah Swt. adalah <strong>ketakwaannya</strong>.
+                        </p>
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">QS. Al-Hujurat: 13</span>
+                        </div>
+                        <div class="text-right text-2xl md:text-3xl font-arabic font-bold text-emerald-900 py-2 leading-loose">
+                            إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ
+                        </div>
+                        <div class="text-xs md:text-sm text-slate-700 bg-white p-3 rounded-xl border border-slate-200">
+                            <strong>Artinya:</strong> “Sesungguhnya yang paling mulia di antara kamu di sisi Allah ialah orang yang paling bertakwalia.”
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 text-base md:text-lg mb-2">3. Keteladanan dari Haji Wada’</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs md:text-sm">
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center font-semibold">Rajin beribadah</div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center font-semibold">Menghormati orang lain</div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center font-semibold">Menjaga persaudaraan</div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center font-semibold">Tidak sombong</div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center font-semibold">Bersikap adil</div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center font-semibold">Menjaga amanah</div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center font-semibold">Tidak zalim</div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center font-semibold">Menyayangi sesama</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E. Kesimpulan Tabel -->
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-slate-300 space-y-4">
+                <h3 class="text-emerald-800 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-table text-amber-500"></i> E. Kesimpulan Ringkasan Peristiwa Sejarah
+                </h3>
+
+                <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+                    <table class="w-full text-left text-xs md:text-sm">
+                        <thead class="bg-emerald-800 text-white font-bold">
+                            <tr>
+                                <th class="p-3 border-b">Peristiwa</th>
+                                <th class="p-3 border-b">Waktu</th>
+                                <th class="p-3 border-b">Inti Kejadian</th>
+                                <th class="p-3 border-b">Keteladanan Utamanya</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Perjanjian Hudaibiyah</td>
+                                <td class="p-3 font-medium">6 Hijriah (628 M)</td>
+                                <td class="p-3">Perjanjian damai tidak berperang 10 tahun antara Muslimin & Quraisy.</td>
+                                <td class="p-3">Kesabaran, perdamaian, & menepati janji.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Fathul Makkah</td>
+                                <td class="p-3 font-medium">8 Hijriah (630 M)</td>
+                                <td class="p-3">Pembebasan Kota Makkah secara damai & penghancuran berhala Ka'bah.</td>
+                                <td class="p-3">Keberanian, pemaaf, rendah hati, & kasih sayang.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-semibold text-emerald-900 bg-emerald-50/50">Haji Wada’</td>
+                                <td class="p-3 font-medium">10 Hijriah (632 M)</td>
+                                <td class="p-3">Haji perpisahan Rasulullah saw. & penyampaian khutbah amanah.</td>
+                                <td class="p-3">Ketakwaan, persaudaraan, keadilan, & kesetaraan.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis PAI Kelas 5 SD - Hudaibiyah, Fathul Makkah & Haji Wada'
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Perjanjian Hudaibiyah, Fathul Makkah, dan Haji Wada’
+        const quizData = [
+            {
+                question: "1. Perjanjian damai antara Nabi Muhammad saw. dan kaum Quraisy Makkah terjadi pada tahun...",
+                options: [
+                    "A. 2 Hijriah",
+                    "B. 6 Hijriah",
+                    "C. 8 Hijriah",
+                    "D. 10 Hijriah"
+                ],
+                correct: 1,
+                explanation: "Perjanjian Hudaibiyah terjadi pada tahun 6 Hijriah (628 M) di daerah Hudaibiyah."
+            },
+            {
+                question: "2. Berapa lama kesepakatan tidak saling berperang dalam Perjanjian Hudaibiyah?",
+                options: [
+                    "A. 5 tahun",
+                    "B. 10 tahun",
+                    "C. 15 tahun",
+                    "D. 20 tahun"
+                ],
+                correct: 1,
+                explanation: "Dalam Perjanjian Hudaibiyah, kedua pihak sepakat untuk tidak saling berperang selama 10 tahun."
+            },
+            {
+                question: "3. Berapakah jumlah rombongan kaum Muslimin yang menyertai Nabi Muhammad saw. saat menuju Hudaibiyah?",
+                options: [
+                    "A. 1.000 sahabat",
+                    "B. 1.400 sahabat",
+                    "C. 10.000 sahabat",
+                    "D. 12.000 sahabat"
+                ],
+                correct: 1,
+                explanation: "Nabi Muhammad saw. datang bersama sekitar 1.400 sahabat untuk melaksanakan umrah."
+            },
+            {
+                question: "4. Peristiwa Fathul Makkah artinya adalah...",
+                options: [
+                    "A. Pembangunan Kota Makkah",
+                    "B. Pembebasan atau penaklukan Kota Makkah",
+                    "C. Perdagangan di Kota Makkah",
+                    "D. Hijrahnya penduduk Makkah"
+                ],
+                correct: 1,
+                explanation: "Fathul Makkah berarti pembebasan atau penaklukan Kota Makkah secara damai."
+            },
+            {
+                question: "5. Fathul Makkah terjadi pada tahun 8 Hijriah karena disebabkan oleh...",
+                options: [
+                    "A. Kaum Muslimin ingin berperang",
+                    "B. Kaum Quraisy melanggar isi Perjanjian Hudaibiyah",
+                    "C. Kaum Muslimin kekurangan bahan makanan",
+                    "D. Perintah berdagang ke Makkah"
+                ],
+                correct: 1,
+                explanation: "Fathul Makkah terjadi setelah kaum Quraisy dan sekutunya melanggar isi Perjanjian Hudaibiyah."
+            },
+            {
+                question: "6. Apa yang dilakukan Nabi Muhammad saw. terhadap berhala di sekitar Ka'bah saat Fathul Makkah?",
+                options: [
+                    "A. Membiarkannya",
+                    "B. Memindahkannya ke museum",
+                    "C. Menghancurkannya",
+                    "D. Menjualnya"
+                ],
+                correct: 2,
+                explanation: "Nabi Muhammad saw. menghancurkan berhala-berhala tersebut dan mengembalikan Ka'bah sebagai tempat beribadah kepada Allah Swt."
+            },
+            {
+                question: "7. Sikap mulia Nabi Muhammad saw. saat berhasil menguasai Makkah adalah...",
+                options: [
+                    "A. Membalas dendam kepada musuh",
+                    "B. Memberikan ampunan dan tidak dendam",
+                    "C. Menghukum seluruh penduduk Makkah",
+                    "D. Mengambil seluruh harta penduduk"
+                ],
+                correct: 1,
+                explanation: "Nabi Muhammad saw. tidak membalas dendam, melainkan memberikan ampunan kepada penduduk Makkah."
+            },
+            {
+                question: "8. Haji Wada’ yang dilakukan oleh Nabi Muhammad saw. dinamakan juga sebagai...",
+                options: [
+                    "A. Haji Pertama",
+                    "B. Haji Perpisahan",
+                    "C. Haji Akbar",
+                    "D. Haji Pembuka"
+                ],
+                correct: 1,
+                explanation: "Haji Wada' berarti haji perpisahan, merupakan ibadah haji terakhir yang dilakukan oleh Nabi Muhammad saw."
+            },
+            {
+                question: "9. Menurut firman Allah Swt. dalam QS. Al-Hujurat ayat 13, hal yang membedakan derajat manusia di sisi Allah Swt. adalah...",
+                options: [
+                    "A. Kekayaannya",
+                    "B. Suku dan keturunannya",
+                    "C. Ketakwaannya",
+                    "D. Jabatan dan ketampanannya"
+                ],
+                correct: 2,
+                explanation: "QS. Al-Hujurat ayat 13 menegaskan bahwa yang paling mulia di sisi Allah Swt. ialah orang yang paling bertakwa."
+            },
+            {
+                question: "10. Manakah urutan kronologis peristiwa sejarah PAI Kelas 5 SD berikut yang benar?",
+                options: [
+                    "A. Fathul Makkah (6 H) → Haji Wada’ (8 H) → Perjanjian Hudaibiyah (10 H)",
+                    "B. Perjanjian Hudaibiyah (6 H) → Fathul Makkah (8 H) → Haji Wada’ (10 H)",
+                    "C. Haji Wada’ (6 H) → Perjanjian Hudaibiyah (8 H) → Fathul Makkah (10 H)",
+                    "D. Perjanjian Hudaibiyah (8 H) → Fathul Makkah (6 H) → Haji Wada’ (10 H)"
+                ],
+                correct: 1,
+                explanation: "Urutan peristiwa yang benar: Perjanjian Hudaibiyah (6 H) → Fathul Makkah (8 H) → Haji Wada’ (10 H)."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-emerald-600 bg-emerald-50 text-emerald-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-emerald-400 hover:bg-emerald-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-emerald-100 text-emerald-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-emerald-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

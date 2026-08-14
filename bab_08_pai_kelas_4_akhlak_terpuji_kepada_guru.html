@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 4 SD - Akhlak Terpuji kepada Guru</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 08. Akhlak Terpuji kepada Guru</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 4 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('sekolah', this)">
+                    <i class="fa-solid fa-school"></i> Di Sekolah & Luar Sekolah
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('manfaat', this)">
+                    <i class="fa-solid fa-star"></i> Manfaat & Dihindari
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('teladan', this)">
+                    <i class="fa-solid fa-book-open-reader"></i> Teladan & Rangkuman
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Materi PAI Kelas 4 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Guru adalah orang yang mengajarkan ilmu dan membimbing kita agar menjadi anak yang berilmu, beriman, dan berakhlak baik. Karena itu, kita harus menghormati dan menyayangi guru.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('sekolah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A & B</span>
+                            <i class="fa-solid fa-school text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Di Sekolah & Luar Sekolah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sikap Hormat & Santun</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Contoh penerapan akhlak terpuji kepada guru baik saat di lingkungan sekolah maupun di luar sekolah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Materi <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('manfaat')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">C & D</span>
+                            <i class="fa-solid fa-star text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Manfaat & Hal Dihindari</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Keberkahan & Larangan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mempelajari manfaat menghormati guru serta sikap-sikap yang harus dihindari sebagai seorang siswa.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('teladan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">E & F</span>
+                            <i class="fa-solid fa-book-open-reader text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Teladan & Kesimpulan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Penerapan Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Contoh nyata perilaku siswa mulia (Ahmad, Siti, Budi) dalam kehidupan sehari-hari beserta kesimpulannya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Rangkuman <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Siswa
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Hormatilah gurumu, karena dari gurulah kita memperoleh ilmu dan bimbingan untuk menjadi anak yang lebih baik!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: AKHLAK TERPUJI DI SEKOLAH & LUAR SEKOLAH -->
+        <div id="tab-sekolah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <!-- Pengantar Singkat -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Allah Swt. mengajarkan kita untuk berbuat baik dan menghormati orang yang berjasa kepada kita. Menghormati guru merupakan salah satu contoh akhlak terpuji.
+                </p>
+            </div>
+
+            <!-- A. Akhlak Terpuji kepada Guru di Lingkungan Sekolah -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-school"></i> A. Akhlak Terpuji kepada Guru di Lingkungan Sekolah
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Sekolah merupakan tempat kita belajar dan bertemu dengan guru setiap hari. Di sekolah, kita harus menunjukkan sikap sopan, hormat, dan santun kepada guru. Berikut contohnya:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Mengucapkan salam ketika bertemu guru:</strong> Ketika bertemu guru, kita sebaiknya mengucapkan salam dengan sopan.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Berbicara dengan sopan:</strong> Gunakan kata-kata yang baik dan jangan berbicara kasar kepada guru.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Mendengarkan ketika guru menjelaskan:</strong> Saat guru menerangkan pelajaran, kita harus memperhatikan dan tidak berbicara sendiri.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Mengerjakan tugas dengan sungguh-sungguh:</strong> Tugas yang diberikan guru harus dikerjakan dengan tanggung jawab.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Mematuhi nasihat dan aturan guru:</strong> Nasihat guru diberikan agar kita menjadi lebih baik, maka kita harus mendengarkannya.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Meminta izin ketika ingin melakukan sesuatu:</strong> Jika ingin keluar kelas atau melakukan sesuatu saat pembelajaran, mintalah izin kepada guru.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Membantu guru:</strong> Kita dapat membantu guru, misalnya membawa buku atau merapikan kelas.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Tidak membantah guru dengan kasar:</strong> Jika memiliki pendapat berbeda, sampaikan dengan bahasa yang santun.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Mengucapkan terima kasih kepada guru:</strong> Kita harus berterima kasih atas ilmu dan bimbingan yang diberikan guru.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Mendoakan guru:</strong> Mendoakan agar guru selalu sehat, diberi kemudahan, dan mendapat keberkahan dari Allah Swt.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- B. Akhlak Terpuji kepada Guru di Luar Lingkungan Sekolah -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-tree"></i> B. Akhlak Terpuji kepada Guru di Luar Lingkungan Sekolah
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Menghormati guru tidak hanya dilakukan ketika berada di sekolah. Ketika bertemu guru di luar sekolah, kita tetap harus menunjukkan sikap yang baik.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Menyapa guru ketika bertemu:</strong> Jika bertemu guru di jalan, pasar, atau tempat lainnya, menyapalah dengan sopan.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Mengucapkan salam:</strong> Kita tetap mengucapkan salam meskipun bertemu guru di luar sekolah.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Berbicara dengan bahasa yang santun:</strong> Jangan berbicara kasar atau bersikap tidak sopan kepada guru.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Menghormati guru di mana pun berada:</strong> Guru tetap harus dihormati meskipun tidak sedang berada di sekolah.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Membantu guru jika membutuhkan bantuan:</strong> Jika guru membutuhkan bantuan dan kita mampu, sebaiknya menolong dengan ikhlas.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Tidak mengabaikan guru:</strong> Ketika guru menyapa, jangan berpura-pura tidak melihat atau tidak mendengar.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Menjaga nama baik guru:</strong> Kita tidak boleh mengejek, menghina, atau menyebarkan cerita buruk tentang guru.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Tetap sopan ketika berbicara melalui pesan:</strong> Jika menghubungi guru melalui telepon atau pesan, gunakan kata-kata yang sopan dan santun.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MANFAAT & HAL YANG HARUS DIHINDARI -->
+        <div id="tab-manfaat" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C. Manfaat Menghormati Guru -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-award"></i> C. Manfaat Menghormati Guru
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Menghormati guru memiliki banyak manfaat bagi kehidupan kita, antara lain:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-sun text-emerald-600"></i> Mendapat pahala dari Allah Swt.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-emerald-600"></i> Mendapat keberkahan ilmu.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-emerald-600"></i> Disayangi dan dihargai oleh guru.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-user-check text-emerald-600"></i> Menjadi anak yang memiliki akhlak mulia.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-face-smile text-emerald-600"></i> Menciptakan suasana belajar yang nyaman.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-hands-holding-circle text-emerald-600"></i> Memiliki hubungan yang baik dengan guru.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2 sm:col-span-2 lg:col-span-3">
+                        <i class="fa-solid fa-thumbs-up text-emerald-600"></i> Menjadi contoh yang baik bagi teman-teman.
+                    </div>
+                </div>
+            </div>
+
+            <!-- D. Sikap yang Harus Dihindari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-rose-800 pb-2 border-b-2 border-rose-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-triangle-exclamation"></i> D. Sikap yang Harus Dihindari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Sebagai seorang siswa, kita harus menghindari perilaku yang tidak sopan kepada guru, seperti:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Berbicara kasar kepada guru.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Memotong pembicaraan guru.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Tidak memperhatikan ketika guru mengajar.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Mengejek atau menghina guru.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Membantah dengan cara yang tidak sopan.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Tidak mengerjakan tugas dengan sengaja.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Mengabaikan guru ketika bertemu di luar sekolah.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Membicarakan keburukan guru kepada orang lain.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: TELADAN & KESIMPULAN -->
+        <div id="tab-teladan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- E. Contoh dalam Kehidupan Sehari-hari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-lightbulb"></i> E. Contoh dalam Kehidupan Sehari-hari
+                </h2>
+                <div class="space-y-3 text-xs md:text-sm">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>Contoh 1:</strong> Saat masuk kelas, Ahmad melihat gurunya datang. Ahmad berdiri, mengucapkan salam, dan mempersilakan guru masuk. Sikap Ahmad merupakan contoh menghormati guru.
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>Contoh 2:</strong> Siti bertemu gurunya di pasar. Siti mengucapkan salam dan menyapa gurunya dengan sopan. Sikap Siti tetap menunjukkan akhlak terpuji meskipun berada di luar sekolah.
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>Contoh 3:</strong> Guru memberikan tugas kepada Budi. Budi mengerjakan tugas dengan sungguh-sungguh dan mengumpulkannya tepat waktu. Sikap Budi menunjukkan tanggung jawab kepada guru.
+                    </div>
+                </div>
+            </div>
+
+            <!-- F. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> F. Kesimpulan
+                </h3>
+                <p class="text-xs md:text-base text-slate-700 leading-relaxed mb-3">
+                    Guru adalah orang yang berjasa dalam memberikan ilmu dan membimbing kita. Oleh karena itu, kita harus menghormati guru dengan akhlak yang baik.
+                </p>
+                <p class="text-xs md:text-base text-slate-700 leading-relaxed mb-3">
+                    Menghormati guru harus dilakukan di sekolah maupun di luar sekolah. Caranya dengan mengucapkan salam, berbicara sopan, mendengarkan nasihat, mengerjakan tugas, membantu guru, menjaga nama baik guru, dan tetap menghormati guru di mana pun kita bertemu.
+                </p>
+                <div class="p-3.5 bg-amber-100/70 border border-amber-300 rounded-xl text-teal-900 font-extrabold text-xs md:text-sm text-center">
+                    💡 Ingatlah: Hormatilah gurumu, karena dari gurulah kita memperoleh ilmu dan bimbingan untuk menjadi anak yang lebih baik.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 4 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 4 SD - Akhlak Terpuji kepada Guru
+        const quizData = [
+            {
+                question: "1. Siapakah sosok yang mengajarkan ilmu dan membimbing kita agar berilmu, beriman, dan berakhlak baik?",
+                options: [
+                    "A. Teman bermain",
+                    "B. Guru",
+                    "C. Pedagang",
+                    "D. Tetangga"
+                ],
+                correct: 1,
+                explanation: "Guru adalah orang yang mengajarkan ilmu dan membimbing kita menjadi anak yang berilmu, beriman, dan berakhlak baik."
+            },
+            {
+                question: "2. Menghormati guru merupakan salah satu contoh...",
+                options: [
+                    "A. Perilaku tercela",
+                    "B. Akhlak terpuji",
+                    "C. Sikap sombong",
+                    "D. Perbuatan sia-sia"
+                ],
+                correct: 1,
+                explanation: "Menghormati orang yang berjasa seperti guru merupakan contoh akhlak terpuji."
+            },
+            {
+                question: "3. Apa yang sebaiknya kita lakukan saat guru sedang menerangkan pelajaran di kelas?",
+                options: [
+                    "A. Berbicara sendiri dengan teman",
+                    "B. Memperhatikan dan tidak berbicara sendiri",
+                    "C. Tidur di dalam kelas",
+                    "D. Mengabaikan penjelasannya"
+                ],
+                correct: 1,
+                explanation: "Saat guru menjelaskan, kita wajib memperhatikan dan tidak berbicara sendiri."
+            },
+            {
+                question: "4. Bagaimana cara yang benar jika kita memiliki pendapat berbeda dengan guru?",
+                options: [
+                    "A. Membantah dengan kata-kata kasar",
+                    "B. Marah-marah di depan kelas",
+                    "C. Menyampaikannya dengan bahasa yang santun",
+                    "D. Berteriak meminta didengarkan"
+                ],
+                correct: 2,
+                explanation: "Jika memiliki pendapat berbeda, sampaikanlah dengan bahasa yang santun dan tidak membantah dengan kasar."
+            },
+            {
+                question: "5. Bagaimana sikap kita jika bertemu guru di luar lingkungan sekolah seperti di pasar?",
+                options: [
+                    "A. Berpura-pura tidak melihat",
+                    "B. Berlari menghindar",
+                    "C. Mengucapkan salam dan menyapa dengan sopan",
+                    "D. Acuh tak acuh"
+                ],
+                correct: 2,
+                explanation: "Menghormati guru dilakukan di mana saja, termasuk menyapa dan mengucapkan salam saat bertemu di luar sekolah."
+            },
+            {
+                question: "6. Saat mengirim pesan WhatsApp atau menelepon guru, hendaknya kita...",
+                options: [
+                    "A. Menggunakan bahasa yang singkat dan kasar",
+                    "B. Menggunakan kata-kata yang sopan dan santun",
+                    "C. Mengirim pesan kapan saja tanpa salam",
+                    "D. Memaksa guru menjawab dengan cepat"
+                ],
+                correct: 1,
+                explanation: "Ketika berkomunikasi via pesan/telepon, gunakan kata-kata yang sopan dan santun."
+            },
+            {
+                question: "7. Manakah salah satu manfaat dari sikap menghormati guru?",
+                options: [
+                    "A. Mendapat keberkahan ilmu",
+                    "B. Dimusuhi oleh teman-teman",
+                    "C. Kesulitan memahami pelajaran",
+                    "D. Diabaikan di sekolah"
+                ],
+                correct: 0,
+                explanation: "Menghormati guru akan membawa keberkahan ilmu, pahala dari Allah Swt., serta disayangi oleh guru."
+            },
+            {
+                question: "8. Manakah perilaku di bawah ini yang harus DIHINDARI kepada guru?",
+                options: [
+                    "A. Mendoakan keselamatan guru",
+                    "B. Memotong pembicaraan guru saat menjelaskan",
+                    "C. Membantu membawakan buku guru",
+                    "D. Mengerjakan tugas tepat waktu"
+                ],
+                correct: 1,
+                explanation: "Memotong pembicaraan guru adalah perilaku tidak sopan yang wajib kita hindari."
+            },
+            {
+                question: "9. Budi diberikan tugas oleh gurunya. Budi mengerjakan tugas tersebut dengan sungguh-sungguh. Sikap Budi menunjukkan...",
+                options: [
+                    "A. Rasa malas",
+                    "B. Tanggung jawab kepada guru",
+                    "C. Keterpaksaan",
+                    "D. Ingin dipuji teman"
+                ],
+                correct: 1,
+                explanation: "Mengerjakan tugas dengan sungguh-sungguh dan tepat waktu mencerminkan sikap bertanggung jawab kepada guru."
+            },
+            {
+                question: "10. Mengapa kita harus mendoakan guru kita?",
+                options: [
+                    "A. Agar guru selalu sehat, diberi kemudahan, dan keberkahan oleh Allah Swt.",
+                    "B. Agar tidak diberi tugas sekolah",
+                    "C. Karena dipaksa oleh teman",
+                    "D. Supaya dipuji orang tua"
+                ],
+                correct: 0,
+                explanation: "Mendoakan guru agar selalu sehat dan berkah adalah bentuk rasa terima kasih dan kasih sayang murid kepada gurunya."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

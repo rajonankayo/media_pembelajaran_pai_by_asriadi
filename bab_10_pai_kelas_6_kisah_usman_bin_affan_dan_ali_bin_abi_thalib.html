@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 6 SD - Kisah & Jasa Khalifah Utsman bin Affan r.a. dan Ali bin Abi Thalib r.a.</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-users-line"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 10. Kisah & Jasa Khalifah Utsman r.a. & Ali r.a.</h1>
+                    <p class="text-xs text-emerald-200 font-medium mt-0.5">Fase C - Kelas 6 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('utsman', this)">
+                    <i class="fa-solid fa-book-bookmark"></i> Utsman bin Affan r.a.
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('ali', this)">
+                    <i class="fa-solid fa-shield-halved"></i> Ali bin Abi Thalib r.a.
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50" onclick="switchTab('perbandingan', this)">
+                    <i class="fa-solid fa-table"></i> Perbandingan & Hikmah
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-emerald-700 to-teal-800 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🕌 Kisah dan Jasa Khalifah Utsman bin Affan r.a. dan Ali bin Abi Thalib r.a.</h2>
+                    <p class="text-sm md:text-base text-emerald-100 leading-relaxed">
+                        Mengenal perjalanan hidup, masuknya Islam, masa kepemimpinan, jasa-jasa besar, serta nilai-nilai keteladanan dari Khalifah ketiga dan keempat Khulafaur Rasyidin.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-emerald-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('utsman')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian A</span>
+                            <i class="fa-solid fa-gem text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Utsman bin Affan r.a.</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Dzun Nurain (Pemilik Dua Cahaya)</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal Utsman r.a., perjuangan awal Islam, kepemimpinan 12 tahun, pembukuan Al-Qur'an (Mushaf Utsmani), dan keteladanannya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Khalifah Utsman <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('ali')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian B</span>
+                            <i class="fa-solid fa-shield-cat text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Ali bin Abi Thalib r.a.</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pemberani & Gerbang Ilmu</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Sepupu sekaligus menantu Rasulullah saw., keberanian menggantikan di tempat tidur saat hijrah, kepemimpinan, dan ilmunya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Pelajari Khalifah Ali <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-emerald-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('perbandingan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Bagian C & D</span>
+                            <i class="fa-solid fa-scale-balanced text-2xl text-emerald-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Perbandingan & Hikmah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rangkuman & Pelajaran</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Tabel perbandingan keistimewaan & jasa utama kedua khalifah, serta hikmah berharga bagi kehidupan siswa sehari-hari.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-emerald-600 flex items-center gap-2">
+                        Lihat Perbandingan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-amber-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('kuis')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-amber-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">Evaluasi</span>
+                            <i class="fa-solid fa-brain text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Kuis Interaktif</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Uji Pemahaman</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Latih pemahamanmu mengenai kisah Khalifah Utsman r.a. dan Ali r.a. melalui 10 soal kuis pilihan ganda.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-amber-600 flex items-center gap-2">
+                        Mulai Kuis <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-emerald-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan Keteladanan untuk Siswa
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Sebagai siswa, kita dapat meneladani Utsman bin Affan r.a. dan Ali bin Abi Thalib r.a. dengan rajin belajar, berani membela kebenaran, suka menolong, bersikap adil, menjaga persatuan, dan menggunakan apa yang kita miliki untuk kebaikan!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: KHALIFAH UTSMAN BIN AFFAN R.A. -->
+        <div id="tab-utsman" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- Header section Utsman -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-4 pb-2 border-b-2 border-emerald-100">
+                    <span class="p-3 bg-emerald-100 text-emerald-800 rounded-xl text-xl font-bold"><i class="fa-solid fa-user-tie"></i></span>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800">A. Khalifah Utsman bin Affan r.a.</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- 1. Mengenal -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-info text-emerald-600"></i> 1. Mengenal Utsman bin Affan r.a.
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Utsman bin Affan r.a. adalah salah satu sahabat utama Nabi Muhammad saw. Beliau termasuk <strong>Khulafaur Rasyidin</strong>, yaitu empat khalifah yang memimpin umat Islam setelah Rasulullah saw. wafat.
+                        </p>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                            Utsman bin Affan r.a. berasal dari keluarga terpandang dari suku Quraisy. Beliau dikenal sebagai orang yang lembut, pemalu, dermawan, dan sangat dekat dengan Rasulullah saw.
+                        </p>
+                        <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900">
+                            <strong>Gelar Dzun Nurain (Pemilik Dua Cahaya):</strong> Gelar ini diberikan karena beliau menikahi dua putri Rasulullah saw. secara bergantian, yaitu Ruqayyah r.a. dan setelah Ruqayyah wafat, beliau menikahi Ummu Kultsum r.a.
+                        </div>
+                    </div>
+
+                    <!-- 2. Masuk Islam -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-heart text-emerald-600"></i> 2. Utsman bin Affan r.a. Masuk Islam
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-2">
+                            Utsman bin Affan r.a. termasuk orang-orang yang pertama menerima dakwah Islam. Beliau masuk Islam melalui ajakan Abu Bakar ash-Shiddiq r.a.
+                        </p>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-2">
+                            Setelah masuk Islam, Utsman tetap teguh mempertahankan keimanannya meskipun mendapatkan tekanan dari kaum Quraisy. Beliau juga pernah ikut hijrah ke Habasyah bersama kaum Muslimin untuk menyelamatkan diri dari tekanan kaum Quraisy, kemudian ikut hijrah ke Madinah.
+                        </p>
+                    </div>
+
+                    <!-- 3. Menjadi Khalifah -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-crown text-emerald-600"></i> 3. Utsman Menjadi Khalifah
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Setelah Umar bin Khattab r.a. wafat, Utsman bin Affan r.a. dipilih menjadi khalifah ketiga. Beliau memimpin umat Islam selama kurang lebih <strong>12 tahun (sekitar 644–656 M)</strong>. Pada masa pemerintahannya, wilayah Islam semakin luas dan banyak daerah baru bergabung.
+                        </p>
+                    </div>
+
+                    <!-- 4. Jasa-Jasa -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-award text-emerald-600"></i> 4. Jasa-Jasa Utsman bin Affan r.a.
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1">
+                                <h4 class="font-bold text-xs md:text-sm text-emerald-900"><i class="fa-solid fa-book text-emerald-700"></i> a. Membukukan & Menyeragamkan Mushaf Al-Qur'an</h4>
+                                <p class="text-xs text-slate-600">Mencegah perselisihan bacaan Al-Qur'an di wilayah Islam yang luas dengan menyusun mushaf standar (Mushaf Utsmani) dan mengirim salinannya ke berbagai wilayah.</p>
+                            </div>
+                            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1">
+                                <h4 class="font-bold text-xs md:text-sm text-emerald-900"><i class="fa-solid fa-map-location-dot text-emerald-700"></i> b. Memperluas Wilayah Islam</h4>
+                                <p class="text-xs text-slate-600">Wilayah Islam berkembang semakin luas hingga ke Afrika Utara, Persia, dan daerah-daerah lainnya.</p>
+                            </div>
+                            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1">
+                                <h4 class="font-bold text-xs md:text-sm text-emerald-900"><i class="fa-solid fa-ship text-emerald-700"></i> c. Mengembangkan Angkatan Laut</h4>
+                                <p class="text-xs text-slate-600">Membangun kekuatan laut umat Islam sehingga mampu menghadapi ancaman luar dari jalur laut.</p>
+                            </div>
+                            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1">
+                                <h4 class="font-bold text-xs md:text-sm text-emerald-900"><i class="fa-solid fa-building-ngo text-emerald-700"></i> d. Membangun Fasilitas Umum</h4>
+                                <p class="text-xs text-slate-600">Dermawan dalam menginfakkan hartanya untuk membantu masyarakat dan membangun sarana publik.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Keteladanan -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-star text-amber-500"></i> 5. Keteladanan Utsman bin Affan r.a.
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs md:text-sm">
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Rajin bersedekah & membantu sesama</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Pemalu dan santun</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Tidak sombong meski kaya</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menjaga persatuan umat</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menjaga kemurnian Al-Qur'an</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Bersabar menghadapi kesulitan</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KHALIFAH ALI BIN ABI THALIB R.A. -->
+        <div id="tab-ali" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-4 pb-2 border-b-2 border-emerald-100">
+                    <span class="p-3 bg-emerald-100 text-emerald-800 rounded-xl text-xl font-bold"><i class="fa-solid fa-shield-halved"></i></span>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800">B. Khalifah Ali bin Abi Thalib r.a.</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- 1. Mengenal -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-info text-emerald-600"></i> 1. Mengenal Ali bin Abi Thalib r.a.
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-2">
+                            Ali bin Abi Thalib r.a. adalah sepupu Rasulullah saw. Beliau juga merupakan menantu Rasulullah saw. karena menikah dengan <strong>Fatimah az-Zahra r.a.</strong>
+                        </p>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Ali bin Abi Thalib r.a. dikenal sebagai orang yang cerdas, pemberani, kuat, sederhana, dan memiliki ilmu yang sangat luas. Beliau termasuk orang yang sangat dekat dengan Nabi sejak kecil.
+                        </p>
+                    </div>
+
+                    <!-- 2. Masuk Islam -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-child text-emerald-600"></i> 2. Ali bin Abi Thalib r.a. Masuk Islam
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Ali bin Abi Thalib r.a. termasuk orang yang pertama kali menerima Islam dari kalangan anak-anak/pemuda. Beliau tinggal dan mendulang pendidikan langsung dari Rasulullah saw. sejak kecil, sehingga memiliki ikatan batin yang amat kuat.
+                        </p>
+                    </div>
+
+                    <!-- 3. Keberanian -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-bed text-emerald-600"></i> 3. Keberanian Ali bin Abi Thalib r.a.
+                        </h3>
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-700 space-y-2">
+                            <p><strong>Kisah Saat Hijrah ke Madinah:</strong> Ketika kaum Quraisy mengepung dan berencana membunuh Rasulullah saw., Ali r.a. dengan sangat berani bersedia tidur di tempat tidur Nabi saw. untuk mengelabui musuh, sementara Rasulullah saw. berhasil keluar untuk hijrah.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Menjadi Khalifah -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-crown text-emerald-600"></i> 4. Ali bin Abi Thalib Menjadi Khalifah
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                            Setelah Utsman bin Affan r.a. wafat, Ali bin Abi Thalib r.a. diangkat menjadi khalifah keempat. Beliau memimpin dalam situasi yang penuh tantangan dan konflik internal, namun tetap berusaha menyelesaikan perselisihan dengan adil demi mengembalikan persatuan umat.
+                        </p>
+                    </div>
+
+                    <!-- 5. Jasa-Jasa -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-award text-emerald-600"></i> 5. Jasa-Jasa Ali bin Abi Thalib r.a.
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1">
+                                <h4 class="font-bold text-xs md:text-sm text-emerald-900"><i class="fa-solid fa-scale-balanced text-emerald-700"></i> a. Menegakkan Keadilan</h4>
+                                <p class="text-xs text-slate-600">Sangat memperhatikan keadilan dan memperlakukan seluruh lapisan masyarakat tanpa membeda-bedakan.</p>
+                            </div>
+                            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1">
+                                <h4 class="font-bold text-xs md:text-sm text-emerald-900"><i class="fa-solid fa-graduation-cap text-emerald-700"></i> b. Mengembangkan Ilmu Pengetahuan</h4>
+                                <p class="text-xs text-slate-600">Memiliki ilmu luas dan memberikan perhatian besar pada pendidikan, ilmu agama, tata bahasa, dan persoalan sosial.</p>
+                            </div>
+                            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1">
+                                <h4 class="font-bold text-xs md:text-sm text-emerald-900"><i class="fa-solid fa-hands-holding-circle text-emerald-700"></i> c. Menjaga Persatuan Umat</h4>
+                                <p class="text-xs text-slate-600">Meskipun berada dalam situasi konflik rumit, beliau senantiasa berupaya merajut persatuan dan kedamaian.</p>
+                            </div>
+                            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1">
+                                <h4 class="font-bold text-xs md:text-sm text-emerald-900"><i class="fa-solid fa-shield text-emerald-700"></i> d. Keberanian Membela Islam</h4>
+                                <p class="text-xs text-slate-600">Sejak usia muda selalu berada di garis depan membela perjuangan Rasulullah saw. dan umat Islam.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Keteladanan -->
+                    <div>
+                        <h3 class="text-base md:text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-star text-amber-500"></i> 6. Keteladanan Ali bin Abi Thalib r.a.
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs md:text-sm">
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Berani membela kebenaran</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Rajin belajar & mencari ilmu</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Bersikap adil kepada semua orang</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Pantang menyerah saat sulit</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menyayangi keluarga & setia</div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menggunakan ilmu untuk menolong</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: PERBANDINGAN & HIKMAH -->
+        <div id="tab-perbandingan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C. Perbandingan Tabel -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-table"></i> C. Perbandingan Utsman dan Ali
+                </h2>
+
+                <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+                    <table class="w-full text-left text-xs md:text-sm">
+                        <thead class="bg-emerald-800 text-white font-bold">
+                            <tr>
+                                <th class="p-3.5 border-b">Khalifah</th>
+                                <th class="p-3.5 border-b">Keistimewaan</th>
+                                <th class="p-3.5 border-b">Jasa Utama</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-700">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 font-bold text-emerald-900 bg-emerald-50/50">Utsman bin Affan r.a.</td>
+                                <td class="p-3.5">Dermawan, lembut, pemalu, bergelar Dzun Nurain.</td>
+                                <td class="p-3.5">Menyeragamkan mushaf Al-Qur'an (Mushaf Utsmani), memperluas wilayah Islam, mengembangkan angkatan laut.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 font-bold text-emerald-900 bg-emerald-50/50">Ali bin Abi Thalib r.a.</td>
+                                <td class="p-3.5">Berani, cerdas, berilmu luas, sepupu & menantu Nabi.</td>
+                                <td class="p-3.5">Menegakkan keadilan, mengembangkan ilmu pengetahuan, berusaha menjaga persatuan umat Islam.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- D. Hikmah Mempelajari Kisah -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-emerald-800 pb-2 border-b-2 border-emerald-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-lightbulb"></i> D. Hikmah Mempelajari Kisah Khulafaur Rasyidin
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Kisah Utsman bin Affan r.a. dan Ali bin Abi Thalib r.a. mengajarkan kita bahwa seorang pemimpin harus memiliki akhlak yang baik. Kita dapat mengambil hikmah berharga bahwa:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-dollar text-emerald-600 text-lg mt-0.5"></i>
+                        <span>Harta harus digunakan untuk kebaikan, seperti yang dicontohkan Utsman bin Affan r.a.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-book-open-reader text-emerald-600 text-lg mt-0.5"></i>
+                        <span>Ilmu harus dipelajari dan diamalkan, sebagaimana Ali bin Abi Thalib r.a.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-shield-heart text-emerald-600 text-lg mt-0.5"></i>
+                        <span>Keberanian sangat diperlukan untuk membela kebenaran.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-scale-balanced text-emerald-600 text-lg mt-0.5"></i>
+                        <span>Keadilan harus diterapkan kepada semua orang tanpa tebang pilih.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-people-group text-emerald-600 text-lg mt-0.5"></i>
+                        <span>Persatuan umat harus selalu dijaga dengan bersikap bijak.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-handshake-angle text-emerald-600 text-lg mt-0.5"></i>
+                        <span>Perbedaan tidak boleh menjadi alasan untuk saling bermusuhan.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kesimpulan -->
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-slate-300 space-y-3">
+                <h3 class="text-emerald-800 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-flag text-amber-500"></i> Rangkuman Akhir
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <strong>Utsman bin Affan r.a.</strong> adalah khalifah ketiga yang terkenal karena kelembutan, kesantunan, dan kedermawanannya dengan jasa utama menyeragamkan Mushaf Al-Qur'an.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <strong>Ali bin Abi Thalib r.a.</strong> adalah khalifah keempat yang terkenal karena keberanian, kecerdasan, keadilan, dan keluasan ilmunya dalam menjaga persatuan umat Islam.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis PAI: Kisah Utsman r.a. & Ali r.a.
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Kuis yang disesuaikan 100% dengan teks materi PAI Kelas 6 SD
+        const quizData = [
+            {
+                question: "1. Gelar 'Dzun Nurain' yang diberikan kepada Utsman bin Affan r.a. memiliki arti...",
+                options: [
+                    "A. Pemilik pedang terkuat",
+                    "B. Pemilik dua cahaya",
+                    "C. Pemimpin yang bijaksana",
+                    "D. Pemilik ilmu yang luas"
+                ],
+                correct: 1,
+                explanation: "Dzun Nurain artinya pemilik dua cahaya karena Utsman r.a. menikahi dua putri Rasulullah saw. (Ruqayyah r.a. dan Ummu Kultsum r.a.) secara bergantian."
+            },
+            {
+                question: "2. Utsman bin Affan r.a. memeluk agama Islam melalui ajakan sahabat utama Rasulullah saw. yaitu...",
+                options: [
+                    "A. Umar bin Khattab r.a.",
+                    "B. Abu Bakar ash-Shiddiq r.a.",
+                    "C. Ali bin Abi Thalib r.a.",
+                    "D. Bilal bin Rabah r.a."
+                ],
+                correct: 1,
+                explanation: "Utsman bin Affan r.a. masuk Islam melalui ajakan Abu Bakar ash-Shiddiq r.a."
+            },
+            {
+                question: "3. Berapa lamakah Khalifah Utsman bin Affan r.a. memimpin umat Islam?",
+                options: [
+                    "A. 2 tahun",
+                    "B. 10 tahun",
+                    "C. 12 tahun",
+                    "D. 20 tahun"
+                ],
+                correct: 2,
+                explanation: "Utsman bin Affan r.a. memimpin umat Islam sebagai khalifah ketiga selama kurang lebih 12 tahun (644–656 M)."
+            },
+            {
+                question: "4. Salah satu jasa paling fenomenal Khalifah Utsman bin Affan r.a. untuk menjaga kemurnian Al-Qur'an adalah...",
+                options: [
+                    "A. Menulis Al-Qur'an di batu",
+                    "B. Membukukan dan menyeragamkan Mushaf Al-Qur'an",
+                    "C. Menerjemahkan Al-Qur'an ke bahasa asing",
+                    "D. Menghafal seluruh isi Al-Qur'an sendirian"
+                ],
+                correct: 1,
+                explanation: "Utsman r.a. memerintahkan penyusunan mushaf standar (Mushaf Utsmani) untuk menyatukan perbedaan bacaan Al-Qur'an."
+            },
+            {
+                question: "5. Apa hubungan kekeluargaan antara Ali bin Abi Thalib r.a. dengan Nabi Muhammad saw.?",
+                options: [
+                    "A. Adik kandung dan paman",
+                    "B. Sepupu sekaligus menantu",
+                    "C. Kakek dan cucu",
+                    "D. Tetangga dekat"
+                ],
+                correct: 1,
+                explanation: "Ali bin Abi Thalib r.a. adalah sepupu Rasulullah saw. dan menantu beliau karena menikah dengan Fatimah az-Zahra r.a."
+            },
+            {
+                question: "6. Bentuk keberanian Ali bin Abi Thalib r.a. yang sangat terkenal saat malam Rasulullah saw. hendak hijrah adalah...",
+                options: [
+                    "A. Melawan musuh sendirian di medan perang",
+                    "B. Bersedia tidur di tempat tidur Nabi saw. untuk mengelabui kaum Quraisy",
+                    "C. Mengunci pintu rumah kaum Quraisy",
+                    "D. Bersembunyi di dalam gua"
+                ],
+                correct: 1,
+                explanation: "Ali r.a. bersedia tidur di tempat tidur Rasulullah saw. untuk mengelabui kejaran dan ancaman pembunuhan kaum Quraisy."
+            },
+            {
+                question: "7. Ali bin Abi Thalib r.a. diangkat menjadi khalifah yang ke-...",
+                options: [
+                    "A. Pertama",
+                    "B. Kedua",
+                    "C. Ketiga",
+                    "D. Keempat"
+                ],
+                correct: 3,
+                explanation: "Setelah Utsman bin Affan r.a. wafat, Ali bin Abi Thalib r.a. diangkat menjadi khalifah keempat Khulafaur Rasyidin."
+            },
+            {
+                question: "8. Manakah di antara pilihan berikut yang merupakan jasa utama Khalifah Ali bin Abi Thalib r.a.?",
+                options: [
+                    "A. Menyeragamkan mushaf Al-Qur'an",
+                    "B. Mengembangkan angkatan laut",
+                    "C. Menegakkan keadilan & mengembangkan ilmu pengetahuan",
+                    "D. Membangun Kabah kembali"
+                ],
+                correct: 2,
+                explanation: "Jasa utama Ali r.a. antara lain menegakkan keadilan, mengembangkan ilmu pengetahuan, serta menjaga persatuan umat."
+            },
+            {
+                question: "9. Sifat khas yang menonjol dari Utsman bin Affan r.a. dalam kehidupan sehari-hari adalah...",
+                options: [
+                    "A. Kasar dan pemarah",
+                    "B. Pemalu, santun, dan sangat dermawan",
+                    "C. Sombong karena kaya",
+                    "D. Penakut dan pemalas"
+                ],
+                correct: 1,
+                explanation: "Utsman bin Affan r.a. dikenal sebagai pribadi yang sangat lembut, pemalu, dermawan, dan tidak sombong."
+            },
+            {
+                question: "10. Hikmah utama yang dapat diambil siswa dari keteladanan Khalifah Ali bin Abi Thalib r.a. adalah...",
+                options: [
+                    "A. Suka bermusuhan dengan teman",
+                    "B. Malas membaca dan menuntut ilmu",
+                    "C. Berani membela kebenaran & rajin menuntut ilmu",
+                    "D. Menggunakan ilmu untuk menyombongkan diri"
+                ],
+                correct: 2,
+                explanation: "Keteladanan Ali r.a. mengajarkan kita untuk berani membela kebenaran, bersikap adil, dan rajin menuntut ilmu."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-emerald-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-emerald-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-emerald-600 bg-emerald-50 text-emerald-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-emerald-400 hover:bg-emerald-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-emerald-100 text-emerald-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-emerald-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

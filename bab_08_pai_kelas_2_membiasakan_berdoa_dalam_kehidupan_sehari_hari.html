@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 2 SD - Membiasakan Berdoa dalam Kehidupan Sehari-hari</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 08. Membiasakan Berdoa dalam Kehidupan Sehari-hari</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 2 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-circle-info"></i> Pengertian & Alasan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('adab', this)">
+                    <i class="fa-solid fa-heart"></i> Adab Berdoa
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('doa', this)">
+                    <i class="fa-solid fa-book-open text-xs"></i> Doa Harian
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('latihan', this)">
+                    <i class="fa-solid fa-pen-to-square"></i> Manfaat & Rangkuman
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Materi PAI Kelas 2 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Membiasakan Berdoa dalam Kehidupan Sehari-hari, Mengamalkan Adab Berdoa, dan Menghafal Doa-Doa Kegiatan Harian.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A & B</span>
+                            <i class="fa-solid fa-hands-praying text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian & Alasan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Makna Berdoa</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti berdoa sebagai bentuk ibadah serta alasan mengapa kita dianjurkan untuk selalu berdoa.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Materi <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('adab')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">C</span>
+                            <i class="fa-solid fa-heart text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Adab Berdoa</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sikap Ketika Berdoa</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal tata cara dan adab yang baik saat berdoa kepada Allah Swt.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Adab <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('doa')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">D</span>
+                            <i class="fa-solid fa-book-open text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Doa Harian</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Lafal & Artinya</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mempelajari doa sebelum/sesudah makan, tidur, bangun tidur, dan sebelum belajar.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Doa <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('latihan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">E-G</span>
+                            <i class="fa-solid fa-star text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Manfaat & Rangkuman</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Sikap & Hikmah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami contoh pembiasaan berdoa, manfaat yang didapat, serta kesimpulan materi.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Rangkuman <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Siswa
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Sebagai anak muslim, mari kita selalu membiasakan diri berdoa sebelum dan sesudah beraktivitas. Berdoa menunjukkan bahwa kita bersyukur dan selalu membutuhkan pertolongan Allah Swt.!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & ALASAN BERDOA -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <!-- A. Pengertian Berdoa -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-circle-info"></i> A. Pengertian Berdoa
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    <strong>Berdoa</strong> adalah memohon dan meminta pertolongan kepada Allah Swt. dengan penuh harapan dan keyakinan. Berdoa merupakan salah satu bentuk ibadah dan tanda bahwa kita membutuhkan pertolongan Allah Swt.
+                </p>
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl text-xs md:text-sm text-teal-900">
+                    <strong>💡 Pembiasaan Diri:</strong> Sebagai anak muslim, kita harus membiasakan diri berdoa dalam kehidupan sehari-hari. Kita berdoa sebelum melakukan kegiatan dan setelah menyelesaikan kegiatan.
+                </div>
+            </div>
+
+            <!-- B. Mengapa Kita Harus Berdoa? -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-circle-question"></i> B. Mengapa Kita Harus Berdoa?
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Kita dianjurkan untuk selalu berdoa karena:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg"></i>
+                        <span>Berdoa merupakan bentuk ibadah kepada Allah Swt.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg"></i>
+                        <span>Berdoa menunjukkan bahwa kita bersyukur kepada Allah Swt.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg"></i>
+                        <span>Berdoa memohon pertolongan dan perlindungan Allah Swt.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg"></i>
+                        <span>Berdoa membuat hati menjadi tenang.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3 md:col-span-2">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg"></i>
+                        <span>Berdoa mengajarkan kita untuk selalu mengingat Allah Swt.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: ADAB BERDOA -->
+        <div id="tab-adab" class="tab-content hidden transition-opacity duration-300">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart"></i> C. Adab Berdoa
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Ketika berdoa, kita sebaiknya memperhatikan adab-adab berikut:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-emerald-200 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-lg font-bold">1</div>
+                            <h3 class="font-bold text-sm text-emerald-900">Menghadap Kiblat</h3>
+                            <p class="text-xs text-slate-600">Menghadap kiblat jika memungkinkan.</p>
+                        </div>
+
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-emerald-200 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-lg font-bold">2</div>
+                            <h3 class="font-bold text-sm text-emerald-900">Mengangkat Tangan</h3>
+                            <p class="text-xs text-slate-600">Mengangkat kedua tangan saat memohon.</p>
+                        </div>
+
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-emerald-200 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-lg font-bold">3</div>
+                            <h3 class="font-bold text-sm text-emerald-900">Sopan & Rendah Hati</h3>
+                            <p class="text-xs text-slate-600">Berdoa dengan penuh sopan dan tidak sombong.</p>
+                        </div>
+
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-emerald-200 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-lg font-bold">4</div>
+                            <h3 class="font-bold text-sm text-emerald-900">Suara Lembut</h3>
+                            <p class="text-xs text-slate-600">Menggunakan suara yang lembut dan tidak teriak.</p>
+                        </div>
+
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-emerald-200 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-lg font-bold">5</div>
+                            <h3 class="font-bold text-sm text-emerald-900">Penuh Keyakinan</h3>
+                            <p class="text-xs text-slate-600">Yakin bahwa Allah Swt. mendengar dan mengabulkan.</p>
+                        </div>
+
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-emerald-200 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-lg font-bold">6</div>
+                            <h3 class="font-bold text-sm text-emerald-900">Memuji Allah Swt.</h3>
+                            <p class="text-xs text-slate-600">Mengawali doa dengan memuji nama Allah Swt.</p>
+                        </div>
+
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-emerald-200 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-lg font-bold">7</div>
+                            <h3 class="font-bold text-sm text-emerald-900">Bersalawat</h3>
+                            <p class="text-xs text-slate-600">Membaca salawat kepada Nabi Muhammad saw.</p>
+                        </div>
+
+                        <div class="p-4 bg-rose-50 border border-rose-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-rose-200 text-rose-800 rounded-full flex items-center justify-center mx-auto text-lg font-bold"><i class="fa-solid fa-xmark"></i></div>
+                            <h3 class="font-bold text-sm text-rose-900">Tidak Berdoa Buruk</h3>
+                            <p class="text-xs text-slate-600">Tidak berdoa untuk sesuatu yang buruk atau kejahatan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: DOA HARIAN -->
+        <div id="tab-doa" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-book-open"></i> D. Membiasakan Berdoa dalam Kehidupan Sehari-hari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                    Berdoa tidak hanya dilakukan ketika sedang mengalami kesulitan. Kita harus membiasakan berdoa dalam berbagai kegiatan harian.
+                </p>
+
+                <div class="space-y-6">
+                    <!-- Doa 1 -->
+                    <div class="p-5 bg-teal-50/60 border border-teal-200 rounded-2xl space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                            <h3 class="font-bold text-teal-900 text-base">Doa Sebelum Makan</h3>
+                        </div>
+                        <p class="text-xs text-slate-600">Sebelum makan, kita berdoa agar makanan yang kita makan mendapat keberkahan.</p>
+                        <div class="p-4 bg-white rounded-xl border border-teal-100 text-right font-arabic text-2xl font-bold text-teal-900 leading-loose">
+                            اللَّهُمَّ بَارِكْ لَنَا فِيهِ وَأَطْعِمْنَا خَيْرًا مِنْهُ
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700 italic">
+                            <strong>Artinya:</strong> “Ya Allah, berkahilah makanan ini untuk kami dan berilah kami makanan yang lebih baik darinya.”
+                        </p>
+                    </div>
+
+                    <!-- Doa 2 -->
+                    <div class="p-5 bg-teal-50/60 border border-teal-200 rounded-2xl space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                            <h3 class="font-bold text-teal-900 text-base">Doa Sesudah Makan</h3>
+                        </div>
+                        <p class="text-xs text-slate-600">Setelah makan, kita bersyukur kepada Allah Swt.</p>
+                        <div class="p-4 bg-white rounded-xl border border-teal-100 text-right font-arabic text-2xl font-bold text-teal-900 leading-loose">
+                            الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ الْمُسْلِمِينَ
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700 italic">
+                            <strong>Artinya:</strong> “Segala puji bagi Allah yang telah memberi kami makan dan minum serta menjadikan kami termasuk orang-orang muslim.”
+                        </p>
+                    </div>
+
+                    <!-- Doa 3 -->
+                    <div class="p-5 bg-teal-50/60 border border-teal-200 rounded-2xl space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                            <h3 class="font-bold text-teal-900 text-base">Doa Sebelum Tidur</h3>
+                        </div>
+                        <p class="text-xs text-slate-600">Sebelum tidur, kita berdoa dan menyerahkan diri kepada Allah Swt.</p>
+                        <div class="p-4 bg-white rounded-xl border border-teal-100 text-right font-arabic text-2xl font-bold text-teal-900 leading-loose">
+                            بِاسْمِكَ اللَّهُمَّ أَحْيَا وَبِاسْمِكَ أَمُوتُ
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700 italic">
+                            <strong>Artinya:</strong> “Dengan nama-Mu ya Allah, aku hidup dan dengan nama-Mu aku mati.”
+                        </p>
+                    </div>
+
+                    <!-- Doa 4 -->
+                    <div class="p-5 bg-teal-50/60 border border-teal-200 rounded-2xl space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold">4</span>
+                            <h3 class="font-bold text-teal-900 text-base">Doa Bangun Tidur</h3>
+                        </div>
+                        <p class="text-xs text-slate-600">Ketika bangun tidur, kita bersyukur karena Allah Swt. masih memberikan kehidupan kepada kita.</p>
+                        <div class="p-4 bg-white rounded-xl border border-teal-100 text-right font-arabic text-2xl font-bold text-teal-900 leading-loose">
+                            الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700 italic">
+                            <strong>Artinya:</strong> “Segala puji bagi Allah yang telah menghidupkan kami setelah mematikan kami dan kepada-Nya kami kembali.”
+                        </p>
+                    </div>
+
+                    <!-- Doa 5 -->
+                    <div class="p-5 bg-teal-50/60 border border-teal-200 rounded-2xl space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-teal-700 text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold">5</span>
+                            <h3 class="font-bold text-teal-900 text-base">Doa Sebelum Belajar</h3>
+                        </div>
+                        <p class="text-xs text-slate-600">Sebelum belajar, kita memohon agar Allah Swt. memberikan ilmu dan pemahaman.</p>
+                        <div class="p-4 bg-white rounded-xl border border-teal-100 text-right font-arabic text-2xl font-bold text-teal-900 leading-loose">
+                            رَبِّ زِدْنِي عِلْمًا
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700 italic">
+                            <strong>Artinya:</strong> “Ya Tuhanku, tambahkanlah kepadaku ilmu.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MANFAAT & RANGKUMAN -->
+        <div id="tab-latihan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- E. Contoh Sikap Berdoa -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-user-check"></i> E. Contoh Sikap Berdoa
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-slate-50 border rounded-lg flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-600"></i> Berdoa sebelum belajar.</div>
+                    <div class="p-3 bg-slate-50 border rounded-lg flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-600"></i> Berdoa sebelum dan sesudah makan.</div>
+                    <div class="p-3 bg-slate-50 border rounded-lg flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-600"></i> Berdoa sebelum tidur dan setelah bangun tidur.</div>
+                    <div class="p-3 bg-slate-50 border rounded-lg flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-600"></i> Berdoa ketika akan bepergian.</div>
+                    <div class="p-3 bg-slate-50 border rounded-lg flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-600"></i> Berdoa ketika mendapat kesulitan.</div>
+                    <div class="p-3 bg-slate-50 border rounded-lg flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-600"></i> Berdoa ketika mendapat kebahagiaan.</div>
+                    <div class="p-3 bg-slate-50 border rounded-lg flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-600"></i> Mendoakan kedua orang tua.</div>
+                    <div class="p-3 bg-slate-50 border rounded-lg flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-600"></i> Mendoakan teman yang sedang sakit.</div>
+                </div>
+            </div>
+
+            <!-- F. Manfaat Membiasakan Berdoa -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-seedling"></i> F. Manfaat Membiasakan Berdoa
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Anak yang rajin berdoa akan belajar menjadi anak yang:
+                </p>
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center text-xs md:text-base font-bold text-teal-900 mb-4">
+                    Rajin beribadah ➔ Selalu mengingat Allah ➔ Bersyukur ➔ Rendah hati ➔ Percaya kepada pertolongan Allah.
+                </div>
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900">
+                    <strong>Ingat:</strong> Berdoa juga mengajarkan kita untuk tidak sombong. Kita menyadari bahwa semua yang kita miliki adalah pemberian Allah Swt.
+                </div>
+            </div>
+
+            <!-- G. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> G. Kesimpulan
+                </h3>
+                <ul class="list-disc list-inside space-y-2 text-xs md:text-base text-slate-700 leading-relaxed">
+                    <li><strong>Berdoa</strong> adalah memohon dan meminta pertolongan kepada Allah Swt.</li>
+                    <li>Berdoa merupakan bentuk <strong>ibadah dan rasa syukur</strong> kita kepada Allah Swt.</li>
+                    <li>Kita harus membiasakan berdoa <strong>sebelum dan sesudah melakukan kegiatan</strong> sehari-hari.</li>
+                    <li>Sebagai anak muslim, hendaknya selalu berdoa dengan <strong>sopan, rendah hati, dan penuh keyakinan</strong> bahwa Allah Swt. mendengar doa hamba-Nya.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 2 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 8</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 2 SD - Berdoa
+        const quizData = [
+            {
+                question: "1. Apa yang dimaksud dengan berdoa?",
+                options: [
+                    "A. Bermain bersama teman",
+                    "B. Memohon dan meminta pertolongan kepada Allah Swt.",
+                    "C. Membaca buku cerita",
+                    "D. Bernyanyi bersama"
+                ],
+                correct: 1,
+                explanation: "Berdoa adalah memohon dan meminta pertolongan kepada Allah Swt. dengan penuh harapan dan keyakinan."
+            },
+            {
+                question: "2. Berdoa merupakan salah satu bentuk...",
+                options: [
+                    "A. Permainan",
+                    "B. Ibadah",
+                    "C. Olahraga",
+                    "D. Hiburan"
+                ],
+                correct: 1,
+                explanation: "Berdoa merupakan salah satu bentuk ibadah kepada Allah Swt."
+            },
+            {
+                question: "3. Kapan sebaiknya kita berdoa?",
+                options: [
+                    "A. Hanya ketika sedih",
+                    "B. Hanya ketika sakit",
+                    "C. Sebelum dan sesudah melakukan kegiatan",
+                    "D. Hanya pada malam hari"
+                ],
+                correct: 2,
+                explanation: "Kita harus membiasakan berdoa sebelum dan sesudah melakukan kegiatan sehari-hari."
+            },
+            {
+                question: "4. Salah satu adab ketika berdoa adalah...",
+                options: [
+                    "A. Berteriak-teriak",
+                    "B. Tertawa keras",
+                    "C. Berdoa dengan sopan dan suara yang lembut",
+                    "D. Berdoa sambil bermain"
+                ],
+                correct: 2,
+                explanation: "Ketika berdoa kita harus bersikap sopan, rendah hati, dan menggunakan suara yang lembut."
+            },
+            {
+                question: "5. Sebelum belajar, kita dianjurkan membaca doa...",
+                options: [
+                    "A. رَبِّ زِدْنِي عِلْمًا",
+                    "B. بِاسْمِكَ اللَّهُمَّ أَحْيَا",
+                    "C. الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا",
+                    "D. اللَّهُمَّ بَارِكْ لَنَا فِيهِ"
+                ],
+                correct: 0,
+                explanation: "Doa sebelum belajar adalah رَبِّ زِدْنِي عِلْمًا yang berarti 'Ya Tuhanku, tambahkanlah kepadaku ilmu.'"
+            },
+            {
+                question: "6. Sebelum makan kita membaca doa agar makanan yang kita makan mendapat...",
+                options: [
+                    "A. Hadiah",
+                    "B. Pujian",
+                    "C. Keberkahan",
+                    "D. Nilai yang tinggi"
+                ],
+                correct: 2,
+                explanation: "Kita berdoa sebelum makan agar makanan yang kita makan mendapat keberkahan dari Allah Swt."
+            },
+            {
+                question: "7. Lafal بِاسْمِكَ اللَّهُمَّ أَحْيَا وَبِاسْمِكَ أَمُوتُ dibaca ketika...",
+                options: [
+                    "A. Sebelum tidur",
+                    "B. Sebelum belajar",
+                    "C. Sebelum makan",
+                    "D. Setelah makan"
+                ],
+                correct: 0,
+                explanation: "Lafal tersebut adalah doa sebelum tidur."
+            },
+            {
+                question: "8. Setelah bangun tidur, kita berdoa sebagai bentuk...",
+                options: [
+                    "A. Rasa takut",
+                    "B. Rasa syukur kepada Allah Swt.",
+                    "C. Keinginan untuk bermain",
+                    "D. Rasa marah"
+                ],
+                correct: 1,
+                explanation: "Setelah bangun tidur kita membaca doa sebagai bentuk rasa syukur karena Allah Swt. masih memberikan kehidupan kepada kita."
+            },
+            {
+                question: "9. Salah satu manfaat membiasakan berdoa adalah...",
+                options: [
+                    "A. Menjadi anak yang sombong",
+                    "B. Selalu mengingat Allah Swt.",
+                    "C. Tidak perlu belajar",
+                    "D. Selalu ingin dipuji"
+                ],
+                correct: 1,
+                explanation: "Membiasakan berdoa membuat kita selalu mengingat Allah Swt. dan menyadari bahwa semua yang kita miliki adalah pemberian-Nya."
+            },
+            {
+                question: "10. Ketika mendapat kesulitan, sikap yang baik adalah...",
+                options: [
+                    "A. Menyerah dan marah",
+                    "B. Menyalahkan teman",
+                    "C. Berdoa memohon pertolongan Allah Swt.",
+                    "D. Berhenti berusaha"
+                ],
+                correct: 2,
+                explanation: "Ketika mengalami kesulitan, kita hendaknya berdoa memohon pertolongan Allah Swt. dan tetap berusaha."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

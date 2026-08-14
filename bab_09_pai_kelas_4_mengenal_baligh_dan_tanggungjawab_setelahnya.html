@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 4 SD - Mengenal Baligh dan Tanggung Jawab Setelah Baligh</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 09. Mengenal Baligh dan Tanggung Jawab</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 4 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-book-open"></i> Pengertian
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('tanda', this)">
+                    <i class="fa-solid fa-dna"></i> Tanda-Tanda Baligh
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('tanggungjawab', this)">
+                    <i class="fa-solid fa-list-check"></i> Kewajiban & Adab
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🌱 Mengenal Baligh dan Tanggung Jawab Setelah Baligh</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Memahami Pengertian Baligh, Tanda-Tanda Baligh Menurut Biologi & Fikih, Kewajiban Agama, Tanggung Jawab, serta Sikap yang Baik Saat Memasuki Masa Baligh.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A</span>
+                            <i class="fa-solid fa-seedling text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian Baligh</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tahap Penting Usia</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti baligh dalam Islam dan kewajiban-kewajiban agama yang mulai dikenakan pada anak.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Pengertian <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('tanda')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">B - C</span>
+                            <i class="fa-solid fa-dna text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Tanda-Tanda Baligh</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Biologi & Fikih</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal perubahan fisik pubertas pada anak laki-laki & perempuan serta tanda baligh menurut sudut pandang Fikih.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Tanda Baligh <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('tanggungjawab')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">D - F</span>
+                            <i class="fa-solid fa-user-check text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Kewajiban & Sikap</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tanggung Jawab Muslim</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami kewajiban ibadah, tanggung jawab sosial, serta sikap positif saat memasuki masa baligh.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Kewajiban <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('tanggungjawab')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">G</span>
+                            <i class="fa-solid fa-award text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Kesimpulan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rangkuman Materi</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Rangkuman pentingnya memahami masa baligh sebagai fase kedewasaan dan tanggung jawab ibadah.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Kesimpulan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Siswa
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    “Menjadi baligh berarti belajar menjadi lebih bertanggung jawab. Rajin beribadah, jaga diri, hormati orang tua dan guru, serta lakukan kebaikan setiap hari.”
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN BALIGH -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- A. Pengertian Baligh -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-book-open"></i> A. Pengertian Baligh
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    <strong>Baligh</strong> adalah keadaan ketika seorang anak sudah mencapai usia dan kondisi tertentu sehingga mulai dikenai kewajiban-kewajiban dalam agama Islam.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Baligh merupakan salah satu tahap penting dalam kehidupan manusia. Setelah baligh, seorang Muslim harus semakin bertanggung jawab dalam menjalankan perintah Allah Swt. dan menjauhi larangan-Nya.
+                </p>
+
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl mb-4 text-xs md:text-sm text-teal-900">
+                    <strong class="block mb-2 text-teal-950 font-bold">Contoh Kewajiban Setelah Baligh:</strong>
+                    <ul class="space-y-1.5 list-disc list-inside">
+                        <li>Melaksanakan salat lima waktu.</li>
+                        <li>Berpuasa Ramadan.</li>
+                        <li>Menutup aurat.</li>
+                        <li>Menjaga kebersihan dan kesucian diri.</li>
+                        <li>Bertanggung jawab atas perbuatan yang dilakukan.</li>
+                    </ul>
+                </div>
+
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 flex items-center gap-3">
+                    <i class="fa-solid fa-circle-info text-amber-600 text-xl shrink-0"></i>
+                    <div>
+                        <strong>Catatan Penting:</strong> Baligh bukan berarti seseorang sudah menjadi orang dewasa sepenuhnya, tetapi menunjukkan bahwa ia mulai memiliki tanggung jawab agama yang lebih besar.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: TANDA-TANDA BALIGH -->
+        <div id="tab-tanda" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- B. Tanda-Tanda Baligh Menurut Ilmu Biologi -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-dna"></i> B. Tanda-Tanda Baligh Menurut Ilmu Biologi
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Menurut ilmu biologi, baligh merupakan masa ketika tubuh mengalami <strong>pubertas</strong>, yaitu perubahan dari tubuh anak-anak menuju tubuh yang lebih matang.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- 1. Anak Laki-Laki -->
+                    <div class="p-5 bg-blue-50/60 border border-blue-200 rounded-2xl space-y-3">
+                        <div class="flex items-center gap-2 text-blue-900 font-bold text-sm md:text-base border-b border-blue-200 pb-2">
+                            <i class="fa-solid fa-mars text-blue-600 text-lg"></i> 1. Tanda Baligh pada Anak Laki-Laki
+                        </div>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-600 mt-1"></i> <span>Suara menjadi lebih berat.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-600 mt-1"></i> <span>Tumbuh rambut di beberapa bagian tubuh, seperti ketiak dan sekitar kemaluan.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-600 mt-1"></i> <span>Pertumbuhan tubuh menjadi lebih cepat.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-600 mt-1"></i> <span>Bahu dan dada mulai berkembang.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-blue-600 mt-1"></i> <span>Mulai mengalami mimpi basah.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Anak Perempuan -->
+                    <div class="p-5 bg-rose-50/60 border border-rose-200 rounded-2xl space-y-3">
+                        <div class="flex items-center gap-2 text-rose-900 font-bold text-sm md:text-base border-b border-rose-200 pb-2">
+                            <i class="fa-solid fa-venus text-rose-600 text-lg"></i> 2. Tanda Baligh pada Anak Perempuan
+                        </div>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-600 mt-1"></i> <span>Mulai mengalami menstruasi (haid).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-600 mt-1"></i> <span>Tumbuh rambut di ketiak dan sekitar kemaluan.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-600 mt-1"></i> <span>Payudara mulai berkembang.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-600 mt-1"></i> <span>Bentuk tubuh mulai berubah.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-600 mt-1"></i> <span>Pertumbuhan tubuh menjadi lebih cepat.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl text-xs md:text-sm text-teal-900 italic">
+                    * Perubahan tersebut adalah hal yang normal. Setiap anak dapat mengalami perubahan pada waktu yang berbeda.
+                </div>
+            </div>
+
+            <!-- C. Tanda-Tanda Baligh Menurut Ilmu Fikih -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-scale-balanced"></i> C. Tanda-Tanda Baligh Menurut Ilmu Fikih
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Dalam ilmu fikih, terdapat beberapa tanda seseorang telah baligh:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs md:text-sm">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1 flex items-center gap-2">
+                            <span class="w-6 h-6 bg-teal-100 text-teal-800 rounded-full flex items-center justify-center text-xs">1</span> Mimpi Basah
+                        </div>
+                        <p class="text-slate-600">Anak laki-laki yang telah mengalami mimpi basah dan mengeluarkan mani berarti telah baligh.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1 flex items-center gap-2">
+                            <span class="w-6 h-6 bg-teal-100 text-teal-800 rounded-full flex items-center justify-center text-xs">2</span> Haid
+                        </div>
+                        <p class="text-slate-600">Anak perempuan yang telah mengalami haid (menstruasi) berarti telah baligh.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1 flex items-center gap-2">
+                            <span class="w-6 h-6 bg-teal-100 text-teal-800 rounded-full flex items-center justify-center text-xs">3</span> Tumbuh Rambut Kemaluan
+                        </div>
+                        <p class="text-slate-600">Tumbuhnya rambut di sekitar kemaluan merupakan salah satu tanda baligh yang dibahas dalam fikih.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1 flex items-center gap-2">
+                            <span class="w-6 h-6 bg-teal-100 text-teal-800 rounded-full flex items-center justify-center text-xs">4</span> Mencapai Usia Baligh
+                        </div>
+                        <p class="text-slate-600">Apabila tanda fisik belum terlihat, seseorang tetap dianggap baligh setelah mencapai usia tertentu (umumnya 15 tahun Hijriah).</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: KEWAJIBAN, TANGGUNG JAWAB & SIKAP -->
+        <div id="tab-tanggungjawab" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- D. Kewajiban Anak Setelah Baligh -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-mosque"></i> D. Kewajiban Anak Setelah Baligh
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Setelah baligh, seorang Muslim memiliki kewajiban agama yang harus dilaksanakan:</p>
+
+                <div class="space-y-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-person-praying text-emerald-600 text-xl mt-0.5"></i>
+                        <div>
+                            <strong>1. Melaksanakan Salat:</strong> Salat lima waktu menjadi kewajiban. Kita harus berusaha melaksanakan salat dengan tertib dan tepat waktu.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-moon text-emerald-600 text-xl mt-0.5"></i>
+                        <div>
+                            <strong>2. Melaksanakan Puasa Ramadan:</strong> Puasa Ramadan menjadi kewajiban bagi Muslim yang telah baligh dan memenuhi syarat.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-shirt text-emerald-600 text-xl mt-0.5"></i>
+                        <div>
+                            <strong>3. Menjaga Aurat:</strong> Anak yang telah baligh harus semakin memahami dan menjaga aurat sesuai dengan ketentuan Islam.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-pump-soap text-emerald-600 text-xl mt-0.5"></i>
+                        <div>
+                            <strong>4. Menjaga Kebersihan dan Kesucian:</strong> Setelah mengalami perubahan tubuh, kita harus menjaga kebersihan diri (mandi, bersuci, dan menjaga pakaian).
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-shield-halved text-emerald-600 text-xl mt-0.5"></i>
+                        <div>
+                            <strong>5. Menjauhi Perbuatan yang Dilarang:</strong> Seseorang harus lebih berhati-hati dalam bertindak dan menjauhi perbuatan dosa.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E. Tanggung Jawab Anak Setelah Baligh -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-users text-teal-700"></i> E. Tanggung Jawab Anak Setelah Baligh
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Baligh membuat seseorang memiliki tanggung jawab yang lebih besar. Contoh tanggung jawab tersebut:</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1"><i class="fa-solid fa-heart text-rose-500 mr-1.5"></i> Kepada Allah Swt.</div>
+                        <p class="text-slate-600">Melaksanakan ibadah secara rutin dan taat.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1"><i class="fa-solid fa-user text-blue-500 mr-1.5"></i> Kepada Diri Sendiri</div>
+                        <p class="text-slate-600">Menjaga kesehatan, kebersihan, dan kehormatan diri.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1"><i class="fa-solid fa-hands-holding-child text-amber-500 mr-1.5"></i> Kepada Orang Tua</div>
+                        <p class="text-slate-600">Menghormati dan membantu orang tua.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1"><i class="fa-solid fa-school text-emerald-500 mr-1.5"></i> Di Sekolah</div>
+                        <p class="text-slate-600">Belajar rajin, menaati aturan, dan menghormati guru.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1"><i class="fa-solid fa-handshake text-purple-500 mr-1.5"></i> Kepada Teman</div>
+                        <p class="text-slate-600">Bersikap jujur, sopan, dan tidak menyakiti.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="font-bold text-teal-800 mb-1"><i class="fa-solid fa-tree text-emerald-600 mr-1.5"></i> Terhadap Lingkungan</div>
+                        <p class="text-slate-600">Menjaga kebersihan dan tidak merusak alam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- F. Sikap Saat Memasuki Masa Baligh -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-face-smile text-teal-700"></i> F. Sikap Saat Memasuki Masa Baligh
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-3">Ketika mulai mengalami perubahan fisik, seorang anak sebaiknya:</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs md:text-sm text-slate-700">
+                    <li class="p-3 bg-teal-50/50 border border-teal-100 rounded-lg flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Tidak malu/takut (perubahan fisik normal).</li>
+                    <li class="p-3 bg-teal-50/50 border border-teal-100 rounded-lg flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menjaga kebersihan tubuh.</li>
+                    <li class="p-3 bg-teal-50/50 border border-teal-100 rounded-lg flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Mempelajari tata cara bersuci dengan benar.</li>
+                    <li class="p-3 bg-teal-50/50 border border-teal-100 rounded-lg flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Bertanya kepada orang tua/guru jika belum paham.</li>
+                    <li class="p-3 bg-teal-50/50 border border-teal-100 rounded-lg flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Rajin melaksanakan ibadah.</li>
+                    <li class="p-3 bg-teal-50/50 border border-teal-100 rounded-lg flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menjaga pergaulan dengan baik.</li>
+                    <li class="p-3 bg-teal-50/50 border border-teal-100 rounded-lg flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menjaga diri dan kehormatan.</li>
+                    <li class="p-3 bg-teal-50/50 border border-teal-100 rounded-lg flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Menjadi lebih disiplin dan bertanggung jawab.</li>
+                </ul>
+            </div>
+
+            <!-- G. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> G. Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    Baligh adalah tahap ketika seorang anak mulai dikenai kewajiban agama. Secara biologi, baligh ditandai dengan perubahan tubuh pada masa pubertas. Dalam fikih, tanda baligh antara lain mimpi basah pada laki-laki, haid pada perempuan, tumbuh rambut di sekitar kemaluan, dan mencapai usia tertentu.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed font-semibold">
+                    Setelah baligh, seorang Muslim harus semakin rajin beribadah, menjaga kebersihan dan aurat, menjauhi perbuatan yang dilarang, serta bertanggung jawab terhadap diri sendiri, orang tua, guru, teman, dan lingkungan.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 4 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti Kelas 4 SD.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Baligh PAI Kelas 4 SD
+        const quizData = [
+            {
+                question: "1. Keadaan ketika seorang anak telah mencapai usia dan kondisi tertentu sehingga mulai dikenai kewajiban agama Islam disebut...",
+                options: [
+                    "A. Baligh",
+                    "B. Mumayyiz",
+                    "C. Dewasa",
+                    "D. Remaja"
+                ],
+                correct: 0,
+                explanation: "Baligh adalah keadaan ketika seorang anak mulai dikenai kewajiban-kewajiban agama Islam."
+            },
+            {
+                question: "2. Masa perubahan dari tubuh anak-anak menuju tubuh yang lebih matang secara biologi disebut...",
+                options: [
+                    "A. Pertumbuhan",
+                    "B. Pubertas",
+                    "C. Penggemukan",
+                    "D. Perkembangan"
+                ],
+                correct: 1,
+                explanation: "Menurut biologi, masa perubahan fisik dari anak-anak menuju matang dinamakan pubertas."
+            },
+            {
+                question: "3. Salah satu tanda baligh menurut ilmu biologi khusus pada anak laki-laki adalah...",
+                options: [
+                    "A. Suara menjadi lebih lembut",
+                    "B. Suara menjadi lebih berat",
+                    "C. Mengalami menstruasi",
+                    "D. Pertumbuhan melambat"
+                ],
+                correct: 1,
+                explanation: "Pada anak laki-laki, perubahan biologi antara lain suara menjadi lebih berat dan bahu mulai berkembang."
+            },
+            {
+                question: "4. Tanda utama baligh pada anak perempuan menurut ilmu fikih dan biologi adalah...",
+                options: [
+                    "A. Mimpi basah",
+                    "B. Haid (menstruasi)",
+                    "C. Suara membesar",
+                    "D. Tumbuh kumis"
+                ],
+                correct: 1,
+                explanation: "Anak perempuan yang telah mengalami haid (menstruasi) menandakan ia telah memasuki masa baligh."
+            },
+            {
+                question: "5. Menurut fikih, apabila seseorang belum menunjukkan tanda fisik baligh, ia tetap dianggap baligh jika mencapai usia...",
+                options: [
+                    "A. 10 tahun Hijriah",
+                    "B. 12 tahun Hijriah",
+                    "C. 15 tahun Hijriah",
+                    "D. 20 tahun Hijriah"
+                ],
+                correct: 2,
+                explanation: "Dalam fikih, batas usia baligh umumnya dibahas sekitar 15 tahun berdasarkan kalender Hijriah."
+            },
+            {
+                question: "6. Salah satu contoh kewajiban ibadah yang harus dilaksanakan setelah baligh adalah...",
+                options: [
+                    "A. Salat 5 waktu dan puasa Ramadan",
+                    "B. Bermain sepanjang hari",
+                    "C. Membeli pakaian baru",
+                    "D. Tidur tepat waktu"
+                ],
+                correct: 0,
+                explanation: "Setelah baligh, seorang Muslim wajib melaksanakan ibadah seperti salat lima waktu dan puasa Ramadan."
+            },
+            {
+                question: "7. Sikap yang tepat saat mulai mengalami perubahan fisik pada masa baligh adalah...",
+                options: [
+                    "A. Malu dan mengurung diri",
+                    "B. Takut dan cemas berlebihan",
+                    "C. Tidak malu karena perubahan tersebut normal",
+                    "D. Acuh tak acuh dan tidak menjaga kebersihan"
+                ],
+                correct: 2,
+                explanation: "Anak sebaiknya tidak merasa malu atau takut karena perubahan fisik pada masa pubertas adalah hal yang normal."
+            },
+            {
+                question: "8. Jika ada hal yang belum dipahami tentang tanda baligh dan tata cara bersuci, kita sebaiknya...",
+                options: [
+                    "A. Diam saja",
+                    "B. Bertanya kepada orang tua atau guru",
+                    "C. Bertanya kepada teman sebaya saja",
+                    "D. Mengabaikannya"
+                ],
+                correct: 1,
+                explanation: "Sangat dianjurkan bertanya kepada orang tua atau guru jika ada hal seputar baligh dan bersuci yang belum dipahami."
+            },
+            {
+                question: "9. Contoh bentuk tanggung jawab terhadap diri sendiri setelah baligh adalah...",
+                options: [
+                    "A. Menjaga kesehatan, kebersihan, dan kehormatan diri",
+                    "B. Membantu orang tua saat diminta saja",
+                    "C. Menjauhi teman di sekolah",
+                    "D. Membiarkan lingkungan kotor"
+                ],
+                correct: 0,
+                explanation: "Tanggung jawab pada diri sendiri meliputi menjaga kesehatan, kebersihan, serta kehormatan diri."
+            },
+            {
+                question: "10. Apa pesan penting dari memasuki masa baligh?",
+                options: [
+                    "A. Boleh melakukan apa saja sesuka hati",
+                    "B. Belajar menjadi anak yang lebih bertanggung jawab dan rajin beribadah",
+                    "C. Bebas dari aturan sekolah",
+                    "D. Tidak perlu lagi didampingi orang tua"
+                ],
+                correct: 1,
+                explanation: "Menjadi baligh berarti belajar menjadi lebih bertanggung jawab, rajin beribadah, dan berbuat kebaikan."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

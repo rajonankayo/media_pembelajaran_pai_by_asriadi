@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 5 SD - Makanan dan Minuman Halal dan Haram</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 09. Makanan dan Minuman Halal dan Haram</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase C - Kelas 5 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('halal', this)">
+                    <i class="fa-solid fa-circle-check"></i> Halal
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('haram', this)">
+                    <i class="fa-solid fa-circle-xmark"></i> Haram
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('penerapan', this)">
+                    <i class="fa-solid fa-scale-balanced"></i> Penerapan & Perbedaan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🥗 Makanan dan Minuman Halal & Haram</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Mengenal Ketentuan Halal dan Haram, Ciri-ciri, Contoh Makanan dan Minuman, Cara Penerapan, Hikmah, serta Sikap yang Harus Dibiasakan.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('halal')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A</span>
+                            <i class="fa-solid fa-apple-whole text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Makanan & Minuman Halal</h3>
+                        <p class="text-xs md:text-sm font-semibold text-emerald-600 mb-3">Diperbolehkan Agama</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti halal, dalil QS. Al-Baqarah: 168, ciri-ciri, serta contoh makanan dan minuman halal.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Halal <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('haram')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-rose-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-rose-600 bg-rose-100 px-2.5 py-1 rounded-full">B</span>
+                            <i class="fa-solid fa-ban text-2xl text-rose-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Makanan & Minuman Haram</h3>
+                        <p class="text-xs md:text-sm font-semibold text-rose-600 mb-3">Dilarang Oleh Allah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti haram, larangan khamr dalam QS. Al-Maidah: 90, serta contoh-contohnya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Haram <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">C - E</span>
+                            <i class="fa-solid fa-list-check text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Perbedaan & Penerapan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Pemilihan & Menjauhi</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Tabel perbedaan halal-haram, cara memilih makanan halal, serta menjauhi makanan haram.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Penerapan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('penerapan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">F - H</span>
+                            <i class="fa-solid fa-heart-pulse text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Hikmah & Sikap</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Manfaat & Kesimpulan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Hikmah mengonsumsi makanan halal, sikap yang harus dibiasakan, dan rangkuman materi.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan Penting Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan Penting
+                </h3>
+                <p class="text-base md:text-lg text-emerald-900 font-bold italic leading-relaxed">
+                    "Aku akan memilih makanan dan minuman yang halal dan baik serta menjauhi makanan dan minuman yang haram."
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: HALAL -->
+        <div id="tab-halal" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- A. Pengertian Makanan dan Minuman Halal -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-600"></i> A. Pengertian Makanan dan Minuman Halal
+                </h2>
+                
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <strong>Halal</strong> berarti sesuatu yang diperbolehkan menurut ajaran Islam. Makanan dan minuman halal adalah makanan dan minuman yang diperbolehkan untuk dikonsumsi oleh umat Islam berdasarkan ketentuan Allah Swt.
+                </p>
+
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Allah Swt. memerintahkan manusia untuk memakan makanan yang <strong>halal</strong> dan <strong>baik (tayyib)</strong>.
+                </p>
+
+                <!-- Ayat QS. Al-Baqarah: 168 -->
+                <div class="p-5 bg-teal-50 border border-teal-200 rounded-2xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-teal-800 bg-teal-200/80 px-3 py-1 rounded-full">QS. Al-Baqarah Ayat 168</span>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-700 bg-white p-3.5 rounded-xl border border-teal-200 leading-relaxed font-medium">
+                        "Wahai manusia! Makanlah dari makanan yang halal dan baik yang terdapat di bumi..."
+                    </p>
+                </div>
+
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 font-medium">
+                    <i class="fa-solid fa-circle-info text-amber-600 mr-1"></i> Makanan halal tidak hanya dilihat dari jenisnya, tetapi juga dari <strong>cara memperoleh</strong> dan <strong>cara mengolahnya</strong>.
+                </div>
+
+                <!-- Ciri-ciri makanan & minuman halal -->
+                <div>
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-list-ul text-teal-600"></i> Ciri-ciri Makanan dan Minuman Halal:
+                    </h3>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs md:text-sm text-slate-700">
+                        <li class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-2.5">
+                            <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                            <span>Jenis makanannya diperbolehkan dalam Islam.</span>
+                        </li>
+                        <li class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-2.5">
+                            <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                            <span>Tidak mengandung bahan yang diharamkan.</span>
+                        </li>
+                        <li class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-2.5">
+                            <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                            <span>Diperoleh dengan cara yang halal, bukan mencuri atau mengambil hak orang lain.</span>
+                        </li>
+                        <li class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-2.5">
+                            <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                            <span>Diolah dengan cara yang baik dan bersih.</span>
+                        </li>
+                        <li class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-2.5 md:col-span-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                            <span>Tidak membahayakan kesehatan.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contoh Makanan & Minuman Halal -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                    <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-2xl">
+                        <h3 class="font-bold text-emerald-900 text-sm md:text-base mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-bowl-food"></i> Contoh Makanan Halal:
+                        </h3>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Nasi</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Sayuran</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Buah-buahan</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Telur</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Ikan</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Daging ayam yang disembelih sesuai syariat</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Daging sapi yang disembelih sesuai syariat</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-2xl">
+                        <h3 class="font-bold text-emerald-900 text-sm md:text-base mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-glass-water"></i> Contoh Minuman Halal:
+                        </h3>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Air putih</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Susu</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Jus buah</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Air kelapa</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Teh</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-600"></i> Minuman lain yang tidak mengandung bahan haram dan membahayakan</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TAB: HARAM -->
+        <div id="tab-haram" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- B. Pengertian Makanan dan Minuman Haram -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-rose-800 pb-2 border-b-2 border-rose-100 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-xmark text-rose-600"></i> B. Pengertian Makanan dan Minuman Haram
+                </h2>
+                
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <strong>Haram</strong> adalah sesuatu yang dilarang oleh Allah Swt. Apabila seorang muslim sengaja mengonsumsi makanan atau minuman yang diharamkan, maka ia berdosa.
+                </p>
+
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Allah Swt. telah menjelaskan beberapa makanan dan minuman yang tidak boleh dikonsumsi oleh umat Islam.
+                </p>
+
+                <!-- Contoh Makanan Haram -->
+                <div class="p-5 bg-rose-50 border border-rose-200 rounded-2xl space-y-3">
+                    <h3 class="font-bold text-rose-900 text-sm md:text-base flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Contoh Makanan Haram:
+                    </h3>
+                    <ul class="space-y-3 text-xs md:text-sm text-slate-700">
+                        <li class="bg-white p-3 rounded-xl border border-rose-200">
+                            <strong class="text-rose-800">Daging babi:</strong> Semua bagian babi dan hasil olahannya haram untuk dimakan.
+                        </li>
+                        <li class="bg-white p-3 rounded-xl border border-rose-200">
+                            <strong class="text-rose-800">Bangkai:</strong> Hewan yang mati tanpa disembelih sesuai ketentuan syariat, kecuali beberapa jenis yang dikecualikan dalam syariat.
+                        </li>
+                        <li class="bg-white p-3 rounded-xl border border-rose-200">
+                            <strong class="text-rose-800">Darah yang mengalir:</strong> Darah yang mengalir dan dikonsumsi sebagai makanan atau minuman hukumnya haram.
+                        </li>
+                        <li class="bg-white p-3 rounded-xl border border-rose-200">
+                            <strong class="text-rose-800">Hewan yang disembelih bukan atas nama Allah:</strong> Hewan yang penyembelihannya tidak sesuai dengan ketentuan syariat tidak boleh dikonsumsi.
+                        </li>
+                        <li class="bg-white p-3 rounded-xl border border-rose-200">
+                            <strong class="text-rose-800">Hewan yang diharamkan dalam Islam:</strong> Misalnya hewan yang memiliki sifat atau ketentuan tertentu yang telah dilarang oleh syariat.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contoh Minuman Haram -->
+                <div class="p-5 bg-rose-50 border border-rose-200 rounded-2xl space-y-3">
+                    <h3 class="font-bold text-rose-900 text-sm md:text-base flex items-center gap-2">
+                        <i class="fa-solid fa-wine-bottle"></i> Contoh Minuman Haram:
+                    </h3>
+                    <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-rose-600 mt-1"></i> Khamr, yaitu minuman yang memabukkan.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-rose-600 mt-1"></i> Minuman yang mengandung zat memabukkan.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-rose-600 mt-1"></i> Minuman yang membahayakan tubuh dan dilarang berdasarkan ketentuan agama.</li>
+                    </ul>
+                </div>
+
+                <!-- Ayat QS. Al-Maidah: 90 -->
+                <div class="p-4 bg-slate-100 border border-slate-300 rounded-xl text-xs md:text-sm text-slate-800 font-medium">
+                    <i class="fa-solid fa-book-quran text-teal-700 mr-1.5"></i> Allah Swt. berfirman dalam <strong>QS. Al-Maidah ayat 90</strong> tentang larangan khamr dan perbuatan yang memabukkan.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TAB: PENERAPAN & PERBEDAAN -->
+        <div id="tab-penerapan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C. Perbedaan Halal dan Haram -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-scale-balanced"></i> C. Perbedaan Halal dan Haram
+                </h2>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs md:text-sm text-left text-slate-700 border-collapse">
+                        <thead>
+                            <tr class="bg-teal-700 text-white">
+                                <th class="p-3 font-bold rounded-tl-xl border-r border-teal-600 w-1/2">Halal</th>
+                                <th class="p-3 font-bold rounded-tr-xl w-1/2">Haram</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 border border-slate-200">
+                            <tr class="bg-slate-50">
+                                <td class="p-3 border-r border-slate-200">Diperbolehkan oleh Allah Swt.</td>
+                                <td class="p-3 text-rose-800 font-medium">Dilarang oleh Allah Swt.</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="p-3 border-r border-slate-200">Boleh dikonsumsi</td>
+                                <td class="p-3 text-rose-800 font-medium">Tidak boleh dikonsumsi</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 border-r border-slate-200">Tidak mengandung bahan yang dilarang</td>
+                                <td class="p-3 text-rose-800 font-medium">Mengandung atau berasal dari sesuatu yang dilarang</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="p-3 border-r border-slate-200">Diperoleh dengan cara yang baik</td>
+                                <td class="p-3 text-rose-800 font-medium">Dapat diperoleh atau dibuat dengan cara yang dilarang</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 border-r border-slate-200">Memberikan ketenangan dalam beribadah</td>
+                                <td class="p-3 text-rose-800 font-medium">Dapat membawa dosa dan keburukan</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- D. Cara Menerapkan Memilih Makanan dan Minuman Halal -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                    <i class="fa-solid fa-cart-shopping"></i> D. Cara Menerapkan Memilih Makanan dan Minuman Halal
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700">
+                    Sebagai seorang muslim, kita harus berhati-hati dalam memilih makanan dan minuman. Hal-hal yang dapat dilakukan antara lain:
+                </p>
+
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm text-slate-700">
+                    <li class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> Memeriksa bahan makanan sebelum membeli.
+                    </li>
+                    <li class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> Memperhatikan label halal pada kemasan apabila tersedia.
+                    </li>
+                    <li class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> Mengetahui kandungan makanan atau minuman.
+                    </li>
+                    <li class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> Tidak membeli makanan yang sudah jelas mengandung bahan haram.
+                    </li>
+                    <li class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> Memilih makanan yang bersih dan sehat.
+                    </li>
+                    <li class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> Tidak membeli makanan dari hasil mencuri atau cara yang tidak halal.
+                    </li>
+                    <li class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> Bertanya kepada orang tua atau guru jika ragu tentang kehalalan suatu makanan.
+                    </li>
+                    <li class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-2">
+                        <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> Menghindari makanan atau minuman yang tidak jelas kehalalannya apabila belum mengetahui statusnya.
+                    </li>
+                </ul>
+
+                <!-- Contoh Penerapan -->
+                <div class="mt-4 pt-4 border-t border-slate-200 space-y-3">
+                    <h3 class="font-bold text-slate-800 text-sm md:text-base">Contoh Penerapan dalam Kehidupan Sehari-hari:</h3>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-700">
+                        <strong class="text-teal-800">Contoh 1:</strong> Ahmad ingin membeli makanan ringan. Ia membaca label pada kemasan dan memastikan bahan-bahannya aman serta terdapat keterangan halal. Sikap Ahmad merupakan contoh memilih makanan halal.
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs md:text-sm text-slate-700">
+                        <strong class="text-teal-800">Contoh 2:</strong> Siti mendapat makanan dari temannya, tetapi ia tidak mengetahui kandungannya. Siti bertanya kepada orang tua sebelum memakannya. Sikap tersebut merupakan contoh kehati-hatian dalam memilih makanan.
+                    </div>
+                </div>
+            </div>
+
+            <!-- E. Cara Menjauhi Makanan dan Minuman Haram -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-rose-800 pb-2 border-b-2 border-rose-100 flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved"></i> E. Cara Menjauhi Makanan dan Minuman Haram
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700">
+                    Untuk menghindari makanan dan minuman haram, kita dapat:
+                </p>
+
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs md:text-sm text-slate-700">
+                    <li class="flex items-center gap-2 p-2.5 bg-rose-50 rounded-lg"><i class="fa-solid fa-xmark text-rose-600"></i> Mengetahui makanan dan minuman yang dilarang dalam Islam.</li>
+                    <li class="flex items-center gap-2 p-2.5 bg-rose-50 rounded-lg"><i class="fa-solid fa-xmark text-rose-600"></i> Membaca komposisi pada kemasan.</li>
+                    <li class="flex items-center gap-2 p-2.5 bg-rose-50 rounded-lg"><i class="fa-solid fa-xmark text-rose-600"></i> Menghindari makanan yang mengandung babi atau bahan haram.</li>
+                    <li class="flex items-center gap-2 p-2.5 bg-rose-50 rounded-lg"><i class="fa-solid fa-xmark text-rose-600"></i> Tidak meminum minuman yang memabukkan.</li>
+                    <li class="flex items-center gap-2 p-2.5 bg-rose-50 rounded-lg"><i class="fa-solid fa-xmark text-rose-600"></i> Tidak membeli makanan dari hasil mencuri.</li>
+                    <li class="flex items-center gap-2 p-2.5 bg-rose-50 rounded-lg"><i class="fa-solid fa-xmark text-rose-600"></i> Tidak tergoda hanya karena makanan tersebut terlihat enak.</li>
+                    <li class="flex items-center gap-2 p-2.5 bg-rose-50 rounded-lg"><i class="fa-solid fa-xmark text-rose-600"></i> Bertanya kepada orang tua atau guru jika merasa ragu.</li>
+                    <li class="flex items-center gap-2 p-2.5 bg-rose-50 rounded-lg"><i class="fa-solid fa-xmark text-rose-600"></i> Membiasakan diri memilih makanan yang halal, bersih, dan sehat.</li>
+                </ul>
+            </div>
+
+            <!-- F. Hikmah Mengonsumsi Makanan dan Minuman Halal -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                    <i class="fa-solid fa-heart-pulse"></i> F. Hikmah Mengonsumsi Makanan dan Minuman Halal
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700">
+                    Mengonsumsi makanan dan minuman halal memiliki banyak manfaat, antara lain:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-award text-emerald-600 text-xl"></i>
+                        <span>Mendapatkan pahala karena menaati perintah Allah Swt.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-notes-medical text-emerald-600 text-xl"></i>
+                        <span>Menjaga kesehatan tubuh.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-emerald-600 text-xl"></i>
+                        <span>Membantu menjaga kebersihan hati dan diri.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-face-smile text-emerald-600 text-xl"></i>
+                        <span>Membuat hati lebih tenang.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-clock text-emerald-600 text-xl"></i>
+                        <span>Membiasakan diri hidup disiplin dan berhati-hati.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-shield-cat text-emerald-600 text-xl"></i>
+                        <span>Menjauhkan diri dari dosa.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3 sm:col-span-2 md:col-span-3 justify-center">
+                        <i class="fa-solid fa-person-praying text-emerald-600 text-xl"></i>
+                        <span>Membantu kita beribadah kepada Allah Swt. dengan baik.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- G. Sikap yang Harus Dibiasakan -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                    <i class="fa-solid fa-user-check"></i> G. Sikap yang Harus Dibiasakan
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700">
+                    Sebagai siswa muslim, kita harus membiasakan diri:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong class="text-teal-800 text-sm block mb-1">1. Bersyukur</strong>
+                        <p class="text-slate-600">Mensyukuri makanan dan minuman yang diberikan Allah Swt.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong class="text-teal-800 text-sm block mb-1">2. Memilih makanan halal</strong>
+                        <p class="text-slate-600">Tidak asal membeli atau memakan makanan.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong class="text-teal-800 text-sm block mb-1">3. Hidup sederhana</strong>
+                        <p class="text-slate-600">Tidak berlebihan dalam makan dan minum.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong class="text-teal-800 text-sm block mb-1">4. Menjaga kebersihan</strong>
+                        <p class="text-slate-600">Memilih makanan dan minuman yang bersih serta baik bagi kesehatan.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong class="text-teal-800 text-sm block mb-1">5. Berhati-hati</strong>
+                        <p class="text-slate-600">Tidak mengonsumsi sesuatu yang belum diketahui kehalalannya.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong class="text-teal-800 text-sm block mb-1">6. Menjauhi yang haram</strong>
+                        <p class="text-slate-600">Tidak memakan atau meminum sesuatu yang telah dilarang Allah Swt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- H. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> H. Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    Makanan dan minuman halal adalah makanan dan minuman yang diperbolehkan oleh syariat Islam, baik dari segi jenis, bahan, cara memperoleh, maupun cara mengolahnya.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    Makanan dan minuman haram adalah makanan dan minuman yang dilarang oleh Allah Swt. untuk dikonsumsi.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed font-semibold">
+                    Sebagai seorang muslim, kita harus memilih makanan dan minuman yang halal, baik, bersih, dan sehat, serta menjauhi makanan dan minuman yang haram. Dengan demikian, kita dapat menjadi anak yang taat kepada Allah Swt. dan menjaga kesehatan tubuh.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 5 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Makanan & Minuman Halal dan Haram PAI Kelas 5 SD
+        const quizData = [
+            {
+                question: "1. Arti kata 'Halal' menurut ajaran Islam adalah...",
+                options: [
+                    "A. Sesuatu yang dilarang",
+                    "B. Sesuatu yang diperbolehkan",
+                    "C. Sesuatu yang membahayakan",
+                    "D. Sesuatu yang kotor"
+                ],
+                correct: 1,
+                explanation: "Halal berarti sesuatu yang diperbolehkan menurut ajaran Islam."
+            },
+            {
+                question: "2. Firman Allah Swt. yang memerintahkan manusia memakan makanan halal dan baik terdapat dalam...",
+                options: [
+                    "A. QS. Al-Baqarah ayat 168",
+                    "B. QS. Al-Maidah ayat 90",
+                    "C. QS. Al-Fatihah ayat 1",
+                    "D. QS. An-Nas ayat 3"
+                ],
+                correct: 0,
+                explanation: "QS. Al-Baqarah ayat 168 berisi perintah memakan makanan yang halal dan baik di bumi."
+            },
+            {
+                question: "3. Makanan halal tidak hanya dilihat dari jenisnya, tetapi juga dari...",
+                options: [
+                    "A. Harganya yang mahal",
+                    "B. Bungkusnya yang bagus",
+                    "C. Cara memperoleh dan cara mengolahnya",
+                    "D. Rasa yang sangat manis"
+                ],
+                correct: 2,
+                explanation: "Kehalalan makanan ditentukan oleh jenisnya, cara memperolehnya, dan cara mengolahnya."
+            },
+            {
+                question: "4. Salah satu contoh makanan halal adalah...",
+                options: [
+                    "A. Bangkai ayam",
+                    "B. Daging babi",
+                    "C. Daging sapi yang disembelih sesuai syariat",
+                    "D. Daging hewan yang disembelih bukan atas nama Allah"
+                ],
+                correct: 2,
+                explanation: "Daging sapi yang disembelih sesuai syariat tergolong makanan yang halal dikonsumsi."
+            },
+            {
+                question: "5. Sesuatu yang dilarang oleh Allah Swt. untuk dikonsumsi disebut...",
+                options: [
+                    "A. Halal",
+                    "B. Haram",
+                    "C. Tayyib",
+                    "D. Wajib"
+                ],
+                correct: 1,
+                explanation: "Haram adalah sesuatu yang dilarang oleh Allah Swt."
+            },
+            {
+                question: "6. Firman Allah Swt. dalam QS. Al-Maidah ayat 90 menjelaskan tentang larangan...",
+                options: [
+                    "A. Makan sayur",
+                    "B. Minum air kelapa",
+                    "C. Khamr dan perbuatan yang memabukkan",
+                    "D. Berpuasa"
+                ],
+                correct: 2,
+                explanation: "QS. Al-Maidah ayat 90 menjelaskan tentang larangan khamr dan perbuatan yang memabukkan."
+            },
+            {
+                question: "7. Sikap Ahmad yang membaca label kemasan sebelum membeli makanan ringan merupakan contoh...",
+                options: [
+                    "A. Menjauhi kebersihan",
+                    "B. Memilih makanan halal",
+                    "C. Sikap yang boros",
+                    "D. Perbuatan yang sia-sia"
+                ],
+                correct: 1,
+                explanation: "Memeriksa komposisi dan label halal pada kemasan adalah contoh nyata penerapan memilih makanan halal."
+            },
+            {
+                question: "8. Jika Siti tidak mengetahui kandungan makanan dari temannya, sikap yang tepat adalah...",
+                options: [
+                    "A. Langsung memakannya tanpa ragu",
+                    "B. Membuangnya ke tempat sampah",
+                    "C. Bertanya kepada orang tua sebelum memakannya",
+                    "D. Memaksa teman untuk memakannya"
+                ],
+                correct: 2,
+                explanation: "Bertanya kepada orang tua atau guru adalah bentuk kehati-hatian dalam memilih makanan."
+            },
+            {
+                question: "9. Salah satu hikmah mengonsumsi makanan dan minuman halal adalah...",
+                options: [
+                    "A. Menjadi sombong dan kuat",
+                    "B. Mendapatkan pahala dan menjaga kesehatan tubuh",
+                    "C. Mudah marah",
+                    "D. Menghemat air"
+                ],
+                correct: 1,
+                explanation: "Hikmah makanan halal antara lain mendapat pahala, menjaga kesehatan tubuh, dan menenangkan hati."
+            },
+            {
+                question: "10. Manakah yang BUKAN merupakan contoh minuman halal?",
+                options: [
+                    "A. Susu segar",
+                    "B. Khamr / Minuman memabukkan",
+                    "C. Air kelapa",
+                    "D. Jus buah"
+                ],
+                correct: 1,
+                explanation: "Khamr atau minuman memabukkan hukumnya haram dalam ajaran Islam."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 1 SD - Bersuci dari Hadats dan Najis</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-bubbles"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 09. Bersuci dari Hadats dan Najis, Berwudhu, Tayamum, & Istinja’</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase A - Kelas 1 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-droplet"></i> Bersuci, Hadats & Najis
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('wudhu', this)">
+                    <i class="fa-solid fa-shower"></i> Wudhu & Tayamum
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('istinja', this)">
+                    <i class="fa-solid fa-pump-soap"></i> Istinja' & Perilaku
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('latihan', this)">
+                    <i class="fa-solid fa-heart"></i> Hikmah & Rangkuman
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">💧 Bersuci dari Hadats & Najis</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Mengenal Pengertian Bersuci (Thaharah), Hadats, Najis, Cara Berwudhu, Tayamum, Istinja’, serta Perilaku Hidup Bersih Sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A - B</span>
+                            <i class="fa-solid fa-soap text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Bersuci, Hadats & Najis</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Thaharah & Kebersihan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti bersuci, perbedaan hadats kecil/besar, dan jenis-jenis najis yang harus dibersihkan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Maksud Bersuci <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('wudhu')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">C - D</span>
+                            <i class="fa-solid fa-faucet-drip text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Wudhu & Tayamum</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tata Cara Bersuci</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mempelajari urutan berwudhu, adab wudhu, hal yang membatalkan wudhu, dan cara bertayamum dengan debu suci.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Wudhu & Tayamum <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('istinja')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">E - F</span>
+                            <i class="fa-solid fa-toilet text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Istinja' & Perilaku</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Kebersihan Diri & Adab</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Cara membersihkan diri setelah buang air, adab toilet, dan membiasakan hidup bersih dalam sehari-hari.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Istinja' <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('latihan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">G - H</span>
+                            <i class="fa-solid fa-award text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Hikmah & Kesimpulan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Manfaat Bersuci</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami manfaat bersuci untuk kesehatan dan ibadah serta rangkuman lengkap materi.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Anak Muslim
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Allah Swt. menyukai orang-orang yang menjaga kebersihan dan kesucian. Mari kita selalu menjaga kebersihan badan, pakaian, dan tempat ibadah kita setiap hari!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN BERSUCI, HADATS & NAJIS -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- A. Pengertian Bersuci -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-droplet"></i> A. Pengertian Bersuci
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Bersuci disebut juga <strong>thaharah</strong>. Bersuci berarti membersihkan diri dari hadats dan najis agar kita dapat melaksanakan ibadah dengan baik.
+                </p>
+
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl mb-5 text-xs md:text-sm text-teal-900 flex items-center gap-3">
+                    <i class="fa-solid fa-heart text-rose-500 text-xl"></i>
+                    <div><strong>Ingat:</strong> Allah Swt. menyukai orang-orang yang menjaga kebersihan dan kesucian.</div>
+                </div>
+
+                <h3 class="text-sm md:text-base font-bold text-slate-800 mb-3">Contoh Menjaga Kebersihan Sehari-hari:</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-hand-wash text-teal-600 text-lg"></i>
+                        <span>Mencuci tangan sebelum makan</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-shower text-teal-600 text-lg"></i>
+                        <span>Mandi setiap hari</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-shirt text-teal-600 text-lg"></i>
+                        <span>Memakai pakaian yang bersih</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-house text-teal-600 text-lg"></i>
+                        <span>Membersihkan tempat tinggal</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3 sm:col-span-2 md:col-span-2">
+                        <i class="fa-solid fa-toilet-paper text-teal-600 text-lg"></i>
+                        <span>Membersihkan diri setelah buang air</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- B. Hadats dan Najis -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-circle-exclamation"></i> B. Hadats dan Najis
+                </h2>
+
+                <!-- 1. Hadats -->
+                <div>
+                    <h3 class="text-base md:text-lg font-bold text-teal-900 mb-2">1. Pengertian Hadats</h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Hadats adalah keadaan tidak suci pada diri seseorang sehingga ia harus bersuci sebelum melakukan ibadah tertentu.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Hadats Kecil -->
+                        <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl space-y-2">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-200/80 px-2.5 py-1 rounded-full">a. Hadats Kecil</span>
+                            <p class="text-xs text-slate-700 mt-2 font-semibold">Contohnya:</p>
+                            <ul class="list-disc list-inside text-xs text-slate-600 space-y-1">
+                                <li>Buang air kecil</li>
+                                <li>Buang air besar</li>
+                                <li>Buang angin</li>
+                                <li>Tidur</li>
+                            </ul>
+                            <div class="p-2 bg-amber-100/70 text-amber-900 text-xs rounded-lg font-bold mt-2">
+                                👉 Cara bersuci dari hadats kecil adalah <u>berwudhu</u>.
+                            </div>
+                        </div>
+
+                        <!-- Hadats Besar -->
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl space-y-2">
+                            <span class="text-xs font-bold text-blue-800 bg-blue-200/80 px-2.5 py-1 rounded-full">b. Hadats Besar</span>
+                            <p class="text-xs text-slate-700 mt-2">
+                                Hadats besar terjadi karena keadaan tertentu yang menyebabkan seseorang harus melakukan mandi wajib.
+                            </p>
+                            <p class="text-xs text-slate-600">
+                                Untuk anak-anak, yang perlu diketahui adalah bahwa hadats besar disucikan dengan <strong>mandi wajib</strong> sesuai ketentuan agama.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-slate-200">
+
+                <!-- 2. Najis -->
+                <div>
+                    <h3 class="text-base md:text-lg font-bold text-teal-900 mb-2">2. Pengertian Najis</h3>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Najis adalah sesuatu yang kotor menurut syariat Islam dan harus dibersihkan.
+                    </p>
+
+                    <p class="text-xs font-bold text-slate-800 mb-2">Contoh Najis:</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs md:text-sm font-semibold mb-4">
+                        <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg">💧 Air kencing</div>
+                        <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg">💩 Tinja</div>
+                        <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg">🩸 Darah</div>
+                        <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg">🐾 Kotoran hewan tertentu</div>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Jika pakaian, badan, atau tempat terkena najis, maka najis tersebut harus dibersihkan.
+                    </p>
+                </div>
+
+                <div class="p-3 bg-amber-50 border border-amber-300 rounded-xl text-xs md:text-sm text-amber-900">
+                    <strong>📌 Ingat Perbedaannya:</strong> Hadats berkaitan dengan <em>keadaan seseorang</em>, sedangkan najis berkaitan dengan <em>kotoran yang harus dibersihkan</em>.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: WUDU & TAYAMUM -->
+        <div id="tab-wudhu" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C. Tata Cara Berwudhu -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-shower"></i> C. Tata Cara Berwudhu
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Wudhu adalah cara bersuci untuk menghilangkan hadats kecil. Kita berwudhu sebelum melakukan ibadah tertentu, seperti salat.
+                </p>
+
+                <h3 class="font-bold text-slate-800 text-sm md:text-base mb-3">Urutan Berwudhu Secara Sederhana:</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs md:text-sm mb-6">
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">1</span>
+                        <span>Berniat berwudhu karena Allah Swt.</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">2</span>
+                        <span>Membasuh kedua telapak tangan</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">3</span>
+                        <span>Berkumur-kumur</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">4</span>
+                        <span>Membersihkan hidung</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">5</span>
+                        <span>Membasuh wajah</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">6</span>
+                        <span>Membasuh tangan kanan sampai siku</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">7</span>
+                        <span>Membasuh tangan kiri sampai siku</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">8</span>
+                        <span>Mengusap kepala</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">9</span>
+                        <span>Membersihkan telinga</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">10</span>
+                        <span>Membasuh kaki kanan sampai mata kaki</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">11</span>
+                        <span>Membasuh kaki kiri sampai mata kaki</span>
+                    </div>
+                    <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl flex items-center gap-3">
+                        <span class="w-7 h-7 bg-teal-700 text-white font-bold rounded-full flex items-center justify-center shrink-0">12</span>
+                        <span>Melakukan semua dengan tertib</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Adab Berwudhu -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h4 class="font-bold text-teal-800 text-sm mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-check-double text-emerald-600"></i> Adab Berwudhu:
+                        </h4>
+                        <ul class="list-disc list-inside text-xs text-slate-700 space-y-1">
+                            <li>Menggunakan air secukupnya</li>
+                            <li>Tidak bermain-main dengan air</li>
+                            <li>Melakukan wudhu dengan tertib</li>
+                            <li>Membaca doa setelah wudhu</li>
+                            <li>Menjaga kebersihan tempat wudhu</li>
+                        </ul>
+                    </div>
+
+                    <!-- Hal Membatalkan Wudhu -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h4 class="font-bold text-rose-800 text-sm mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-xmark text-rose-600"></i> Hal yang Membatalkan Wudhu:
+                        </h4>
+                        <ul class="list-disc list-inside text-xs text-slate-700 space-y-1">
+                            <li>Buang air kecil</li>
+                            <li>Buang air besar</li>
+                            <li>Buang angin</li>
+                            <li>Tidur nyenyak</li>
+                            <li>Hal lain yang menyebabkan hadats kecil</li>
+                        </ul>
+                        <p class="text-xs text-rose-900 mt-2 italic font-medium">Jika wudhu batal, kita harus berwudhu kembali sebelum salat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D. Tayamum -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-sun"></i> D. Tayamum
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Tayamum adalah bersuci menggunakan debu atau tanah yang suci sebagai pengganti wudhu atau mandi dalam keadaan tertentu.
+                </p>
+
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl mb-4 text-xs md:text-sm">
+                    <p class="font-bold text-amber-900 mb-1">Tayamum dapat dilakukan jika:</p>
+                    <ul class="list-disc list-inside text-slate-700 space-y-1">
+                        <li>Tidak menemukan air</li>
+                        <li>Tidak dapat menggunakan air karena alasan yang dibenarkan syariat</li>
+                    </ul>
+                </div>
+
+                <h3 class="font-bold text-slate-800 text-sm md:text-base mb-3">Tata Cara Tayamum:</h3>
+                <ol class="list-decimal list-inside space-y-2 text-xs md:text-sm text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <li>Berniat tayamum.</li>
+                    <li>Menepukkan kedua telapak tangan pada debu atau tanah yang suci.</li>
+                    <li>Mengusapkan tangan ke wajah.</li>
+                    <li>Menepukkan kembali kedua tangan pada debu atau tanah yang suci.</li>
+                    <li>Mengusapkan tangan kanan dan kiri.</li>
+                </ol>
+
+                <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 mt-4 flex items-center gap-2">
+                    <i class="fa-solid fa-smile text-emerald-600 text-lg"></i>
+                    <span>Tayamum mengajarkan kita bahwa Islam adalah agama yang mudah dan memberikan kemudahan kepada umatnya.</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: ISTINJA' & PERILAKU BERSUCI -->
+        <div id="tab-istinja" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- E. Istinja' -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-pump-soap"></i> E. Istinja’
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Istinja’ adalah membersihkan qubul atau dubur setelah buang air kecil atau buang air besar. Istinja’ dilakukan agar badan menjadi bersih dari najis.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Cara Istinja' -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-800 text-sm mb-2">Cara Istinja’:</h3>
+                        <p class="text-xs text-slate-600 mb-2">Istinja’ dapat dilakukan menggunakan air yang suci dan bersih.</p>
+                        <ul class="list-disc list-inside text-xs text-slate-700 space-y-1">
+                            <li>Setelah buang air, bersihkan bagian yang terkena kotoran.</li>
+                            <li>Gunakan air secukupnya.</li>
+                            <li>Pastikan tidak ada kotoran yang tersisa.</li>
+                            <li>Cuci tangan sampai bersih setelah selesai.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Adab Setelah Buang Air -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-teal-800 text-sm mb-2">Adab Setelah Buang Air:</h3>
+                        <ul class="list-disc list-inside text-xs text-slate-700 space-y-1">
+                            <li>Masuk dan keluar toilet dengan tertib.</li>
+                            <li>Tidak bermain-main di toilet.</li>
+                            <li>Menjaga kebersihan toilet.</li>
+                            <li>Membersihkan diri dengan baik.</li>
+                            <li>Mencuci tangan setelah selesai.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- F. Perilaku Bersuci dalam Kehidupan Sehari-hari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-hands-holding"></i> F. Perilaku Bersuci dalam Kehidupan Sehari-hari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Sebagai anak muslim, kita harus membiasakan hidup bersih dan suci.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 flex items-center gap-2.5">
+                        <i class="fa-solid fa-mosque text-teal-700"></i> Berwudhu sebelum salat
+                    </div>
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 flex items-center gap-2.5">
+                        <i class="fa-solid fa-soap text-teal-700"></i> Membersihkan tubuh setelah buang air
+                    </div>
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 flex items-center gap-2.5">
+                        <i class="fa-solid fa-shirt text-teal-700"></i> Mengganti pakaian yang terkena najis
+                    </div>
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 flex items-center gap-2.5">
+                        <i class="fa-solid fa-bath text-teal-700"></i> Menjaga kebersihan kamar mandi
+                    </div>
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 flex items-center gap-2.5">
+                        <i class="fa-solid fa-trash-can text-teal-700"></i> Tidak membuang sampah sembarangan
+                    </div>
+                    <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 flex items-center gap-2.5">
+                        <i class="fa-solid fa-faucet text-teal-700"></i> Menggunakan air dengan hemat
+                    </div>
+                </div>
+                <div class="mt-3 p-3 bg-amber-50 rounded-xl border border-amber-200 text-center text-xs md:text-sm font-semibold text-amber-900">
+                    Menjaga kebersihan badan, pakaian, dan tempat ibadah.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: HIKMAH & RANGKUMAN -->
+        <div id="tab-latihan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- G. Hikmah Bersuci -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-heart-pulse"></i> G. Hikmah Bersuci
+                </h2>
+
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Bersuci memiliki banyak manfaat, antara lain:</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-shield-halved text-emerald-600 text-xl"></i>
+                        <span>Tubuh menjadi bersih</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-virus-slash text-emerald-600 text-xl"></i>
+                        <span>Terhindar dari kotoran dan penyakit</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-face-smile text-emerald-600 text-xl"></i>
+                        <span>Membuat kita nyaman dalam beribadah</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-clock text-emerald-600 text-xl"></i>
+                        <span>Mengajarkan hidup disiplin</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-broom text-emerald-600 text-xl"></i>
+                        <span>Menumbuhkan rasa cinta terhadap kebersihan</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-star text-emerald-600 text-xl"></i>
+                        <span>Mendapat pahala karena menaati perintah Allah Swt.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- H. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> H. Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                    Bersuci (thaharah) adalah membersihkan diri dari hadats dan najis. Hadats kecil dapat disucikan dengan wudhu, sedangkan dalam keadaan tertentu wudhu dapat diganti dengan tayamum. Setelah buang air kecil atau buang air besar, kita melakukan istinja’ untuk membersihkan najis.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed font-semibold">
+                    Anak muslim harus membiasakan diri hidup bersih, sehat, suci, dan rapi karena kebersihan merupakan bagian penting dalam kehidupan seorang muslim.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 1 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 8</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Bersuci PAI Kelas 1 SD
+        const quizData = [
+            {
+                question: "1. Bersuci dalam agama Islam disebut juga dengan...",
+                options: [
+                    "A. Thaharah",
+                    "B. Istinja'",
+                    "C. Tayamum",
+                    "D. Hadats"
+                ],
+                correct: 0,
+                explanation: "Bersuci dalam agama Islam disebut thaharah."
+            },
+            {
+                question: "2. Bersuci dari hadats kecil dilakukan dengan cara...",
+                options: [
+                    "A. Berwudhu",
+                    "B. Bermain",
+                    "C. Tidur",
+                    "D. Makan"
+                ],
+                correct: 0,
+                explanation: "Hadats kecil disucikan dengan berwudhu."
+            },
+            {
+                question: "3. Manakah yang termasuk contoh najis?",
+                options: [
+                    "A. Air hujan",
+                    "B. Air kencing",
+                    "C. Air minum",
+                    "D. Debu bersih"
+                ],
+                correct: 1,
+                explanation: "Air kencing merupakan salah satu contoh najis yang harus dibersihkan."
+            },
+            {
+                question: "4. Sebelum melaksanakan salat, kita harus bersuci dengan cara...",
+                options: [
+                    "A. Berwudhu",
+                    "B. Bermain",
+                    "C. Makan",
+                    "D. Tidur"
+                ],
+                correct: 0,
+                explanation: "Kita harus berwudhu sebelum salat jika masih memiliki hadats kecil."
+            },
+            {
+                question: "5. Jika tidak menemukan air untuk berwudhu, kita dapat melakukan...",
+                options: [
+                    "A. Istinja'",
+                    "B. Tayamum",
+                    "C. Mandi",
+                    "D. Tidur"
+                ],
+                correct: 1,
+                explanation: "Tayamum dapat dilakukan sebagai pengganti wudhu dalam keadaan tertentu, seperti tidak menemukan air."
+            },
+            {
+                question: "6. Tayamum dilakukan menggunakan...",
+                options: [
+                    "A. Minyak",
+                    "B. Air sabun",
+                    "C. Debu atau tanah yang suci",
+                    "D. Pasir yang kotor"
+                ],
+                correct: 2,
+                explanation: "Tayamum dilakukan menggunakan debu atau tanah yang suci."
+            },
+            {
+                question: "7. Membersihkan diri setelah buang air kecil atau buang air besar disebut...",
+                options: [
+                    "A. Wudhu",
+                    "B. Istinja'",
+                    "C. Tayamum",
+                    "D. Mandi"
+                ],
+                correct: 1,
+                explanation: "Istinja' adalah membersihkan qubul atau dubur setelah buang air kecil atau buang air besar."
+            },
+            {
+                question: "8. Salah satu hal yang membatalkan wudhu adalah...",
+                options: [
+                    "A. Membaca buku",
+                    "B. Berjalan kaki",
+                    "C. Buang angin",
+                    "D. Duduk"
+                ],
+                correct: 2,
+                explanation: "Buang angin merupakan salah satu hal yang membatalkan wudhu."
+            },
+            {
+                question: "9. Saat berwudhu, sebaiknya kita menggunakan air...",
+                options: [
+                    "A. Sebanyak-banyaknya",
+                    "B. Secukupnya",
+                    "C. Sampai habis",
+                    "D. Dengan bermain-main"
+                ],
+                correct: 1,
+                explanation: "Kita dianjurkan menggunakan air secukupnya dan tidak boros."
+            },
+            {
+                question: "10. Salah satu manfaat bersuci adalah...",
+                options: [
+                    "A. Tubuh menjadi kotor",
+                    "B. Mudah terkena penyakit",
+                    "C. Tubuh menjadi bersih",
+                    "D. Membuat tempat menjadi kotor"
+                ],
+                correct: 2,
+                explanation: "Bersuci membuat tubuh menjadi bersih dan membantu menjaga kesehatan."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

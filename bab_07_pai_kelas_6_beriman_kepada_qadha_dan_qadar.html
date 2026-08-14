@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 6 SD - Beriman kepada Qadha dan Qadar</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 07. Beriman kepada Qadha dan Qadar</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase C - Kelas 6 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-book-open"></i> Pengertian & Dalil
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('macam', this)">
+                    <i class="fa-solid fa-code-branch"></i> Macam Takdir
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hubungan', this)">
+                    <i class="fa-solid fa-hands-praying"></i> Ikhtiar, Doa & Tawakal
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hikmah', this)">
+                    <i class="fa-solid fa-heart-pulse"></i> Hikmah & Sikap
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Materi PAI Kelas 6 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Memahami Rukun Iman Keenam: Meyakini Qadha dan Qadar Allah SWT dalam Kehidupan Sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A</span>
+                            <i class="fa-solid fa-scale-balanced text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian & Dalil</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rukun Iman ke-6</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti Qadha dan Qadar, dalil QS. Al-Qamar ayat 49, serta penerapannya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Pengertian <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('macam')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">C</span>
+                            <i class="fa-solid fa-code-branch text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Macam-Macam Takdir</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Mubram & Muallaq</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal takdir Mubram yang pasti terjadi dan takdir Muallaq yang berkaitan dengan ikhtiar.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Takdir <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hubungan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">D</span>
+                            <i class="fa-solid fa-hands-praying text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Ikhtiar, Doa & Tawakal</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Proses Usaha</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami alur: Berusaha (Ikhtiar) → Berdoa → Tawakal → Menerima Hasil dengan Ikhlas.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hubungan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hikmah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">E-G</span>
+                            <i class="fa-solid fa-star text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Hikmah & Kesimpulan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Manfaat & Sikap</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Manfaat beriman kepada takdir, contoh sikap yang benar, serta rangkuman materi.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Siswa
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Keimanan kepada takdir bukan berarti kita boleh bermalas-malasan! Teruslah giat belajar, rajin berdoa, dan berserah diri (tawakal) kepada Allah SWT.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & DALIL -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-book-open"></i> A. Pengertian Qadha dan Qadar
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Sebagai seorang muslim, kita wajib beriman kepada qadha dan qadar Allah SWT. Beriman kepada qadha dan qadar merupakan <strong>rukun iman yang keenam</strong>.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl">
+                            <h3 class="font-bold text-teal-900 text-base mb-1">1. Qada</h3>
+                            <p class="text-xs md:text-sm text-slate-700">Ketetapan atau keputusan Allah SWT terhadap segala sesuatu yang telah ditetapkan sejak zaman azali.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
+                            <h3 class="font-bold text-emerald-900 text-base mb-1">2. Qadar</h3>
+                            <p class="text-xs md:text-sm text-slate-700">Perwujudan atau kenyataan dari ketetapan Allah SWT sesuai dengan ukuran dan ketentuan-Nya.</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        Dengan demikian, <strong>iman kepada qadha dan qadar</strong> berarti meyakini dengan sepenuh hati bahwa segala sesuatu yang terjadi di alam semesta berada dalam ilmu, kehendak, dan ketentuan Allah SWT.
+                    </p>
+
+                    <!-- Dalil Al-Qur'an -->
+                    <div class="p-5 bg-amber-50 border border-amber-200 rounded-xl text-center space-y-3 mb-6">
+                        <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Firman Allah SWT (QS. Al-Qamar: 49)</p>
+                        <p class="font-arabic text-2xl md:text-3xl text-teal-900 font-bold leading-loose">إِنَّا كُلَّ شَيْءٍ خَلَقْنَاهُ بِقَدَرٍ</p>
+                        <p class="text-xs md:text-sm text-slate-700 italic">Artinya: “Sesungguhnya Kami menciptakan segala sesuatu menurut ukuran.”</p>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        Namun, keimanan kepada takdir bukan berarti manusia boleh bermalas-malasan. Allah SWT memberikan manusia akal, kemampuan, dan kesempatan untuk berusaha. Oleh karena itu, kita harus berusaha sebaik mungkin, kemudian menyerahkan hasilnya kepada Allah SWT.
+                    </p>
+                </div>
+
+                <!-- B. Meyakini dalam Kehidupan -->
+                <div class="pt-4 border-t border-slate-200">
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-heart"></i> B. Meyakini Qadha dan Qadar dalam Kehidupan Sehari-hari
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-3">
+                        Beriman kepada qadha dan qadar dapat diterapkan dalam kehidupan sehari-hari, seperti:
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs md:text-sm text-slate-700 font-medium mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Rajin belajar karena ingin mendapatkan hasil yang baik.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Berdoa kepada Allah SWT sebelum melakukan sesuatu.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Tidak mudah menyerah ketika mengalami kesulitan.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Bersyukur ketika mendapatkan keberhasilan.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Bersabar ketika mendapatkan kegagalan atau musibah.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Tidak sombong ketika memperoleh prestasi.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Tidak menyalahkan Allah SWT jika tak sesuai keinginan.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> Bertawakal setelah berusaha dengan sungguh-sungguh.</li>
+                    </ul>
+
+                    <div class="p-4 bg-slate-100 rounded-xl border border-slate-300">
+                        <h3 class="font-bold text-slate-800 text-sm mb-1">💡 Contoh Penerapan:</h3>
+                        <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+                            Ahmad ingin mendapatkan nilai yang bagus dalam ujian. Ia belajar dengan rajin, berdoa, dan mempersiapkan diri. Setelah ujian, Ahmad menyerahkan hasilnya kepada Allah SWT. Jika mendapatkan nilai bagus, Ahmad bersyukur. Jika nilainya belum sesuai harapan, Ahmad bersabar dan belajar lebih giat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MACAM-MACAM TAKDIR -->
+        <div id="tab-macam" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-code-branch"></i> C. Macam-Macam Takdir
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                        Secara umum, takdir dapat dipahami dalam dua macam, yaitu <strong>Takdir Mubram</strong> dan <strong>Takdir Muallaq</strong>.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <!-- Mubram -->
+                        <div class="p-5 bg-rose-50 border border-rose-200 rounded-2xl space-y-3">
+                            <span class="text-xs font-bold text-rose-800 bg-rose-200 px-3 py-1 rounded-full">1. Takdir Mubram</span>
+                            <p class="text-xs md:text-sm text-slate-700 font-medium">Ketentuan Allah SWT yang pasti terjadi dan <strong>tidak dapat diubah</strong> oleh manusia.</p>
+                            <p class="text-xs font-bold text-rose-900 border-t border-rose-200 pt-2">Contoh:</p>
+                            <ul class="list-disc list-inside text-xs text-slate-700 space-y-1">
+                                <li>Kelahiran seseorang</li>
+                                <li>Kematian seseorang</li>
+                                <li>Jenis kelamin seseorang</li>
+                                <li>Orang tua yang melahirkan kita</li>
+                                <li>Peristiwa alam tertentu atas kehendak Allah SWT</li>
+                            </ul>
+                            <p class="text-xs text-rose-800 italic pt-1">Sikap: Diterima dengan ikhlas, sabar, dan percaya.</p>
+                        </div>
+
+                        <!-- Muallaq -->
+                        <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-2xl space-y-3">
+                            <span class="text-xs font-bold text-emerald-800 bg-emerald-200 px-3 py-1 rounded-full">2. Takdir Muallaq</span>
+                            <p class="text-xs md:text-sm text-slate-700 font-medium">Ketentuan Allah SWT yang <strong>berkaitan dengan usaha dan ikhtiar</strong> manusia.</p>
+                            <p class="text-xs font-bold text-emerald-900 border-t border-emerald-200 pt-2">Contoh:</p>
+                            <ul class="list-disc list-inside text-xs text-slate-700 space-y-1">
+                                <li>Pandai karena rajin belajar</li>
+                                <li>Sehat dengan menjaga pola hidup & olahraga</li>
+                                <li>Berprestasi karena rajin berlatih</li>
+                                <li>Sukses karena bekerja keras</li>
+                                <li>Nilai baik karena belajar sungguh-sungguh</li>
+                            </ul>
+                            <p class="text-xs text-emerald-800 italic pt-1">Sikap: Berusaha, berdoa, lalu bertawakal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tabel Perbandingan -->
+                    <h3 class="text-base font-bold text-slate-800 mb-2">Tabel Perbedaan Takdir</h3>
+                    <div class="overflow-x-auto rounded-xl border border-slate-200">
+                        <table class="w-full text-left border-collapse text-xs md:text-sm">
+                            <thead>
+                                <tr class="bg-teal-800 text-white font-bold text-center">
+                                    <th class="p-3">Takdir</th>
+                                    <th class="p-3">Pengertian</th>
+                                    <th class="p-3">Contoh</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-slate-800">
+                                <tr>
+                                    <td class="p-3 font-bold text-rose-800 text-center">Mubram</td>
+                                    <td class="p-3">Ketentuan Allah yang pasti terjadi dan tidak dapat diubah manusia.</td>
+                                    <td class="p-3">Kelahiran dan kematian</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 font-bold text-emerald-800 text-center">Muallaq</td>
+                                    <td class="p-3">Ketentuan yang berkaitan dengan usaha manusia.</td>
+                                    <td class="p-3">Kepandaian dan prestasi</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: IKHTIAR, DOA & TAWAKAL -->
+        <div id="tab-hubungan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-hands-praying"></i> D. Hubungan Ikhtiar, Doa, dan Tawakal
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-6">
+                        Dalam menghadapi kehidupan, seorang muslim harus melakukan tiga hal penting secara berurutan:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <!-- Ikhtiar -->
+                        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold mx-auto">1</div>
+                            <h3 class="font-bold text-teal-900 text-base">Ikhtiar</h3>
+                            <p class="text-xs text-slate-600">Berusaha dengan sungguh-sungguh untuk mencapai tujuan.</p>
+                            <span class="block text-xs font-semibold text-teal-700 pt-1 border-t">Contoh: Belajar rajin demi nilai bagus</span>
+                        </div>
+
+                        <!-- Doa -->
+                        <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold mx-auto">2</div>
+                            <h3 class="font-bold text-amber-900 text-base">Doa</h3>
+                            <p class="text-xs text-slate-600">Memohon pertolongan kepada Allah SWT setelah berusaha.</p>
+                            <span class="block text-xs font-semibold text-amber-700 pt-1 border-t">Contoh: Berdoa diberi kemudahan ujian</span>
+                        </div>
+
+                        <!-- Tawakal -->
+                        <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                            <div class="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold mx-auto">3</div>
+                            <h3 class="font-bold text-emerald-900 text-base">Tawakal</h3>
+                            <p class="text-xs text-slate-600">Menyerahkan hasil usaha kepada Allah SWT setelah ikhtiar & doa.</p>
+                            <span class="block text-xs font-semibold text-emerald-700 pt-1 border-t">Contoh: Berserah diri atas hasil ujian</span>
+                        </div>
+                    </div>
+
+                    <!-- Flow Urutan -->
+                    <div class="p-4 bg-gradient-to-r from-teal-800 to-emerald-800 text-white rounded-2xl text-center">
+                        <p class="text-xs font-semibold text-teal-200 mb-2 uppercase tracking-wider">Urutan Sikap yang Benar:</p>
+                        <div class="flex flex-wrap items-center justify-center gap-2 font-bold text-sm md:text-base">
+                            <span class="bg-white/20 px-3 py-1 rounded-lg">Berusaha (Ikhtiar)</span>
+                            <i class="fa-solid fa-arrow-right text-yellow-300"></i>
+                            <span class="bg-white/20 px-3 py-1 rounded-lg">Berdoa</span>
+                            <i class="fa-solid fa-arrow-right text-yellow-300"></i>
+                            <span class="bg-white/20 px-3 py-1 rounded-lg">Tawakal</span>
+                            <i class="fa-solid fa-arrow-right text-yellow-300"></i>
+                            <span class="bg-amber-500 text-slate-900 px-3 py-1 rounded-lg">Menerima Hasil dengan Ikhlas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HIKMAH & SIKAP -->
+        <div id="tab-hikmah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- E. Hikmah -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-heart-pulse"></i> E. Hikmah Beriman kepada Qadha dan Qadar
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm text-slate-700">
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>1. Menumbuhkan Sikap Sabar:</strong> Ketika mengalami kesulitan/musibah, kita sabar karena yakin terjadi atas kehendak Allah SWT.
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>2. Menumbuhkan Rasa Syukur:</strong> Saat berhasil, kita tidak sombong karena sadar itu karunia Allah SWT.
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>3. Menjadi Pribadi Optimis:</strong> Tidak mudah putus asa karena yakin Allah SWT memberi jalan terbaik.
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>4. Mendorong Rajin Berusaha:</strong> Iman kepada takdir mendorong kita terus berusaha secara maksimal.
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>5. Menumbuhkan Sikap Tawakal:</strong> Berserah diri kepada Allah SWT setelah berupaya maksimal.
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>6. Menghindari Sifat Sombong:</strong> Menyadari semua keberhasilan terjadi atas izin Allah SWT.
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>7. Menghindari Putus Asa:</strong> Jika gagal, kita mengambil pelajaran dan mencoba kembali.
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>8. Menjadikan Hati Tenang:</strong> Yakin bahwa Allah SWT mengatur segala sesuatu dengan sebaik-baiknya.
+                    </div>
+                </div>
+            </div>
+
+            <!-- F. Contoh Sikap -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-list-check"></i> F. Contoh Sikap Beriman kepada Qadha dan Qadar
+                </h2>
+
+                <div class="overflow-x-auto rounded-xl border border-slate-200">
+                    <table class="w-full text-left border-collapse text-xs md:text-sm">
+                        <thead>
+                            <tr class="bg-teal-800 text-white font-bold">
+                                <th class="p-3">Peristiwa</th>
+                                <th class="p-3">Sikap yang Benar</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-800">
+                            <tr><td class="p-2.5 font-semibold">Mendapat nilai bagus</td><td class="p-2.5">Bersyukur dan tidak sombong</td></tr>
+                            <tr class="bg-slate-50"><td class="p-2.5 font-semibold">Mendapat nilai kurang baik</td><td class="p-2.5">Sabar dan belajar lebih giat</td></tr>
+                            <tr><td class="p-2.5 font-semibold">Mengalami musibah</td><td class="p-2.5">Sabar, berdoa, dan bertawakal</td></tr>
+                            <tr class="bg-slate-50"><td class="p-2.5 font-semibold">Mendapat prestasi</td><td class="p-2.5">Bersyukur dan tetap rendah hati</td></tr>
+                            <tr><td class="p-2.5 font-semibold">Menghadapi ujian</td><td class="p-2.5">Belajar, berdoa, dan bertawakal</td></tr>
+                            <tr class="bg-slate-50"><td class="p-2.5 font-semibold">Mengalami kegagalan</td><td class="p-2.5">Tidak putus asa dan mencoba lagi</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- G. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> G. Kesimpulan
+                </h3>
+                <ul class="list-disc list-inside space-y-2 text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <li>Beriman kepada qadha dan qadar berarti meyakini segala sesuatu terjadi berdasarkan ilmu, kehendak, dan ketentuan Allah SWT.</li>
+                    <li><strong>Takdir Mubram:</strong> Ketentuan Allah SWT yang pasti terjadi dan tidak dapat diubah manusia.</li>
+                    <li><strong>Takdir Muallaq:</strong> Ketentuan yang berkaitan dengan usaha dan ikhtiar manusia.</li>
+                    <li>Sebagai muslim, kita harus <strong>berusaha, berdoa, bertawakal, bersabar saat sulit, dan bersyukur saat berhasil</strong>.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif Qadha & Qadar
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 8</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi Qadha dan Qadar Kelas 6 SD
+        const quizData = [
+            {
+                question: "1. Beriman kepada qada dan qadar merupakan rukun iman yang ke-...",
+                options: [
+                    "A. Ketiga",
+                    "B. Keempat",
+                    "C. Kelima",
+                    "D. Keenam"
+                ],
+                correct: 3,
+                explanation: "Beriman kepada qada dan qadar merupakan rukun iman yang keenam."
+            },
+            {
+                question: "2. Ketetapan Allah SWT terhadap segala sesuatu sejak zaman azali disebut...",
+                options: [
+                    "A. Qada",
+                    "B. Qadar",
+                    "C. Ikhtiar",
+                    "D. Tawakal"
+                ],
+                correct: 0,
+                explanation: "Qada adalah ketetapan atau keputusan Allah SWT terhadap segala sesuatu sejak zaman azali."
+            },
+            {
+                question: "3. Ketentuan Allah SWT yang berkaitan dengan usaha dan ikhtiar manusia disebut...",
+                options: [
+                    "A. Takdir Mubram",
+                    "B. Takdir Muallaq",
+                    "C. Qada",
+                    "D. Tawakal"
+                ],
+                correct: 1,
+                explanation: "Takdir Muallaq adalah ketentuan Allah SWT yang berkaitan dengan usaha dan ikhtiar manusia."
+            },
+            {
+                question: "4. Manakah contoh yang termasuk Takdir Mubram?",
+                options: [
+                    "A. Menjadi pandai karena rajin belajar",
+                    "B. Mendapatkan nilai tinggi karena giat belajar",
+                    "C. Kelahiran dan kematian seseorang",
+                    "D. Menjadi juara karena rajin berlatih"
+                ],
+                correct: 2,
+                explanation: "Kelahiran dan kematian merupakan contoh takdir mubram yang telah menjadi ketentuan Allah SWT."
+            },
+            {
+                question: "5. Sikap menyerahkan hasil usaha kepada Allah SWT setelah berusaha dan berdoa disebut...",
+                options: [
+                    "A. Ikhtiar",
+                    "B. Qana'ah",
+                    "C. Tawakal",
+                    "D. Tasamuh"
+                ],
+                correct: 2,
+                explanation: "Tawakal adalah menyerahkan hasil kepada Allah SWT setelah melakukan usaha dan berdoa."
+            },
+            {
+                question: "6. Urutan sikap yang benar dalam menghadapi suatu tujuan adalah...",
+                options: [
+                    "A. Doa → Tawakal → Ikhtiar",
+                    "B. Ikhtiar → Doa → Tawakal",
+                    "C. Tawakal → Ikhtiar → Doa",
+                    "D. Doa → Ikhtiar → Tawakal"
+                ],
+                correct: 1,
+                explanation: "Sikap yang benar adalah berusaha atau ikhtiar, kemudian berdoa, lalu bertawakal kepada Allah SWT."
+            },
+            {
+                question: "7. Surat dan ayat Al-Qur'an yang menjelaskan bahwa Allah SWT menciptakan segala sesuatu menurut ukuran adalah...",
+                options: [
+                    "A. QS. Al-Baqarah: 286",
+                    "B. QS. Al-Qamar: 49",
+                    "C. QS. Al-Ikhlas: 1-4",
+                    "D. QS. Al-Ma'un: 1-7"
+                ],
+                correct: 1,
+                explanation: "QS. Al-Qamar ayat 49 menjelaskan bahwa Allah SWT menciptakan segala sesuatu menurut ukuran dan ketentuan-Nya."
+            },
+            {
+                question: "8. Bagaimana sikap yang benar ketika mendapatkan keberhasilan atau prestasi?",
+                options: [
+                    "A. Menyombongkan diri",
+                    "B. Bersyukur kepada Allah dan tetap rendah hati",
+                    "C. Berhenti belajar karena sudah berhasil",
+                    "D. Merasa lebih hebat daripada orang lain"
+                ],
+                correct: 1,
+                explanation: "Ketika mendapatkan keberhasilan, kita harus bersyukur kepada Allah SWT dan tidak boleh sombong."
+            },
+            {
+                question: "9. Salah satu hikmah beriman kepada qada dan qadar adalah...",
+                options: [
+                    "A. Menjadi mudah menyerah",
+                    "B. Tidak perlu berusaha",
+                    "C. Menjadi sabar dan tidak mudah putus asa",
+                    "D. Menyalahkan orang lain ketika gagal"
+                ],
+                correct: 2,
+                explanation: "Beriman kepada qada dan qadar membuat kita lebih sabar, optimis, dan tidak mudah putus asa ketika menghadapi kesulitan."
+            },
+            {
+                question: "10. Ketika mengalami kegagalan, sikap yang sesuai dengan iman kepada qada dan qadar adalah...",
+                options: [
+                    "A. Menyerah dan tidak mau mencoba lagi",
+                    "B. Menyalahkan Allah SWT",
+                    "C. Bersedih terus-menerus tanpa berusaha",
+                    "D. Bersabar, mengambil pelajaran, dan mencoba kembali"
+                ],
+                correct: 3,
+                explanation: "Orang yang beriman kepada qada dan qadar akan bersabar ketika gagal, mengambil pelajaran, kemudian berusaha dan mencoba kembali."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 3 SD - Sholat Jum'at</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-mosque"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 10. Sholat Jum'at</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 3 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-book-open-reader"></i> Pengertian & Ketentuan
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pelaksanaan', this)">
+                    <i class="fa-solid fa-list-check"></i> Pelaksanaan & Praktik
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('adab', this)">
+                    <i class="fa-solid fa-user-check"></i> Adab & Hikmah
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">🕌 Sholat Jum'at</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Mengenal Pengertian Sholat Jum'at, Hukum, Ketentuan, Rangkaian Pelaksanaan, Tata Cara Praktik, Adab, serta Hikmah Melaksanakannya.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A - C</span>
+                            <i class="fa-solid fa-scale-balanced text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian & Ketentuan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Hukum & Syarat</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti Sholat Jum'at, hukum wajibnya berdasarkan Surah Al-Jumu'ah ayat 9, serta syarat wajib dan syarat sahnya.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Ketentuan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pelaksanaan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">D - E</span>
+                            <i class="fa-solid fa-hands-praying text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Rangkaian & Praktik</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Tata Cara Ibadah</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengetahui urutan persiapan, masuk masjid, mendengarkan dua khutbah, hingga tata cara praktik sholat 2 rakaat.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Pelaksanaan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('adab')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">F - G</span>
+                            <i class="fa-solid fa-star text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Adab & Hikmah</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Akhlak & Keutamaan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami adab saat melaksanakan sholat Jum'at dan berbagai hikmah kebaikan yang didapatkan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Adab & Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('adab')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">H - I</span>
+                            <i class="fa-solid fa-award text-2xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pembiasaan & Ringkasan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rangkuman Materi</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Sikap terpuji yang harus dibiasakan dalam kehidupan sehari-hari beserta ringkasan materi sholat Jum'at.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Ringkasan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Anak Muslim
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Hari Jum'at adalah hari yang istimewa bagi umat Islam! Mari mempersiapkan diri dengan mandi, memakai pakaian bersih, datang ke masjid lebih awal, dan mendengarkan khutbah dengan tertib. Dengan begitu, kita belajar menjadi anak yang taat, disiplin, dan berakhlak mulia!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & KETENTUAN SALAT JUMAT -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- A. Pengertian Sholat Jum'at -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-book-open-reader"></i> A. Pengertian Sholat Jum'at
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    <strong>Sholat Jum'at</strong> adalah sholat dua rakaat yang dilaksanakan pada waktu Zuhur di hari Jum'at secara berjamaah di masjid atau tempat yang digunakan untuk sholat Jum'at.
+                </p>
+
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl mb-4 text-xs md:text-sm text-teal-900 flex items-center gap-3">
+                    <i class="fa-solid fa-circle-info text-teal-600 text-xl shrink-0"></i>
+                    <div>Sholat Jum'at didahului dengan <strong>dua khutbah</strong> yang disampaikan oleh khatib. Setelah khutbah selesai, imam memimpin sholat Jum'at sebanyak dua rakaat.</div>
+                </div>
+
+                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 flex items-center gap-3">
+                    <i class="fa-solid fa-star text-amber-500 text-xl shrink-0"></i>
+                    <div><strong>Hari Istimewa:</strong> Hari Jum'at merupakan hari yang istimewa bagi umat Islam. Oleh karena itu, kita dianjurkan mempersiapkan diri dengan baik untuk melaksanakan sholat Jum'at.</div>
+                </div>
+            </div>
+
+            <!-- B. Hukum Sholat Jum'at -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-scale-balanced"></i> B. Hukum Sholat Jum'at
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Sholat Jum'at hukumnya <strong>wajib</strong> bagi laki-laki Muslim yang telah memenuhi syarat-syaratnya.
+                </p>
+
+                <div class="p-5 bg-emerald-50 border border-emerald-200 rounded-2xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-200/80 px-3 py-1 rounded-full">Dalil Al-Qur'an (QS. Al-Jumu'ah: 9)</span>
+                    </div>
+                    <div class="text-xs md:text-sm text-slate-700 bg-white p-3.5 rounded-xl border border-emerald-200 leading-relaxed italic">
+                        "Wahai orang-orang yang beriman! Apabila telah diseru untuk melaksanakan sholat pada hari Jum'at, maka segeralah kamu mengingat Allah dan tinggalkanlah jual beli."
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-600">
+                        Ayat tersebut mengajarkan kepada umat Islam untuk segera melaksanakan sholat Jum'at ketika azan telah dikumandangkan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- C. Ketentuan Sholat Jum'at -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-list-check"></i> C. Ketentuan Sholat Jum'at
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Syarat Wajib -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                        <h3 class="font-bold text-teal-800 text-sm md:text-base flex items-center gap-2 border-b pb-2 border-slate-200">
+                            <i class="fa-solid fa-user-check text-teal-600"></i> 1. Syarat Wajib Sholat Jum'at
+                        </h3>
+                        <p class="text-xs text-slate-600">Sholat Jum'at diwajibkan bagi orang yang:</p>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> <span>Beragama Islam</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> <span>Laki-laki</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> <span>Sudah balig</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> <span>Berakal sehat</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> <span>Sehat dan mampu pergi ke tempat sholat Jum'at</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> <span>Bertempat tinggal (bukan musafir jauh)</span></li>
+                        </ul>
+                        <div class="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800">
+                            <strong>Catatan:</strong> Anak-anak belum wajib melaksanakan sholat Jum'at, tetapi dianjurkan untuk belajar dan membiasakan diri melaksanakannya.
+                        </div>
+                    </div>
+
+                    <!-- Syarat Sah -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
+                        <h3 class="font-bold text-teal-800 text-sm md:text-base flex items-center gap-2 border-b pb-2 border-slate-200">
+                            <i class="fa-solid fa-square-check text-teal-600"></i> 2. Syarat Sah Sholat Jum'at
+                        </h3>
+                        <p class="text-xs text-slate-600">Sholat Jum'at dilaksanakan dengan ketentuan:</p>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-teal-600"></i> <span>Dilaksanakan pada waktu sholat Zuhur.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-users text-teal-600"></i> <span>Dilaksanakan secara berjamaah.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-teal-600"></i> <span>Dilaksanakan di tempat yang memungkinkan berkumpul.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-comments text-teal-600"></i> <span>Didahului dengan dua khutbah.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-person-praying text-teal-600"></i> <span>Dilaksanakan setelah khatib menyampaikan khutbah.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: PELAKSANAAN & PRAKTIK -->
+        <div id="tab-pelaksanaan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- D. Rangkaian Pelaksanaan Sholat Jum'at -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-timeline"></i> D. Rangkaian Pelaksanaan Sholat Jum'at
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Langkah 1 -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                        <div class="flex items-center gap-2 text-teal-800 font-bold text-sm md:text-base">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center text-xs">1</span>
+                            Bersiap untuk Sholat Jum'at
+                        </div>
+                        <p class="text-xs text-slate-600">Sebelum berangkat, sebaiknya:</p>
+                        <ul class="space-y-1.5 text-xs md:text-sm text-slate-700 pl-2">
+                            <li>• Mandi dan berwudu.</li>
+                            <li>• Memakai pakaian yang bersih dan sopan.</li>
+                            <li>• Memakai wewangian bagi laki-laki.</li>
+                            <li>• Memotong kuku dan menjaga kebersihan diri.</li>
+                            <li>• Berangkat ke masjid dengan tenang.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Langkah 2 -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                        <div class="flex items-center gap-2 text-teal-800 font-bold text-sm md:text-base">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center text-xs">2</span>
+                            Masuk Masjid
+                        </div>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li>• Mendahulukan kaki kanan dan membaca doa masuk masjid.</li>
+                            <li>• Menjaga ketenangan, tidak bermain, tidak berbicara keras, dan menghormati orang yang sedang beribadah.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Langkah 3 -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                        <div class="flex items-center gap-2 text-teal-800 font-bold text-sm md:text-base">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center text-xs">3</span>
+                            Mendengarkan Khutbah
+                        </div>
+                        <p class="text-xs text-slate-600">Ketika khutbah berlangsung, kita harus:</p>
+                        <ul class="space-y-1 text-xs md:text-sm text-slate-700 pl-2">
+                            <li>• Duduk dengan tertib dan mendengarkan khutbah dengan baik.</li>
+                            <li>• Tidak berbicara, tidak bermain, dan tidak mengganggu orang lain.</li>
+                        </ul>
+                        <p class="text-xs text-teal-700 bg-teal-50 p-2 rounded-lg font-medium mt-1">
+                            Khutbah berisi nasihat dan ajaran agama agar umat Islam menjadi lebih baik.
+                        </p>
+                    </div>
+
+                    <!-- Langkah 4 -->
+                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                        <div class="flex items-center gap-2 text-teal-800 font-bold text-sm md:text-base">
+                            <span class="w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center text-xs">4</span>
+                            Melaksanakan Sholat Jum'at
+                        </div>
+                        <ul class="space-y-2 text-xs md:text-sm text-slate-700">
+                            <li>• Dipimpin oleh imam sebanyak <strong>dua rakaat secara berjamaah</strong>.</li>
+                            <li>• Mengikuti gerakan imam dengan tertib (takbiratul ihram, berdiri, rukuk, iktidal, sujud, duduk di antara dua sujud, hingga salam).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E. Tata Cara Praktik Sholat Jum'at -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-shoe-prints"></i> E. Tata Cara Praktik Sholat Jum'at
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Langkah sederhana dalam mempraktikkan sholat Jum'at:</p>
+
+                <div class="space-y-2.5 text-xs md:text-sm text-slate-800">
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">1</span>
+                         Bersuci dengan mandi dan berwudu.
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">2</span>
+                         Memakai pakaian yang bersih dan sopan.
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">3</span>
+                         Berangkat ke masjid dengan tertib.
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">4</span>
+                         Melaksanakan sholat sunah sebelum sholat Jum'at jika memungkinkan.
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">5</span>
+                         Duduk dan mendengarkan khutbah pertama.
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">6</span>
+                         Mendengarkan khutbah kedua.
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">7</span>
+                         Berdiri dan membentuk saf ketika imam mengajak sholat.
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">8</span>
+                         Berniat melaksanakan sholat Jum'at.
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">9</span>
+                         Mengikuti imam melaksanakan sholat Jum'at dua rakaat.
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <span class="font-bold text-emerald-800 bg-emerald-200 w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0">10</span>
+                         Mengakhiri sholat dengan salam.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: ADAB, HIKMAH & PEMBIASAAN -->
+        <div id="tab-adab" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- F. Adab Ketika Melaksanakan Sholat Jum'at -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-user-check"></i> F. Adab Ketika Melaksanakan Sholat Jum'at
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Sebagai seorang muslim, kita harus memiliki adab yang baik ketika melaksanakan sholat Jum'at:</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Menjaga kebersihan tubuh dan pakaian.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Datang ke masjid lebih awal.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Berjalan dengan tenang.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Tidak berlari-lari di dalam masjid.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Tidak berbicara ketika khutbah berlangsung.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Tidak bermain atau bercanda.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Merapatkan dan meluruskan saf.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Mengikuti gerakan imam.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Menjaga kebersihan masjid.
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2.5">
+                        <i class="fa-solid fa-check-double text-teal-600"></i> Menghormati jamaah lainnya.
+                    </div>
+                </div>
+            </div>
+
+            <!-- G. Hikmah Sholat Jum'at -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-heart-pulse"></i> G. Hikmah Sholat Jum'at
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 mb-4">Sholat Jum'at memiliki banyak manfaat dan hikmah, antara lain:</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-hand-holding-heart text-emerald-600 text-xl"></i>
+                        <span>Meningkatkan keimanan kepada Allah Swt.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-users text-emerald-600 text-xl"></i>
+                        <span>Membiasakan diri melaksanakan sholat berjamaah.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-ear-listen text-emerald-600 text-xl"></i>
+                        <span>Mendengarkan nasihat dan ajaran agama.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-hands-holding-child text-emerald-600 text-xl"></i>
+                        <span>Mempererat persaudaraan sesama umat Islam.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-clock text-emerald-600 text-xl"></i>
+                        <span>Melatih kedisiplinan dan ketertiban.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                        <i class="fa-solid fa-face-smile text-emerald-600 text-xl"></i>
+                        <span>Mengingatkan untuk selalu berbuat baik.</span>
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3 sm:col-span-2 md:col-span-3 justify-center">
+                        <i class="fa-solid fa-seedling text-emerald-600 text-xl"></i>
+                        <span>Menumbuhkan rasa peduli terhadap sesama.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- H. Sikap yang Harus Dibiasakan -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-thumbs-up"></i> H. Sikap yang Harus Dibiasakan
+                </h2>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs md:text-sm text-slate-700">
+                    <li class="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Rajin melaksanakan sholat.</li>
+                    <li class="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Menjaga kebersihan diri.</li>
+                    <li class="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Menghormati orang yang sedang beribadah.</li>
+                    <li class="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Mendengarkan nasihat dengan baik.</li>
+                    <li class="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Disiplin dan tertib.</li>
+                    <li class="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Menjaga kebersihan masjid.</li>
+                    <li class="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-2 sm:col-span-2"><i class="fa-solid fa-star text-amber-500"></i> Bersikap sopan kepada imam, khatib, guru, orang tua, dan jamaah lainnya.</li>
+                </ul>
+            </div>
+
+            <!-- I. Ringkasan Materi & Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300 space-y-4">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-award text-amber-500"></i> I. Ringkasan & Kesimpulan
+                </h3>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <strong>Sholat Jum'at</strong> adalah sholat dua rakaat yang dilaksanakan pada hari Jum'at pada waktu Zuhur secara berjamaah dan didahului oleh dua khutbah. Sholat Jum'at wajib bagi laki-laki Muslim yang telah memenuhi syarat-syaratnya.
+                </p>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Pelaksanaannya dimulai dengan persiapan diri, pergi ke masjid, mendengarkan dua khutbah, kemudian melaksanakan sholat Jum'at sebanyak dua rakaat bersama imam.
+                </p>
+                <p class="text-xs md:text-sm text-slate-800 font-semibold leading-relaxed border-t border-slate-300 pt-3">
+                    Dengan melaksanakan sholat Jum'at dengan tertib, kita belajar menjadi anak yang taat kepada Allah Swt., disiplin, bersih, sopan, dan menghargai orang lain.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 3 SD - Sholat Jum'at
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions materi Sholat Jum'at PAI Kelas 3 SD berdasarkan Bagian J
+        const quizData = [
+            {
+                question: "1. Apa yang dimaksud dengan sholat Jum'at?",
+                options: [
+                    "A. Sholat empat rakaat yang dikerjakan sendirian di rumah",
+                    "B. Sholat dua rakaat pada waktu Zuhur di hari Jum'at secara berjamaah",
+                    "C. Sholat sunah dua rakaat pada waktu malam hari",
+                    "D. Sholat yang dilaksanakan hanya saat hari raya"
+                ],
+                correct: 1,
+                explanation: "Sholat Jum'at adalah sholat dua rakaat yang dilaksanakan pada waktu Zuhur di hari Jum'at secara berjamaah di masjid."
+            },
+            {
+                question: "2. Berapa rakaat sholat Jum'at dilaksanakan?",
+                options: [
+                    "A. 1 rakaat",
+                    "B. 2 rakaat",
+                    "C. 3 rakaat",
+                    "D. 4 rakaat"
+                ],
+                correct: 1,
+                explanation: "Sholat Jum'at dilaksanakan sebanyak dua rakaat secara berjamaah bersama imam."
+            },
+            {
+                question: "3. Kapan sholat Jum'at dilaksanakan?",
+                options: [
+                    "A. Hari Jum'at pada waktu Zuhur",
+                    "B. Hari Jum'at pada waktu Subuh",
+                    "C. Hari Minggu pada waktu Asar",
+                    "D. Setiap hari pada waktu Magrib"
+                ],
+                correct: 0,
+                explanation: "Sholat Jum'at dilaksanakan pada hari Jum'at tepat pada waktu sholat Zuhur."
+            },
+            {
+                question: "4. Apa saja persiapan yang sebaiknya dilakukan sebelum pergi sholat Jum'at?",
+                options: [
+                    "A. Bermain game dan tidur nyenyak",
+                    "B. Mandi, berwudu, dan memakai pakaian bersih/sopan",
+                    "C. Makan makanan pedas dan berolahraga berat",
+                    "D. Berlarian ke masjid tanpa mandi"
+                ],
+                correct: 1,
+                explanation: "Sebelum sholat Jum'at kita dianjurkan mandi, berwudu, memakai pakaian bersih dan sopan, serta memotong kuku."
+            },
+            {
+                question: "5. Berapa kali khutbah dilaksanakan sebelum sholat Jum'at?",
+                options: [
+                    "A. 1 kali",
+                    "B. 2 kali",
+                    "C. 3 kali",
+                    "D. Tidak ada khutbah"
+                ],
+                correct: 1,
+                explanation: "Sholat Jum'at didahului dengan dua khutbah yang disampaikan oleh khatib."
+            },
+            {
+                question: "6. Siapa yang bertugas memimpin sholat Jum'at?",
+                options: [
+                    "A. Khatib",
+                    "B. Muazin",
+                    "C. Imam",
+                    "D. Makmum"
+                ],
+                correct: 2,
+                explanation: "Khutbah delivered oleh khatib, sedangkan sholat memimpin oleh seorang Imam."
+            },
+            {
+                question: "7. Mengapa kita harus diam dan tenang ketika khutbah berlangsung?",
+                options: [
+                    "A. Agar bisa tidur di dalam masjid",
+                    "B. Agar tidak ketinggalan bermain",
+                    "C. Agar dapat mendengarkan nasihat dan ajaran agama dengan baik",
+                    "D. Karena dimarahi oleh teman"
+                ],
+                correct: 2,
+                explanation: "Saat khutbah, kita harus diam dan menyimak agar nasihat dan ajaran agama yang disampaikan khatib dapat kita pahami."
+            },
+            {
+                question: "8. Manakah yang TERMASUK adab ketika berada di masjid untuk sholat Jum'at?",
+                options: [
+                    "A. Berlari-lari dan bercanda di dalam masjid",
+                    "B. Masuk dengan kaki kanan dan berjalan tenang",
+                    "C. Berbicara keras saat khutbah",
+                    "D. Mengganggu jamaah lain yang beribadah"
+                ],
+                correct: 1,
+                explanation: "Adab berada di masjid adalah mendahulukan kaki kanan, berjalan tenang, serta tidak bercanda atau mengganggu jamaah lain."
+            },
+            {
+                question: "9. Salah satu hikmah melaksanakan sholat Jum'at adalah...",
+                options: [
+                    "A. Menjadi lebih sombong",
+                    "B. Mempererat persaudaraan sesama umat Islam",
+                    "C. Membuat tubuh menjadi lelah",
+                    "D. Mengurangi waktu belajar"
+                ],
+                correct: 1,
+                explanation: "Sholat Jum'at dapat mempererat persaudaraan sesama muslim, meningkatkan keimanan, dan melatih kedisiplinan."
+            },
+            {
+                question: "10. Bagaimana sikap kita yang benar saat mengikuti sholat Jum'at?",
+                options: [
+                    "A. Mendahului gerakan imam",
+                    "B. Mengikuti gerakan imam dengan tertib dan khusyuk",
+                    "C. Sholat sambil melihat sekeliling",
+                    "D. Bercanda dengan teman di samping"
+                ],
+                correct: 1,
+                explanation: "Saat sholat berjamaah, makmum harus mengikuti gerakan imam dengan tertib, teratur, dan khusyuk."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

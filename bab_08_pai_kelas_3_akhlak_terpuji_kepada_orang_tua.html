@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 3 SD - Akhlak Terpuji kepada Orang Tua</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-people-roof"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 08. Akhlak Terpuji kepada Orang Tua</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 3 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-circle-info"></i> Pengertian & Contoh
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('adab', this)">
+                    <i class="fa-solid fa-comments"></i> Cara Berbicara & Doa
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('latihan', this)">
+                    <i class="fa-solid fa-star"></i> Manfaat & Teladan
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Materi PAI Kelas 3 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Mengenal dan membiasakan Akhlak Terpuji kepada Orang Tua, Menghormati Ayah dan Ibu, serta Mendoakan Mereka dalam Kehidupan Sehari-hari.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A & B</span>
+                            <i class="fa-solid fa-hands-holding-child text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian & Contoh</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Berbakti kepada Orang Tua</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Memahami arti berbakti kepada orang tua, dalil perintah Al-Qur'an, serta contoh sikap terpuji sehari-hari.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Materi <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('adab')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">C & D</span>
+                            <i class="fa-solid fa-comments text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Cara Berbicara & Doa</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Kesopanan & Doa</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mempelajari tata cara berbicara yang sopan kepada ayah ibu serta menghafal doa untuk kedua orang tua.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Kesopanan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('latihan')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">E - H</span>
+                            <i class="fa-solid fa-star text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Manfaat & Teladan</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Hikmah & Kesimpulan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengetahui manfaat berbakti, perilaku yang harus dihindari, contoh kisah kehidupan, serta kesimpulan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Rangkuman <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Siswa
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Orang tua adalah sosok yang paling berjasa dalam hidup kita. Mari kita selalu menyayangi, menghormati, mendengarkan nasihatnya, dan mendoakan ayah ibu setiap hari!
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & CONTOH AKHLAK TERPUJI -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <!-- A. Pengertian Berbakti kepada Orang Tua -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-circle-info"></i> A. Pengertian Berbakti kepada Orang Tua
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Orang tua adalah orang yang sangat berjasa dalam kehidupan kita. Ayah dan ibu merawat, mendidik, menjaga, dan memenuhi kebutuhan kita sejak kecil. Sebagai anak, kita harus menyayangi dan menghormati orang tua. Sikap menghormati dan berbuat baik kepada orang tua disebut <strong>berbakti kepada orang tua</strong>.
+                </p>
+                <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl space-y-3">
+                    <p class="text-xs md:text-sm font-bold text-teal-900">
+                        📖 Allah Swt. memerintahkan kita untuk berbuat baik kepada kedua orang tua:
+                    </p>
+                    <div class="p-4 bg-white rounded-xl border border-teal-100 text-right font-arabic text-2xl font-bold text-teal-900 leading-loose">
+                        وَبِالْوَالِدَيْنِ إِحْسَانًا
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-700 italic">
+                        <strong>Artinya:</strong> “Dan berbuat baiklah kepada kedua orang tua.” (QS. Al-Isra: 23)
+                    </p>
+                </div>
+            </div>
+
+            <!-- B. Contoh Akhlak Terpuji kepada Orang Tua -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-list-check"></i> B. Contoh Akhlak Terpuji kepada Orang Tua
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Berikut beberapa contoh sikap berbakti kepada orang tua yang bisa kita lakukan:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Menghormati orang tua:</strong> Kita harus menghormati ayah dan ibu serta tidak merendahkan mereka.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Berbicara dengan sopan:</strong> Gunakan kata-kata yang lembut dan tidak membentak orang tua.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Mematuhi nasihat yang baik:</strong> Jika ayah dan ibu memberikan nasihat yang baik, hendaknya kita mendengarkan dan melaksanakannya.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Membantu pekerjaan orang tua:</strong> Contohnya merapikan tempat tidur, menyapu rumah, atau mencuci piring sendiri.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Menyayangi orang tua:</strong> Menunjukkan kasih sayang dengan bersikap ramah, membantu, dan memperhatikan mereka.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Mendoakan orang tua:</strong> Selalu mendoakan agar Allah Swt. memberikan kesehatan, keselamatan, dan keberkahan.
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3 md:col-span-2">
+                        <i class="fa-solid fa-check-circle text-teal-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong>Tidak menyakiti hati orang tua:</strong> Jangan berkata kasar, berbohong, membantah dengan kasar, atau membuat orang tua sedih.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: CARA BERBICARA & DOA -->
+        <div id="tab-adab" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <!-- C. Cara Berbicara kepada Orang Tua -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-comments"></i> C. Cara Berbicara kepada Orang Tua
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Ketika berbicara dengan ayah dan ibu, kita harus menggunakan bahasa yang sopan.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-4 text-xs md:text-sm">
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl font-medium text-emerald-900 flex items-center gap-2">
+                        <i class="fa-solid fa-comment-dots text-emerald-600"></i> “Ayah, bolehkah saya membantu?”
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl font-medium text-emerald-900 flex items-center gap-2">
+                        <i class="fa-solid fa-comment-dots text-emerald-600"></i> “Ibu, apakah saya boleh bermain setelah belajar?”
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl font-medium text-emerald-900 flex items-center gap-2">
+                        <i class="fa-solid fa-comment-dots text-emerald-600"></i> “Terima kasih, Ayah.”
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl font-medium text-emerald-900 flex items-center gap-2">
+                        <i class="fa-solid fa-comment-dots text-emerald-600"></i> “Terima kasih, Ibu.”
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl font-medium text-emerald-900 flex items-center gap-2">
+                        <i class="fa-solid fa-comment-dots text-emerald-600"></i> “Maaf, Ayah.”
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl font-medium text-emerald-900 flex items-center gap-2">
+                        <i class="fa-solid fa-comment-dots text-emerald-600"></i> “Maaf, Ibu.”
+                    </div>
+                </div>
+
+                <div class="p-4 bg-rose-50 border border-rose-200 rounded-xl text-xs md:text-sm text-rose-900">
+                    <strong>🚫 Perhatian:</strong> Hindarilah perkataan kasar seperti membentak, berteriak, atau mengatakan “ah” kepada orang tua.
+                </div>
+            </div>
+
+            <!-- D. Mendoakan Orang Tua -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-hands-praying"></i> D. Mendoakan Orang Tua
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Salah satu bentuk berbakti kepada orang tua adalah mendoakan mereka. Doa ini dapat kita baca setelah salat dan dalam kehidupan sehari-hari:
+                </p>
+
+                <div class="p-5 bg-teal-50/60 border border-teal-200 rounded-2xl space-y-4">
+                    <div class="p-4 bg-white rounded-xl border border-teal-100 text-right font-arabic text-2xl font-bold text-teal-900 leading-loose">
+                        رَبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-700 italic">
+                        <strong>Artinya:</strong> “Ya Tuhanku, ampunilah aku dan kedua orang tuaku, dan sayangilah mereka sebagaimana mereka menyayangiku ketika aku masih kecil.”
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: MANFAAT, PERILAKU DIHINDARI & TELADAN -->
+        <div id="tab-latihan" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- E. Manfaat Berbakti kepada Orang Tua -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-seedling"></i> E. Manfaat Berbakti kepada Orang Tua
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Berbakti kepada orang tua memberikan banyak manfaat, antara lain:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-award text-emerald-600"></i> Mendapat pahala dari Allah Swt.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-emerald-600"></i> Mendapat kasih sayang dari orang tua.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-face-smile text-emerald-600"></i> Membuat orang tua bahagia.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-users text-emerald-600"></i> Disukai oleh orang lain.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-sun text-emerald-600"></i> Hidup menjadi lebih tenang.
+                    </div>
+                    <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-user-check text-emerald-600"></i> Membiasakan menjadi anak sopan & bertanggung jawab.
+                    </div>
+                </div>
+            </div>
+
+            <!-- F. Perilaku yang Harus Dihindari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-rose-800 pb-2 border-b-2 border-rose-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-triangle-exclamation"></i> F. Perilaku yang Harus Dihindari
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Sebagai anak yang baik, kita harus menghindari perilaku buruk berikut:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Membentak orang tua.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Berkata kasar kepada orang tua.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Tidak mau mendengarkan nasihat yang baik.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Berbohong kepada orang tua.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Melawan orang tua dengan cara yang tidak sopan.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-600"></i> Membuat orang tua sedih dengan sengaja.</div>
+                    <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-900 flex items-center gap-2 sm:col-span-2"><i class="fa-solid fa-xmark text-rose-600"></i> Tidak mau membantu orang tua.</div>
+                </div>
+            </div>
+
+            <!-- G. Contoh dalam Kehidupan Sehari-hari -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-house-user"></i> G. Contoh dalam Kehidupan Sehari-hari
+                </h2>
+                <div class="space-y-3 text-xs md:text-sm">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>Contoh 1:</strong> Ibu sedang membersihkan rumah. Ali segera membantu menyapu lantai. Ali telah menunjukkan sikap berbakti kepada orang tua.
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>Contoh 2:</strong> Ayah meminta Siti merapikan mainannya. Siti segera melakukannya tanpa membantah. Siti telah menunjukkan sikap patuh dan bertanggung jawab.
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <strong>Contoh 3:</strong> Sebelum berangkat sekolah, Ahmad mencium tangan ayah dan ibunya serta meminta doa. Ahmad menunjukkan sikap hormat kepada orang tua.
+                    </div>
+                </div>
+            </div>
+
+            <!-- H. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-500"></i> H. Kesimpulan
+                </h3>
+                <p class="text-xs md:text-base text-slate-700 leading-relaxed mb-3">
+                    Orang tua sangat berjasa dalam kehidupan kita. Oleh karena itu, kita harus menghormati, menyayangi, membantu, menaati nasihat yang baik, berbicara dengan sopan, dan mendoakan orang tua.
+                </p>
+                <p class="text-xs md:text-base text-teal-900 font-bold leading-relaxed">
+                    Berbakti kepada orang tua merupakan akhlak terpuji yang harus dibiasakan sejak kecil. Anak yang berbakti kepada orang tua akan mendapatkan pahala dan kasih sayang dari Allah Swt.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 3 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 10</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 3 SD - Akhlak Terpuji kepada Orang Tua
+        const quizData = [
+            {
+                question: "1. Sikap menghormati dan berbuat baik kepada kedua orang tua disebut...",
+                options: [
+                    "A. Berbakti kepada orang tua",
+                    "B. Mandiri",
+                    "C. Percaya diri",
+                    "D. Bermalas-malasan"
+                ],
+                correct: 0,
+                explanation: "Sikap menghormati dan berbuat baik kepada ayah dan ibu dinamakan berbakti kepada orang tua."
+            },
+            {
+                question: "2. Potongan ayat وَبِالْوَالِدَيْنِ إِحْسَانًا terdapat dalam surat...",
+                options: [
+                    "A. QS. Al-Ikhlas: 1",
+                    "B. QS. Al-Isra: 23",
+                    "C. QS. Al-Fatihah: 2",
+                    "D. QS. An-Nas: 3"
+                ],
+                correct: 1,
+                explanation: "Perintah berbuat baik kepada orang tua terdapat dalam QS. Al-Isra ayat 23."
+            },
+            {
+                question: "3. Bagaimana cara berbicara yang baik kepada ayah dan ibu?",
+                options: [
+                    "A. Membentak dan berteriak",
+                    "B. Mengucapkan kata 'ah' dengan kesal",
+                    "C. Berbicara dengan kata-kata yang lembut dan sopan",
+                    "D. Acuh tak acuh"
+                ],
+                correct: 2,
+                explanation: "Ketika berbicara dengan orang tua, kita wajib menggunakan kata-kata yang lembut dan sopan."
+            },
+            {
+                question: "4. Manakah contoh perbuatan membantu pekerjaan orang tua di rumah?",
+                options: [
+                    "A. Membiarkan mainan berantakan",
+                    "B. Merapikan tempat tidur dan menyapu rumah",
+                    "C. Menyuruh ibu mencuci mainan",
+                    "D. Bermain game seharian"
+                ],
+                correct: 1,
+                explanation: "Merapikan tempat tidur dan menyapu rumah merupakan contoh sikap membantu pekerjaan orang tua."
+            },
+            {
+                question: "5. Kalimat doa untuk kedua orang tua adalah...",
+                options: [
+                    "A. رَبِّ زِدْنِي عِلْمًا",
+                    "B. رَبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+                    "C. بِاسْمِكَ اللَّهُمَّ أَحْيَا",
+                    "D. الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا"
+                ],
+                correct: 1,
+                explanation: "Doa memohon ampunan dan kasih sayang untuk orang tua adalah 'Rabbighfir lii wa liwaalidayya warhamhumaa kamaa rabbayaanii shaghiiraa'."
+            },
+            {
+                question: "6. Apa yang harus kita lakukan jika orang tua memberikan nasihat yang baik?",
+                options: [
+                    "A. Pura-pura tidak mendengar",
+                    "B. Mendengarkan dan melaksanakannya",
+                    "C. Marah dan membantah",
+                    "D. Pergi meninggalkan orang tua"
+                ],
+                correct: 1,
+                explanation: "Anak yang berbakti akan mendengarkan nasihat orang tua dengan baik dan mematuhinya."
+            },
+            {
+                question: "7. Perilaku mana yang harus DIHINDARI kepada orang tua?",
+                options: [
+                    "A. Mengucapkan terima kasih",
+                    "B. Mendoakan setelah salat",
+                    "C. Membentak dan berbohong",
+                    "D. Mencium tangan sebelum sekolah"
+                ],
+                correct: 2,
+                explanation: "Membentak dan berbohong adalah perilaku tercela yang disukai syaitan dan harus dihindari."
+            },
+            {
+                question: "8. Salah satu manfaat berbakti kepada orang tua adalah...",
+                options: [
+                    "A. Mendapatkan dosa",
+                    "B. Membuat orang tua sedih",
+                    "C. Mendapat pahala dari Allah Swt. dan membuat orang tua bahagia",
+                    "D. Dijauhi oleh teman-teman"
+                ],
+                correct: 2,
+                explanation: "Anak yang berbakti akan mendapat keberkahan, pahala dari Allah Swt., serta kebahagiaan bagi orang tuanya."
+            },
+            {
+                question: "9. Ahmad selalu mencium tangan orang tuanya sebelum pergi ke sekolah. Sikap Ahmad menunjukkan...",
+                options: [
+                    "A. Hormat kepada orang tua",
+                    "B. Sombong kepada orang tua",
+                    "C. Terpaksa dan malas",
+                    "D. Ingin diberi uang jajan banyak"
+                ],
+                correct: 0,
+                explanation: "Mencium tangan dan meminta doa sebelum berangkat sekolah adalah bentuk rasa hormat kepada ayah dan ibu."
+            },
+            {
+                question: "10. Kapan waktu yang baik untuk mendoakan orang tua?",
+                options: [
+                    "A. Hanya saat orang tua marah",
+                    "B. Setelah salat dan dalam kehidupan sehari-hari",
+                    "C. Setahun sekali saat ulang tahun",
+                    "D. Tidak perlu mendoakan"
+                ],
+                correct: 1,
+                explanation: "Kita hendaknya mendoakan keselamatan dan kesehatan orang tua setiap hari, terutama setelah salat."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAI Kelas 4 SD - Beriman kepada Rasul-Rasul Allah SWT</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'LPMQ IsepMisbah';
+            src: url('./LPMQ%20IsepMisbah.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['LPMQ IsepMisbah', 'Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">    
+
+    <!-- Header Navigation Utama -->
+    <header class="bg-gradient-to-r from-teal-800 to-teal-700 text-white py-3 px-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-4">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="bg-white/20 w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] rounded-xl flex items-center justify-center text-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold leading-snug">BAB 07. Beriman kepada Rasul-Rasul Allah SWT</h1>
+                    <p class="text-xs text-teal-200 font-medium mt-0.5">Fase B - Kelas 4 SD <span class="text-yellow-300">(Pendidikan Agama Islam dan Budi Pekerti)</span></p>
+                </div>
+            </div>
+            <nav id="navbar" class="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-1 scrollbar-none">
+                <button class="nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md" onclick="switchTab('home', this)">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('pengertian', this)">
+                    <i class="fa-solid fa-book-open"></i> Pengertian & Makna
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('rasul', this)">
+                    <i class="fa-solid fa-users"></i> 25 Rasul & Ulul 'Azmi
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('sifat', this)">
+                    <i class="fa-solid fa-star"></i> Sifat-Sifat Rasul
+                </button>
+                <button class="nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50" onclick="switchTab('hikmah', this)">
+                    <i class="fa-solid fa-heart"></i> Hikmah & Perilaku
+                </button>
+                <button class="nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white" onclick="switchTab('kuis', this)">
+                    <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
+
+        <!-- TAB: BERANDA / HOME -->
+        <div id="tab-home" class="tab-content block transition-opacity duration-300">
+            <div class="relative overflow-hidden bg-gradient-to-br from-teal-600 to-emerald-700 text-white p-6 md:p-10 rounded-2xl text-center mb-6 shadow-md">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">📚 Materi PAI Kelas 4 SD</h2>
+                    <p class="text-sm md:text-base text-teal-100 leading-relaxed">
+                        Mengenal Pengertian, Makna, Nama-Nama Rasul Allah SWT, Sifat Wajib Rasul, Rasul Ulul 'Azmi, serta Hikmah dan Contoh Perilaku Beriman kepada Rasul.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-lg md:text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-list-check"></i> Pokok Pembelajaran
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                <!-- Card 1 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('pengertian')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">A - B</span>
+                            <i class="fa-solid fa-book-quran text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Pengertian & Makna</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Rukun Iman Ke-4</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Meyakini utusan Allah SWT, memahami dalil Al-Qur'an (QS. An-Nisa: 64), dan bentuk sikap beriman.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Makna <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('rasul')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">C & E</span>
+                            <i class="fa-solid fa-users-between-lines text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">25 Rasul & Ulul 'Azmi</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Keteguhan & Ketabahan</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mengenal 25 Nabi/Rasul yang wajib diketahui dan kisah keteladanan 5 Rasul Ulul 'Azmi.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Rasul <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('sifat')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">D</span>
+                            <i class="fa-solid fa-award text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Sifat-Sifat Rasul</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">4 Sifat Wajib</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Mempelajari Siddiq (jujur), Amanah (dapat dipercaya), Tabligh (menyampaikan), dan Fathanah (cerdas).</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Pelajari Sifat <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white hover:bg-teal-50 rounded-2xl p-5 shadow-md hover:shadow-xl border border-slate-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between relative overflow-hidden" onclick="switchTab('hikmah')">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-teal-600 group-hover:w-full group-hover:opacity-5 transition-all duration-300"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-teal-600 bg-teal-100 px-2.5 py-1 rounded-full">F - H</span>
+                            <i class="fa-solid fa-heart-circle-check text-2xl text-teal-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Hikmah & Perilaku</h3>
+                        <p class="text-xs md:text-sm font-semibold text-amber-600 mb-3">Penerapan Sehari-hari</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-4 line-clamp-3">Manfaat beriman kepada rasul, contoh perilaku siswa dalam kehidupan sehari-hari, dan kesimpulan.</p>
+                    </div>
+                    <div class="text-xs md:text-sm font-bold text-teal-600 flex items-center gap-2">
+                        Buka Hikmah <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan untuk Siswa Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-5 md:p-6 border border-slate-300 text-center">
+                <h3 class="text-teal-800 font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                    🌟 Pesan untuk Siswa
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 font-semibold leading-relaxed">
+                    Mari meneladani akhlak mulia para rasul Allah SWT! Dengan menjadi anak yang jujur, amanah, sabar, dan rajin beribadah, kita dapat menjadi pribadi yang dicintai Allah SWT dan orang-orang di sekitar kita.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB: PENGERTIAN & MAKNA -->
+        <div id="tab-pengertian" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <!-- A. Pengertian -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8 space-y-4">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> A. Pengertian Iman kepada Rasul Allah SWT
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <strong>Iman kepada rasul Allah SWT</strong> berarti percaya dengan sepenuh hati bahwa Allah SWT telah mengutus rasul-rasul-Nya untuk menyampaikan wahyu, mengajarkan agama, dan membimbing manusia ke jalan yang benar.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-2">
+                    <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl">
+                        <span class="text-xs font-bold text-teal-800 uppercase tracking-wider block mb-1">Apakah Rasul itu?</span>
+                        <p class="text-xs md:text-sm text-slate-700">Rasul adalah manusia pilihan Allah SWT yang menerima wahyu untuk disampaikan kepada umatnya.</p>
+                    </div>
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl">
+                        <span class="text-xs font-bold text-amber-800 uppercase tracking-wider block mb-1">Kedudukan Iman</span>
+                        <p class="text-xs md:text-sm text-slate-700">Beriman kepada rasul merupakan salah satu <strong>rukun iman yang keempat</strong>.</p>
+                    </div>
+                </div>
+
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                    Kita wajib meyakini bahwa semua rasul yang diutus Allah SWT benar-benar membawa ajaran dari Allah. Kita juga harus menghormati dan mencintai semua rasul Allah SWT.
+                </p>
+
+                <!-- Dalil Al-Qur'an -->
+                <div class="bg-gradient-to-r from-teal-800 to-teal-900 text-white p-5 rounded-xl space-y-3 mt-4">
+                    <div class="flex items-center justify-between text-xs text-teal-200 border-b border-teal-700/60 pb-2">
+                        <span class="font-bold"><i class="fa-solid fa-quran mr-1"></i> Allah SWT berfirman:</span>
+                        <span class="font-semibold">QS. An-Nisa: 64</span>
+                    </div>
+                    <div class="font-arabic text-2xl md:text-3xl font-bold text-right leading-loose tracking-wide pt-2">
+                        وَمَا أَرْسَلْنَا مِنْ رَسُولٍ إِلَّا لِيُطَاعَ بِإِذْنِ اللَّهِ
+                    </div>
+                    <p class="text-xs md:text-sm text-teal-100 italic border-t border-teal-700/60 pt-2">
+                        <strong>Artinya:</strong> “Dan Kami tidak mengutus seorang rasul pun, melainkan untuk ditaati dengan izin Allah.”
+                    </p>
+                </div>
+            </div>
+
+            <!-- B. Makna -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-heart"></i> B. Makna Beriman kepada Rasul-Rasul Allah SWT
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Beriman kepada rasul Allah SWT dapat diwujudkan dengan beberapa sikap berikut:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <div class="bg-teal-600 text-white w-7 h-7 rounded-lg flex items-center justify-center shrink-0 font-bold text-xs">1</div>
+                        <p class="text-xs md:text-sm font-semibold text-slate-800">Percaya bahwa rasul adalah utusan Allah SWT.</p>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <div class="bg-teal-600 text-white w-7 h-7 rounded-lg flex items-center justify-center shrink-0 font-bold text-xs">2</div>
+                        <p class="text-xs md:text-sm font-semibold text-slate-800">Meyakini bahwa rasul menyampaikan wahyu Allah SWT.</p>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <div class="bg-teal-600 text-white w-7 h-7 rounded-lg flex items-center justify-center shrink-0 font-bold text-xs">3</div>
+                        <p class="text-xs md:text-sm font-semibold text-slate-800">Membenarkan ajaran yang dibawa oleh para rasul.</p>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <div class="bg-teal-600 text-white w-7 h-7 rounded-lg flex items-center justify-center shrink-0 font-bold text-xs">4</div>
+                        <p class="text-xs md:text-sm font-semibold text-slate-800">Mencintai dan menghormati para rasul.</p>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <div class="bg-teal-600 text-white w-7 h-7 rounded-lg flex items-center justify-center shrink-0 font-bold text-xs">5</div>
+                        <p class="text-xs md:text-sm font-semibold text-slate-800">Meneladani akhlak dan perilaku para rasul.</p>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <div class="bg-teal-600 text-white w-7 h-7 rounded-lg flex items-center justify-center shrink-0 font-bold text-xs">6</div>
+                        <p class="text-xs md:text-sm font-semibold text-slate-800">Mengamalkan ajaran yang disampaikan Rasulullah SAW.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs md:text-sm text-emerald-900 font-semibold flex items-center gap-3">
+                    <i class="fa-solid fa-star text-amber-500 text-xl shrink-0"></i>
+                    <span>Sebagai umat Nabi Muhammad SAW, kita harus mengikuti ajaran beliau dan menjadikan beliau sebagai teladan dalam kehidupan sehari-hari.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: 25 RASUL & ULUL 'AZMI -->
+        <div id="tab-rasul" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- C. 25 Rasul Allah SWT -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-list-ol"></i> C. Nama-Nama Rasul Allah SWT
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Allah SWT mengutus banyak rasul kepada manusia. Di antara rasul-rasul tersebut, ada <strong>25 nabi dan rasul</strong> yang wajib kita ketahui:
+                </p>
+
+                <!-- Tabel 25 Nabi dan Rasul -->
+                <div class="overflow-x-auto rounded-xl border border-slate-200 mb-4">
+                    <table class="w-full text-center border-collapse text-xs md:text-sm">
+                        <thead>
+                            <tr class="bg-teal-800 text-white font-bold">
+                                <th class="p-2.5">No.</th>
+                                <th class="p-2.5">Nabi / Rasul</th>
+                                <th class="p-2.5">No.</th>
+                                <th class="p-2.5">Nabi / Rasul</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-800 font-medium">
+                            <tr><td class="p-2 font-bold text-teal-800">1</td><td class="p-2">Adam a.s.</td><td class="p-2 font-bold text-teal-800">14</td><td class="p-2">Dzulkifli a.s.</td></tr>
+                            <tr class="bg-slate-50"><td class="p-2 font-bold text-teal-800">2</td><td class="p-2">Idris a.s.</td><td class="p-2 font-bold text-teal-800">15</td><td class="p-2">Musa a.s.</td></tr>
+                            <tr><td class="p-2 font-bold text-teal-800">3</td><td class="p-2">Nuh a.s.</td><td class="p-2 font-bold text-teal-800">16</td><td class="p-2">Harun a.s.</td></tr>
+                            <tr class="bg-slate-50"><td class="p-2 font-bold text-teal-800">4</td><td class="p-2">Hud a.s.</td><td class="p-2 font-bold text-teal-800">17</td><td class="p-2">Dawud a.s.</td></tr>
+                            <tr><td class="p-2 font-bold text-teal-800">5</td><td class="p-2">Saleh a.s.</td><td class="p-2 font-bold text-teal-800">18</td><td class="p-2">Sulaiman a.s.</td></tr>
+                            <tr class="bg-slate-50"><td class="p-2 font-bold text-teal-800">6</td><td class="p-2">Ibrahim a.s.</td><td class="p-2 font-bold text-teal-800">19</td><td class="p-2">Ilyas a.s.</td></tr>
+                            <tr><td class="p-2 font-bold text-teal-800">7</td><td class="p-2">Luth a.s.</td><td class="p-2 font-bold text-teal-800">20</td><td class="p-2">Ilyasa a.s.</td></tr>
+                            <tr class="bg-slate-50"><td class="p-2 font-bold text-teal-800">8</td><td class="p-2">Ismail a.s.</td><td class="p-2 font-bold text-teal-800">21</td><td class="p-2">Yunus a.s.</td></tr>
+                            <tr><td class="p-2 font-bold text-teal-800">9</td><td class="p-2">Ishaq a.s.</td><td class="p-2 font-bold text-teal-800">22</td><td class="p-2">Zakaria a.s.</td></tr>
+                            <tr class="bg-slate-50"><td class="p-2 font-bold text-teal-800">10</td><td class="p-2">Ya'qub a.s.</td><td class="p-2 font-bold text-teal-800">23</td><td class="p-2">Yahya a.s.</td></tr>
+                            <tr><td class="p-2 font-bold text-teal-800">11</td><td class="p-2">Yusuf a.s.</td><td class="p-2 font-bold text-teal-800">24</td><td class="p-2">Isa a.s.</td></tr>
+                            <tr class="bg-slate-50"><td class="p-2 font-bold text-teal-800">12</td><td class="p-2">Ayyub a.s.</td><td class="p-2 font-bold text-teal-800">25</td><td class="p-2 font-bold text-emerald-800">Muhammad SAW</td></tr>
+                            <tr><td class="p-2 font-bold text-teal-800">13</td><td class="p-2">Syu'aib a.s.</td><td class="p-2 text-slate-400">-</td><td class="p-2 text-slate-400">-</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-900 font-semibold">
+                    💡 <strong>Nabi Muhammad SAW</strong> adalah nabi dan rasul terakhir (Khatamul Anbiya'). Setelah beliau tidak ada lagi nabi dan rasul.
+                </div>
+            </div>
+
+            <!-- E. Rasul Ulul 'Azmi -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-shield-halved"></i> E. Rasul Ulul ‘Azmi
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    <strong>Ulul ‘Azmi</strong> adalah sebutan bagi rasul-rasul yang memiliki keteguhan hati, kesabaran, dan ketabahan yang sangat kuat dalam menjalankan tugas dari Allah SWT.
+                </p>
+
+                <p class="text-xs md:text-sm font-bold text-teal-800 mb-3">Ada 5 Rasul Ulul ‘Azmi:</p>
+
+                <div class="space-y-3">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-sm md:text-base text-teal-800 mb-1">1. Nabi Nuh a.s.</h3>
+                        <p class="text-xs md:text-sm text-slate-700">Berdakwah kepada kaumnya dalam waktu yang sangat lama. Meskipun banyak yang menolak, beliau tetap sabar mengajak mereka menyembah Allah SWT.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-sm md:text-base text-teal-800 mb-1">2. Nabi Ibrahim a.s.</h3>
+                        <p class="text-xs md:text-sm text-slate-700">Sangat teguh dalam menyembah Allah SWT. Beliau tidak takut menghadapi orang-orang yang menyembah berhala.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-sm md:text-base text-teal-800 mb-1">3. Nabi Musa a.s.</h3>
+                        <p class="text-xs md:text-sm text-slate-700">Menghadapi Fir'aun yang sangat sombong. Beliau tetap berani menyampaikan perintah Allah SWT.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-sm md:text-base text-teal-800 mb-1">4. Nabi Isa a.s.</h3>
+                        <p class="text-xs md:text-sm text-slate-700">Mengajarkan manusia untuk menyembah Allah SWT. Beliau menghadapi berbagai penolakan dari kaumnya dengan penuh kesabaran.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-sm md:text-base text-teal-800 mb-1">5. Nabi Muhammad SAW</h3>
+                        <p class="text-xs md:text-sm text-slate-700">Menghadapi berbagai tantangan dalam berdakwah. Beliau tetap sabar, jujur, dan tidak menyerah dalam menyampaikan ajaran Islam.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB: SIFAT-SIFAT RASUL -->
+        <div id="tab-sifat" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-award"></i> D. Sifat-Sifat Rasul Allah SWT
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Rasul Allah SWT memiliki sifat-sifat mulia yang wajib kita ketahui dan teladani:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <!-- 1. Siddiq -->
+                    <div class="p-5 bg-amber-50/70 border border-amber-200 rounded-xl space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-base text-amber-900">1. Siddiq</h3>
+                            <span class="text-xs font-bold bg-amber-200 text-amber-900 px-2.5 py-0.5 rounded-full">Benar / Jujur</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700">Rasul selalu berkata benar dan tidak pernah berdusta.</p>
+                        <div class="p-2.5 bg-white rounded-lg border border-amber-100 text-xs text-slate-600">
+                            <strong>Contoh Sikap Siswa:</strong> Kita harus berkata jujur kepada orang tua, guru, dan teman.
+                        </div>
+                    </div>
+
+                    <!-- 2. Amanah -->
+                    <div class="p-5 bg-blue-50/70 border border-blue-200 rounded-xl space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-base text-blue-900">2. Amanah</h3>
+                            <span class="text-xs font-bold bg-blue-200 text-blue-900 px-2.5 py-0.5 rounded-full">Dapat Dipercaya</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700">Rasul selalu menjaga kepercayaan yang diberikan kepadanya.</p>
+                        <div class="p-2.5 bg-white rounded-lg border border-blue-100 text-xs text-slate-600">
+                            <strong>Contoh Sikap Siswa:</strong> Jika guru memberikan tugas, kita mengerjakan dengan baik dan tidak menyalahgunakan kepercayaan.
+                        </div>
+                    </div>
+
+                    <!-- 3. Tabligh -->
+                    <div class="p-5 bg-emerald-50/70 border border-emerald-200 rounded-xl space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-base text-emerald-900">3. Tabligh</h3>
+                            <span class="text-xs font-bold bg-emerald-200 text-emerald-900 px-2.5 py-0.5 rounded-full">Menyampaikan</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700">Rasul menyampaikan seluruh wahyu dan ajaran Allah SWT kepada umatnya.</p>
+                        <div class="p-2.5 bg-white rounded-lg border border-emerald-100 text-xs text-slate-600">
+                            <strong>Contoh Sikap Siswa:</strong> Kita menyampaikan informasi yang benar dan tidak menyembunyikan kebenaran.
+                        </div>
+                    </div>
+
+                    <!-- 4. Fathanah -->
+                    <div class="p-5 bg-purple-50/70 border border-purple-200 rounded-xl space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-base text-purple-900">4. Fathanah</h3>
+                            <span class="text-xs font-bold bg-purple-200 text-purple-900 px-2.5 py-0.5 rounded-full">Cerdas / Pandai</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-700">Para rasul memiliki kecerdasan dalam memahami wahyu Allah dan menyampaikan ajaran kepada umatnya.</p>
+                        <div class="p-2.5 bg-white rounded-lg border border-purple-100 text-xs text-slate-600">
+                            <strong>Contoh Sikap Siswa:</strong> Kita harus rajin belajar agar menjadi anak yang cerdas dan menggunakan ilmu untuk kebaikan.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ringkasan Sifat Rasul -->
+                <div class="p-4 bg-teal-800 text-white rounded-xl">
+                    <h3 class="font-bold text-sm md:text-base mb-2 border-b border-teal-700 pb-1">📌 Ringkasan Sifat Rasul</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs md:text-sm">
+                        <div class="p-2 bg-teal-700/60 rounded-lg"><strong>Siddiq</strong> → Benar</div>
+                        <div class="p-2 bg-teal-700/60 rounded-lg"><strong>Amanah</strong> → Dapat dipercaya</div>
+                        <div class="p-2 bg-teal-700/60 rounded-lg"><strong>Tabligh</strong> → Menyampaikan</div>
+                        <div class="p-2 bg-teal-700/60 rounded-lg"><strong>Fathanah</strong> → Cerdas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: HIKMAH & CONTOH PERILAKU -->
+        <div id="tab-hikmah" class="tab-content hidden transition-opacity duration-300 space-y-6">
+            
+            <!-- F. Hikmah Beriman kepada Rasul -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-gem"></i> F. Hikmah Beriman kepada Rasul Allah SWT
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Beriman kepada rasul Allah SWT memberikan banyak manfaat dalam kehidupan kita:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-xs md:text-sm text-teal-800 mb-1">1. Memperkuat iman kepada Allah SWT</h3>
+                        <p class="text-xs text-slate-600">Semakin yakin bahwa Allah SWT memberikan petunjuk kepada manusia melalui para rasul.</p>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-xs md:text-sm text-teal-800 mb-1">2. Meneladani akhlak mulia</h3>
+                        <p class="text-xs text-slate-600">Mencontoh kejujuran, kesabaran, amanah, dan kasih sayang para rasul.</p>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-xs md:text-sm text-teal-800 mb-1">3. Menjadi anak yang jujur</h3>
+                        <p class="text-xs text-slate-600">Meneladani sifat siddiq Rasul dengan belajar selalu berkata dan berbuat benar.</p>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-xs md:text-sm text-teal-800 mb-1">4. Menjadi anak yang dapat dipercaya</h3>
+                        <p class="text-xs text-slate-600">Belajar melaksanakan tugas dan menjaga kepercayaan orang lain.</p>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-xs md:text-sm text-teal-800 mb-1">5. Menjadi anak yang sabar</h3>
+                        <p class="text-xs text-slate-600">Kisah para rasul mengajarkan kita agar tidak mudah menyerah ketika menghadapi kesulitan.</p>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+                        <h3 class="font-bold text-xs md:text-sm text-teal-800 mb-1">6. Rajin beribadah</h3>
+                        <p class="text-xs text-slate-600">Rasul mengajarkan manusia untuk selalu taat dan beribadah kepada Allah SWT.</p>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl sm:col-span-2 lg:col-span-3">
+                        <h3 class="font-bold text-xs md:text-sm text-teal-800 mb-1">7. Menyayangi sesama</h3>
+                        <p class="text-xs text-slate-600">Rasulullah SAW mengajarkan kita untuk menyayangi orang tua, guru, teman, tetangga, dan semua makhluk Allah SWT.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- G. Contoh Perilaku -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden p-6 md:p-8">
+                <h2 class="text-xl md:text-2xl font-extrabold text-teal-800 pb-2 border-b-2 border-teal-100 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-hand-holding-heart"></i> G. Contoh Perilaku Beriman kepada Rasul
+                </h2>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
+                    Berikut contoh perilaku yang dapat dilakukan siswa dalam kehidupan sehari-hari:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs md:text-sm">
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Berkata jujur kepada guru dan orang tua
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Menepati janji
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Mengembalikan barang yang dipinjam
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Rajin belajar
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Sabar ketika menghadapi kesulitan
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Tidak mudah menyerah
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Menghormati orang tua dan guru
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Menolong teman yang membutuhkan
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Rajin melaksanakan salat
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Membaca dan mempelajari Al-Qur'an
+                    </div>
+                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900 font-medium flex items-center gap-2 sm:col-span-2">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Meneladani akhlak Nabi Muhammad SAW
+                    </div>
+                </div>
+            </div>
+
+            <!-- H. Kesimpulan -->
+            <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-slate-300">
+                <h3 class="text-teal-800 font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-flag-checkered text-amber-500"></i> H. Kesimpulan
+                </h3>
+                <ul class="list-disc list-inside space-y-2 text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <li><strong>Beriman kepada rasul Allah SWT</strong> adalah percaya dengan sepenuh hati bahwa Allah SWT mengutus rasul untuk menyampaikan wahyu dan membimbing manusia ke jalan yang benar.</li>
+                    <li>Rasul memiliki <strong>empat sifat wajib</strong>, yaitu: <strong>Siddiq</strong> (benar), <strong>Amanah</strong> (dapat dipercaya), <strong>Tabligh</strong> (menyampaikan), dan <strong>Fathanah</strong> (cerdas).</li>
+                    <li><strong>Rasul Ulul ‘Azmi</strong> ada lima, yaitu Nabi Nuh a.s., Nabi Ibrahim a.s., Nabi Musa a.s., Nabi Isa a.s., dan Nabi Muhammad SAW.</li>
+                    <li>Dengan beriman kepada rasul, kita belajar menjadi anak yang jujur, amanah, sabar, cerdas, rajin beribadah, dan memiliki akhlak mulia.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- TAB: KUIS INTERAKTIF -->
+        <div id="tab-kuis" class="tab-content hidden transition-opacity duration-300">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4 md:p-5 flex justify-between items-center gap-2">
+                    <div class="text-base md:text-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece"></i> Kuis Interaktif PAI Kelas 4 SD
+                    </div>
+                    <div class="text-xs md:text-sm bg-white/20 px-3 py-1 rounded-full font-semibold whitespace-nowrap" id="quiz-progress">Soal 1 dari 8</div>
+                </div>
+                
+                <div class="p-5 md:p-6" id="quiz-body">
+                    <!-- Dynamic Question Area -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 px-4 mt-auto text-xs md:text-sm">
+        <p>&copy; 2026 Media Pembelajaran Interaktif.</p>
+        <p class="text-xs opacity-70 mt-1">Pendidikan Agama Islam dan Budi Pekerti.</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Questions khusus materi PAI Kelas 4 SD: Beriman kepada Rasul-Rasul Allah SWT
+        const quizData = [
+            {
+                question: "1. Beriman kepada rasul-rasul Allah SWT merupakan rukun iman yang ke-...",
+                options: [
+                    "A. Ketiga",
+                    "B. Keempat",
+                    "C. Kelima",
+                    "D. Keenam"
+                ],
+                correct: 1,
+                explanation: "Beriman kepada rasul-rasul Allah SWT merupakan rukun iman yang keempat."
+            },
+            {
+                question: "2. Beriman kepada rasul Allah SWT berarti...",
+                options: [
+                    "A. Percaya bahwa rasul adalah manusia biasa tanpa tugas khusus",
+                    "B. Percaya bahwa rasul adalah utusan Allah SWT yang menyampaikan wahyu",
+                    "C. Percaya hanya kepada Nabi Muhammad SAW",
+                    "D. Menganggap semua manusia adalah rasul"
+                ],
+                correct: 1,
+                explanation: "Beriman kepada rasul berarti percaya dengan sepenuh hati bahwa Allah SWT mengutus rasul untuk menyampaikan wahyu dan membimbing manusia."
+            },
+            {
+                question: "3. Sifat wajib rasul yang berarti benar atau jujur adalah...",
+                options: [
+                    "A. Amanah",
+                    "B. Tabligh",
+                    "C. Fathanah",
+                    "D. Siddiq"
+                ],
+                correct: 3,
+                explanation: "Siddiq berarti benar atau jujur. Rasul selalu berkata benar dan tidak pernah berdusta."
+            },
+            {
+                question: "4. Sifat wajib rasul yang berarti dapat dipercaya adalah...",
+                options: [
+                    "A. Siddiq",
+                    "B. Amanah",
+                    "C. Tabligh",
+                    "D. Fathanah"
+                ],
+                correct: 1,
+                explanation: "Amanah berarti dapat dipercaya. Para rasul selalu menjaga kepercayaan yang diberikan kepada mereka."
+            },
+            {
+                question: "5. Sifat Tabligh yang dimiliki oleh rasul berarti...",
+                options: [
+                    "A. Cerdas",
+                    "B. Jujur",
+                    "C. Menyampaikan",
+                    "D. Dapat dipercaya"
+                ],
+                correct: 2,
+                explanation: "Tabligh berarti menyampaikan. Rasul menyampaikan seluruh wahyu dan ajaran Allah SWT kepada umatnya."
+            },
+            {
+                question: "6. Sifat Fathanah yang dimiliki oleh rasul berarti...",
+                options: [
+                    "A. Cerdas atau pandai",
+                    "B. Dapat dipercaya",
+                    "C. Menyampaikan wahyu",
+                    "D. Benar atau jujur"
+                ],
+                correct: 0,
+                explanation: "Fathanah berarti cerdas atau pandai. Rasul memiliki kecerdasan dalam memahami wahyu dan membimbing umatnya."
+            },
+            {
+                question: "7. Rasul yang memiliki keteguhan hati, kesabaran, dan ketabahan yang sangat kuat disebut...",
+                options: [
+                    "A. Khulafaur Rasyidin",
+                    "B. Ulul 'Azmi",
+                    "C. Khatamul Anbiya'",
+                    "D. Wali Allah"
+                ],
+                correct: 1,
+                explanation: "Ulul 'Azmi adalah sebutan bagi lima rasul yang memiliki keteguhan hati, kesabaran, dan ketabahan yang sangat kuat."
+            },
+            {
+                question: "8. Berikut ini yang termasuk Rasul Ulul 'Azmi adalah...",
+                options: [
+                    "A. Nabi Adam a.s.",
+                    "B. Nabi Yusuf a.s.",
+                    "C. Nabi Ibrahim a.s.",
+                    "D. Nabi Yunus a.s."
+                ],
+                correct: 2,
+                explanation: "Nabi Ibrahim a.s. termasuk salah satu dari lima Rasul Ulul 'Azmi bersama Nabi Nuh, Musa, Isa, dan Muhammad SAW."
+            },
+            {
+                question: "9. Rasul yang menjadi nabi dan rasul terakhir adalah...",
+                options: [
+                    "A. Nabi Isa a.s.",
+                    "B. Nabi Musa a.s.",
+                    "C. Nabi Ibrahim a.s.",
+                    "D. Nabi Muhammad SAW"
+                ],
+                correct: 3,
+                explanation: "Nabi Muhammad SAW adalah nabi dan rasul terakhir serta menjadi penutup para nabi."
+            },
+            {
+                question: "10. Salah satu hikmah beriman kepada rasul Allah SWT adalah...",
+                options: [
+                    "A. Menjadi sombong karena memiliki ilmu",
+                    "B. Meneladani akhlak mulia para rasul",
+                    "C. Tidak perlu belajar agama",
+                    "D. Merasa lebih baik daripada orang lain"
+                ],
+                correct: 1,
+                explanation: "Salah satu hikmah beriman kepada rasul adalah kita dapat meneladani akhlak mulia mereka, seperti jujur, amanah, sabar, dan rajin beribadah."
+            }
+        ];
+
+        // State variables
+        let currentQuestion = 0;
+        let selectedAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Navigation Handler
+        function switchTab(tabId, targetBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+
+            const activeContent = document.getElementById('tab-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                if (btn.classList.contains('quiz-btn')) {
+                    btn.className = "nav-btn quiz-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white";
+                } else {
+                    btn.className = "nav-btn transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white/10 hover:bg-white/25 text-teal-50";
+                }
+            });
+
+            // Set active button
+            let currentBtn = targetBtn;
+            if (!currentBtn) {
+                currentBtn = Array.from(buttons).find(btn => 
+                    btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tabId}'`)
+                );
+            }
+            
+            if (currentBtn) {
+                if (currentBtn.classList.contains('quiz-btn')) {
+                    currentBtn.className = "nav-btn quiz-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-amber-500 text-white shadow-md";
+                } else {
+                    currentBtn.className = "nav-btn active transition-all duration-200 shrink-0 px-3.5 py-2 rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 bg-white text-teal-800 shadow-md";
+                }
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'kuis' && !quizSubmitted) {
+                renderQuestion();
+            }
+        }
+
+        // Quiz Logic
+        function renderQuestion() {
+            const container = document.getElementById('quiz-body');
+            const progress = document.getElementById('quiz-progress');
+            
+            const q = quizData[currentQuestion];
+            progress.innerText = `Soal ${currentQuestion + 1} dari ${quizData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                const isSelected = selectedAnswers[currentQuestion] === idx;
+                const baseClass = "w-full border-2 rounded-xl p-3.5 text-left text-xs md:text-sm font-medium transition-all flex items-center justify-between gap-3 ";
+                const stateClass = isSelected 
+                    ? "border-teal-600 bg-teal-50 text-teal-900 font-bold" 
+                    : "border-slate-200 bg-slate-50 hover:border-teal-400 hover:bg-teal-50/50 text-slate-800";
+
+                optionsHtml += `
+                    <button class="${baseClass} ${stateClass}" onclick="selectOption(${idx})">
+                        <span>${opt}</span>
+                        ${isSelected ? '<i class="fa-solid fa-circle-check text-teal-600 text-base"></i>' : '<i class="fa-regular fa-circle text-slate-400"></i>'}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-sm md:text-base font-bold text-slate-800 mb-4 leading-relaxed">${q.question}</div>
+                <div class="space-y-3 mb-6">${optionsHtml}</div>
+                <div class="flex justify-between items-center border-t border-slate-200 pt-4 gap-2">
+                    <button class="px-4 py-2 bg-slate-600 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="prevQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    ${currentQuestion === quizData.length - 1 ? 
+                        `<button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="submitQuiz()" ${selectedAnswers.includes(null) ? 'disabled' : ''}>
+                            Selesai <i class="fa-solid fa-check-double"></i>
+                         </button>` : 
+                        `<button class="px-4 py-2 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white text-xs md:text-sm font-bold rounded-xl transition-colors flex items-center gap-1.5" onclick="nextQuestion()" ${selectedAnswers[currentQuestion] === null ? 'disabled' : ''}>
+                            Lanjut <i class="fa-solid fa-arrow-right"></i>
+                         </button>`
+                    }
+                </div>
+            `;
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQuestion] = index;
+            renderQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            quizSubmitted = true;
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (selectedAnswers[idx] === q.correct) {
+                    score++;
+                }
+            });
+
+            const finalScore = Math.round((score / quizData.length) * 100);
+            const container = document.getElementById('quiz-body');
+            document.getElementById('quiz-progress').innerText = "Hasil Kuis";
+
+            let reviewHtml = '';
+            quizData.forEach((q, idx) => {
+                const isCorrect = selectedAnswers[idx] === q.correct;
+                reviewHtml += `
+                    <div class="text-left bg-slate-50 border border-slate-200 p-3.5 rounded-xl mb-3 border-l-4 ${isCorrect ? 'border-l-emerald-500' : 'border-l-rose-500'}">
+                        <p class="font-bold text-xs md:text-sm mb-1">${q.question}</p>
+                        <p class="text-xs md:text-sm ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                            <strong>Jawaban Anda:</strong> ${q.options[selectedAnswers[idx]]} 
+                            ${isCorrect ? '<i class="fa-solid fa-circle-check"></i> (Benar)' : '<i class="fa-solid fa-circle-xmark"></i> (Salah)'}
+                        </p>
+                        ${!isCorrect ? `<p class="text-xs md:text-sm text-emerald-800 mt-0.5"><strong>Jawaban Tepat:</strong> ${q.options[q.correct]}</p>` : ''}
+                        <p class="text-xs text-slate-500 mt-1 italic">${q.explanation}</p>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-28 h-28 rounded-full bg-teal-100 text-teal-800 flex flex-col items-center justify-center mx-auto mb-4 border-4 border-teal-600 shadow-inner">
+                        <div class="text-3xl font-extrabold leading-none">${finalScore}</div>
+                        <div class="text-[10px] font-bold uppercase mt-1 tracking-wider">Nilai</div>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-1 text-slate-800">${finalScore >= 80 ? 'Sangat Baik! 🎉' : finalScore >= 60 ? 'Bagus! 👍' : 'Tetap Semangat! 💪'}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mb-5">Anda menjawab <strong>${score}</strong> dari <strong>${quizData.length}</strong> pertanyaan dengan benar.</p>
+                    <button class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs md:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2 shadow-md mb-6" onclick="resetQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i> Coba Kuis Lagi
+                    </button>
+                </div>
+                <h4 class="text-sm font-bold mb-3 text-slate-800">Evaluasi Jawaban:</h4>
+                ${reviewHtml}
+            `;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            selectedAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>
