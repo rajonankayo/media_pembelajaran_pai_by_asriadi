@@ -210,12 +210,12 @@
             --avatar-size: clamp(140px, 20vw, 200px);
             position: relative;
             display: block;
-            width: var(--avatar-size);
-            height: var(--avatar-size);
-            min-width: var(--avatar-size);
-            min-height: var(--avatar-size);
-            max-width: none;
-            max-height: none;
+            width: 60px;
+            height:  60px;
+            min-width:  60px;
+            min-height:  60px;
+            max-width:  60px;
+            max-height:  60px;
             margin: 12px auto 2.2rem auto;
             flex: none;
         }
@@ -505,35 +505,6 @@
             }
         }
 
-        /* OVERRIDE FINAL FOTO PROFIL (letakkan paling bawah) */
-        .profile-container {
-            --avatar-size: clamp(140px, 28vw, 200px);
-            display: block !important;
-            position: relative !important;
-            width: var(--avatar-size) !important;
-            height: var(--avatar-size) !important;
-            min-width: var(--avatar-size) !important;
-            min-height: var(--avatar-size) !important;
-            max-width: var(--avatar-size) !important;
-            max-height: var(--avatar-size) !important;
-            margin: 12px auto 2.2rem auto !important;
-            flex: none !important;
-        }
-        
-        .profile-avatar-wrap {
-            width: 100% !important;
-            height: 100% !important;
-            aspect-ratio: 1 / 1 !important;
-            border-radius: 50% !important;
-        }
-        
-        .profile-avatar {
-            width: 100% !important;
-            height: 100% !important;
-            aspect-ratio: 1 / 1 !important;
-            border-radius: 50% !important;
-            object-fit: cover !important;
-        }
     </style>
     </head>
     <body>
@@ -560,7 +531,7 @@
                 data-aos-duration="1200">
 
                 <!-- Profile Picture -->
-                <div class="profile-container" data-aos="fade-down" data-aos-delay="200" style="display:none;">
+                <div class="profile-container" data-aos="fade-down" data-aos-delay="200">
                     <div class="profile-ring-blur" aria-hidden="true"></div>
                     <div class="profile-ring" aria-hidden="true"></div>
                     <div class="profile-avatar-wrap">
