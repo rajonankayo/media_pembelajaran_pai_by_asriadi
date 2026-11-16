@@ -207,14 +207,17 @@
            4. PROFILE IMAGE & ANIMATED BORDER RING (SELALU BULAT)
            ================================================================= */
         .profile-container {
+            --avatar-size: clamp(140px, 28vw, 200px);
             position: relative;
-            /* Ukuran responsif: min 140px, ideal 28% lebar layar, max 200px */
-            width: clamp(140px, 28vw, 200px);
-            aspect-ratio: 1 / 1;      /* selalu persegi => lingkaran sempurna */
-            height: auto;
-            margin: 12px auto 2.2rem auto;
             display: block;
-            flex-shrink: 0;
+            width: var(--avatar-size);
+            height: var(--avatar-size);
+            min-width: var(--avatar-size);
+            min-height: var(--avatar-size);
+            max-width: none;
+            max-height: none;
+            margin: 12px auto 2.2rem auto;
+            flex: none;
         }
 
         .profile-ring {
