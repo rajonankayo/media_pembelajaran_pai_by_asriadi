@@ -242,12 +242,13 @@
            ================================================================= */
         .profile-container {
             position: relative;
-            max-width: 50px;
-            max-height: 50px;
-            margin: 0 auto 2.2rem auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            /* Ukuran responsif: min 140px, ideal 28% lebar layar, max 200px */
+            width: clamp(140px, 28vw, 200px);
+            aspect-ratio: 1 / 1;          /* selalu persegi => lingkaran sempurna */
+            height: auto;
+            margin: 12px auto 2.2rem auto;
+            display: block;
+            flex-shrink: 0;
         }
 
         /* Outer Rotating Gradient Ring */
@@ -289,9 +290,13 @@
         }
 
         .profile-avatar {
+            display: block;
             width: 100%;
             height: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
             object-fit: cover;
+            object-position: center top;  /* wajah tetap terlihat */
             transition: transform 0.6s ease, filter 0.6s ease;
         }
 
@@ -489,13 +494,7 @@
                 padding: 2.5rem 1.5rem;
                 border-radius: 24px;
             }
-
-            .profile-container {
-                width: 180px;
-                height: 180px;
-                margin-bottom: 1.8rem;
-            }
-
+           
             .profile-name {
                 font-size: 2.35rem;
             }
@@ -577,13 +576,7 @@
                             class="profile-avatar"
                             loading="eager">
                     </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                </div>                
 
                 <!-- Profile Name -->
                 <h1 class="profile-name" data-aos="fade-up"
