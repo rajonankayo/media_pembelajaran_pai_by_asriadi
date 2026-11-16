@@ -207,7 +207,7 @@
            4. PROFILE IMAGE & ANIMATED BORDER RING (SELALU BULAT)
            ================================================================= */
         .profile-container {
-            --avatar-size: clamp(140px, 100vw, 200px);
+            --avatar-size: clamp(140px, 20vw, 200px);
             position: relative;
             display: block;
             width: var(--avatar-size);
@@ -503,6 +503,36 @@
             .social-group {
                 gap: 0.5rem;
             }
+        }
+
+        /* OVERRIDE FINAL FOTO PROFIL (letakkan paling bawah) */
+        .profile-container {
+            --avatar-size: clamp(140px, 28vw, 200px);
+            display: block !important;
+            position: relative !important;
+            width: var(--avatar-size) !important;
+            height: var(--avatar-size) !important;
+            min-width: var(--avatar-size) !important;
+            min-height: var(--avatar-size) !important;
+            max-width: var(--avatar-size) !important;
+            max-height: var(--avatar-size) !important;
+            margin: 12px auto 2.2rem auto !important;
+            flex: none !important;
+        }
+        
+        .profile-avatar-wrap {
+            width: 100% !important;
+            height: 100% !important;
+            aspect-ratio: 1 / 1 !important;
+            border-radius: 50% !important;
+        }
+        
+        .profile-avatar {
+            width: 100% !important;
+            height: 100% !important;
+            aspect-ratio: 1 / 1 !important;
+            border-radius: 50% !important;
+            object-fit: cover !important;
         }
     </style>
     </head>
